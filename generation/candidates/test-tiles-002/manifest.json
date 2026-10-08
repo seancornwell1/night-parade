@@ -1,0 +1,82 @@
+{
+  "batch": "test-tiles-002",
+  "request": "generation/requests/test-tiles-002.json",
+  "created": "2026-10-08T23:55:36Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "grass",
+      "type": "tile",
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': '3a627026-199c-4eca-bbf4-d6af0cdf7158'}"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': 'c600c7a9-37b0-4b1c-8ba2-2b67e1d8f9c4'}"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 2,
+      "id": "dirt-path",
+      "type": "tile",
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': 'cea0b291-60a1-4dd9-b1db-016df16be601'}"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': 'b0b7e66c-0e1b-4823-8f56-e6ca21796cda'}"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 3,
+      "id": "water",
+      "type": "tile",
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': '1e0f60a8-902e-42b5-96fb-05f838909b0b'}"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': '79681b90-c939-4d9e-938e-5a92d04e2b62'}"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    }
+  ],
+  "note": "Retry of the 3 test tiles with Retro Diffusion only (its seamless tile mode), after the seam check fix.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-08T23:56:23Z",
+  "counts": {
+    "failed": 3
+  }
+}

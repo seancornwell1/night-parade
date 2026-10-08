@@ -1,0 +1,10 @@
+--- run 2026-10-08T23:56:23Z
+[test-tiles-002] #1 grass (tile)
+  retrodiffusion: error (HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': '3a627026-199c-4eca-bbf4-d6af0cdf7158'})
+  retrodiffusion: error (HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': 'c600c7a9-37b0-4b1c-8ba2-2b67e1d8f9c4'})
+[test-tiles-002] #2 dirt-path (tile)
+  retrodiffusion: error (HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': 'cea0b291-60a1-4dd9-b1db-016df16be601'})
+  retrodiffusion: error (HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': 'b0b7e66c-0e1b-4823-8f56-e6ca21796cda'})
+[test-tiles-002] #3 water (tile)
+  retrodiffusion: error (HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': '1e0f60a8-902e-42b5-96fb-05f838909b0b'})
+  retrodiffusion: error (HTTP 400: {'status_code': 502, 'code': 'inference_failed', 'message': 'Unable to run inference.', 'request_id': '79681b90-c939-4d9e-938e-5a92d04e2b62'})
