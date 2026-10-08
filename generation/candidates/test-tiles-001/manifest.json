@@ -1,0 +1,94 @@
+{
+  "batch": "test-tiles-001",
+  "request": "generation/requests/test-tiles-001.json",
+  "created": "2026-10-08T20:34:44Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "grass",
+      "type": "tile",
+      "prompt": "top-down 16-bit pixel art seamless ground tile, short green grass with a few small flowers, feudal Japan countryside, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: no API key secret"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: no API key secret"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: no API key secret"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 2,
+      "id": "dirt-path",
+      "type": "tile",
+      "prompt": "top-down 16-bit pixel art seamless ground tile, packed brown dirt path with small pebbles, feudal Japan village, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: no API key secret"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: no API key secret"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: no API key secret"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 3,
+      "id": "water",
+      "type": "tile",
+      "prompt": "top-down 16-bit pixel art seamless tile, shallow clear blue river water with gentle ripples, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: no API key secret"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: no API key secret"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: no API key secret"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "Pipeline test: three day-stage ground tiles (phase 1 tile templates).",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-08T20:34:44Z",
+  "counts": {
+    "pending": 3
+  }
+}
