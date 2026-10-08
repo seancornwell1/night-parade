@@ -1,4 +1,6 @@
 import Phaser from 'phaser';
+import { ArenaScene } from './scenes/ArenaScene';
+import { HudScene } from './scenes/HudScene';
 import { TitleScene } from './scenes/TitleScene';
 
 new Phaser.Game({
@@ -10,6 +12,6 @@ new Phaser.Game({
     width: window.innerWidth,
     height: window.innerHeight,
   },
-  input: { activePointers: 3 },
-  scene: [TitleScene],
+  input: { activePointers: 4 },
+  scene: [TitleScene, ArenaScene, HudScene],
 });

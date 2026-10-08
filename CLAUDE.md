@@ -21,3 +21,6 @@
 - TypeScript + Phaser, bundled with Vite. Source in `src/`, static files in `public/`.
 - Landscape iPhone Safari, installable via Add to Home Screen (`public/manifest.webmanifest`).
 - `npm run build` must pass (typecheck + bundle) before pushing.
+- Every tuning number lives in `src/config/tuning.ts`. Triple-tap the top-left
+  corner in game to open the tuning panel; "Copy changes" gives back the edited
+  values to paste into that file.
