@@ -28,7 +28,7 @@
       "sprite": "rd_fast__default",
       "sheet": "rd_pro__spritesheet"
     },
-    "tileSeamless": true
+    "tileSeamless": false
   },
   "pixellab": {
     "view": "high top-down",

@@ -1,0 +1,46 @@
+{
+  "batch": "test-tiles-003",
+  "note": "Retry of the 3 test tiles with Retro Diffusion only, without its tile_x/tile_y option (002 failed with it on).",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "items": [
+    {
+      "id": "grass",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "providers": [
+        "retrodiffusion"
+      ],
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight"
+    },
+    {
+      "id": "dirt-path",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "providers": [
+        "retrodiffusion"
+      ],
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight"
+    },
+    {
+      "id": "water",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "providers": [
+        "retrodiffusion"
+      ],
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight"
+    }
+  ]
+}
