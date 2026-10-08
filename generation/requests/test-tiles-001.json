@@ -1,0 +1,10 @@
+{
+  "batch": "test-tiles-001",
+  "note": "Pipeline test: three day-stage ground tiles (phase 1 tile templates).",
+  "palette": { "mode": "auto", "colors": 16 },
+  "items": [
+    { "id": "grass", "type": "tile", "size": [32, 32], "prompt": "top-down 16-bit pixel art seamless ground tile, short green grass with a few small flowers, feudal Japan countryside, daylight" },
+    { "id": "dirt-path", "type": "tile", "size": [32, 32], "prompt": "top-down 16-bit pixel art seamless ground tile, packed brown dirt path with small pebbles, feudal Japan village, daylight" },
+    { "id": "water", "type": "tile", "size": [32, 32], "prompt": "top-down 16-bit pixel art seamless tile, shallow clear blue river water with gentle ripples, daylight" }
+  ]
+}

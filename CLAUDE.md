@@ -28,3 +28,5 @@
   Schemas are documented in `docs/SCHEMAS.md`.
 - Open the game with `?debug` to expose `window.__np` (game, controls, status, actions)
   for automated playtests.
+- Asset generation runs only in GitHub Actions; see `docs/PIPELINE.md`. Start a run by
+  committing a request to `generation/requests/`. Candidates appear at `/review/`.

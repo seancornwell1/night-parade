@@ -216,3 +216,5 @@ picks it later.
 `content/rifts/red-lotus.json`, Guren, the Red Lotus Hell: a `frost` rift that resists
 frost and fears fire. Fire hits deal 1.5 (feared) × 1.3 (Fire's minor is "bonus vs frost
 rifts") = 1.95× damage there. Frost hits deal 0.5×.
+
+Asset generation requests have their own format, documented in `docs/PIPELINE.md`.

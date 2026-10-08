@@ -1,0 +1,42 @@
+{
+  "providers": {
+    "tile": ["retrodiffusion", "pixellab", "cloudflare"],
+    "sprite": ["pixellab", "retrodiffusion", "cloudflare"],
+    "sheet": ["pixellab", "retrodiffusion", "cloudflare"]
+  },
+  "dailyCaps": {
+    "pixellab": 10,
+    "retrodiffusion": 8,
+    "cloudflare": 40
+  },
+  "attemptsPerProvider": 3,
+  "retrodiffusion": {
+    "styles": {
+      "tile": "rd_tile__single_tile",
+      "sprite": "rd_fast__default",
+      "sheet": "rd_pro__spritesheet"
+    }
+  },
+  "pixellab": {
+    "view": "high top-down",
+    "minSize": 32,
+    "maxSize": 400
+  },
+  "cloudflare": {
+    "model": "@cf/black-forest-labs/flux-1-schnell",
+    "steps": 4,
+    "styleSuffix": "16-bit SNES pixel art, limited palette, crisp pixels, flat colors, no text, no border"
+  },
+  "checks": {
+    "tileSeamRatio": 1.6,
+    "tileMinColors": 3,
+    "spriteMinCoverage": 0.04,
+    "spriteMaxCoverage": 0.9,
+    "contrastMin": 1.6,
+    "frameAreaRange": [0.6, 1.6],
+    "frameHeightRange": [0.7, 1.3],
+    "frameColorDistanceMax": 0.6,
+    "silhouetteSpillMax": 0.02,
+    "minComponentPixels": 4
+  }
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#111111" />
+    <title>Asset Review</title>
+    <style>
+      :root {
+        --bg: #111;
+        --panel: #1c1c1c;
+        --line: #333;
+        --text: #e6e6e6;
+        --muted: #999;
+        --ok: #7fd48a;
+        --bad: #ff8a80;
+        --wait: #f5c26b;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 14px/1.45 -apple-system, system-ui, sans-serif;
+        padding: max(12px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 40px max(16px, env(safe-area-inset-left));
+      }
+      h1 { font-size: 20px; margin: 4px 0 2px; }
+      .sub { color: var(--muted); margin-bottom: 12px; }
+      .batches { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+      .batches button {
+        font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line);
+        border-radius: 999px; padding: 6px 12px;
+      }
+      .batches button.on { border-color: var(--text); }
+      .summary { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 14px; }
+      .counts span { margin-right: 12px; }
+      .swatches { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 8px; }
+      .swatches i { width: 18px; height: 18px; display: inline-block; border: 1px solid #000; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+      .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; overflow: hidden; }
+      .head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+      .num { font-size: 28px; font-weight: 800; }
+      .id { font-weight: 600; }
+      .tag { font-size: 12px; color: var(--muted); }
+      .status-ok { color: var(--ok); }
+      .status-failed { color: var(--bad); }
+      .status-pending { color: var(--wait); }
+      .art { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; margin: 6px 0 10px; }
+      .px {
+        image-rendering: pixelated; image-rendering: crisp-edges; display: block;
+        background-color: #3a3a3a;
+        background-image: linear-gradient(45deg, #444 25%, transparent 25%), linear-gradient(-45deg, #444 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #444 75%), linear-gradient(-45deg, transparent 75%, #444 75%);
+        background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      }
+      .tiled { image-rendering: pixelated; background-repeat: repeat; }
+      .art > div { max-width: 100%; }
+      .cap { font-size: 11px; color: var(--muted); margin-top: 3px; }
+      .frames { display: flex; gap: 4px; flex-wrap: wrap; }
+      .wrap { position: relative; display: inline-block; }
+      .hitbox { position: absolute; border: 1px dashed rgba(255, 255, 255, 0.8); pointer-events: none; }
+      ul.checks { list-style: none; padding: 0; margin: 0 0 8px; font-size: 13px; }
+      ul.checks li::before { content: '✓ '; color: var(--ok); }
+      ul.checks li.bad::before { content: '✗ '; color: var(--bad); }
+      details { margin-top: 6px; font-size: 13px; }
+      summary { color: var(--muted); }
+      .prompt { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+      .empty { color: var(--muted); padding: 20px 0; }
+      @media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <h1>Asset review</h1>
+    <div class="sub">Generated candidates, numbered. Tell Claude which numbers to keep.</div>
+    <div class="batches" id="batches"></div>
+    <div id="batch"></div>
+    <script>
+      const $ = (s) => document.querySelector(s);
+      const el = (tag, attrs = {}, ...kids) => {
+        const e = document.createElement(tag);
+        for (const [k, v] of Object.entries(attrs)) {
+          if (k === 'style') Object.assign(e.style, v);
+          else if (k === 'class') e.className = v;
+          else e.setAttribute(k, v);
+        }
+        for (const k of kids.flat()) if (k != null) e.append(k);
+        return e;
+      };
+      const scaleFor = (w, h, box = 256) => Math.max(2, Math.floor(Math.min(box / w, box / h)));
+
+      async function load() {
+        let batches = [];
+        try {
+          batches = await (await fetch('./index.json', { cache: 'no-store' })).json();
+        } catch {}
+        const bar = $('#batches');
+        if (!batches.length) {
+          $('#batch').append(el('div', { class: 'empty' }, 'No batches yet.'));
+          return;
+        }
+        const want = new URLSearchParams(location.search).get('batch') || batches[0].batch;
+        for (const b of batches) {
+          const btn = el('button', { class: b.batch === want ? 'on' : '' }, b.batch);
+          btn.onclick = () => {
+            history.replaceState(null, '', '?batch=' + encodeURIComponent(b.batch));
+            bar.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === btn));
+            show(b.batch);
+          };
+          bar.append(btn);
+        }
+        show(want);
+      }
+
+      async function show(name) {
+        const root = $('#batch');
+        root.replaceChildren();
+        const base = `./candidates/${name}/`;
+        const m = await (await fetch(base + 'manifest.json', { cache: 'no-store' })).json();
+        const c = m.counts || {};
+        const pal = m.palette?.mode === 'file' ? `locked palette "${m.palette.name}"` : `auto palette (${m.palette?.colors ?? 16} colours per image)`;
+        root.append(
+          el('div', { class: 'summary' },
+            el('div', { class: 'id' }, m.batch),
+            m.note ? el('div', { class: 'prompt' }, m.note) : null,
+            el('div', { class: 'counts' },
+              el('span', { class: 'status-ok' }, `${c.ok || 0} ready`),
+              el('span', { class: 'status-pending' }, `${c.pending || 0} waiting`),
+              el('span', { class: 'status-failed' }, `${c.failed || 0} failed`)),
+            el('div', { class: 'cap' }, `${pal} · updated ${m.updated || m.created}`),
+            el('div', { class: 'cap' }, el('a', { href: base + 'log.txt', style: { color: 'inherit' } }, 'run log'))));
+        const grid = el('div', { class: 'grid' });
+        for (const cand of m.candidates) grid.append(card(cand, base));
+        root.append(grid);
+      }
+
+      function pxImg(src, w, h, scale, cls = 'px') {
+        return el('img', { src, width: w * scale, height: h * scale, class: cls, alt: '' });
+      }
+
+      function card(c, base) {
+        const status = c.status;
+        const label = { ok: 'ready', pending: 'waiting', failed: 'failed' }[status] || status;
+        const head = el('div', { class: 'head' },
+          el('span', { class: 'num' }, '#' + c.number),
+          el('span', { class: 'id' }, c.id),
+          el('span', { class: 'tag' }, c.type + (c.provider ? ' · ' + c.provider : '')),
+          el('span', { class: 'tag status-' + status }, label));
+        const body = [head, el('div', { class: 'prompt' }, c.prompt || '')];
+        if (status === 'ok') {
+          const [fw, fh] = c.size;
+          const [cols, rows] = c.grid || [1, 1];
+          const w = fw * cols, h = fh * rows;
+          const s = scaleFor(w, h);
+          const art = el('div', { class: 'art' });
+          const main = el('div', { class: 'wrap' }, pxImg(base + c.files.image, w, h, s));
+          if (c.type === 'sprite' && c.hitboxes?.[0]) {
+            const hb = c.hitboxes[0];
+            main.append(el('div', { class: 'hitbox', style: { left: hb.x * s + 'px', top: hb.y * s + 'px', width: hb.w * s + 'px', height: hb.h * s + 'px' } }));
+          }
+          art.append(el('div', {}, main, el('div', { class: 'cap' }, `${w}×${h} shown ×${s}`)));
+          if (c.type === 'tile') {
+            const ts = Math.max(2, Math.floor(s / 2));
+            const tiled = el('div', { class: 'tiled', style: { width: `min(${w * ts * 3}px, 100%)`, aspectRatio: `${w} / ${h}`, backgroundImage: `url(${base + c.files.image})`, backgroundSize: '33.333% 33.333%' } });
+            art.append(el('div', {}, tiled, el('div', { class: 'cap' }, '3×3 tiled')));
+          }
+          if (c.files.mask) art.append(el('div', {}, pxImg(base + c.files.mask, w, h, Math.max(1, Math.floor(s / 2)), ''), el('div', { class: 'cap' }, 'mask')));
+          if (c.files.frames) {
+            const fs = scaleFor(fw, fh, 64);
+            const frames = el('div', { class: 'frames' }, c.files.frames.map((f) => pxImg(base + f, fw, fh, fs)));
+            const anim = pxImg(base + c.files.frames[0], fw, fh, scaleFor(fw, fh, 128));
+            let i = 0;
+            setInterval(() => { i = (i + 1) % c.files.frames.length; anim.src = base + c.files.frames[i]; }, 150);
+            art.append(el('div', {}, frames, el('div', { class: 'cap' }, 'frames')), el('div', {}, anim, el('div', { class: 'cap' }, 'animated')));
+          }
+          body.push(art);
+          body.push(el('ul', { class: 'checks' }, (c.checks || []).map((k) => el('li', { class: k.pass ? '' : 'bad' }, `${k.name}: ${k.value} (${k.limit})`))));
+          if (c.palette) body.push(el('div', { class: 'swatches' }, c.palette.map((h) => el('i', { style: { background: h }, title: h }))));
+          body.push(el('details', {}, el('summary', {}, 'raw provider output'), el('img', { src: base + c.files.raw, alt: '', style: { maxWidth: '256px', width: '100%' } })));
+        } else {
+          body.push(el('div', { class: 'status-' + status }, c.reason || ''));
+        }
+        if (c.attempts?.length) {
+          body.push(el('details', {}, el('summary', {}, `attempts (${c.attempts.length})`), el('ul', {}, c.attempts.map((a) => el('li', {}, `${a.provider}: ${a.outcome}`)))));
+        }
+        return el('div', { class: 'card' }, body);
+      }
+
+      load();
+    </script>
+  </body>
+</html>
