@@ -1,7 +1,8 @@
 {
   "date": "2026-10-08",
   "counts": {
-    "pixellab": 3
+    "pixellab": 3,
+    "retrodiffusion": 4
   },
   "limited": {}
 }
