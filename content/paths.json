@@ -1,0 +1,7 @@
+[
+  { "id": "fire", "name": "Fire", "major": "Tag enemies and kite while they burn; strong vs high health", "minor": "Bonus vs frost rifts", "minorVs": "frost", "opposes": "frost" },
+  { "id": "frost", "name": "Frost", "major": "Slow and control crowds", "minor": "Bonus vs beast rifts", "minorVs": "beast", "opposes": "fire" },
+  { "id": "thunder", "name": "Thunder", "major": "Chains through dense packs", "minor": "Bonus vs spirit rifts", "minorVs": "spirit", "opposes": "spirit" },
+  { "id": "spirit", "name": "Spirit", "major": "Pierces armor and shields", "minor": "Bonus vs thunder rifts", "minorVs": "thunder", "opposes": "thunder" },
+  { "id": "beast", "name": "Beast", "major": "Shikigami-heavy, swarm support", "minor": "Bonus vs fire rifts", "minorVs": "fire", "opposes": "fire" }
+]

@@ -1,0 +1,12 @@
+[
+  { "id": "thunder-finisher", "name": "Thunder Finisher", "description": "Your finisher arcs lightning to 4 more enemies.", "path": "thunder", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "finisher", "tag": "thunder", "effect": { "kind": "chain", "count": 4, "range": 160, "damagePct": 0.6 } }] },
+  { "id": "thunder-edge", "name": "Static Edge", "description": "Hits 1-3 jump to one nearby enemy.", "path": "thunder", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "string", "tag": "thunder", "effect": { "kind": "chain", "count": 1, "range": 120, "damagePct": 0.4 } }] },
+  { "id": "thunder-raiju", "name": "Raiju", "description": "A thunder beast strikes chain lightning behind you. Stacks.", "path": "thunder", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "shikigami", "id": "raiju" }] },
+  { "id": "thunder-charge", "name": "Storm Charge", "description": "Charge attacks chain through 6 enemies.", "path": "thunder", "tier": 2,
+    "effects": [{ "type": "onHit", "slot": "charge", "tag": "thunder", "effect": { "kind": "chain", "count": 6, "range": 180, "damagePct": 0.7 } }] },
+  { "id": "thunder-deep", "name": "Raijin's Drum", "description": "Every hit chains to 2 enemies. Locks out Spirit.", "path": "thunder", "tier": 3,
+    "effects": [{ "type": "onHit", "slot": "all", "tag": "thunder", "effect": { "kind": "chain", "count": 2, "range": 200, "damagePct": 0.5 } }] }
+]

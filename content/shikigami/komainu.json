@@ -1,0 +1,1 @@
+{ "id": "komainu", "name": "Komainu", "tag": "beast", "attack": "bite", "cooldown": 0.9, "damage": 13, "range": 220, "damagePerLevel": 6, "cooldownPerLevel": 0.9 }

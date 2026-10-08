@@ -1,0 +1,1 @@
+{ "id": "icicle-monk", "name": "Icicle Monk", "behavior": "ranged", "size": 22, "hp": 40, "speed": 75, "damage": 10, "xp": 3, "windup": 0.6, "attackCooldown": 2, "preferredRange": 280, "projectileSpeed": 300, "projectileSize": 9 }

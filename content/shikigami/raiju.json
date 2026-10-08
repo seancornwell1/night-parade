@@ -1,0 +1,1 @@
+{ "id": "raiju", "name": "Raiju", "tag": "thunder", "attack": "chain", "cooldown": 1.7, "damage": 12, "range": 250, "chains": 3, "damagePerLevel": 6, "cooldownPerLevel": 0.85 }

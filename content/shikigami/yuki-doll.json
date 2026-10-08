@@ -1,0 +1,1 @@
+{ "id": "yuki-doll", "name": "Yuki Doll", "tag": "frost", "attack": "nova", "cooldown": 2.6, "damage": 6, "range": 130, "radius": 130, "damagePerLevel": 4, "cooldownPerLevel": 0.85, "effects": [{ "kind": "slow", "amount": 0.45, "duration": 2.5 }] }

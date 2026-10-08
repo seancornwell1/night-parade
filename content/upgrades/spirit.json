@@ -1,0 +1,18 @@
+[
+  { "id": "spirit-edge", "name": "Spirit Edge", "description": "Hits 1-3 ignore armor.", "path": "spirit", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "string", "tag": "spirit", "effect": { "kind": "pierceArmor" } }] },
+  { "id": "spirit-finisher", "name": "Spirit Wave", "description": "Your finisher sends a piercing wave forward.", "path": "spirit", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "finisher", "tag": "spirit", "effect": { "kind": "wave", "damagePct": 0.8, "speed": 520, "range": 380, "width": 44 } }] },
+  { "id": "spirit-crane", "name": "Paper Crane", "description": "A paper crane fires armor-piercing darts behind you. Stacks.", "path": "spirit", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "shikigami", "id": "paper-crane" }] },
+  { "id": "spirit-charge", "name": "Soul Lance", "description": "Charge attacks ignore armor and launch a big wave.", "path": "spirit", "tier": 2,
+    "effects": [
+      { "type": "onHit", "slot": "charge", "tag": "spirit", "effect": { "kind": "pierceArmor" } },
+      { "type": "onHit", "slot": "charge", "tag": "spirit", "effect": { "kind": "wave", "damagePct": 1.2, "speed": 560, "range": 460, "width": 64 } }
+    ] },
+  { "id": "spirit-deep", "name": "Veil Breaker", "description": "Every hit ignores armor, +15% damage. Locks out Thunder.", "path": "spirit", "tier": 3,
+    "effects": [
+      { "type": "onHit", "slot": "all", "tag": "spirit", "effect": { "kind": "pierceArmor" } },
+      { "type": "stat", "stat": "damage", "mult": 1.15 }
+    ] }
+]

@@ -1,0 +1,22 @@
+{
+  "id": "mahapadma",
+  "name": "Mahapadma, the Great Red Lotus",
+  "behavior": "boss",
+  "size": 72,
+  "hp": 2200,
+  "speed": 65,
+  "damage": 25,
+  "xp": 60,
+  "armor": 0.25,
+  "knockbackResist": 1,
+  "reach": 90,
+  "pattern": [
+    { "kind": "chase", "time": 3 },
+    { "kind": "charge", "windup": 0.8, "speed": 520, "time": 0.6 },
+    { "kind": "chase", "time": 2 },
+    { "kind": "burst", "windup": 0.9, "count": 14, "projectileSpeed": 220 },
+    { "kind": "summon", "enemy": "ice-gaki", "count": 6 },
+    { "kind": "chase", "time": 3 },
+    { "kind": "burst", "windup": 0.7, "count": 20, "projectileSpeed": 260 }
+  ]
+}

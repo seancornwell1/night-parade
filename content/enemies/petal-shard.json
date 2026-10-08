@@ -1,0 +1,1 @@
+{ "id": "petal-shard", "name": "Petal Shard", "behavior": "swarmer", "size": 14, "hp": 12, "speed": 120, "damage": 4, "xp": 1, "windup": 0.25, "attackCooldown": 1, "reach": 28 }

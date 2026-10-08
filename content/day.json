@@ -1,0 +1,9 @@
+{
+  "enemies": [
+    { "enemy": "gaki", "weight": 5 },
+    { "enemy": "kappa", "weight": 2 },
+    { "enemy": "tengu-archer", "weight": 2 },
+    { "enemy": "nuppeppo", "weight": 2 },
+    { "enemy": "oni", "weight": 1 }
+  ]
+}

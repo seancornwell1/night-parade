@@ -1,0 +1,12 @@
+[
+  { "id": "fire-finisher", "name": "Burning Finisher", "description": "Your finisher sets enemies on fire.", "path": "fire", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "finisher", "tag": "fire", "effect": { "kind": "burn", "dps": 6, "maxHpPct": 0.04, "duration": 4 } }] },
+  { "id": "fire-edge", "name": "Ember Edge", "description": "Hits 1-3 leave a short burn.", "path": "fire", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "string", "tag": "fire", "effect": { "kind": "burn", "dps": 3, "maxHpPct": 0.01, "duration": 3 } }] },
+  { "id": "fire-fox", "name": "Kitsune-bi", "description": "A fox-fire familiar shoots burning bolts behind you. Stacks.", "path": "fire", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "shikigami", "id": "kitsune-bi" }] },
+  { "id": "fire-charge", "name": "Flame Launcher", "description": "Charge attacks burn hard, scaling with enemy health.", "path": "fire", "tier": 2,
+    "effects": [{ "type": "onHit", "slot": "charge", "tag": "fire", "effect": { "kind": "burn", "dps": 10, "maxHpPct": 0.07, "duration": 5 } }] },
+  { "id": "fire-deep", "name": "Inferno", "description": "Burning enemies explode when they die. Locks out Frost.", "path": "fire", "tier": 3,
+    "effects": [{ "type": "onHit", "slot": "all", "tag": "fire", "effect": { "kind": "explodeOnDeath", "radius": 110, "damagePct": 0.5 } }] }
+]

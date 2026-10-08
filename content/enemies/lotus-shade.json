@@ -1,0 +1,1 @@
+{ "id": "lotus-shade", "name": "Lotus Shade", "behavior": "splitter", "size": 30, "hp": 75, "speed": 60, "damage": 11, "xp": 2, "windup": 0.5, "attackCooldown": 1.4, "reach": 44, "splitInto": "petal-shard", "splitCount": 4 }

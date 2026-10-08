@@ -1,0 +1,15 @@
+[
+  { "id": "beast-komainu", "name": "Komainu", "description": "A guardian lion-dog bites enemies behind you. Stacks.", "path": "beast", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "shikigami", "id": "komainu" }] },
+  { "id": "beast-pack", "name": "Pack Leader", "description": "All shikigami deal +25% damage.", "path": "beast", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "stat", "stat": "shikigamiDamage", "mult": 1.25 }] },
+  { "id": "beast-bond", "name": "Familiar Bond", "description": "All shikigami attack 20% faster.", "path": "beast", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "stat", "stat": "shikigamiRate", "mult": 1.2 }] },
+  { "id": "beast-paws", "name": "Hundred Paws", "description": "Komainu gains two levels.", "path": "beast", "tier": 2,
+    "effects": [{ "type": "shikigami", "id": "komainu", "levels": 2 }] },
+  { "id": "beast-deep", "name": "Hyakki Pact", "description": "Another Komainu and +50% shikigami damage. Locks out Fire.", "path": "beast", "tier": 3,
+    "effects": [
+      { "type": "shikigami", "id": "komainu", "extra": true },
+      { "type": "stat", "stat": "shikigamiDamage", "mult": 1.5 }
+    ] }
+]

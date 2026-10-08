@@ -1,0 +1,1 @@
+{ "id": "kappa", "name": "Kappa", "behavior": "charger", "size": 24, "hp": 40, "speed": 70, "damage": 12, "xp": 3, "windup": 0.6, "attackCooldown": 1.8, "chargeRange": 220, "chargeSpeed": 480, "chargeTime": 0.45 }

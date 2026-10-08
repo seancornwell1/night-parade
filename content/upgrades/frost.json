@@ -1,0 +1,15 @@
+[
+  { "id": "frost-finisher", "name": "Frost Finisher", "description": "Your finisher slows everything it hits by half.", "path": "frost", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "finisher", "tag": "frost", "effect": { "kind": "slow", "amount": 0.5, "duration": 3 } }] },
+  { "id": "frost-edge", "name": "Chill Edge", "description": "Hits 1-3 slow enemies.", "path": "frost", "tier": 1,
+    "effects": [{ "type": "onHit", "slot": "string", "tag": "frost", "effect": { "kind": "slow", "amount": 0.3, "duration": 1.5 } }] },
+  { "id": "frost-doll", "name": "Yuki Doll", "description": "A snow-woman doll pulses frost behind you. Stacks.", "path": "frost", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "shikigami", "id": "yuki-doll" }] },
+  { "id": "frost-charge", "name": "Glacial Charge", "description": "Charge attacks slow heavily and freeze already-slowed enemies.", "path": "frost", "tier": 2,
+    "effects": [
+      { "type": "onHit", "slot": "charge", "tag": "frost", "effect": { "kind": "freeze", "duration": 1.5 } },
+      { "type": "onHit", "slot": "charge", "tag": "frost", "effect": { "kind": "slow", "amount": 0.6, "duration": 4 } }
+    ] },
+  { "id": "frost-deep", "name": "Absolute Zero", "description": "Any hit freezes slowed enemies solid. Locks out Fire.", "path": "frost", "tier": 3,
+    "effects": [{ "type": "onHit", "slot": "all", "tag": "frost", "effect": { "kind": "freeze", "duration": 1 } }] }
+]

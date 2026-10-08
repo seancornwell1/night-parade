@@ -1,0 +1,14 @@
+[
+  { "id": "vitality", "name": "Vitality", "description": "+25 max HP and heal 25.", "tier": 1, "maxStacks": 5,
+    "effects": [{ "type": "stat", "stat": "maxHp", "add": 25 }, { "type": "heal", "amount": 25 }] },
+  { "id": "swift", "name": "Swift Feet", "description": "+8% move speed.", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "stat", "stat": "moveSpeed", "mult": 1.08 }] },
+  { "id": "greed", "name": "Long Reach", "description": "+40% pickup radius.", "tier": 1, "maxStacks": 3,
+    "effects": [{ "type": "stat", "stat": "pickupRadius", "mult": 1.4 }] },
+  { "id": "might", "name": "Might", "description": "+10% damage.", "tier": 1, "maxStacks": 5,
+    "effects": [{ "type": "stat", "stat": "damage", "mult": 1.1 }] },
+  { "id": "tempo", "name": "Tempo", "description": "Finisher cooldown -20%.", "tier": 1, "maxStacks": 2,
+    "effects": [{ "type": "stat", "stat": "finisherCooldown", "mult": 0.8 }] },
+  { "id": "second-wind", "name": "Second Wind", "description": "Heal 40.", "tier": 1, "maxStacks": 99, "weight": 0.5,
+    "effects": [{ "type": "heal", "amount": 40 }] }
+]

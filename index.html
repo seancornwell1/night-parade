@@ -54,6 +54,15 @@
   <body>
     <div id="game"></div>
     <div id="rotate">Turn your phone sideways to play</div>
+    <script>
+      // Show errors on screen: the phone has no console.
+      addEventListener('error', (e) => {
+        const pre = document.createElement('pre');
+        pre.style.cssText = 'position:fixed;left:8px;right:8px;bottom:8px;z-index:30;margin:0;padding:8px;background:#300;color:#fdd;font:12px monospace;white-space:pre-wrap';
+        pre.textContent = 'Error: ' + e.message;
+        document.body.appendChild(pre);
+      });
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

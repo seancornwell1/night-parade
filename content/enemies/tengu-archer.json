@@ -1,0 +1,1 @@
+{ "id": "tengu-archer", "name": "Tengu Archer", "behavior": "ranged", "size": 22, "hp": 30, "speed": 80, "damage": 8, "xp": 3, "windup": 0.5, "attackCooldown": 2.2, "preferredRange": 260, "projectileSpeed": 260, "projectileSize": 8 }

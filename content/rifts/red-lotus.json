@@ -1,0 +1,18 @@
+{
+  "id": "red-lotus",
+  "name": "Guren, the Red Lotus Hell",
+  "flavor": "A cold hell where frost splits skin into red petals. Tonight the parade marches in on frozen wind.",
+  "theme": "Buddhist cold hell",
+  "tag": "frost",
+  "resisted": "frost",
+  "feared": "fire",
+  "enemies": [
+    { "enemy": "ice-gaki", "weight": 6 },
+    { "enemy": "guren-hound", "weight": 2 },
+    { "enemy": "icicle-monk", "weight": 2 },
+    { "enemy": "lotus-shade", "weight": 2 },
+    { "enemy": "glacier-oni", "weight": 1 }
+  ],
+  "boss": "mahapadma",
+  "omens": [{ "enemy": "ice-gaki", "weight": 1 }]
+}

@@ -24,3 +24,7 @@
 - Every tuning number lives in `src/config/tuning.ts`. Triple-tap the top-left
   corner in game to open the tuning panel; "Copy changes" gives back the edited
   values to paste into that file.
+- Content data lives in `content/` and is loaded and validated by `src/content/`.
+  Schemas are documented in `docs/SCHEMAS.md`.
+- Open the game with `?debug` to expose `window.__np` (game, controls, status, actions)
+  for automated playtests.
