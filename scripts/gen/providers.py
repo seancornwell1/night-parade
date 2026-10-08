@@ -126,7 +126,8 @@ class RetroDiffusion(Provider):
             "num_images": 1,
         }
         if item["type"] == "tile":
-            body["tile_x"] = body["tile_y"] = True
+            if self.cfg.get("tileSeamless", True):
+                body["tile_x"] = body["tile_y"] = True
         else:
             body["remove_bg"] = True
         if palette_img is not None:

@@ -1,8 +1,20 @@
 {
   "providers": {
-    "tile": ["retrodiffusion", "pixellab", "cloudflare"],
-    "sprite": ["pixellab", "retrodiffusion", "cloudflare"],
-    "sheet": ["pixellab", "retrodiffusion", "cloudflare"]
+    "tile": [
+      "retrodiffusion",
+      "pixellab",
+      "cloudflare"
+    ],
+    "sprite": [
+      "pixellab",
+      "retrodiffusion",
+      "cloudflare"
+    ],
+    "sheet": [
+      "pixellab",
+      "retrodiffusion",
+      "cloudflare"
+    ]
   },
   "dailyCaps": {
     "pixellab": 10,
@@ -15,7 +27,8 @@
       "tile": "rd_tile__single_tile",
       "sprite": "rd_fast__default",
       "sheet": "rd_pro__spritesheet"
-    }
+    },
+    "tileSeamless": true
   },
   "pixellab": {
     "view": "high top-down",
@@ -33,8 +46,14 @@
     "spriteMinCoverage": 0.04,
     "spriteMaxCoverage": 0.9,
     "contrastMin": 1.6,
-    "frameAreaRange": [0.6, 1.6],
-    "frameHeightRange": [0.7, 1.3],
+    "frameAreaRange": [
+      0.6,
+      1.6
+    ],
+    "frameHeightRange": [
+      0.7,
+      1.3
+    ],
     "frameColorDistanceMax": 0.6,
     "silhouetteSpillMax": 0.02,
     "minComponentPixels": 4

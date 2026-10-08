@@ -265,9 +265,10 @@ def process(item: dict, raw: Image.Image, palette_cfg: dict, cfg: dict, silhouet
     extras: dict = {}
 
     if kind == "tile":
+        # Judge the provider's own edges: blending can hide any seam, so measure before it.
+        ratio = seam_ratio(snap(img, palette))
+        checks.append(check("original edges wrap seamlessly", ratio <= c["tileSeamRatio"], ratio, f"<= {c['tileSeamRatio']}"))
         img = snap(make_seamless(img), palette)
-        ratio = seam_ratio(img)
-        checks.append(check("seamless edges", ratio <= c["tileSeamRatio"], ratio, f"<= {c['tileSeamRatio']}"))
         n = len(palette_used(img))
         checks.append(check("enough detail (colours)", n >= c["tileMinColors"], n, f">= {c['tileMinColors']}"))
     else:
