@@ -1,0 +1,5 @@
+--- run 2026-10-09T11:11:45Z
+[phase1-mei] #1 mei (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-mei] #2 mei (sprite)
+  retrodiffusion: ok on attempt 1

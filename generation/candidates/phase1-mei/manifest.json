@@ -1,0 +1,157 @@
+{
+  "batch": "phase1-mei",
+  "request": "generation/requests/phase1-5-mei.json",
+  "created": "2026-10-09T11:10:16Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "mei",
+      "type": "sprite",
+      "prompt": "Mei, a cheerful 8-year-old girl origami master: two big round hair buns tied with bright yellow ribbons, a bright magenta kimono with big white cherry blossoms and a sky-blue sash, holding a large folded paper crane; a chubby round tanuki with a dark eye mask, big round ears and a thick striped fluffy tail rides on her shoulders. Bold dark outlines, bright saturated colours, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.18,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T11:10:57Z",
+      "files": {
+        "image": "01-mei.png",
+        "raw": "01-mei.raw.png",
+        "mask": "01-mei.mask.png"
+      },
+      "palette": [
+        "#fce0aa",
+        "#f5c698",
+        "#84c4d6",
+        "#9d7a82",
+        "#6f546b",
+        "#b84d80",
+        "#c1377e",
+        "#763f5c",
+        "#7c2159",
+        "#41233b",
+        "#3a212d",
+        "#2b1d2b",
+        "#2e1228",
+        "#210b0e",
+        "#050008"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.697,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.354,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 7.514,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 11,
+          "y": 1,
+          "w": 26,
+          "h": 45
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "mei",
+      "type": "sprite",
+      "prompt": "Mei, a cheerful 8-year-old girl origami master: two big round hair buns tied with bright yellow ribbons, a bright magenta kimono with big white cherry blossoms and a sky-blue sash, holding a large folded paper crane; a chubby round tanuki with a dark eye mask, big round ears and a thick striped fluffy tail rides on her shoulders. Bold dark outlines, bright saturated colours, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.18,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T11:11:45Z",
+      "files": {
+        "image": "02-mei.png",
+        "raw": "02-mei.raw.png",
+        "mask": "02-mei.mask.png"
+      },
+      "palette": [
+        "#fcecf9",
+        "#fae324",
+        "#f0c991",
+        "#7cb8ab",
+        "#c77c34",
+        "#847753",
+        "#754426",
+        "#484354",
+        "#c82585",
+        "#452725",
+        "#1b1925",
+        "#450d2d",
+        "#100c16",
+        "#090104",
+        "#090103",
+        "#000000"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.597,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.478,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 7.284,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 1,
+          "w": 41,
+          "h": 45
+        }
+      ]
+    }
+  ],
+  "note": "Mei & Pom redesign for an 8-year-old player: bright magenta and yellow, big hair buns, a large clearly drawn tanuki on her shoulders. Retro Diffusion Pro, 48x48.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-09T11:11:45Z",
+  "counts": {
+    "ok": 2
+  }
+}
