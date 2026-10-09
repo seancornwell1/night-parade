@@ -64,6 +64,11 @@ class Usage:
         self.data["counts"][name] = self.data["counts"].get(name, 0) + 1
         self.dirty = True
 
+    def spend(self, name: str, usd: float) -> None:
+        spent = self.data.setdefault("usd", {})
+        spent[name] = round(spent.get(name, 0) + float(usd), 4)
+        self.dirty = True
+
     def limit(self, name: str, why: str) -> None:
         self.data["limited"][name] = why[:200]
         self.dirty = True
@@ -164,10 +169,13 @@ def make_candidate(item, number, palette_cfg, cfg, providers, usage, log) -> dic
                 log(f"  {name}: unexpected error {e!r}")
                 break
             usage.count(name)
+            cost = getattr(p, "last_cost", None)
+            if cost is not None:
+                usage.spend(name, cost)
             result = process(item, raw, palette_cfg, cfg, silhouette)
             failed = [c for c in result["checks"] if not c["pass"]]
             entry["attempts"].append(
-                {"provider": name, "outcome": "ok" if not failed else "checks failed: " + "; ".join(f"{c['name']} = {c['value']}" for c in failed)}
+                {"provider": name, "cost": cost, "outcome": "ok" if not failed else "checks failed: " + "; ".join(f"{c['name']} = {c['value']}" for c in failed)}
             )
             if not failed:
                 log(f"  {name}: ok on attempt {attempt}")
@@ -380,7 +388,33 @@ def quote(batch: str) -> int:
     return 0
 
 
+def balances() -> int:
+    """Read-only balance check on each provider. Generates nothing."""
+    import os
+
+    import requests
+
+    out = {"checked": now()}
+    if os.environ.get("PIXELLAB_API_KEY"):
+        try:
+            r = requests.get("https://api.pixellab.ai/v1/balance", headers={"Authorization": f"Bearer {os.environ['PIXELLAB_API_KEY']}"}, timeout=60)
+            out["pixellab"] = r.json() if r.status_code < 400 else f"HTTP {r.status_code}: {r.text[:200]}"
+        except Exception as e:  # noqa: BLE001
+            out["pixellab"] = f"error: {e}"
+    if os.environ.get("RETRO_DIFFUSION_API_KEY"):
+        try:
+            r = requests.get("https://api.retrodiffusion.ai/v2/inferences/credits", headers={"X-RD-Token": os.environ["RETRO_DIFFUSION_API_KEY"]}, timeout=60)
+            out["retrodiffusion"] = r.json() if r.status_code < 400 else f"HTTP {r.status_code}: {r.text[:200]}"
+        except Exception as e:  # noqa: BLE001
+            out["retrodiffusion"] = f"error: {e}"
+    save_json(GEN / "balances.json", out)
+    print(json.dumps(out, indent=2))
+    return 0
+
+
 if __name__ == "__main__":
+    if len(sys.argv) == 2 and sys.argv[1] == "--balances":
+        sys.exit(balances())
     if len(sys.argv) == 3 and sys.argv[1] == "--reprocess":
         sys.exit(reprocess(sys.argv[2]))
     if len(sys.argv) == 3 and sys.argv[1] == "--quote":

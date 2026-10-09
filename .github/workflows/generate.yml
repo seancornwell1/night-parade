@@ -13,6 +13,10 @@ on:
         description: 'Batch to price on Retro Diffusion (free cost check, generates nothing). Leave empty for a normal run.'
         required: false
         default: ''
+      balances:
+        description: 'Only check provider balances (read-only, generates nothing).'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -37,7 +41,7 @@ jobs:
           cache-dependency-path: scripts/gen/requirements.txt
       - run: pip install -r scripts/gen/requirements.txt
       - name: Generate
-        if: ${{ !inputs.quote }}
+        if: ${{ !inputs.quote && !inputs.balances }}
         run: python scripts/gen/run.py
         env:
           PIXELLAB_API_KEY: ${{ secrets.PIXELLAB_API_KEY }}
@@ -48,6 +52,12 @@ jobs:
         if: ${{ inputs.quote }}
         run: python scripts/gen/run.py --quote "${{ inputs.quote }}"
         env:
+          RETRO_DIFFUSION_API_KEY: ${{ secrets.RETRO_DIFFUSION_API_KEY }}
+      - name: Balance check
+        if: ${{ inputs.balances }}
+        run: python scripts/gen/run.py --balances
+        env:
+          PIXELLAB_API_KEY: ${{ secrets.PIXELLAB_API_KEY }}
           RETRO_DIFFUSION_API_KEY: ${{ secrets.RETRO_DIFFUSION_API_KEY }}
       - name: Commit candidates
         id: commit

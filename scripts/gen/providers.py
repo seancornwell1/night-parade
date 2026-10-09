@@ -71,6 +71,7 @@ def b64_image(data: str) -> Image.Image:
 
 class Provider:
     name = "base"
+    last_cost: float | None = None  # USD reported by the provider for the last generation
 
     def configured(self) -> bool:
         raise NotImplementedError
@@ -111,6 +112,7 @@ class PixelLab(Provider):
             body["color_image"] = {"type": "base64", "base64": png_b64(palette_img.convert("RGB")), "format": "png"}
         r = post("https://api.pixellab.ai/v1/generate-image-pixflux", headers={"Authorization": f"Bearer {self.key}"}, json=body)
         data = r.json()
+        self.last_cost = (data.get("usage") or {}).get("usd")
         try:
             return b64_image(data["image"]["base64"])
         except (KeyError, TypeError) as e:
@@ -160,6 +162,7 @@ class RetroDiffusion(Provider):
             if not task_id:
                 raise ProviderError(f"no task id: {str(task)[:300]}")
             result = self.poll(task_id, headers)
+        self.last_cost = result.get("balance_cost")
         images = result.get("base64_images") or []
         if not images:
             raise ProviderError(f"no images: {str(result)[:300]}")
