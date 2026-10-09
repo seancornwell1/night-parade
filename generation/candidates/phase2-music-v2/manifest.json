@@ -1,0 +1,54 @@
+{
+  "batch": "phase2-music-v2",
+  "request": "generation/requests/phase2-5-music-v2.json",
+  "created": "2026-10-09T13:04:22Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "day-theme",
+      "type": "music",
+      "prompt": "Dark, subdued electronic track for a survival action game's daytime: a steady four-on-the-floor kick thumping like a club, deep warm sub bass, sinister minor-key synth arpeggios, sparse eerie koto plucks and breathy shakuhachi drifting over it, tense and brooding but restrained, 118 BPM, instrumental, loopable, no vocals",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+        },
+        {
+          "provider": "stability",
+          "outcome": "skipped: daily cap of 1 reached"
+        }
+      ],
+      "duration": 120,
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 2,
+      "id": "night-theme",
+      "type": "music",
+      "prompt": "Aggressive Japanese-themed metal battle music for a night boss fight: heavy downtuned distorted guitar riffs, fast double-kick drums layered with thunderous taiko, shamisen and shakuhachi lead melodies, dark, intense and driving, 150 BPM, instrumental, loopable, no vocals",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+        },
+        {
+          "provider": "stability",
+          "outcome": "skipped: daily cap of 1 reached"
+        }
+      ],
+      "duration": 120,
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "New direction: day = subdued sinister club thump; night = Japanese metal fight music. Waiting for a music provider: ElevenLabs music needs a paid plan and Stability's free credits are spent.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-09T13:04:22Z",
+  "counts": {
+    "pending": 2
+  }
+}

@@ -1,0 +1,7 @@
+--- run 2026-10-09T13:04:22Z
+[phase2-sheets-test] #1 hotaru-idle (sheet)
+[phase2-sheets-test] #2 hotaru-idle (sheet)
+[phase2-sheets-test] #3 hotaru-run (sheet)
+[phase2-sheets-test] #4 hotaru-run (sheet)
+[phase2-sheets-test] #5 hotaru-attack (sheet)
+[phase2-sheets-test] #6 hotaru-attack (sheet)

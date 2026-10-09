@@ -1,0 +1,166 @@
+{
+  "batch": "phase2-sheets-test",
+  "request": "generation/requests/phase2-0-sheets.json",
+  "created": "2026-10-09T13:04:22Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "hotaru-idle",
+      "type": "sheet",
+      "prompt": "16-bit pixel art sprite sheet: exactly 4 animation frames in one horizontal row on a plain flat background, the same character in every frame, idle breathing loop. Hotaru the Lantern Warden: a young girl in an indigo kimono and hakama with a very wide flat straw kasa hat, a glowing amber paper lantern on a pole over her shoulder. 3/4 top-down view, facing right, evenly spaced frames, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "grid": [
+        4,
+        1
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 2,
+      "id": "hotaru-idle",
+      "type": "sheet",
+      "prompt": "16-bit pixel art sprite sheet: exactly 4 animation frames in one horizontal row on a plain flat background, the same character in every frame, idle breathing loop. Hotaru the Lantern Warden: a young girl in an indigo kimono and hakama with a very wide flat straw kasa hat, a glowing amber paper lantern on a pole over her shoulder. 3/4 top-down view, facing right, evenly spaced frames, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "grid": [
+        4,
+        1
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 3,
+      "id": "hotaru-run",
+      "type": "sheet",
+      "prompt": "16-bit pixel art sprite sheet: exactly 4 animation frames in one horizontal row on a plain flat background, the same character in every frame, running cycle. Hotaru the Lantern Warden: a young girl in an indigo kimono and hakama with a very wide flat straw kasa hat, a glowing amber paper lantern on a pole over her shoulder. 3/4 top-down view, facing right, evenly spaced frames, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "grid": [
+        4,
+        1
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 4,
+      "id": "hotaru-run",
+      "type": "sheet",
+      "prompt": "16-bit pixel art sprite sheet: exactly 4 animation frames in one horizontal row on a plain flat background, the same character in every frame, running cycle. Hotaru the Lantern Warden: a young girl in an indigo kimono and hakama with a very wide flat straw kasa hat, a glowing amber paper lantern on a pole over her shoulder. 3/4 top-down view, facing right, evenly spaced frames, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "grid": [
+        4,
+        1
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 5,
+      "id": "hotaru-attack",
+      "type": "sheet",
+      "prompt": "16-bit pixel art sprite sheet: exactly 4 animation frames in one horizontal row on a plain flat background, the same character in every frame, sword slash attack swing. Hotaru the Lantern Warden: a young girl in an indigo kimono and hakama with a very wide flat straw kasa hat, a glowing amber paper lantern on a pole over her shoulder. 3/4 top-down view, facing right, evenly spaced frames, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "grid": [
+        4,
+        1
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 6,
+      "id": "hotaru-attack",
+      "type": "sheet",
+      "prompt": "16-bit pixel art sprite sheet: exactly 4 animation frames in one horizontal row on a plain flat background, the same character in every frame, sword slash attack swing. Hotaru the Lantern Warden: a young girl in an indigo kimono and hakama with a very wide flat straw kasa hat, a glowing amber paper lantern on a pole over her shoulder. 3/4 top-down view, facing right, evenly spaced frames, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "grid": [
+        4,
+        1
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "Test: can Cloudflare (free) make animation sheets with consistent frames? Hotaru idle, run and attack, 4 frames of 48x48 each. The frame-consistency check judges them.",
+  "palette": {
+    "mode": "file",
+    "name": "day",
+    "colors": [
+      "#281622",
+      "#1a503e",
+      "#4b4056",
+      "#9e272b",
+      "#c82585",
+      "#3f823b",
+      "#7e6758",
+      "#ec5840",
+      "#58ac46",
+      "#ab8259",
+      "#28bdeb",
+      "#9c9c9c",
+      "#7ebd42",
+      "#c5a16a",
+      "#62e1f6",
+      "#fcecdc"
+    ]
+  },
+  "updated": "2026-10-09T13:04:22Z",
+  "counts": {
+    "pending": 6
+  }
+}
