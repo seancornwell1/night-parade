@@ -40,15 +40,6 @@ jobs:
           cache: pip
           cache-dependency-path: scripts/gen/requirements.txt
       - run: pip install -r scripts/gen/requirements.txt
-      - name: ffmpeg
-        timeout-minutes: 8
-        run: |
-          if ! which ffmpeg; then
-            # Skip the slow man-db rebuild that apt triggers on hosted runners.
-            sudo rm -f /var/lib/man-db/auto-update
-            sudo DEBIAN_FRONTEND=noninteractive apt-get update -qq
-            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends ffmpeg
-          fi
       - name: Generate
         if: ${{ !inputs.quote && !inputs.balances }}
         run: python scripts/gen/run.py

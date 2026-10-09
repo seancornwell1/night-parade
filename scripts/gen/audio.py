@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import os
 import re
+import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -91,19 +92,34 @@ class Stability(Provider):
 # ---------------------------------------------------------------- post-processing
 
 
+def _ffmpeg_exe() -> str:
+    """System ffmpeg if present, otherwise the static build bundled with the imageio-ffmpeg package."""
+    exe = shutil.which("ffmpeg")
+    if exe:
+        return exe
+    import imageio_ffmpeg
+
+    return imageio_ffmpeg.get_ffmpeg_exe()
+
+
 def _ffmpeg(*args: str) -> str:
-    p = subprocess.run(["ffmpeg", "-hide_banner", "-nostdin", "-y", *args], capture_output=True, text=True)
+    p = subprocess.run([_ffmpeg_exe(), "-hide_banner", "-nostdin", "-y", *args], capture_output=True, text=True)
     if p.returncode != 0:
         raise ProviderError(f"ffmpeg failed: {p.stderr[-400:]}")
     return p.stderr
 
 
 def _duration(path: Path) -> float:
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)], capture_output=True, text=True)
+    """Decode the file and read the last timestamp ffmpeg reports (no ffprobe needed)."""
     try:
-        return float(out.stdout.strip())
-    except ValueError:
+        err = _ffmpeg("-i", str(path), "-f", "null", "-")
+    except ProviderError:
         return 0.0
+    times = re.findall(r"time=(\d+):(\d+):([\d.]+)", err)
+    if not times:
+        return 0.0
+    h, m, sec = times[-1]
+    return int(h) * 3600 + int(m) * 60 + float(sec)
 
 
 def _stats(path: Path) -> dict:
