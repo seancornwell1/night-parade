@@ -14,16 +14,34 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
         },
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "outcome": "checks failed: original edges wrap seamlessly = 4.464"
         },
         {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "provider": "pixellab",
+          "outcome": "checks failed: original edges wrap seamlessly = 1.892"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "checks failed: original edges wrap seamlessly = 2.535"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": false,
+          "value": 2.535,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
         }
       ],
       "status": "pending",
@@ -40,16 +58,34 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
         },
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "outcome": "checks failed: original edges wrap seamlessly = 2.11"
         },
         {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "provider": "pixellab",
+          "outcome": "checks failed: original edges wrap seamlessly = 3.196"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "checks failed: original edges wrap seamlessly = 3.379"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": false,
+          "value": 3.379,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
         }
       ],
       "status": "pending",
@@ -66,16 +102,34 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
         },
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "outcome": "checks failed: original edges wrap seamlessly = 1.706"
         },
         {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "provider": "pixellab",
+          "outcome": "checks failed: original edges wrap seamlessly = 1.681"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "checks failed: original edges wrap seamlessly = 2.295"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": false,
+          "value": 2.295,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 14.0,
+          "limit": ">= 3"
         }
       ],
       "status": "pending",
@@ -238,12 +292,12 @@
       "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
     }
   ],
-  "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept.",
+  "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept. Retro Diffusion's free credits are used up, so tiles try Cloudflare before PixelLab (PixelLab tends to draw scenes rather than textures).",
   "palette": {
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T00:13:56Z",
+  "updated": "2026-10-09T00:19:57Z",
   "counts": {
     "pending": 9
   }
