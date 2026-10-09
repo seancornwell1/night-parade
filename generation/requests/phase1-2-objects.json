@@ -63,6 +63,7 @@
       "rdStyle": "rd_tile__scene_object",
       "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view",
       "providers": [
+        "retrodiffusion",
         "cloudflare"
       ]
     },
@@ -79,6 +80,36 @@
       "prompt": "a single mossy grey boulder, 3/4 top-down game view",
       "providers": [
         "cloudflare"
+      ]
+    },
+    {
+      "id": "lantern",
+      "type": "sprite",
+      "size": [
+        16,
+        32
+      ],
+      "candidates": 3,
+      "background": "#5fae44",
+      "rdStyle": "rd_tile__tile_object",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "providers": [
+        "retrodiffusion"
+      ]
+    },
+    {
+      "id": "rock",
+      "type": "sprite",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "rdStyle": "rd_tile__tile_object",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "providers": [
+        "retrodiffusion"
       ]
     }
   ]

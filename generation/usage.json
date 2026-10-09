@@ -6,7 +6,6 @@
     "cloudflare": 55
   },
   "limited": {
-    "retrodiffusion": "cost 0.06 exceeds remaining balance 0.020000000000000018",
     "pixellab": "HTTP 402: {\"detail\":\"Insufficient generations and credits. Generations: 40.0/40.0, Credits: 0.0\"}"
   }
 }

@@ -57,6 +57,58 @@
       "providers": [
         "cloudflare"
       ]
+    },
+    {
+      "id": "wall",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 3,
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "providers": [
+        "retrodiffusion"
+      ]
+    },
+    {
+      "id": "grass",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 1,
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "providers": [
+        "retrodiffusion"
+      ]
+    },
+    {
+      "id": "dirt-path",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 1,
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "providers": [
+        "retrodiffusion"
+      ]
+    },
+    {
+      "id": "water",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 1,
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "providers": [
+        "retrodiffusion"
+      ]
     }
   ]
 }
