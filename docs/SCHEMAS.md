@@ -68,6 +68,10 @@ code. All numbers below are per-enemy; global multipliers (`enemyHpMult`,
 | `speed` | number | yes | Move speed (units/s) |
 | `damage` | number | yes | Damage per strike, dash or projectile |
 | `xp` | number | yes | XP dropped (doubled at night by `nightXpMult`) |
+| `sprite` | string | no | Art in `assets/day`, e.g. `"enemies/gaki"`. Without it the enemy is a grey box (listed in ASSETS_NEEDED.md). Drawn at 2 world units per art pixel |
+| `spriteScale` | number | no | Draw the sprite smaller or larger (e.g. split pieces reuse their parent's art at 0.55) |
+| `tint` | `"#rrggbb"` | no | Tint applied to the sprite |
+| `projectileSprite` | string | no | Ranged: art for its shots, e.g. `"fx/arrow"` |
 | `armor` | number 0–1 | no | Fraction of damage blocked. Spirit's `pierceArmor` ignores it |
 | `knockbackResist` | number 0–1 | no | Reduces knockback, hit-stun and freeze |
 | `windup` | number | no | Telegraph seconds before a strike, dash or shot |
@@ -167,6 +171,8 @@ enemies **outside your attack arc** (tuning `hitArcDeg`), so they guard your bac
 | `radius` | number | nova | Pulse radius |
 | `chains` | number | chain | Extra enemies the lightning jumps to |
 | `effects` | HitEffect[] | no | Applied to everything it hits |
+| `sprite` | string | no | Art in `assets/day`, e.g. `"shikigami/komainu"` |
+| `projectileSprite` | string | no | Art for its shots (bolt, pierce) |
 
 Attacks: `bolt` one shot, one target. `pierce` a shot through every enemy in its path.
 `chain` instant lightning that jumps. `nova` a pulse around the familiar. `bite` it dashes
@@ -182,6 +188,45 @@ matchup. Cooldown is `cooldown × cooldownPerLevel^(level − 1) ÷ shikigamiRat
 | `enemies` | Spawn[] | The day stage's own demons |
 
 During the day, spawns draw from `day.enemies` plus tonight's rift `omens`.
+
+### Stage — `content/day.json` `stage`
+
+The frozen day world. Layout comes from `seed`, so it is the same every run. Every art
+reference must exist in `assets/day` (checked at load).
+
+| Field | Type | Meaning |
+|---|---|---|
+| `seed` | number | Seed for object placement |
+| `ground` | string | Tile repeated over the whole world |
+| `patches` | `{tile, count, minSize, maxSize}[]` | Random rectangles of another tile (currently none) |
+| `border` | `{tile, thickness}` | Wall tile around the edge |
+| `paths`, `water` | `{tile, x, y, w, h}[]` | Tiled rectangles in world units |
+| `clearRadius` | number | No objects this close to the start |
+| `regions` | `{name, x, y, w, h, objects: {sprite, count}[]}[]` | Areas filled with scattered objects (forest, village outskirts, fields) |
+| `landmarks` | `{sprite, x, y}[]` | Fixed objects (the keep) |
+| `shrines` | string[] | Art for the healing shrines, used in turn |
+
+## Character — `content/characters/<id>.json`
+
+| Field | Type | Meaning |
+|---|---|---|
+| `id` | string | Unique id |
+| `name` | string | Display name |
+| `sprite` | string | Art in `assets/day` |
+| `weapon` | weapon id | Starting weapon |
+| `playable` | boolean | Selectable |
+| `default` | boolean | The character used now (exactly one) |
+
+## Weapon — `content/weapons/<id>.json`
+
+Combo numbers still live in tuning; per-weapon strings, charge sets and reach come later.
+
+| Field | Type | Meaning |
+|---|---|---|
+| `id` | string | Unique id |
+| `name` | string | Display name |
+| `sprite` | string | Art in `assets/day` |
+| `angleOffsetDeg` | number | The angle the blade points in the art, so it can be rotated to the swing |
 
 ## Rift — `content/rifts/<id>.json`
 

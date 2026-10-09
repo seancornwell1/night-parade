@@ -32,3 +32,18 @@ Kept candidates live in `assets/templates/` (`tiles/`, `objects/`, `silhouettes/
 `assets/templates/templates.json` with the provider, prompt, palette and source batch of each.
 Silhouette templates keep the sprite and its exact mask (`<id>.mask.png`); phase 2 fills
 the silhouettes in the locked day palette.
+
+## Day palette (locked)
+
+`generation/palettes/day.json` is the locked 16-colour day palette, built from every approved
+day template (k-means in Lab; tiles weighted ×3; two near-duplicate colours swapped for the
+water blue and Mei's magenta from the source images). `assets/day/` holds every approved
+template snapped to it, with masks and hitboxes in `assets/day/day.json`. Day art requests
+use `"palette": {"mode": "file", "name": "day"}`.
+
+## In-game animation
+
+Until animated sprite sheets exist, the game animates each single frame in code (allowed:
+code places, moves, tints, scales and animates generated files): idle breathing, run bob and
+lean, attack lean and squash, a spin for the dodge roll, tint flashes for hits, charge, slow,
+burn and freeze. The weapon art itself swings through each attack arc.

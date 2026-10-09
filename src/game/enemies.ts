@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { ART_SCALE, hasArt } from '../art';
 import { GREY, tuning } from '../config/tuning';
 import type { BossStep, EnemyDef } from '../content/types';
 
@@ -10,14 +11,17 @@ export interface EnemyWorld {
   py: number;
   tokensUsed: number;
   hurtPlayer(damage: number): void;
-  fireEnemyProjectile(x: number, y: number, angle: number, speed: number, size: number, damage: number): void;
+  fireEnemyProjectile(x: number, y: number, angle: number, speed: number, size: number, damage: number, sprite?: string): void;
   summon(id: string, x: number, y: number): void;
 }
 
 type Mode = 'move' | 'windup' | 'charge';
 
 export class Enemy {
-  rect: Phaser.GameObjects.Rectangle;
+  rect: Phaser.GameObjects.Rectangle | Phaser.GameObjects.Image;
+  private art: boolean;
+  private baseTint: number;
+  private bob = Math.random() * 10;
   x: number;
   y: number;
   vx = 0;
@@ -55,8 +59,15 @@ export class Enemy {
     this.y = y;
     this.maxHp = this.hp = def.hp * tuning.enemyHpMult;
     this.cooldown = Math.random() * (def.attackCooldown ?? 1);
-    const color = def.behavior === 'boss' ? GREY.boss : GREY.enemy;
-    this.rect = scene.add.rectangle(x, y, def.size, def.size, color).setDepth(def.behavior === 'boss' ? 6 : 5);
+    this.art = !!def.sprite && hasArt(def.sprite);
+    this.baseTint = def.tint ? parseInt(def.tint.slice(1), 16) : 0xffffff;
+    if (this.art) {
+      this.rect = scene.add.image(x, y, def.sprite!).setOrigin(0.5, 0.75);
+    } else {
+      // Grey box until this enemy has art (night/rift enemies come in asset phase 3).
+      const color = def.behavior === 'boss' ? GREY.boss : GREY.enemy;
+      this.rect = scene.add.rectangle(x, y, def.size, def.size, color).setDepth(def.behavior === 'boss' ? 6 : 5);
+    }
   }
 
   get isBoss(): boolean {
@@ -226,6 +237,7 @@ export class Enemy {
           this.def.projectileSpeed ?? 260,
           this.def.projectileSize ?? 8,
           this.damage,
+          this.def.projectileSprite,
         );
         this.finish();
       }
@@ -297,15 +309,35 @@ export class Enemy {
     }
   }
 
-  sync(now: number): void {
+  sync(now: number, playerX: number): void {
+    const pop = this.pop > 0 ? 1 + 0.4 * Math.sin((1 - this.pop / this.popDur) * Math.PI) : 1;
+    const pulse = this.telegraphing ? 1.12 : 1;
+    if (this.art) {
+      const img = this.rect as Phaser.GameObjects.Image;
+      const scale = ART_SCALE * (this.def.spriteScale ?? 1) * pop * pulse;
+      const moving = this.stun <= 0 && this.mode !== 'windup';
+      this.bob += moving ? 0.016 * (this.def.speed / 10) : 0;
+      img.setPosition(this.x, this.y - (moving ? Math.abs(Math.sin(this.bob)) * 3 : 0));
+      img.setScale(scale * (1 + 0.03 * Math.sin(this.bob * 2)), scale);
+      img.setFlipX(playerX < this.x);
+      img.setDepth(this.y);
+      img.setTintMode(this.flash > 0 ? Phaser.TintModes.FILL : Phaser.TintModes.MULTIPLY);
+      if (this.flash > 0) img.setTint(0xffffff);
+      else if (this.telegraphing) img.setTint(0xffd27f);
+      else if (this.burnT > 0 && Math.floor(now / 110) % 2) img.setTint(0xff9a5a);
+      else if (this.stun > 0.3) img.setTint(0xb8f0ff);
+      else if (this.slowT > 0) img.setTint(0x9fd8ff);
+      else img.setTint(this.baseTint);
+      img.setAlpha(1);
+      return;
+    }
+    const rect = this.rect as Phaser.GameObjects.Rectangle;
     let c: number = this.isBoss ? GREY.boss : this.hasToken ? GREY.enemyToken : GREY.enemy;
     if (this.telegraphing) c = GREY.enemyWindup;
     if (this.burnT > 0 && Math.floor(now / 110) % 2) c = GREY.enemyToken;
     if (this.flash > 0) c = GREY.enemyFlash;
-    const pop = this.pop > 0 ? 1 + 0.4 * Math.sin((1 - this.pop / this.popDur) * Math.PI) : 1;
-    const pulse = this.telegraphing ? 1.12 : 1;
     const s = this.size * pop * pulse;
-    this.rect.setPosition(this.x, this.y).setFillStyle(c).setDisplaySize(s, s);
-    this.rect.setAlpha(this.slowT > 0 ? 0.7 : 1);
+    rect.setPosition(this.x, this.y).setFillStyle(c).setDisplaySize(s, s);
+    rect.setAlpha(this.slowT > 0 ? 0.7 : 1);
   }
 }

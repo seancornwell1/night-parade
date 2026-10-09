@@ -1,1 +1,15 @@
-{ "id": "gaki", "name": "Gaki", "behavior": "swarmer", "size": 18, "hp": 12, "speed": 105, "damage": 5, "xp": 1, "windup": 0.3, "attackCooldown": 0.9, "reach": 34, "groupSize": 5 }
+{
+  "id": "gaki",
+  "name": "Gaki",
+  "behavior": "swarmer",
+  "size": 22,
+  "hp": 12,
+  "speed": 105,
+  "damage": 5,
+  "xp": 1,
+  "windup": 0.3,
+  "attackCooldown": 0.9,
+  "reach": 34,
+  "groupSize": 5,
+  "sprite": "enemies/gaki"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "gonta",
+  "name": "Gonta, the Oni-Blooded Brawler",
+  "sprite": "characters/gonta",
+  "weapon": "naginata",
+  "playable": false
+}

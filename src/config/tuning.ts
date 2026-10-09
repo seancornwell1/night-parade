@@ -143,6 +143,11 @@ const DEFS = {
   shikigamiFollowDist: t(46, 10, 150, 2, 'Shikigami', 'Follow distance'),
   shikigamiDashSpeed: t(650, 100, 1500, 25, 'Shikigami', 'Bite dash speed'),
 
+  // Sound and display
+  musicVolume: t(0.5, 0, 1, 0.05, 'Sound', 'Music volume'),
+  sfxVolume: t(0.8, 0, 1, 0.05, 'Sound', 'Sound effects volume'),
+  showAimGuides: t(0, 0, 1, 1, 'Sound', 'Show aim guides (1 = on)'),
+
   // Controls
   stickRadius: t(60, 25, 140, 1, 'Controls', 'Stick radius (px)'),
   stickDeadzone: t(0.15, 0, 0.6, 0.01, 'Controls', 'Stick deadzone'),

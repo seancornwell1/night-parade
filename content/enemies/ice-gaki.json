@@ -1,1 +1,16 @@
-{ "id": "ice-gaki", "name": "Frostbitten Gaki", "behavior": "swarmer", "size": 18, "hp": 16, "speed": 115, "damage": 6, "xp": 1, "windup": 0.3, "attackCooldown": 0.9, "reach": 34, "groupSize": 6 }
+{
+  "id": "ice-gaki",
+  "name": "Frostbitten Gaki",
+  "behavior": "swarmer",
+  "size": 22,
+  "hp": 16,
+  "speed": 115,
+  "damage": 6,
+  "xp": 1,
+  "windup": 0.3,
+  "attackCooldown": 0.9,
+  "reach": 34,
+  "groupSize": 6,
+  "sprite": "enemies/gaki",
+  "tint": "#a8e8ff"
+}

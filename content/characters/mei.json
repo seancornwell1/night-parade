@@ -1,0 +1,7 @@
+{
+  "id": "mei",
+  "name": "Mei & Pom",
+  "sprite": "characters/mei",
+  "weapon": "katana",
+  "playable": false
+}

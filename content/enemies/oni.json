@@ -1,1 +1,16 @@
-{ "id": "oni", "name": "Oni", "behavior": "tank", "size": 40, "hp": 160, "speed": 45, "damage": 18, "xp": 6, "armor": 0.4, "knockbackResist": 0.7, "windup": 0.8, "attackCooldown": 1.8, "reach": 62 }
+{
+  "id": "oni",
+  "name": "Oni",
+  "behavior": "tank",
+  "size": 64,
+  "hp": 160,
+  "speed": 45,
+  "damage": 18,
+  "xp": 6,
+  "armor": 0.4,
+  "knockbackResist": 0.7,
+  "windup": 0.8,
+  "attackCooldown": 1.8,
+  "reach": 62,
+  "sprite": "enemies/oni"
+}

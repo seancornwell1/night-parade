@@ -1,0 +1,7 @@
+{
+  "id": "kuro",
+  "name": "Kuro, the Crow Ronin",
+  "sprite": "characters/kuro",
+  "weapon": "katana",
+  "playable": false
+}

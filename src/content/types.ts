@@ -15,6 +15,10 @@ export interface EnemyDef {
   speed: number;
   damage: number;
   xp: number;
+  sprite?: string; // art in assets/day, e.g. "enemies/gaki" (no sprite = grey box until its art exists)
+  spriteScale?: number; // draw the sprite smaller or larger (e.g. split pieces)
+  tint?: string; // "#rrggbb" tint applied to the sprite (e.g. omens)
+  projectileSprite?: string; // ranged: art for its shots, e.g. "fx/arrow"
   armor?: number; // 0..1 fraction of damage blocked; spirit hits ignore it
   knockbackResist?: number; // 0..1
   windup?: number; // seconds of telegraph before a melee strike
@@ -101,6 +105,8 @@ export interface ShikigamiDef {
   range: number;
   damagePerLevel: number;
   cooldownPerLevel: number; // multiplier per extra level, e.g. 0.9
+  sprite?: string;
+  projectileSprite?: string;
   projectileSpeed?: number;
   radius?: number; // nova radius
   chains?: number; // chain count
@@ -112,8 +118,46 @@ export interface Spawn {
   weight: number;
 }
 
+export interface StageRect {
+  tile: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+export interface StageDef {
+  seed: number;
+  ground: string;
+  patches: { tile: string; count: number; minSize: number; maxSize: number }[];
+  border: { tile: string; thickness: number };
+  paths: StageRect[];
+  water: StageRect[];
+  clearRadius: number;
+  regions: { name: string; x: number; y: number; w: number; h: number; objects: { sprite: string; count: number }[] }[];
+  landmarks: { sprite: string; x: number; y: number }[];
+  shrines: string[];
+}
+
 export interface DayDef {
   enemies: Spawn[];
+  stage: StageDef;
+}
+
+export interface CharacterDef {
+  id: string;
+  name: string;
+  sprite: string;
+  weapon: string;
+  playable: boolean;
+  default?: boolean;
+}
+
+export interface WeaponDef {
+  id: string;
+  name: string;
+  sprite: string;
+  angleOffsetDeg: number; // the angle the blade points in the art, so it can be rotated to the swing
 }
 
 export interface RiftDef {

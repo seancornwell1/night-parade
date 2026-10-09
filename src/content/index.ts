@@ -1,13 +1,16 @@
 import {
   BEHAVIORS,
   TAGS,
+  type CharacterDef,
   type DayDef,
   type EnemyDef,
   type PathDef,
   type RiftDef,
   type ShikigamiDef,
   type UpgradeDef,
+  type WeaponDef,
 } from './types';
+import { hasArt } from '../art';
 
 // Loads every content file under /content and checks it against the schemas in docs/SCHEMAS.md.
 // Adding content means adding a file; no code changes.
@@ -30,6 +33,8 @@ const upgrades = collect<UpgradeDef>(import.meta.glob('../../content/upgrades/*.
 const shikigami = collect<ShikigamiDef>(import.meta.glob('../../content/shikigami/*.json', { eager: true, import: 'default' }), 'shikigami');
 const rifts = collect<RiftDef>(import.meta.glob('../../content/rifts/*.json', { eager: true, import: 'default' }), 'rift');
 const paths = collect<PathDef>(import.meta.glob('../../content/paths.json', { eager: true, import: 'default' }), 'path');
+const characters = collect<CharacterDef>(import.meta.glob('../../content/characters/*.json', { eager: true, import: 'default' }), 'character');
+const weapons = collect<WeaponDef>(import.meta.glob('../../content/weapons/*.json', { eager: true, import: 'default' }), 'weapon');
 const day = Object.values(import.meta.glob('../../content/day.json', { eager: true, import: 'default' }))[0] as DayDef;
 
 function check(ok: unknown, msg: string): void {
@@ -71,8 +76,31 @@ for (const r of rifts.values()) {
   spawnsOk(r.omens, `rift ${r.id} omens`);
 }
 check(rifts.size > 0, 'no rift files in content/rifts');
+for (const c of characters.values()) {
+  check(weapons.has(c.weapon), `character ${c.id} uses unknown weapon "${c.weapon}"`);
+  check(hasArt(c.sprite), `character ${c.id} sprite "${c.sprite}" is not in assets/day`);
+}
+for (const w of weapons.values()) check(hasArt(w.sprite), `weapon ${w.id} sprite "${w.sprite}" is not in assets/day`);
+for (const e of enemies.values()) if (e.sprite) check(hasArt(e.sprite), `enemy ${e.id} sprite "${e.sprite}" is not in assets/day`);
+for (const s of shikigami.values()) if (s.sprite) check(hasArt(s.sprite), `shikigami ${s.id} sprite "${s.sprite}" is not in assets/day`);
+const stageArt = [
+  day.stage.ground,
+  day.stage.border.tile,
+  ...day.stage.patches.map((p) => p.tile),
+  ...day.stage.paths.map((p) => p.tile),
+  ...day.stage.water.map((p) => p.tile),
+  ...day.stage.regions.flatMap((r) => r.objects.map((o) => o.sprite)),
+  ...day.stage.landmarks.map((l) => l.sprite),
+  ...day.stage.shrines,
+];
+for (const a of stageArt) check(hasArt(a), `day stage uses "${a}", which is not in assets/day`);
+check([...characters.values()].some((c) => c.default), 'one character must be "default": true');
 
-export const content = { enemies, upgrades, shikigami, rifts, paths, day };
+export const content = { enemies, upgrades, shikigami, rifts, paths, day, characters, weapons };
+
+export function mainCharacter(): CharacterDef {
+  return [...characters.values()].find((c) => c.default)!;
+}
 
 /** Tonight's rift. One test rift for now; the daily pipeline picks it later. */
 export function currentRift(): RiftDef {

@@ -1,1 +1,19 @@
-{ "id": "paper-crane", "name": "Paper Crane", "tag": "spirit", "attack": "pierce", "cooldown": 1.4, "damage": 14, "range": 340, "damagePerLevel": 7, "cooldownPerLevel": 0.85, "projectileSpeed": 520, "effects": [{ "kind": "pierceArmor" }] }
+{
+  "id": "paper-crane",
+  "name": "Paper Crane",
+  "tag": "spirit",
+  "attack": "pierce",
+  "cooldown": 1.4,
+  "damage": 14,
+  "range": 340,
+  "damagePerLevel": 7,
+  "cooldownPerLevel": 0.85,
+  "projectileSpeed": 520,
+  "effects": [
+    {
+      "kind": "pierceArmor"
+    }
+  ],
+  "sprite": "shikigami/paper-crane",
+  "projectileSprite": "fx/paper-dart"
+}

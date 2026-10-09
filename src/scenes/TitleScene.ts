@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { IMAGES, SOUNDS } from '../art';
 
 // Placeholder title. The background and logo are generated assets listed in ASSETS_NEEDED.md.
 // A tap is required to start (iOS also needs it to unlock audio later).
@@ -8,6 +9,11 @@ export class TitleScene extends Phaser.Scene {
 
   constructor() {
     super('Title');
+  }
+
+  preload(): void {
+    for (const [key, url] of Object.entries(IMAGES)) this.load.image(key, url);
+    for (const [key, url] of Object.entries(SOUNDS)) this.load.audio(key, url);
   }
 
   create(): void {

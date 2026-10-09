@@ -1,22 +1,28 @@
 import Phaser from 'phaser';
+import { ART_SCALE, hasArt, hasSound } from '../art';
 import { ARENA, GREY, tuning } from '../config/tuning';
-import { content, currentRift, enemy as enemyDef } from '../content';
+import { content, currentRift, enemy as enemyDef, mainCharacter } from '../content';
 import type { EnemyDef, HitEffect, RiftDef, Spawn, Tag } from '../content/types';
 import { Build } from '../game/build';
 import { Enemy, type EnemyWorld } from '../game/enemies';
 import { piercesArmor, type HitOpts } from '../game/hit';
 import { actions, controls, status, type Phase, type RunResult } from '../game/shared';
 import { Familiar, type ShikiWorld } from '../game/shikigami';
+import { buildStage, type BuiltStage } from '../game/stage';
 
-// The classic run: day, dusk, night. Grey-box scaffolding throughout; grey boxes never ship.
+// The classic run: day, dusk, night. Day art comes from assets/day; anything without art yet
+// is still a grey box (listed in ASSETS_NEEDED.md). Grey boxes never ship.
 
 const DEG = Math.PI / 180;
 
 type PlayerState = 'free' | 'attack' | 'charging' | 'chargeAttack' | 'dodge';
 type ChargeKind = 'launcher' | 'sweep' | 'big';
 
+type Visual = Phaser.GameObjects.Rectangle | Phaser.GameObjects.Image;
+
 interface Fx {
-  obj: Phaser.GameObjects.Rectangle;
+  obj: Visual;
+  rotOffset?: number;
   t: number;
   dur: number;
   alpha: number;
@@ -27,7 +33,7 @@ interface Fx {
 }
 
 interface Projectile {
-  rect: Phaser.GameObjects.Rectangle;
+  rect: Visual;
   x: number;
   y: number;
   vx: number;
@@ -44,7 +50,7 @@ interface Projectile {
 }
 
 interface Pickup {
-  rect: Phaser.GameObjects.Rectangle;
+  rect: Visual;
   x: number;
   y: number;
   kind: 'xp' | 'heal';
@@ -53,8 +59,7 @@ interface Pickup {
 }
 
 interface Shrine {
-  rect: Phaser.GameObjects.Rectangle;
-  zone: Phaser.GameObjects.Rectangle;
+  sprite: Phaser.GameObjects.Image;
   bar: Phaser.GameObjects.Rectangle;
   x: number;
   y: number;
@@ -65,9 +70,12 @@ interface Shrine {
 const wrapAngle = (a: number) => Phaser.Math.Angle.Wrap(a);
 
 export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
-  private floor!: Phaser.GameObjects.Rectangle;
-  private player!: Phaser.GameObjects.Rectangle;
-  private nose!: Phaser.GameObjects.Rectangle;
+  private stage!: BuiltStage;
+  private player!: Phaser.GameObjects.Image;
+  private weapon!: { key: string; offset: number };
+  private music?: Phaser.Sound.BaseSound;
+  private lastXpSound = 0;
+  private moving = false;
   private arcLines: Phaser.GameObjects.Rectangle[] = [];
   private snapMarker!: Phaser.GameObjects.Rectangle;
   enemies: Enemy[] = [];
@@ -151,15 +159,25 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     actions.pick = (i) => this.pick(i);
     actions.reroll = () => this.reroll();
 
-    this.buildFloor();
-    this.buildShrines();
+    const shrineSpots = this.shrineSpots();
+    this.stage = buildStage(this, content.day.stage, ARENA.width, ARENA.height, [
+      { x: this.px, y: this.py, r: content.day.stage.clearRadius },
+      ...shrineSpots.map((s) => ({ ...s, r: tuning.shrineRadius + 40 })),
+      ...content.day.stage.landmarks.map((l) => ({ x: l.x, y: l.y, r: 160 })),
+    ]);
+    this.buildShrines(shrineSpots);
 
     for (let i = 0; i < 2; i++) {
       this.arcLines.push(this.add.rectangle(0, 0, 10, 2, GREY.arc, 0.3).setOrigin(0, 0.5).setVisible(false));
     }
     this.snapMarker = this.add.rectangle(0, 0, 10, 10, GREY.arc, 0.8).setVisible(false);
-    this.player = this.add.rectangle(this.px, this.py, tuning.playerSize, tuning.playerSize, GREY.player).setDepth(10);
-    this.nose = this.add.rectangle(this.px, this.py, 8, 8, GREY.nose).setDepth(11);
+    const hero = mainCharacter();
+    const weapon = content.weapons.get(hero.weapon)!;
+    this.weapon = { key: weapon.sprite, offset: weapon.angleOffsetDeg * DEG };
+    this.player = this.add.image(this.px, this.py, hero.sprite).setOrigin(0.5, 0.78).setScale(ART_SCALE);
+    this.arcLines.forEach((l) => l.setDepth(5000));
+    this.snapMarker.setDepth(5000);
+    this.startMusic(1, 0);
 
     const cam = this.cameras.main;
     cam.setBounds(0, 0, ARENA.width, ARENA.height);
@@ -194,29 +212,37 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     status.banner = { title, sub, until: this.time.now + ms };
   }
 
-  private buildFloor(): void {
-    this.floor = this.add.rectangle(0, 0, ARENA.width, ARENA.height, GREY.floor).setOrigin(0);
-    for (let x = 0; x <= ARENA.width; x += ARENA.grid) this.add.rectangle(x, 0, 2, ARENA.height, GREY.grid).setOrigin(0.5, 0);
-    for (let y = 0; y <= ARENA.height; y += ARENA.grid) this.add.rectangle(0, y, ARENA.width, 2, GREY.grid).setOrigin(0, 0.5);
-    const w = 12;
-    this.add.rectangle(0, 0, ARENA.width, w, GREY.wall).setOrigin(0);
-    this.add.rectangle(0, ARENA.height - w, ARENA.width, w, GREY.wall).setOrigin(0);
-    this.add.rectangle(0, 0, w, ARENA.height, GREY.wall).setOrigin(0);
-    this.add.rectangle(ARENA.width - w, 0, w, ARENA.height, GREY.wall).setOrigin(0);
+  private shrineSpots(): { x: number; y: number }[] {
+    const n = Math.round(tuning.shrineCount);
+    return Array.from({ length: n }, (_, i) => {
+      const a = (i / n) * Math.PI * 2 + Math.PI / 4;
+      return { x: ARENA.width / 2 + Math.cos(a) * 750, y: ARENA.height / 2 + Math.sin(a) * 750 };
+    });
   }
 
-  private buildShrines(): void {
-    const n = Math.round(tuning.shrineCount);
-    for (let i = 0; i < n; i++) {
-      const a = (i / n) * Math.PI * 2 + Math.PI / 4;
-      const x = ARENA.width / 2 + Math.cos(a) * 750;
-      const y = ARENA.height / 2 + Math.sin(a) * 750;
-      const r = tuning.shrineRadius;
-      const zone = this.add.rectangle(x, y, r * 2, r * 2, GREY.shrine, 0.12).setDepth(1);
-      const rect = this.add.rectangle(x, y, 30, 40, GREY.shrine).setDepth(2);
-      const bar = this.add.rectangle(x - 30, y - 34, 0, 6, GREY.heal).setOrigin(0, 0.5).setDepth(20);
-      this.shrines.push({ rect, zone, bar, x, y, progress: 0, cooldown: 0 });
-    }
+  private buildShrines(spots: { x: number; y: number }[]): void {
+    const art = content.day.stage.shrines;
+    spots.forEach(({ x, y }, i) => {
+      const sprite = this.add.image(x, y, art[i % art.length]).setOrigin(0.5, 0.85).setScale(ART_SCALE).setDepth(y);
+      // Progress bar: grey scaffolding until generated UI bar frames exist (ASSETS_NEEDED.md).
+      const bar = this.add.rectangle(x - 30, y - 110, 0, 6, GREY.heal).setOrigin(0, 0.5).setDepth(5000);
+      this.shrines.push({ sprite, bar, x, y, progress: 0, cooldown: 0 });
+    });
+  }
+
+  // ---------------------------------------------------------------- sound
+
+  private sfx(key: string, volume = 1): void {
+    const k = `audio/${key}`;
+    if (hasSound(k) && tuning.sfxVolume > 0) this.sound.play(k, { volume: tuning.sfxVolume * volume });
+  }
+
+  /** Day theme. Until the night has its own rift track, the night plays it slowed and lowered. */
+  private startMusic(rate: number, detune: number): void {
+    this.music?.stop();
+    if (!hasSound('audio/day-theme')) return;
+    this.music = this.sound.add('audio/day-theme', { loop: true, volume: tuning.musicVolume, rate, detune });
+    this.music.play();
   }
 
   // ---------------------------------------------------------------- input
@@ -342,6 +368,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     // Calm: the day's demons melt away, and one upgrade pick is guaranteed.
     for (const e of this.enemies) this.removeEnemy(e);
     for (const p of this.projectiles) if (p.owner === 'enemy') p.dead = true;
+    if (this.music) this.tweens.add({ targets: this.music, volume: 0, duration: 3000 });
     this.pendingPicks++;
     this.banner('Dusk', 'The lanterns are lit. The parade is coming.', 3500);
   }
@@ -351,7 +378,10 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.phaseT = 0;
     this.spawnAcc = 0;
     this.marchAngle = Math.random() * Math.PI * 2;
-    this.floor.setFillStyle(GREY.floorNight);
+    for (const g of this.stage.ground) g.setTint(0x6a6fa8);
+    for (const d of this.stage.decor) d.setTint(0x6a6fa8);
+    for (const sh of this.shrines) sh.sprite.setTint(0x8a8fc0);
+    this.startMusic(0.9, -500);
     this.banner('The Night Parade', `${this.rift.name}. Night pays double XP.`, 4000);
   }
 
@@ -428,6 +458,8 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       upgrades: this.build.taken,
       build: this.build.summary(),
     };
+    if (!victory) this.sfx('death');
+    this.music?.stop();
     this.scene.stop('Hud');
     this.scene.start('Result', result);
   }
@@ -436,6 +468,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
 
   private updatePlayer(dt: number): void {
     const s = this.stick();
+    this.moving = s.mag > 0;
     this.stateT += dt;
     this.cooldown -= dt;
     this.dodgeCd -= dt;
@@ -530,6 +563,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (this.invulnerable || this.phase === 'over') return;
     this.hp -= damage;
     this.stats.damageTaken += damage;
+    this.sfx('hurt');
     this.hurtT = tuning.playerHurtIFrames;
     if (tuning.shakeDuration > 0) this.cameras.main.shake(tuning.shakeDuration * 1000, tuning.hurtShakeIntensity, true);
     if (this.hp <= 0) this.endRun(false);
@@ -584,6 +618,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   }
 
   private releaseCharge(): void {
+    this.sfx('charge');
     this.chargeKind = this.chargeKindNow();
     this.facing = this.aimNextHit();
     this.lastHitFacing = this.facing;
@@ -598,11 +633,15 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (i < 3) {
       const n = this.hitArc(tuning.hitRange, tuning.hitArcDeg, tuning.hitDamage, tuning.hitKnockback, 0, hit);
       this.spawnSwing(tuning.hitRange, 10, this.facing, tuning.hitArcDeg, 0.08, i % 2 === 1);
-      if (n) this.feel(tuning.hitStop, tuning.shakeIntensity);
+      if (n) {
+        this.feel(tuning.hitStop, tuning.shakeIntensity);
+        this.sfx('hit');
+      }
       this.launchWaves(effects, tags, tuning.hitDamage);
     } else {
       const n = this.hitArc(tuning.finisherRadius, 360, tuning.finisherDamage, tuning.finisherKnockback, 0, hit);
       this.spawnSwing(tuning.finisherRadius, 12, this.facing, 360, 0.14, false);
+      this.sfx('finisher');
       this.cooldown = tuning.finisherCooldown * this.build.stats.finisherCooldown;
       if (n) this.feel(tuning.finisherHitStop, tuning.finisherShakeIntensity);
       this.launchWaves(effects, tags, tuning.finisherDamage);
@@ -651,6 +690,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
         damage: baseDamage * ef.damagePct * this.build.stats.damage,
         pierceThrough: true,
         hit: { tags, pierce: true, source: 'effect' },
+        sprite: 'fx/spirit-wave',
       });
     }
   }
@@ -810,6 +850,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.dodgeDir = s.mag > 0 ? s.angle : this.facing;
     this.facing = this.dodgeDir;
     this.setState('dodge');
+    this.sfx('roll');
   }
 
   // ---------------------------------------------------------------- enemies
@@ -835,10 +876,16 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     }
   }
 
-  fireEnemyProjectile(x: number, y: number, angle: number, speed: number, size: number, damage: number): void {
+  /** A generated image if it exists, otherwise a grey box (listed in ASSETS_NEEDED.md). */
+  private visual(key: string | undefined, x: number, y: number, size: number, grey: number, alpha = 1): Visual {
+    if (key && hasArt(key)) return this.add.image(x, y, key).setScale(ART_SCALE).setDepth(4000);
+    return this.add.rectangle(x, y, size, size, grey, alpha).setDepth(4000);
+  }
+
+  fireEnemyProjectile(x: number, y: number, angle: number, speed: number, size: number, damage: number, sprite?: string): void {
     if (this.projectiles.length > 400) return;
     this.projectiles.push({
-      rect: this.add.rectangle(x, y, size, size, GREY.projectileEnemy).setDepth(8),
+      rect: this.visual(sprite ?? 'fx/fireball', x, y, size, GREY.projectileEnemy).setRotation(angle),
       x,
       y,
       vx: Math.cos(angle) * speed,
@@ -854,11 +901,11 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     });
   }
 
-  shoot(o: { x: number; y: number; angle: number; speed: number; range: number; size: number; width?: number; damage: number; pierceThrough: boolean; hit: HitOpts }): void {
+  shoot(o: { x: number; y: number; angle: number; speed: number; range: number; size: number; width?: number; damage: number; pierceThrough: boolean; hit: HitOpts; sprite?: string }): void {
     if (this.projectiles.length > 400) return;
     const w = o.width ?? o.size;
     this.projectiles.push({
-      rect: this.add.rectangle(o.x, o.y, o.size, w, GREY.projectilePlayer, 0.9).setDepth(8).setRotation(o.angle),
+      rect: this.visual(o.sprite, o.x, o.y, o.size, GREY.projectilePlayer).setRotation(o.angle),
       x: o.x,
       y: o.y,
       vx: Math.cos(o.angle) * o.speed,
@@ -943,7 +990,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   }
 
   private dropPickup(x: number, y: number, kind: 'xp' | 'heal', value: number): void {
-    const rect = this.add.rectangle(x, y, 8, 8, kind === 'xp' ? GREY.xp : GREY.heal).setDepth(4);
+    const rect = this.visual(kind === 'xp' ? 'fx/xp-orb' : 'fx/heal-onigiri', x, y, 8, kind === 'xp' ? GREY.xp : GREY.heal).setDepth(y);
     this.pickups.push({ rect, x, y, kind, value, pulled: false });
   }
 
@@ -954,8 +1001,16 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       const dy = this.py - p.y;
       const d = Math.hypot(dx, dy);
       if (d < tuning.playerSize / 2 + 6) {
-        if (p.kind === 'xp') this.gainXp(p.value);
-        else this.heal(p.value);
+        if (p.kind === 'xp') {
+          this.gainXp(p.value);
+          if (this.time.now - this.lastXpSound > 70) {
+            this.lastXpSound = this.time.now;
+            this.sfx('pickup-xp', 0.6);
+          }
+        } else {
+          this.heal(p.value);
+          this.sfx('pickup-heal');
+        }
         p.value = -1;
         continue;
       }
@@ -996,6 +1051,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.bufferT = 0;
     if (this.state === 'charging') this.setState('free');
     status.offer = { cards, rerolls: this.rerolls, title, openedAt: this.time.now };
+    this.sfx('level-up');
   }
 
   private pick(i: number): void {
@@ -1026,13 +1082,17 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
         s.progress += dt;
         if (s.progress >= tuning.shrineChannelTime) {
           this.heal(tuning.shrineHeal);
+          this.sfx('pickup-heal');
           this.stats.shrines++;
           s.cooldown = tuning.shrineCooldown;
           s.progress = 0;
         }
       } else s.progress = Math.max(0, s.progress - dt * 2);
-      s.rect.setAlpha(s.cooldown > 0 ? 0.3 : 1);
-      s.zone.setAlpha(s.cooldown > 0 ? 0.04 : 0.12);
+      // A shrine you can use glows warmly when you're near; a used one fades until it recovers.
+      const night = this.phase === 'night';
+      if (s.cooldown > 0) s.sprite.setTint(0x777777).setAlpha(0.7);
+      else if (inside) s.sprite.setTint(Math.floor(this.time.now / 200) % 2 ? 0xfff2b0 : 0xffffff).setAlpha(1);
+      else s.sprite.setTint(night ? 0x8a8fc0 : 0xffffff).setAlpha(1);
       s.bar.width = (60 * s.progress) / tuning.shrineChannelTime;
     }
   }
@@ -1086,11 +1146,27 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
 
   // ---------------------------------------------------------------- effects and visuals
 
+  /** The weapon's own art swings through the arc (a grey bar only if the weapon has no art). */
   private spawnSwing(length: number, thickness: number, facing: number, arcDeg: number, dur: number, reverse: boolean): void {
     const half = (arcDeg * DEG) / 2;
     let from = facing - half;
     let to = facing + half;
     if (reverse) [from, to] = [to, from];
+    if (hasArt(this.weapon.key)) {
+      const blade = 45 * Math.SQRT2; // diagonal of the 48px weapon art
+      const obj = this.add.image(this.px, this.py, this.weapon.key).setOrigin(0.12, 0.88).setScale((length * 0.95) / blade).setDepth(this.py + 1);
+      this.fx.push({ obj, t: 0, dur: Math.max(dur, 0.12), alpha: 1, follow: true, from, to, rotOffset: this.weapon.offset });
+      if (hasArt('fx/slash-arc') && arcDeg > 0) {
+        const mid = facing;
+        const trail = this.add
+          .image(this.px + Math.cos(mid) * length * 0.55, this.py + Math.sin(mid) * length * 0.55, 'fx/slash-arc')
+          .setScale((length * 1.1) / 48)
+          .setRotation(mid)
+          .setDepth(this.py + 2);
+        this.fx.push({ obj: trail, t: 0, dur: dur * 1.4, alpha: 0.9 });
+      }
+      return;
+    }
     const obj = this.add.rectangle(this.px, this.py, length, thickness, GREY.swing, 0.8).setOrigin(0, 0.5).setDepth(12).setRotation(from);
     this.fx.push({ obj, t: 0, dur, alpha: 0.8, follow: true, from, to });
   }
@@ -1115,7 +1191,8 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       f.t += dt;
       const k = Math.min(1, f.t / f.dur);
       if (f.follow) f.obj.setPosition(this.px, this.py);
-      if (f.from !== undefined && f.to !== undefined) f.obj.setRotation(f.from + (f.to - f.from) * Math.min(1, k * 1.6));
+      if (f.follow) f.obj.setDepth(this.py + 1);
+      if (f.from !== undefined && f.to !== undefined) f.obj.setRotation(f.from + (f.to - f.from) * Math.min(1, k * 1.6) + (f.rotOffset ?? 0));
       if (f.grow) f.obj.setScale(0.6 + 0.4 * k);
       f.obj.setAlpha(f.alpha * (1 - k));
     }
@@ -1127,18 +1204,54 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   }
 
   private syncVisuals(): void {
+    // Hotaru's single generated frame, animated by code: bob, lean, squash, spin and tints.
     const p = this.player;
-    p.setPosition(this.px, this.py).setRotation(this.facing).setDisplaySize(tuning.playerSize, tuning.playerSize);
-    let color = GREY.player;
-    if (this.state === 'charging') color = Math.floor(this.time.now / 80) % 2 ? GREY.playerCharging : GREY.player;
-    else if (this.hurtT > tuning.playerHurtIFrames - 0.1) color = GREY.playerHurt;
-    else if (this.cooldown > 0) color = GREY.playerCooldown;
-    p.setFillStyle(color);
-    p.setAlpha(this.state === 'dodge' && this.stateT < tuning.dodgeIFrames ? 0.4 : this.hurtT > 0 ? 0.7 : 1);
-    const nd = tuning.playerSize / 2 + 4;
-    this.nose.setPosition(this.px + Math.cos(this.facing) * nd, this.py + Math.sin(this.facing) * nd).setRotation(this.facing);
+    const t = this.time.now / 1000;
+    const flip = Math.cos(this.facing) < 0;
+    const dir = flip ? -1 : 1;
+    let rot = 0;
+    let sx = 1;
+    let sy = 1;
+    let oy = 0;
+    switch (this.state) {
+      case 'free':
+        if (this.moving) {
+          oy = -Math.abs(Math.sin(t * 14)) * 5;
+          rot = Math.sin(t * 14) * 0.06;
+        } else {
+          sy = 1 + 0.025 * Math.sin(t * 3);
+          sx = 1 - 0.015 * Math.sin(t * 3);
+        }
+        break;
+      case 'attack':
+      case 'chargeAttack': {
+        const k = Math.min(1, this.stateT / (this.state === 'attack' ? tuning.hitDuration : tuning.chargeRecovery));
+        rot = dir * 0.2 * (1 - k);
+        sx = 1 + 0.1 * (1 - k);
+        sy = 1 - 0.08 * (1 - k);
+        break;
+      }
+      case 'charging':
+        sx = 1.05;
+        sy = 0.93;
+        break;
+      case 'dodge':
+        rot = dir * Math.PI * 2 * Math.min(1, this.stateT / tuning.dodgeTime);
+        sy = 0.85;
+        break;
+    }
+    p.setPosition(this.px, this.py + oy).setFlipX(flip).setRotation(rot).setScale(ART_SCALE * sx, ART_SCALE * sy).setDepth(this.py);
+    p.clearTint();
+    const hurtFlash = this.hurtT > tuning.playerHurtIFrames - 0.12;
+    p.setTintMode(hurtFlash ? Phaser.TintModes.FILL : Phaser.TintModes.MULTIPLY);
+    if (hurtFlash) p.setTint(0xff5050);
+    else if (this.state === 'charging' && Math.floor(this.time.now / 80) % 2) p.setTint(0xffe066);
+    else if (this.cooldown > 0) p.setTint(0xbbbbbb);
+    else if (this.phase === 'night') p.setTint(0xc8cbf0);
+    const iframes = this.state === 'dodge' && this.stateT < tuning.dodgeIFrames;
+    p.setAlpha(iframes ? 0.6 : this.hurtT > 0 && Math.floor(this.time.now / 90) % 2 ? 0.55 : 1);
 
-    const showArc = this.state === 'free' && this.comboIndex > 0;
+    const showArc = tuning.showAimGuides >= 1 && this.state === 'free' && this.comboIndex > 0;
     const clamp = tuning.turnClampDeg * DEG;
     this.arcLines.forEach((l, i) => {
       l.setVisible(showArc);
@@ -1152,10 +1265,15 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (target) this.snapMarker.setPosition(target.x, target.y - target.size / 2 - 10);
 
     const now = this.time.now;
-    for (const e of this.enemies) if (e.alive) e.sync(now);
+    for (const e of this.enemies) if (e.alive) e.sync(now, this.px);
     for (const pk of this.pickups) {
-      const s = pk.kind === 'heal' ? 14 + Math.sin(now / 150) * 2 : 6 + Math.min(10, Math.sqrt(pk.value) * 2);
-      pk.rect.setPosition(pk.x, pk.y).setDisplaySize(s, s);
+      if (pk.rect instanceof Phaser.GameObjects.Image) {
+        const k = pk.kind === 'heal' ? 1 + 0.08 * Math.sin(now / 150) : 0.6 + Math.min(0.6, Math.sqrt(pk.value) * 0.12);
+        pk.rect.setPosition(pk.x, pk.y - 4 - Math.sin(now / 200 + pk.x) * 2).setScale(ART_SCALE * k).setDepth(pk.y);
+      } else {
+        const s = pk.kind === 'heal' ? 14 + Math.sin(now / 150) * 2 : 6 + Math.min(10, Math.sqrt(pk.value) * 2);
+        pk.rect.setPosition(pk.x, pk.y).setDisplaySize(s, s);
+      }
     }
   }
 }

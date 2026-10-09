@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { ART_SCALE, hasArt } from '../art';
 import { GREY, tuning } from '../config/tuning';
 import type { ShikigamiDef } from '../content/types';
 import type { Build } from './build';
@@ -16,14 +17,15 @@ export interface ShikiWorld {
   build: Build;
   hitEnemy(e: Enemy, damage: number, hit: HitOpts): void;
   chain(from: Enemy, count: number, range: number, damage: number, hit: HitOpts, already?: Set<Enemy>): void;
-  shoot(opts: { x: number; y: number; angle: number; speed: number; range: number; size: number; width?: number; damage: number; pierceThrough: boolean; hit: HitOpts }): void;
+  shoot(opts: { x: number; y: number; angle: number; speed: number; range: number; size: number; width?: number; damage: number; pierceThrough: boolean; hit: HitOpts; sprite?: string }): void;
   lightning(x1: number, y1: number, x2: number, y2: number): void;
   pulse(x: number, y: number, radius: number): void;
 }
 
 export class Familiar {
-  rect: Phaser.GameObjects.Rectangle;
-  label: Phaser.GameObjects.Text;
+  rect: Phaser.GameObjects.Rectangle | Phaser.GameObjects.Image;
+  label?: Phaser.GameObjects.Text;
+  private bob = Math.random() * 10;
   x: number;
   y: number;
   level = 1;
@@ -40,11 +42,16 @@ export class Familiar {
   ) {
     this.x = x;
     this.y = y;
-    this.rect = scene.add.rectangle(x, y, 14, 14, GREY.shikigami).setDepth(9);
-    this.label = scene.add
-      .text(x, y, def.name, { fontFamily: 'system-ui, sans-serif', fontSize: '10px', color: '#bbbbbb' })
-      .setOrigin(0.5, 1)
-      .setDepth(9);
+    if (def.sprite && hasArt(def.sprite)) {
+      this.rect = scene.add.image(x, y, def.sprite).setScale(ART_SCALE * 0.8).setDepth(y);
+    } else {
+      // Grey box and name label until this shikigami has art.
+      this.rect = scene.add.rectangle(x, y, 14, 14, GREY.shikigami).setDepth(9);
+      this.label = scene.add
+        .text(x, y, def.name, { fontFamily: 'system-ui, sans-serif', fontSize: '10px', color: '#bbbbbb' })
+        .setOrigin(0.5, 1)
+        .setDepth(9);
+    }
   }
 
   private damage(b: Build): number {
@@ -110,8 +117,11 @@ export class Familiar {
 
     if (this.cd <= 0 && this.state === 'follow') this.attack(w);
 
-    this.rect.setPosition(this.x, this.y);
-    this.label.setPosition(this.x, this.y - 9).setText(this.level > 1 ? `${this.def.name} ${this.level}` : this.def.name);
+    this.bob += dt * 4;
+    const floatY = this.y - 6 - Math.sin(this.bob) * 3;
+    this.rect.setPosition(this.x, floatY);
+    if (this.rect instanceof Phaser.GameObjects.Image) this.rect.setDepth(this.y + 1).setFlipX(w.px < this.x);
+    this.label?.setPosition(this.x, this.y - 9).setText(this.level > 1 ? `${this.def.name} ${this.level}` : this.def.name);
   }
 
   private attack(w: ShikiWorld): void {
@@ -133,6 +143,7 @@ export class Familiar {
           damage: dmg,
           pierceThrough: def.attack === 'pierce',
           hit: this.hitOpts(),
+          sprite: def.projectileSprite,
         });
         break;
       case 'chain':
@@ -159,6 +170,6 @@ export class Familiar {
 
   destroy(): void {
     this.rect.destroy();
-    this.label.destroy();
+    this.label?.destroy();
   }
 }

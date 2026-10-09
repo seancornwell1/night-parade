@@ -1,0 +1,7 @@
+{
+  "id": "yuki",
+  "name": "Yuki, the Fox-Mask Shrine Maiden",
+  "sprite": "characters/yuki",
+  "weapon": "naginata",
+  "playable": false
+}

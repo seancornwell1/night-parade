@@ -9,6 +9,7 @@ const game = new Phaser.Game({
   type: Phaser.AUTO,
   parent: 'game',
   backgroundColor: '#000000',
+  pixelArt: true,
   scale: {
     mode: Phaser.Scale.RESIZE,
     width: window.innerWidth,

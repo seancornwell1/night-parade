@@ -763,5 +763,87 @@
         "h": 45
       }
     }
+  ],
+  "audio": [
+    {
+      "id": "hit",
+      "file": "audio/hit.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, quick crisp sword slash hitting a demon, short punchy impact",
+      "length": 0.26,
+      "from": "phase2-sfx #2"
+    },
+    {
+      "id": "finisher",
+      "file": "audio/finisher.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, heavy spinning sword finisher whoosh ending in a big impact boom",
+      "length": 1.23,
+      "from": "phase2-sfx #4"
+    },
+    {
+      "id": "charge",
+      "file": "audio/charge.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, energy charging up then releasing in a powerful burst",
+      "length": 1.52,
+      "from": "phase2-sfx #5"
+    },
+    {
+      "id": "roll",
+      "file": "audio/roll.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, fast dodge roll whoosh on dirt",
+      "length": 0.5,
+      "from": "phase2-sfx #8"
+    },
+    {
+      "id": "pickup-xp",
+      "file": "audio/pickup-xp.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, tiny bright sparkling chime for collecting a spirit orb",
+      "length": 0.48,
+      "from": "phase2-sfx #9"
+    },
+    {
+      "id": "pickup-heal",
+      "file": "audio/pickup-heal.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, warm soft rising chime for eating a healing rice ball",
+      "length": 0.39,
+      "from": "phase2-sfx #12"
+    },
+    {
+      "id": "level-up",
+      "file": "audio/level-up.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, cheerful ascending fanfare jingle for leveling up",
+      "length": 1.33,
+      "from": "phase2-sfx #13"
+    },
+    {
+      "id": "hurt",
+      "file": "audio/hurt.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, short painful grunt with a dull hit, player taking damage",
+      "length": 0.52,
+      "from": "phase2-sfx #15"
+    },
+    {
+      "id": "death",
+      "file": "audio/death.mp3",
+      "provider": "elevenlabs",
+      "prompt": "16-bit retro video game sound effect, chiptune style, sad descending game over jingle with a final thud",
+      "length": 2.01,
+      "from": "phase2-sfx #18"
+    },
+    {
+      "id": "day-theme",
+      "file": "audio/day-theme.mp3",
+      "provider": "stability",
+      "prompt": "16-bit SNES chiptune background music for a feudal Japan adventure game daytime stage: koto-like pentatonic lead melody, taiko-style drum pattern, plucky shamisen-like bass, bright, adventurous and determined, steady 120 BPM, loopable, instrumental, no vocals",
+      "length": 88.03,
+      "from": "phase2-music #1"
+    }
   ]
 }

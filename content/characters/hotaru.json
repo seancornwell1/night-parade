@@ -1,0 +1,8 @@
+{
+  "id": "hotaru",
+  "name": "Hotaru, the Lantern Warden",
+  "sprite": "characters/hotaru",
+  "weapon": "katana",
+  "playable": true,
+  "default": true
+}

@@ -1,1 +1,22 @@
-{ "id": "kitsune-bi", "name": "Kitsune-bi", "tag": "fire", "attack": "bolt", "cooldown": 1.2, "damage": 10, "range": 280, "damagePerLevel": 6, "cooldownPerLevel": 0.85, "projectileSpeed": 420, "effects": [{ "kind": "burn", "dps": 4, "maxHpPct": 0.02, "duration": 3 }] }
+{
+  "id": "kitsune-bi",
+  "name": "Kitsune-bi",
+  "tag": "fire",
+  "attack": "bolt",
+  "cooldown": 1.2,
+  "damage": 10,
+  "range": 280,
+  "damagePerLevel": 6,
+  "cooldownPerLevel": 0.85,
+  "projectileSpeed": 420,
+  "effects": [
+    {
+      "kind": "burn",
+      "dps": 4,
+      "maxHpPct": 0.02,
+      "duration": 3
+    }
+  ],
+  "sprite": "shikigami/kitsune-bi",
+  "projectileSprite": "fx/foxfire-bolt"
+}

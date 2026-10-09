@@ -1,1 +1,16 @@
-{ "id": "nuppeppo", "name": "Nuppeppo", "behavior": "splitter", "size": 30, "hp": 60, "speed": 55, "damage": 10, "xp": 2, "windup": 0.5, "attackCooldown": 1.4, "reach": 44, "splitInto": "nuppeppo-small", "splitCount": 3 }
+{
+  "id": "nuppeppo",
+  "name": "Nuppeppo",
+  "behavior": "splitter",
+  "size": 45,
+  "hp": 60,
+  "speed": 55,
+  "damage": 10,
+  "xp": 2,
+  "windup": 0.5,
+  "attackCooldown": 1.4,
+  "reach": 44,
+  "splitInto": "nuppeppo-small",
+  "splitCount": 3,
+  "sprite": "enemies/nuppeppo"
+}

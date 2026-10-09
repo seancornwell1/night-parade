@@ -1,0 +1,6 @@
+{
+  "id": "katana",
+  "name": "Katana",
+  "sprite": "weapons/katana",
+  "angleOffsetDeg": 45
+}

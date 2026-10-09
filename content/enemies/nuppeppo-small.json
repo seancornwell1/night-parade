@@ -1,1 +1,15 @@
-{ "id": "nuppeppo-small", "name": "Nuppeppo Blob", "behavior": "swarmer", "size": 16, "hp": 15, "speed": 95, "damage": 5, "xp": 1, "windup": 0.3, "attackCooldown": 1, "reach": 30 }
+{
+  "id": "nuppeppo-small",
+  "name": "Nuppeppo Blob",
+  "behavior": "swarmer",
+  "size": 25,
+  "hp": 15,
+  "speed": 95,
+  "damage": 5,
+  "xp": 1,
+  "windup": 0.3,
+  "attackCooldown": 1,
+  "reach": 30,
+  "sprite": "enemies/nuppeppo",
+  "spriteScale": 0.55
+}
