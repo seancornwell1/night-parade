@@ -2,13 +2,13 @@
   "date": "2026-10-09",
   "counts": {
     "pixellab": 37,
-    "retrodiffusion": 20,
+    "retrodiffusion": 45,
     "cloudflare": 55
   },
   "limited": {
     "pixellab": "HTTP 402: {\"detail\":\"Insufficient generations and credits. Generations: 40.0/40.0, Credits: 0.0\"}"
   },
   "usd": {
-    "retrodiffusion": 0.96
+    "retrodiffusion": 2.46
   }
 }

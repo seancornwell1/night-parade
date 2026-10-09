@@ -1423,19 +1423,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9279d1f8-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"92ae89de-c3c7-11f1-80fd-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:58:20Z",
+      "files": {
+        "image": "22-charger-boar.png",
+        "raw": "22-charger-boar.raw.png",
+        "mask": "22-charger-boar.mask.png"
+      },
+      "palette": [
+        "#b18159",
+        "#6e5563",
+        "#5f3b49",
+        "#293455",
+        "#582026",
+        "#22233f",
+        "#1a1d39",
+        "#141630",
+        "#200e20",
+        "#110f26",
+        "#0d0e26",
+        "#0d091d",
+        "#0a0a1f",
+        "#09081c",
+        "#070617",
+        "#040411"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.327,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.224,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 3,
+          "w": 29,
+          "h": 28
+        }
+      ]
     },
     {
       "number": 23,
@@ -1449,19 +1488,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"92df97d6-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93110f5a-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:59:04Z",
+      "files": {
+        "image": "23-charger-wanyudo.png",
+        "raw": "23-charger-wanyudo.raw.png",
+        "mask": "23-charger-wanyudo.mask.png"
+      },
+      "palette": [
+        "#f6d156",
+        "#f18c37",
+        "#f36c2e",
+        "#826862",
+        "#e24f27",
+        "#dc391e",
+        "#6f484e",
+        "#413d4d",
+        "#d22214",
+        "#be110e",
+        "#7e1e1e",
+        "#7f0a0e",
+        "#342638",
+        "#1d1a2f",
+        "#1f0c1c",
+        "#070312"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.46,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.359,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 28,
+          "h": 30
+        }
+      ]
     },
     {
       "number": 24,
@@ -1475,19 +1553,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93448a7e-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93761346-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:59:17Z",
+      "files": {
+        "image": "24-charger-wanyudo.png",
+        "raw": "24-charger-wanyudo.raw.png",
+        "mask": "24-charger-wanyudo.mask.png"
+      },
+      "palette": [
+        "#8e6250",
+        "#505a5d",
+        "#5f3931",
+        "#39393f",
+        "#4b2828",
+        "#37262c",
+        "#252934",
+        "#24202a",
+        "#33181f",
+        "#241722",
+        "#181927",
+        "#170f1d",
+        "#0f0f1f",
+        "#0c091a",
+        "#0a0514",
+        "#040212"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.454,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.242,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 3,
+          "w": 30,
+          "h": 26
+        }
+      ]
     },
     {
       "number": 25,
@@ -1501,19 +1618,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93a6754a-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93db5cba-c3c7-11f1-80fd-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:59:40Z",
+      "files": {
+        "image": "25-ranged-tengu.png",
+        "raw": "25-ranged-tengu.raw.png",
+        "mask": "25-ranged-tengu.mask.png"
+      },
+      "palette": [
+        "#7c6a66",
+        "#4b434d",
+        "#41353f",
+        "#313043",
+        "#37242c",
+        "#262437",
+        "#1d1e35",
+        "#1a1629",
+        "#151427",
+        "#11132b",
+        "#0f0c1f",
+        "#09091e",
+        "#050313",
+        "#030318",
+        "#030315",
+        "#04020a"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.502,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.346,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ]
     },
     {
       "number": 26,
@@ -1527,19 +1683,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"940ef9c6-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"94450ffc-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:00:06Z",
+      "files": {
+        "image": "26-ranged-tengu.png",
+        "raw": "26-ranged-tengu.raw.png",
+        "mask": "26-ranged-tengu.mask.png"
+      },
+      "palette": [
+        "#ea484d",
+        "#eb3c48",
+        "#eb3c47",
+        "#eb3c46",
+        "#585c64",
+        "#504353",
+        "#693545",
+        "#193248",
+        "#552334",
+        "#182237",
+        "#102339",
+        "#0e152a",
+        "#09162e",
+        "#060e24",
+        "#03061d",
+        "#030314"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.577,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.333,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ]
     },
     {
       "number": 27,
@@ -1553,19 +1748,63 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9478e25a-c3c7-11f1-b5fd-a2aa336465d7\"}}"
+          "cost": 0.06,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.468"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"94aa711c-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:00:41Z",
+      "files": {
+        "image": "27-ranged-fox-mage.png",
+        "raw": "27-ranged-fox-mage.raw.png",
+        "mask": "27-ranged-fox-mage.mask.png"
+      },
+      "palette": [
+        "#fcfbd9",
+        "#f9d27f",
+        "#fb9c3d",
+        "#ea9862",
+        "#ef7a3b",
+        "#e06035",
+        "#c86140",
+        "#956059",
+        "#a94a3b",
+        "#764749",
+        "#86342f",
+        "#6a1a1b",
+        "#392d4b",
+        "#271737",
+        "#140726",
+        "#040328"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.488,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.033,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ]
     },
     {
       "number": 28,
@@ -1579,19 +1818,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"94db6312-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"950c7aa6-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:00:51Z",
+      "files": {
+        "image": "28-ranged-fox-mage.png",
+        "raw": "28-ranged-fox-mage.raw.png",
+        "mask": "28-ranged-fox-mage.mask.png"
+      },
+      "palette": [
+        "#fced8b",
+        "#f6cb64",
+        "#f5b450",
+        "#ef9c45",
+        "#fb7f2d",
+        "#fa5f1c",
+        "#ef6b2a",
+        "#bc6746",
+        "#c03a29",
+        "#7e2933",
+        "#553846",
+        "#551723",
+        "#2a1f37",
+        "#171125",
+        "#140814",
+        "#04030c"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.378,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.104,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ]
     },
     {
       "number": 29,
@@ -1605,19 +1883,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95440c5a-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95725934-c3c7-11f1-80fd-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:01:01Z",
+      "files": {
+        "image": "29-ranged-skeleton-archer.png",
+        "raw": "29-ranged-skeleton-archer.raw.png",
+        "mask": "29-ranged-skeleton-archer.mask.png"
+      },
+      "palette": [
+        "#b0a186",
+        "#73634d",
+        "#744532",
+        "#413932",
+        "#542321",
+        "#2d2725",
+        "#201e23",
+        "#19171c",
+        "#370b10",
+        "#1e0c10",
+        "#121014",
+        "#0e0b0f",
+        "#0b0b0f",
+        "#0a090b",
+        "#09090d",
+        "#060406"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.421,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.975,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ]
     },
     {
       "number": 30,
@@ -1631,19 +1948,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95ac48ce-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95dc0280-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:01:18Z",
+      "files": {
+        "image": "30-ranged-skeleton-archer.png",
+        "raw": "30-ranged-skeleton-archer.raw.png",
+        "mask": "30-ranged-skeleton-archer.mask.png"
+      },
+      "palette": [
+        "#bfa286",
+        "#796258",
+        "#644a43",
+        "#4f393c",
+        "#402b33",
+        "#341f29",
+        "#261a2c",
+        "#13162f",
+        "#1f0b21",
+        "#10091c",
+        "#06091f",
+        "#050311",
+        "#020721",
+        "#010419",
+        "#020416",
+        "#020314"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.276,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.881,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 5,
+          "w": 25,
+          "h": 26
+        }
+      ]
     },
     {
       "number": 31,
@@ -1657,19 +2013,63 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"960b1368-c3c7-11f1-b5fd-a2aa336465d7\"}}"
+          "cost": 0.06,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.267"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"963cd6d2-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:01:44Z",
+      "files": {
+        "image": "31-splitter-nuppeppo.png",
+        "raw": "31-splitter-nuppeppo.raw.png",
+        "mask": "31-splitter-nuppeppo.mask.png"
+      },
+      "palette": [
+        "#fc855a",
+        "#fa704f",
+        "#f8674a",
+        "#f05f45",
+        "#ec5840",
+        "#e2543f",
+        "#d54636",
+        "#c04035",
+        "#4e4a5b",
+        "#ae2f2c",
+        "#9e272b",
+        "#96242a",
+        "#732631",
+        "#771a24",
+        "#322434",
+        "#110b0f"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.518,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.738,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 4,
+          "y": 1,
+          "w": 32,
+          "h": 38
+        }
+      ]
     },
     {
       "number": 32,
@@ -1683,19 +2083,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"966db158-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"969d503e-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:02:04Z",
+      "files": {
+        "image": "32-splitter-nuppeppo.png",
+        "raw": "32-splitter-nuppeppo.raw.png",
+        "mask": "32-splitter-nuppeppo.mask.png"
+      },
+      "palette": [
+        "#fce6b5",
+        "#fdd380",
+        "#f3c27f",
+        "#e3ad7c",
+        "#d69a72",
+        "#c47e70",
+        "#aa7364",
+        "#ae656d",
+        "#796533",
+        "#a45b61",
+        "#914653",
+        "#644329",
+        "#603636",
+        "#562a35",
+        "#3e2324",
+        "#1c0c11"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.569,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.738,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 37,
+          "h": 38
+        }
+      ]
     },
     {
       "number": 33,
@@ -1709,19 +2148,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"96d21cc4-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"970745ac-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:02:14Z",
+      "files": {
+        "image": "33-splitter-mud.png",
+        "raw": "33-splitter-mud.raw.png",
+        "mask": "33-splitter-mud.mask.png"
+      },
+      "palette": [
+        "#d5ad69",
+        "#b07f50",
+        "#9a6846",
+        "#80523f",
+        "#754037",
+        "#6d3232",
+        "#633434",
+        "#43313b",
+        "#562331",
+        "#422031",
+        "#342334",
+        "#2c1d39",
+        "#33182f",
+        "#231833",
+        "#1e122c",
+        "#060926"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.516,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.206,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 4,
+          "w": 38,
+          "h": 32
+        }
+      ]
     },
     {
       "number": 34,
@@ -1735,19 +2213,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9738b98e-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9764c1e6-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:02:27Z",
+      "files": {
+        "image": "34-splitter-mud.png",
+        "raw": "34-splitter-mud.raw.png",
+        "mask": "34-splitter-mud.mask.png"
+      },
+      "palette": [
+        "#7b6b41",
+        "#6e5e37",
+        "#625138",
+        "#534138",
+        "#423138",
+        "#3d2b3d",
+        "#3b2941",
+        "#352640",
+        "#332238",
+        "#201732",
+        "#0f0a2f",
+        "#0b072e",
+        "#02022c",
+        "#080320",
+        "#010123",
+        "#01001e"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.412,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.673,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 3,
+          "w": 38,
+          "h": 33
+        }
+      ]
     },
     {
       "number": 35,
@@ -1761,19 +2278,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"97a0f10c-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"97d45c22-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:02:37Z",
+      "files": {
+        "image": "35-splitter-jar.png",
+        "raw": "35-splitter-jar.raw.png",
+        "mask": "35-splitter-jar.mask.png"
+      },
+      "palette": [
+        "#b6977e",
+        "#df7e64",
+        "#bf775d",
+        "#97735a",
+        "#fc6852",
+        "#fc5f4b",
+        "#a06858",
+        "#896358",
+        "#a05654",
+        "#774654",
+        "#64394f",
+        "#602b4c",
+        "#512e49",
+        "#4d2447",
+        "#2e1b3b",
+        "#13152b"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.339,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.888,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 1,
+          "w": 24,
+          "h": 38
+        }
+      ]
     },
     {
       "number": 36,
@@ -1787,19 +2343,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"98031a30-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"98364608-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:02:50Z",
+      "files": {
+        "image": "36-splitter-jar.png",
+        "raw": "36-splitter-jar.raw.png",
+        "mask": "36-splitter-jar.mask.png"
+      },
+      "palette": [
+        "#fdc693",
+        "#d48773",
+        "#ac595c",
+        "#803849",
+        "#62263a",
+        "#4d1d35",
+        "#431531",
+        "#401631",
+        "#3c1230",
+        "#34102d",
+        "#340f2f",
+        "#360e20",
+        "#250b29",
+        "#1a0729",
+        "#020328",
+        "#010327"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.676,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.153,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 36,
+          "h": 37
+        }
+      ]
     },
     {
       "number": 37,
@@ -1813,19 +2408,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9869ec4c-c3c7-11f1-80fd-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"989925de-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:03:03Z",
+      "files": {
+        "image": "37-tank-oni.png",
+        "raw": "37-tank-oni.raw.png",
+        "mask": "37-tank-oni.mask.png"
+      },
+      "palette": [
+        "#e53e44",
+        "#cf1a2e",
+        "#b71532",
+        "#911036",
+        "#4a455d",
+        "#342c42",
+        "#630f29",
+        "#201628",
+        "#620635",
+        "#4c032c",
+        "#3b0323",
+        "#26021a",
+        "#150413",
+        "#170112",
+        "#0e010e",
+        "#0d010d"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.496,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.438,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 46,
+          "h": 45
+        }
+      ]
     },
     {
       "number": 38,
@@ -1839,19 +2473,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"98d90294-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9917d622-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:03:13Z",
+      "files": {
+        "image": "38-tank-oni.png",
+        "raw": "38-tank-oni.raw.png",
+        "mask": "38-tank-oni.mask.png"
+      },
+      "palette": [
+        "#626352",
+        "#483c3b",
+        "#3e272a",
+        "#191c22",
+        "#c60632",
+        "#aa062f",
+        "#8d052a",
+        "#2a0b1a",
+        "#7c0427",
+        "#510225",
+        "#40021d",
+        "#320218",
+        "#260213",
+        "#18020c",
+        "#070104",
+        "#010101"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.357,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.735,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 4,
+          "w": 46,
+          "h": 40
+        }
+      ]
     },
     {
       "number": 39,
@@ -1865,19 +2538,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"994c0780-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"997e4fd8-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:03:26Z",
+      "files": {
+        "image": "39-tank-ochimusha.png",
+        "raw": "39-tank-ochimusha.raw.png",
+        "mask": "39-tank-ochimusha.mask.png"
+      },
+      "palette": [
+        "#826f71",
+        "#6b555f",
+        "#71484e",
+        "#414153",
+        "#872e3b",
+        "#4b323a",
+        "#333245",
+        "#282738",
+        "#5d1729",
+        "#340e1b",
+        "#1d1c2c",
+        "#1e0817",
+        "#100f21",
+        "#080513",
+        "#04010f",
+        "#00011c"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.318,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.036,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 1,
+          "w": 32,
+          "h": 46
+        }
+      ]
     },
     {
       "number": 40,
@@ -1891,19 +2603,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"99ac6ee0-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"99e189f4-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:03:36Z",
+      "files": {
+        "image": "40-tank-ochimusha.png",
+        "raw": "40-tank-ochimusha.raw.png",
+        "mask": "40-tank-ochimusha.mask.png"
+      },
+      "palette": [
+        "#96967e",
+        "#705f4c",
+        "#754033",
+        "#403f4d",
+        "#6f2727",
+        "#362c39",
+        "#262537",
+        "#201b2e",
+        "#3a1025",
+        "#201227",
+        "#15152c",
+        "#120d22",
+        "#0a0a20",
+        "#05041d",
+        "#020114",
+        "#010107"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.281,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.299,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 9,
+          "y": 1,
+          "w": 29,
+          "h": 46
+        }
+      ]
     },
     {
       "number": 41,
@@ -1917,19 +2668,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9a1315fa-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9a41af78-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:04:27Z",
+      "files": {
+        "image": "41-tank-nurikabe.png",
+        "raw": "41-tank-nurikabe.raw.png",
+        "mask": "41-tank-nurikabe.mask.png"
+      },
+      "palette": [
+        "#b5c794",
+        "#8da378",
+        "#80926a",
+        "#6d8b5f",
+        "#4d8f3e",
+        "#708263",
+        "#816467",
+        "#587553",
+        "#475e48",
+        "#464d47",
+        "#4e3a4c",
+        "#2c3f3a",
+        "#213133",
+        "#2b253a",
+        "#16252e",
+        "#061528"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.829,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.214,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 46,
+          "h": 46
+        }
+      ]
     },
     {
       "number": 42,
@@ -1943,19 +2733,58 @@
       "attempts": [
         {
           "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9a77849a-c3c7-11f1-80fd-a2aad1a06e13\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9ab38db4-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:04:56Z",
+      "files": {
+        "image": "42-tank-nurikabe.png",
+        "raw": "42-tank-nurikabe.raw.png",
+        "mask": "42-tank-nurikabe.mask.png"
+      },
+      "palette": [
+        "#dedcc5",
+        "#95c373",
+        "#a6808d",
+        "#62757e",
+        "#7a5570",
+        "#5f486d",
+        "#38455c",
+        "#29364b",
+        "#522c4b",
+        "#3e2852",
+        "#2e2a4a",
+        "#2e1b40",
+        "#1b1736",
+        "#150c2e",
+        "#080421",
+        "#01011b"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.344,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.351,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 6,
+          "y": 1,
+          "w": 35,
+          "h": 46
+        }
+      ]
     },
     {
       "number": 43,
@@ -2661,6 +3490,136 @@
       ]
     },
     {
+      "number": 54,
+      "id": "charger-kappa",
+      "type": "sprite",
+      "prompt": "a crouching kappa: a green turtle-shelled river imp with a water-filled dish on its head and a beak, ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:05:09Z",
+      "files": {
+        "image": "54-charger-kappa.png",
+        "raw": "54-charger-kappa.raw.png",
+        "mask": "54-charger-kappa.mask.png"
+      },
+      "palette": [
+        "#a7c24a",
+        "#789b37",
+        "#6d8839",
+        "#557e35",
+        "#7b6e35",
+        "#4d7132",
+        "#436430",
+        "#3c592d",
+        "#664329",
+        "#304a2a",
+        "#273d27",
+        "#1f3221",
+        "#2f211e",
+        "#15221c",
+        "#0e1818",
+        "#060815"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.651,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.637,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "id": "charger-kappa",
+      "type": "sprite",
+      "prompt": "a crouching kappa: a green turtle-shelled river imp with a water-filled dish on its head and a beak, ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T10:05:44Z",
+      "files": {
+        "image": "55-charger-kappa.png",
+        "raw": "55-charger-kappa.raw.png",
+        "mask": "55-charger-kappa.mask.png"
+      },
+      "palette": [
+        "#8ec571",
+        "#65a85e",
+        "#628a50",
+        "#338850",
+        "#686c3f",
+        "#406d3e",
+        "#256840",
+        "#1d5839",
+        "#6d3620",
+        "#234028",
+        "#0f432e",
+        "#0c2f21",
+        "#2d120c",
+        "#091811",
+        "#030b08",
+        "#010101"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.5,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.379,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 4,
+          "w": 30,
+          "h": 24
+        }
+      ]
+    },
+    {
       "number": 56,
       "id": "boss-nue",
       "type": "sprite",
@@ -2796,10 +3755,8 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T09:56:25Z",
+  "updated": "2026-10-09T10:05:44Z",
   "counts": {
-    "ok": 34,
-    "pending": 21,
-    "failed": 2
+    "ok": 57
   }
 }

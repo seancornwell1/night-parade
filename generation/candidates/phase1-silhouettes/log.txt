@@ -214,3 +214,52 @@
   retrodiffusion: ok on attempt 1
 [phase1-silhouettes] #57 boss-nue (sprite)
   retrodiffusion: ok on attempt 1
+--- run 2026-10-09T10:05:44Z
+[phase1-silhouettes] #22 charger-boar (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #23 charger-wanyudo (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #24 charger-wanyudo (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #25 ranged-tengu (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #26 ranged-tengu (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #27 ranged-fox-mage (sprite)
+  retrodiffusion: checks failed (1), attempt 1
+  retrodiffusion: ok on attempt 2
+[phase1-silhouettes] #28 ranged-fox-mage (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #29 ranged-skeleton-archer (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #30 ranged-skeleton-archer (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #31 splitter-nuppeppo (sprite)
+  retrodiffusion: checks failed (1), attempt 1
+  retrodiffusion: ok on attempt 2
+[phase1-silhouettes] #32 splitter-nuppeppo (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #33 splitter-mud (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #34 splitter-mud (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #35 splitter-jar (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #36 splitter-jar (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #37 tank-oni (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #38 tank-oni (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #39 tank-ochimusha (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #40 tank-ochimusha (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #41 tank-nurikabe (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #42 tank-nurikabe (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #54 charger-kappa (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-silhouettes] #55 charger-kappa (sprite)
+  retrodiffusion: ok on attempt 1
