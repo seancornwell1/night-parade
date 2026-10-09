@@ -1,0 +1,13 @@
+{
+  "batch": "phase2-music",
+  "note": "Day stage chiptune track: plays once in the day, loops seamlessly.",
+  "items": [
+    {
+      "id": "day-theme",
+      "type": "music",
+      "duration": 90,
+      "candidates": 1,
+      "prompt": "16-bit SNES chiptune background music for a feudal Japan adventure game daytime stage: koto-like pentatonic lead melody, taiko-style drum pattern, plucky shamisen-like bass, bright, adventurous and determined, steady 120 BPM, loopable, instrumental, no vocals"
+    }
+  ]
+}

@@ -146,7 +146,12 @@
           el('span', { class: 'tag' }, c.type + (c.provider ? ' · ' + c.provider : '')),
           el('span', { class: 'tag status-' + status }, label));
         const body = [head, el('div', { class: 'prompt' }, c.prompt || '')];
-        if (status === 'ok') {
+        if (status === 'ok' && c.files.audio) {
+          body.push(el('audio', { controls: '', preload: 'none', src: base + c.files.audio, style: { width: '100%', margin: '6px 0' } }));
+          if (c.type === 'music') body.push(el('div', { class: 'cap' }, 'Loops seamlessly in the game; the player plays it once.'));
+          body.push(el('ul', { class: 'checks' }, (c.checks || []).map((k) => el('li', { class: k.pass ? '' : 'bad' }, `${k.name}: ${k.value} (${k.limit})`))));
+          body.push(el('details', {}, el('summary', {}, 'raw provider output'), el('audio', { controls: '', preload: 'none', src: base + c.files.raw, style: { width: '100%' } })));
+        } else if (status === 'ok') {
           const [fw, fh] = c.size;
           const [cols, rows] = c.grid || [1, 1];
           const w = fw * cols, h = fh * rows;

@@ -1,0 +1,1 @@
+--- 2026-10-09T11:28:14Z built locally from assets/templates with the locked day palette (no provider calls)

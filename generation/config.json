@@ -14,12 +14,21 @@
       "pixellab",
       "retrodiffusion",
       "cloudflare"
+    ],
+    "sfx": [
+      "elevenlabs"
+    ],
+    "music": [
+      "elevenlabs",
+      "stability"
     ]
   },
   "dailyCaps": {
     "pixellab": 100,
     "retrodiffusion": 80,
-    "cloudflare": 55
+    "cloudflare": 55,
+    "elevenlabs": 30,
+    "stability": 1
   },
   "attemptsPerProvider": 3,
   "retrodiffusion": {
@@ -61,5 +70,17 @@
     "silhouetteSpillMax": 0.02,
     "minComponentPixels": 4,
     "boxFillMax": 0.86
+  },
+  "stability": {
+    "model": "stable-audio-2.5"
+  },
+  "audioChecks": {
+    "sfxMin": 0.08,
+    "sfxMax": 4,
+    "musicMin": 20,
+    "musicMax": 240,
+    "minMeanDb": -38,
+    "maxPeakDb": -0.3,
+    "maxSilentFraction": 0.25
   }
 }

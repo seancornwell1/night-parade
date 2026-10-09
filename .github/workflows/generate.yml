@@ -40,6 +40,8 @@ jobs:
           cache: pip
           cache-dependency-path: scripts/gen/requirements.txt
       - run: pip install -r scripts/gen/requirements.txt
+      - name: ffmpeg
+        run: which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
       - name: Generate
         if: ${{ !inputs.quote && !inputs.balances }}
         run: python scripts/gen/run.py
@@ -48,6 +50,8 @@ jobs:
           RETRO_DIFFUSION_API_KEY: ${{ secrets.RETRO_DIFFUSION_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          STABILITY_API_KEY: ${{ secrets.STABILITY_API_KEY }}
       - name: Price check
         if: ${{ inputs.quote }}
         run: python scripts/gen/run.py --quote "${{ inputs.quote }}"

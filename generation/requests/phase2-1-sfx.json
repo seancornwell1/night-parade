@@ -1,0 +1,69 @@
+{
+  "batch": "phase2-sfx",
+  "note": "Day stage sound effects (ElevenLabs).",
+  "items": [
+    {
+      "id": "hit",
+      "type": "sfx",
+      "duration": 0.5,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, quick crisp sword slash hitting a demon, short punchy impact"
+    },
+    {
+      "id": "finisher",
+      "type": "sfx",
+      "duration": 1.2,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, heavy spinning sword finisher whoosh ending in a big impact boom"
+    },
+    {
+      "id": "charge",
+      "type": "sfx",
+      "duration": 1.5,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, energy charging up then releasing in a powerful burst"
+    },
+    {
+      "id": "roll",
+      "type": "sfx",
+      "duration": 0.6,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, fast dodge roll whoosh on dirt"
+    },
+    {
+      "id": "pickup-xp",
+      "type": "sfx",
+      "duration": 0.4,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, tiny bright sparkling chime for collecting a spirit orb"
+    },
+    {
+      "id": "pickup-heal",
+      "type": "sfx",
+      "duration": 0.8,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, warm soft rising chime for eating a healing rice ball"
+    },
+    {
+      "id": "level-up",
+      "type": "sfx",
+      "duration": 1.6,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, cheerful ascending fanfare jingle for leveling up"
+    },
+    {
+      "id": "hurt",
+      "type": "sfx",
+      "duration": 0.5,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, short painful grunt with a dull hit, player taking damage"
+    },
+    {
+      "id": "death",
+      "type": "sfx",
+      "duration": 2.5,
+      "candidates": 2,
+      "prompt": "16-bit retro video game sound effect, chiptune style, sad descending game over jingle with a final thud"
+    }
+  ]
+}

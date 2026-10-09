@@ -1,0 +1,767 @@
+{
+  "palette": "day",
+  "colors": [
+    "#281622",
+    "#1a503e",
+    "#4b4056",
+    "#9e272b",
+    "#c82585",
+    "#3f823b",
+    "#7e6758",
+    "#ec5840",
+    "#58ac46",
+    "#ab8259",
+    "#28bdeb",
+    "#9c9c9c",
+    "#7ebd42",
+    "#c5a16a",
+    "#62e1f6",
+    "#fcecdc"
+  ],
+  "assets": [
+    {
+      "id": "gonta",
+      "kind": "character",
+      "file": "characters/gonta.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/characters/gonta.png",
+      "mask": "characters/gonta.mask.png",
+      "hitbox": {
+        "x": 5,
+        "y": 1,
+        "w": 37,
+        "h": 46
+      }
+    },
+    {
+      "id": "hotaru",
+      "kind": "character",
+      "file": "characters/hotaru.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/characters/hotaru.png",
+      "mask": "characters/hotaru.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 1,
+        "w": 41,
+        "h": 45
+      }
+    },
+    {
+      "id": "kuro",
+      "kind": "character",
+      "file": "characters/kuro.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/characters/kuro.png",
+      "mask": "characters/kuro.mask.png",
+      "hitbox": {
+        "x": 9,
+        "y": 1,
+        "w": 30,
+        "h": 45
+      }
+    },
+    {
+      "id": "mei",
+      "kind": "character",
+      "file": "characters/mei.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/characters/mei.png",
+      "mask": "characters/mei.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 1,
+        "w": 41,
+        "h": 45
+      }
+    },
+    {
+      "id": "yuki",
+      "kind": "character",
+      "file": "characters/yuki.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/characters/yuki.png",
+      "mask": "characters/yuki.mask.png",
+      "hitbox": {
+        "x": 10,
+        "y": 1,
+        "w": 27,
+        "h": 45
+      }
+    },
+    {
+      "id": "boar",
+      "kind": "enemies",
+      "file": "enemies/boar.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/enemies/boar.png",
+      "mask": "enemies/boar.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 4,
+        "w": 30,
+        "h": 24
+      }
+    },
+    {
+      "id": "fox-mage",
+      "kind": "enemies",
+      "file": "enemies/fox-mage.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/enemies/fox-mage.png",
+      "mask": "enemies/fox-mage.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "gaki",
+      "kind": "enemies",
+      "file": "enemies/gaki.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/enemies/gaki.png",
+      "mask": "enemies/gaki.mask.png",
+      "hitbox": {
+        "x": 4,
+        "y": 0,
+        "w": 16,
+        "h": 23
+      }
+    },
+    {
+      "id": "gashadokuro",
+      "kind": "enemies",
+      "file": "enemies/gashadokuro.png",
+      "size": [
+        96,
+        96
+      ],
+      "template": "templates/enemies/gashadokuro.png",
+      "mask": "enemies/gashadokuro.mask.png",
+      "hitbox": {
+        "x": 10,
+        "y": 3,
+        "w": 76,
+        "h": 90
+      }
+    },
+    {
+      "id": "hitodama",
+      "kind": "enemies",
+      "file": "enemies/hitodama.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/enemies/hitodama.png",
+      "mask": "enemies/hitodama.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 0,
+        "w": 19,
+        "h": 24
+      }
+    },
+    {
+      "id": "imp",
+      "kind": "enemies",
+      "file": "enemies/imp.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/enemies/imp.png",
+      "mask": "enemies/imp.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "w": 17,
+        "h": 24
+      }
+    },
+    {
+      "id": "jar",
+      "kind": "enemies",
+      "file": "enemies/jar.png",
+      "size": [
+        40,
+        40
+      ],
+      "template": "templates/enemies/jar.png",
+      "mask": "enemies/jar.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 36,
+        "h": 37
+      }
+    },
+    {
+      "id": "nue",
+      "kind": "enemies",
+      "file": "enemies/nue.png",
+      "size": [
+        96,
+        96
+      ],
+      "template": "templates/enemies/nue.png",
+      "mask": "enemies/nue.mask.png",
+      "hitbox": {
+        "x": 18,
+        "y": 3,
+        "w": 59,
+        "h": 90
+      }
+    },
+    {
+      "id": "nuppeppo",
+      "kind": "enemies",
+      "file": "enemies/nuppeppo.png",
+      "size": [
+        40,
+        40
+      ],
+      "template": "templates/enemies/nuppeppo.png",
+      "mask": "enemies/nuppeppo.mask.png",
+      "hitbox": {
+        "x": 4,
+        "y": 1,
+        "w": 32,
+        "h": 38
+      }
+    },
+    {
+      "id": "nurikabe",
+      "kind": "enemies",
+      "file": "enemies/nurikabe.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/enemies/nurikabe.png",
+      "mask": "enemies/nurikabe.mask.png",
+      "hitbox": {
+        "x": 6,
+        "y": 1,
+        "w": 35,
+        "h": 46
+      }
+    },
+    {
+      "id": "ochimusha",
+      "kind": "enemies",
+      "file": "enemies/ochimusha.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/enemies/ochimusha.png",
+      "mask": "enemies/ochimusha.mask.png",
+      "hitbox": {
+        "x": 8,
+        "y": 1,
+        "w": 32,
+        "h": 46
+      }
+    },
+    {
+      "id": "oni",
+      "kind": "enemies",
+      "file": "enemies/oni.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/enemies/oni.png",
+      "mask": "enemies/oni.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 46,
+        "h": 45
+      }
+    },
+    {
+      "id": "oni-lord",
+      "kind": "enemies",
+      "file": "enemies/oni-lord.png",
+      "size": [
+        96,
+        96
+      ],
+      "template": "templates/enemies/oni-lord.png",
+      "mask": "enemies/oni-lord.mask.png",
+      "hitbox": {
+        "x": 5,
+        "y": 3,
+        "w": 86,
+        "h": 90
+      }
+    },
+    {
+      "id": "skeleton-archer",
+      "kind": "enemies",
+      "file": "enemies/skeleton-archer.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/enemies/skeleton-archer.png",
+      "mask": "enemies/skeleton-archer.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "tengu",
+      "kind": "enemies",
+      "file": "enemies/tengu.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/enemies/tengu.png",
+      "mask": "enemies/tengu.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "wanyudo",
+      "kind": "enemies",
+      "file": "enemies/wanyudo.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/enemies/wanyudo.png",
+      "mask": "enemies/wanyudo.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 28,
+        "h": 30
+      }
+    },
+    {
+      "id": "keep",
+      "kind": "objects",
+      "file": "objects/keep.png",
+      "size": [
+        128,
+        128
+      ],
+      "template": "templates/objects/keep.png",
+      "mask": "objects/keep.mask.png",
+      "hitbox": {
+        "x": 18,
+        "y": 3,
+        "w": 92,
+        "h": 121
+      }
+    },
+    {
+      "id": "keep-2",
+      "kind": "objects",
+      "file": "objects/keep-2.png",
+      "size": [
+        128,
+        128
+      ],
+      "template": "templates/objects/keep-2.png",
+      "mask": "objects/keep-2.mask.png",
+      "hitbox": {
+        "x": 17,
+        "y": 3,
+        "w": 93,
+        "h": 121
+      }
+    },
+    {
+      "id": "lantern",
+      "kind": "objects",
+      "file": "objects/lantern.png",
+      "size": [
+        16,
+        32
+      ],
+      "template": "templates/objects/lantern.png",
+      "mask": "objects/lantern.mask.png",
+      "hitbox": {
+        "x": 0,
+        "y": 1,
+        "w": 15,
+        "h": 30
+      }
+    },
+    {
+      "id": "lantern-2",
+      "kind": "objects",
+      "file": "objects/lantern-2.png",
+      "size": [
+        16,
+        32
+      ],
+      "template": "templates/objects/lantern-2.png",
+      "mask": "objects/lantern-2.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 12,
+        "h": 30
+      }
+    },
+    {
+      "id": "rock",
+      "kind": "objects",
+      "file": "objects/rock.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/objects/rock.png",
+      "mask": "objects/rock.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "rock-2",
+      "kind": "objects",
+      "file": "objects/rock-2.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/objects/rock-2.png",
+      "mask": "objects/rock-2.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 30,
+        "h": 28
+      }
+    },
+    {
+      "id": "rock-3",
+      "kind": "objects",
+      "file": "objects/rock-3.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/objects/rock-3.png",
+      "mask": "objects/rock-3.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 30,
+        "h": 28
+      }
+    },
+    {
+      "id": "shrine",
+      "kind": "objects",
+      "file": "objects/shrine.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/objects/shrine.png",
+      "mask": "objects/shrine.mask.png",
+      "hitbox": {
+        "x": 8,
+        "y": 1,
+        "w": 32,
+        "h": 45
+      }
+    },
+    {
+      "id": "shrine-2",
+      "kind": "objects",
+      "file": "objects/shrine-2.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/objects/shrine-2.png",
+      "mask": "objects/shrine-2.mask.png",
+      "hitbox": {
+        "x": 9,
+        "y": 1,
+        "w": 30,
+        "h": 45
+      }
+    },
+    {
+      "id": "shrine-3",
+      "kind": "objects",
+      "file": "objects/shrine-3.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/objects/shrine-3.png",
+      "mask": "objects/shrine-3.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 1,
+        "w": 42,
+        "h": 46
+      }
+    },
+    {
+      "id": "tree",
+      "kind": "objects",
+      "file": "objects/tree.png",
+      "size": [
+        48,
+        64
+      ],
+      "template": "templates/objects/tree.png",
+      "mask": "objects/tree.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 42,
+        "h": 61
+      }
+    },
+    {
+      "id": "tree-2",
+      "kind": "objects",
+      "file": "objects/tree-2.png",
+      "size": [
+        48,
+        64
+      ],
+      "template": "templates/objects/tree-2.png",
+      "mask": "objects/tree-2.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 45,
+        "h": 59
+      }
+    },
+    {
+      "id": "tree-3",
+      "kind": "objects",
+      "file": "objects/tree-3.png",
+      "size": [
+        48,
+        64
+      ],
+      "template": "templates/objects/tree-3.png",
+      "mask": "objects/tree-3.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 4,
+        "w": 45,
+        "h": 55
+      }
+    },
+    {
+      "id": "kitsune-bi",
+      "kind": "shikigami",
+      "file": "shikigami/kitsune-bi.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/shikigami/kitsune-bi.png",
+      "mask": "shikigami/kitsune-bi.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "komainu",
+      "kind": "shikigami",
+      "file": "shikigami/komainu.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/shikigami/komainu.png",
+      "mask": "shikigami/komainu.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 0,
+        "w": 20,
+        "h": 24
+      }
+    },
+    {
+      "id": "paper-crane",
+      "kind": "shikigami",
+      "file": "shikigami/paper-crane.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/shikigami/paper-crane.png",
+      "mask": "shikigami/paper-crane.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "dirt-path",
+      "kind": "tile",
+      "file": "tiles/dirt-path.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/tiles/dirt-path.png",
+      "mask": "tiles/dirt-path.mask.png",
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "id": "grass",
+      "kind": "tile",
+      "file": "tiles/grass.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/tiles/grass.png",
+      "mask": "tiles/grass.mask.png",
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "id": "water",
+      "kind": "tile",
+      "file": "tiles/water.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/tiles/water.png",
+      "mask": "tiles/water.mask.png",
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      }
+    },
+    {
+      "id": "dirt-path-2",
+      "kind": "tiles",
+      "file": "tiles/dirt-path-2.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/tiles/dirt-path-2.png"
+    },
+    {
+      "id": "grass-2",
+      "kind": "tiles",
+      "file": "tiles/grass-2.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/tiles/grass-2.png"
+    },
+    {
+      "id": "wall",
+      "kind": "tiles",
+      "file": "tiles/wall.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/tiles/wall.png"
+    },
+    {
+      "id": "katana",
+      "kind": "weapons",
+      "file": "weapons/katana.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/weapons/katana.png",
+      "mask": "weapons/katana.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 45,
+        "h": 45
+      }
+    },
+    {
+      "id": "naginata",
+      "kind": "weapons",
+      "file": "weapons/naginata.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/weapons/naginata.png",
+      "mask": "weapons/naginata.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 45,
+        "h": 45
+      }
+    }
+  ]
+}

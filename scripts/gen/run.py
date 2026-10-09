@@ -17,11 +17,13 @@ from pathlib import Path
 from PIL import Image
 
 from process import palette_strip, process, hex_to_rgb
+from audio import make_audio_providers, process_audio
 from providers import LimitHit, ProviderError, Refused, make_providers
 
 ROOT = Path(__file__).resolve().parents[2]
 GEN = ROOT / "generation"
-TYPES = ("tile", "sprite", "sheet")
+TYPES = ("tile", "sprite", "sheet", "sfx", "music")
+AUDIO = ("sfx", "music")
 
 
 def load_json(path: Path, default):
@@ -89,6 +91,9 @@ def validate(req: dict, path: Path) -> None:
         need(it.get("type") in TYPES, f"item {it.get('id')}: type must be one of {TYPES}")
         need(isinstance(it.get("id"), str) and it["id"], "every item needs an id")
         need(isinstance(it.get("prompt"), str) and it["prompt"], f"item {it['id']}: needs a prompt")
+        if it["type"] in AUDIO:
+            need(isinstance(it.get("duration"), (int, float)) and 0.3 <= it["duration"] <= 300, f"item {it['id']}: audio needs duration in seconds")
+            continue
         size = it.get("size")
         need(isinstance(size, list) and len(size) == 2 and all(isinstance(v, int) and 8 <= v <= 512 for v in size), f"item {it['id']}: size must be [w, h], 8-512")
         if it["type"] == "sheet":
@@ -107,7 +112,11 @@ def resolve_palette(req: dict) -> dict:
 
 def make_candidate(item, number, palette_cfg, cfg, providers, usage, log) -> dict:
     """Walk the provider chain for one candidate. Returns a manifest entry."""
-    entry = {"number": number, "id": item["id"], "type": item["type"], "prompt": item["prompt"], "size": item["size"], "attempts": []}
+    entry = {"number": number, "id": item["id"], "type": item["type"], "prompt": item["prompt"], "attempts": []}
+    if item["type"] in AUDIO:
+        entry["duration"] = item["duration"]
+    else:
+        entry["size"] = item["size"]
     if item["type"] == "sheet":
         entry["grid"] = item["grid"]
     palette_img = None
@@ -118,9 +127,11 @@ def make_candidate(item, number, palette_cfg, cfg, providers, usage, log) -> dic
     silhouette = None
     if item.get("silhouette"):
         silhouette = Image.open(ROOT / item["silhouette"])
-    fw, fh = item["size"]
-    cols, rows = item.get("grid", [1, 1]) if item["type"] == "sheet" else (1, 1)
-    gen_size = (fw * cols, fh * rows)
+    gen_size = None
+    if item["type"] not in AUDIO:
+        fw, fh = item["size"]
+        cols, rows = item.get("grid", [1, 1]) if item["type"] == "sheet" else (1, 1)
+        gen_size = (fw * cols, fh * rows)
 
     waiting = False
     order = item.get("providers") or cfg["providers"][item["type"]]
@@ -172,7 +183,7 @@ def make_candidate(item, number, palette_cfg, cfg, providers, usage, log) -> dic
             cost = getattr(p, "last_cost", None)
             if cost is not None:
                 usage.spend(name, cost)
-            result = process(item, raw, palette_cfg, cfg, silhouette)
+            result = process_audio(item, raw, cfg) if item["type"] in AUDIO else process(item, raw, palette_cfg, cfg, silhouette)
             failed = [c for c in result["checks"] if not c["pass"]]
             entry["attempts"].append(
                 {"provider": name, "cost": cost, "outcome": "ok" if not failed else "checks failed: " + "; ".join(f"{c['name']} = {c['value']}" for c in failed)}
@@ -196,6 +207,13 @@ def save_candidate(batch_dir: Path, e: dict) -> dict:
     """Write files for a finished candidate and return its manifest entry."""
     stem = f"{e['number']:02d}-{e['id']}"
     raw, result = e.pop("raw"), e.pop("result")
+    if "audio" in result:
+        files = {"audio": f"{stem}.mp3", "raw": f"{stem}.raw.mp3"}
+        (batch_dir / files["audio"]).write_bytes(result["audio"])
+        (batch_dir / files["raw"]).write_bytes(result["raw"])
+        e.update({"files": files, "checks": result["checks"], "length": round(result["duration"], 2)})
+        e.pop("lastChecks", None)
+        return e
     files = {"image": f"{stem}.png", "raw": f"{stem}.raw.png"}
     result["image"].save(batch_dir / files["image"])
     raw_small = raw.copy()
@@ -218,7 +236,7 @@ def save_candidate(batch_dir: Path, e: dict) -> dict:
 
 def run() -> int:
     cfg = load_json(GEN / "config.json", None)
-    providers = make_providers(cfg)
+    providers = {**make_providers(cfg), **make_audio_providers(cfg)}
     usage = Usage(GEN / "usage.json", cfg.get("dailyCaps", {}))
     configured = [n for n, p in providers.items() if p.configured()]
     print(f"Providers with keys: {', '.join(configured) or 'none'}")

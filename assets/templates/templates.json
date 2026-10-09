@@ -250,34 +250,1419 @@
         48
       ],
       "hitbox": {
-        "x": 10,
+        "x": 3,
         "y": 1,
-        "w": 27,
-        "h": 46
+        "w": 41,
+        "h": 45
       },
       "provider": "retrodiffusion",
-      "prompt": "Mei the Paper Folder: a small girl origami master in soft pink and cream clothes with a cape of folded paper cranes, a round brown tanuki sitting on top of her head, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan",
+      "prompt": "Mei, a cheerful 8-year-old girl origami master: two big round hair buns tied with bright yellow ribbons, a bright magenta kimono with big white cherry blossoms and a sky-blue sash, holding a large folded paper crane; a chubby round tanuki with a dark eye mask, big round ears and a thick striped fluffy tail rides on her shoulders. Bold dark outlines, bright saturated colours, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right",
       "palette": [
-        "#f3dab4",
-        "#e0c38d",
-        "#ebbdb1",
-        "#dbaaa1",
-        "#bd9282",
-        "#bf7453",
-        "#8e5c59",
-        "#725961",
-        "#6b4942",
-        "#6b3f2d",
-        "#4b343a",
-        "#46271f",
-        "#1e080a",
-        "#120905",
-        "#080102",
-        "#020408"
+        "#fcecf9",
+        "#fae324",
+        "#f0c991",
+        "#7cb8ab",
+        "#c77c34",
+        "#847753",
+        "#754426",
+        "#484354",
+        "#c82585",
+        "#452725",
+        "#1b1925",
+        "#450d2d",
+        "#100c16",
+        "#090104",
+        "#090103",
+        "#000000"
       ],
-      "from": "phase1-characters #9",
-      "made": "2026-10-09T10:52:27Z",
-      "note": "placeholder until the Mei redesign"
+      "from": "phase1-mei #2",
+      "made": "2026-10-09T11:11:45Z"
+    },
+    {
+      "id": "wall",
+      "kind": "tiles",
+      "file": "tiles/wall.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "palette": [
+        "#c2c2c2",
+        "#bebebd",
+        "#b9b9b9",
+        "#a7a7a7",
+        "#a1a1a1",
+        "#9f9f9e",
+        "#9c9c9c",
+        "#969696",
+        "#8e8e8e",
+        "#8b8b8a",
+        "#898989",
+        "#878786",
+        "#848483",
+        "#7f7f7e",
+        "#787878",
+        "#737372"
+      ],
+      "from": "phase1-tiles #10",
+      "made": "2026-10-09T09:52:37Z"
+    },
+    {
+      "id": "grass-2",
+      "kind": "tiles",
+      "file": "tiles/grass-2.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "palette": [
+        "#bde243",
+        "#b6e03c",
+        "#b0de40",
+        "#a3da43",
+        "#8dcd4a",
+        "#84c84b",
+        "#80c54a",
+        "#7bc14b",
+        "#77bf4c",
+        "#6eba4c",
+        "#6ab64b",
+        "#67b54c",
+        "#61af4e",
+        "#5bac4e",
+        "#50a947",
+        "#52a74c"
+      ],
+      "from": "phase1-tiles #13",
+      "made": "2026-10-09T09:53:04Z"
+    },
+    {
+      "id": "dirt-path-2",
+      "kind": "tiles",
+      "file": "tiles/dirt-path-2.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "palette": [
+        "#dab985",
+        "#d9b57f",
+        "#d6b27a",
+        "#d1ac74",
+        "#caa66e",
+        "#c5a16a",
+        "#c19d66",
+        "#be9a64",
+        "#bc9863",
+        "#b79360",
+        "#b48f5f",
+        "#af8b5e",
+        "#ac885c",
+        "#a8855a",
+        "#a3845e",
+        "#9b7d57"
+      ],
+      "from": "phase1-tiles #14",
+      "made": "2026-10-09T09:53:11Z"
+    },
+    {
+      "id": "water-2",
+      "kind": "tiles",
+      "file": "tiles/water-2.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "palette": [
+        "#6ce1f7",
+        "#69dff5",
+        "#68e1f5",
+        "#59daf3",
+        "#46d4f0",
+        "#45d6f2",
+        "#44d3ef",
+        "#40d1ef",
+        "#3dcfee",
+        "#36cbeb",
+        "#33c9eb",
+        "#32c6ed",
+        "#2dc2ed",
+        "#29bfeb",
+        "#28bdeb",
+        "#27bbeb"
+      ],
+      "from": "phase1-tiles #15",
+      "made": "2026-10-09T09:53:18Z"
+    },
+    {
+      "id": "tree",
+      "kind": "objects",
+      "file": "objects/tree.png",
+      "size": [
+        48,
+        64
+      ],
+      "provider": "pixellab",
+      "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan",
+      "palette": [
+        "#7fb854",
+        "#63a94e",
+        "#58a24c",
+        "#8f8d8c",
+        "#529c4b",
+        "#489248",
+        "#377d47",
+        "#2e6f44",
+        "#2b6843",
+        "#645230",
+        "#164435",
+        "#123d33",
+        "#0f3c2e",
+        "#5b3b21",
+        "#2e1f19",
+        "#103930"
+      ],
+      "from": "phase1-objects #1",
+      "made": "2026-10-09T00:11:37Z",
+      "mask": "objects/tree.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 42,
+        "h": 61
+      }
+    },
+    {
+      "id": "tree-2",
+      "kind": "objects",
+      "file": "objects/tree-2.png",
+      "size": [
+        48,
+        64
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan",
+      "palette": [
+        "#83d538",
+        "#5fbb37",
+        "#5db837",
+        "#3f823b",
+        "#1a4d34",
+        "#524749",
+        "#1c4b37",
+        "#443a42",
+        "#322d39",
+        "#2c2b36",
+        "#0f282b"
+      ],
+      "from": "phase1-objects #2",
+      "made": "2026-10-09T00:11:54Z",
+      "mask": "objects/tree-2.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 45,
+        "h": 59
+      }
+    },
+    {
+      "id": "tree-3",
+      "kind": "objects",
+      "file": "objects/tree-3.png",
+      "size": [
+        48,
+        64
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan",
+      "palette": [
+        "#adaeaf",
+        "#66bb60",
+        "#489950",
+        "#2b7c40",
+        "#746b58",
+        "#26633e",
+        "#1a503e",
+        "#524a40",
+        "#4e463c",
+        "#183f37",
+        "#3f3832",
+        "#2f2928",
+        "#2f2927",
+        "#21292b",
+        "#13282e",
+        "#13272d"
+      ],
+      "from": "phase1-objects #3",
+      "made": "2026-10-09T00:12:04Z",
+      "mask": "objects/tree-3.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 4,
+        "w": 45,
+        "h": 55
+      }
+    },
+    {
+      "id": "shrine",
+      "kind": "objects",
+      "file": "objects/shrine.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view",
+      "palette": [
+        "#ceb7aa",
+        "#b1957e",
+        "#a28770",
+        "#7e6758",
+        "#614f43",
+        "#5d4c40",
+        "#5a483e",
+        "#56453b",
+        "#4f3e38",
+        "#4c3c38",
+        "#4a3b37",
+        "#453634",
+        "#413331",
+        "#3d2f2e",
+        "#30262e"
+      ],
+      "from": "phase1-objects #4",
+      "made": "2026-10-09T00:12:17Z",
+      "mask": "objects/shrine.mask.png",
+      "hitbox": {
+        "x": 8,
+        "y": 1,
+        "w": 32,
+        "h": 45
+      }
+    },
+    {
+      "id": "shrine-2",
+      "kind": "objects",
+      "file": "objects/shrine-2.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view",
+      "palette": [
+        "#bda980",
+        "#af8b68",
+        "#777867",
+        "#957056",
+        "#906b54",
+        "#845d4b",
+        "#7f5646",
+        "#5c5f56",
+        "#555751",
+        "#6f473c",
+        "#633d36",
+        "#4e3431",
+        "#454645",
+        "#363639",
+        "#312f34",
+        "#27202c"
+      ],
+      "from": "phase1-objects #5",
+      "made": "2026-10-09T00:12:30Z",
+      "mask": "objects/shrine-2.mask.png",
+      "hitbox": {
+        "x": 9,
+        "y": 1,
+        "w": 30,
+        "h": 45
+      }
+    },
+    {
+      "id": "shrine-3",
+      "kind": "objects",
+      "file": "objects/shrine-3.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "cloudflare",
+      "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view",
+      "palette": [
+        "#a5aabb",
+        "#878c9f",
+        "#b06b3a",
+        "#896964",
+        "#835a60",
+        "#855144",
+        "#7b525a",
+        "#604c57",
+        "#6a3c3a",
+        "#50394b",
+        "#512c34",
+        "#4d1a26",
+        "#372c42",
+        "#2f1b2f",
+        "#26122b",
+        "#130724"
+      ],
+      "from": "phase1-objects #6",
+      "made": "2026-10-09T00:12:32Z",
+      "mask": "objects/shrine-3.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 1,
+        "w": 42,
+        "h": 46
+      }
+    },
+    {
+      "id": "lantern",
+      "kind": "objects",
+      "file": "objects/lantern.png",
+      "size": [
+        16,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "palette": [
+        "#e4e5e3",
+        "#bdbdbb",
+        "#a1acab",
+        "#829090",
+        "#818181",
+        "#6e7d7f",
+        "#627174",
+        "#2f4653",
+        "#212429"
+      ],
+      "from": "phase1-objects #16",
+      "made": "2026-10-09T09:54:32Z",
+      "mask": "objects/lantern.mask.png",
+      "hitbox": {
+        "x": 0,
+        "y": 1,
+        "w": 15,
+        "h": 30
+      }
+    },
+    {
+      "id": "lantern-2",
+      "kind": "objects",
+      "file": "objects/lantern-2.png",
+      "size": [
+        16,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "palette": [
+        "#c7c9c8",
+        "#a8b2aa",
+        "#a4aea6",
+        "#8f9a92",
+        "#707e7f",
+        "#6c7a7b",
+        "#58676a",
+        "#3d4b55",
+        "#3c4954",
+        "#232330"
+      ],
+      "from": "phase1-objects #17",
+      "made": "2026-10-09T09:54:45Z",
+      "mask": "objects/lantern-2.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 12,
+        "h": 30
+      }
+    },
+    {
+      "id": "keep",
+      "kind": "objects",
+      "file": "objects/keep.png",
+      "size": [
+        128,
+        128
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view",
+      "palette": [
+        "#fefefe",
+        "#dcdbec",
+        "#b0b2ba",
+        "#9d939a",
+        "#808db3",
+        "#868097",
+        "#6f7a81",
+        "#816969",
+        "#616785",
+        "#4d5566",
+        "#593f46",
+        "#454c64",
+        "#333d52",
+        "#232a40",
+        "#2f2231",
+        "#171e36"
+      ],
+      "from": "phase1-objects #10",
+      "made": "2026-10-09T09:53:50Z",
+      "mask": "objects/keep.mask.png",
+      "hitbox": {
+        "x": 18,
+        "y": 3,
+        "w": 92,
+        "h": 121
+      }
+    },
+    {
+      "id": "keep-2",
+      "kind": "objects",
+      "file": "objects/keep-2.png",
+      "size": [
+        128,
+        128
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view",
+      "palette": [
+        "#eff1f2",
+        "#bbbcbe",
+        "#999494",
+        "#7a7e85",
+        "#7f736d",
+        "#776165",
+        "#585e6f",
+        "#494f68",
+        "#5a403a",
+        "#40465c",
+        "#393e55",
+        "#2e3349",
+        "#44251e",
+        "#252b3e",
+        "#1f2533",
+        "#171c28"
+      ],
+      "from": "phase1-objects #12",
+      "made": "2026-10-09T09:54:19Z",
+      "mask": "objects/keep-2.mask.png",
+      "hitbox": {
+        "x": 17,
+        "y": 3,
+        "w": 93,
+        "h": 121
+      }
+    },
+    {
+      "id": "rock",
+      "kind": "objects",
+      "file": "objects/rock.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "cloudflare",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "palette": [
+        "#80b105",
+        "#79ad06",
+        "#7d974f",
+        "#619811",
+        "#8d8c91",
+        "#8c8b90",
+        "#7b8773",
+        "#4d8616",
+        "#68696d",
+        "#4d6d2e",
+        "#56535f",
+        "#43503d",
+        "#4c4857",
+        "#43434c",
+        "#383546",
+        "#2a253a"
+      ],
+      "from": "phase1-objects #13",
+      "made": "2026-10-09T00:12:59Z",
+      "mask": "objects/rock.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "rock-2",
+      "kind": "objects",
+      "file": "objects/rock-2.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "palette": [
+        "#d1deae",
+        "#cfddac",
+        "#94af72",
+        "#93ad70",
+        "#92ad70",
+        "#708b58",
+        "#6f8a56",
+        "#5f7749",
+        "#5d7547",
+        "#50643f",
+        "#4e5d40",
+        "#4a593e",
+        "#364132",
+        "#35412f",
+        "#354031",
+        "#363f33"
+      ],
+      "from": "phase1-objects #19",
+      "made": "2026-10-09T09:55:11Z",
+      "mask": "objects/rock-2.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 30,
+        "h": 28
+      }
+    },
+    {
+      "id": "rock-3",
+      "kind": "objects",
+      "file": "objects/rock-3.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "palette": [
+        "#ced9b0",
+        "#64af30",
+        "#979a86",
+        "#727b69",
+        "#687360",
+        "#5a6755",
+        "#3d662f",
+        "#556451",
+        "#44544a",
+        "#2a3f3a",
+        "#1c2c29"
+      ],
+      "from": "phase1-objects #20",
+      "made": "2026-10-09T09:55:34Z",
+      "mask": "objects/rock-3.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 30,
+        "h": 28
+      }
+    },
+    {
+      "id": "katana",
+      "kind": "weapons",
+      "file": "weapons/katana.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "pixellab",
+      "prompt": "a single katana sword with black wrapped hilt, drawn diagonally, game weapon sprite",
+      "palette": [
+        "#cdd2e5",
+        "#ba874d",
+        "#747685",
+        "#9b6c34",
+        "#5c5c6e",
+        "#56555f",
+        "#6b441a",
+        "#4f4e62",
+        "#434052",
+        "#56381c",
+        "#3d2a18",
+        "#2e2c33",
+        "#1f1d22",
+        "#161212",
+        "#100c0c",
+        "#0b0706"
+      ],
+      "from": "phase1-silhouettes #4",
+      "made": "2026-10-09T09:21:04Z",
+      "mask": "weapons/katana.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 45,
+        "h": 45
+      }
+    },
+    {
+      "id": "naginata",
+      "kind": "weapons",
+      "file": "weapons/naginata.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "pixellab",
+      "prompt": "a single naginata polearm with a long wooden shaft and curved blade, drawn diagonally, game weapon sprite",
+      "palette": [
+        "#7e5c29",
+        "#64471e",
+        "#5a4024",
+        "#59322a",
+        "#3f3224",
+        "#49231f",
+        "#272017",
+        "#19140f",
+        "#171107",
+        "#110c07",
+        "#0a0703"
+      ],
+      "from": "phase1-silhouettes #5",
+      "made": "2026-10-09T09:21:24Z",
+      "mask": "weapons/naginata.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 45,
+        "h": 45
+      }
+    },
+    {
+      "id": "kitsune-bi",
+      "kind": "shikigami",
+      "file": "shikigami/kitsune-bi.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "pixellab",
+      "prompt": "a small fox-fire spirit: a tiny white paper fox wreathed in blue flame, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#fcfcfc",
+        "#c5edf7",
+        "#e0dde9",
+        "#c7c2d7",
+        "#bab7c1",
+        "#65def5",
+        "#67a4c1",
+        "#888788",
+        "#596d7e",
+        "#615c69",
+        "#245c91",
+        "#35455b",
+        "#1a324b",
+        "#120f10",
+        "#110f0f",
+        "#0f0b0b"
+      ],
+      "from": "phase1-silhouettes #51",
+      "made": "2026-10-09T08:49:21Z",
+      "mask": "shikigami/kitsune-bi.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "paper-crane",
+      "kind": "shikigami",
+      "file": "shikigami/paper-crane.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "pixellab",
+      "prompt": "a small folded white paper crane familiar, wings spread, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#efedf5",
+        "#e6e3ee",
+        "#dedae9",
+        "#d9d5e5",
+        "#cdc7dc",
+        "#aea9ba",
+        "#828084",
+        "#907678",
+        "#75717d",
+        "#706b75",
+        "#5d5960",
+        "#412f39",
+        "#151312",
+        "#151311",
+        "#13100f",
+        "#100d0c"
+      ],
+      "from": "phase1-silhouettes #52",
+      "made": "2026-10-09T08:49:40Z",
+      "mask": "shikigami/paper-crane.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "komainu",
+      "kind": "shikigami",
+      "file": "shikigami/komainu.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "pixellab",
+      "prompt": "a small stone guardian lion-dog (komainu) familiar, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#bcb6be",
+        "#a09ea5",
+        "#9a959c",
+        "#908192",
+        "#847886",
+        "#7c6a83",
+        "#7b657e",
+        "#78657f",
+        "#65596d",
+        "#5e4554",
+        "#4b4755",
+        "#423647",
+        "#35293a",
+        "#2a2133",
+        "#261c33",
+        "#22192f"
+      ],
+      "from": "phase1-silhouettes #53",
+      "made": "2026-10-09T08:50:16Z",
+      "mask": "shikigami/komainu.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 0,
+        "w": 20,
+        "h": 24
+      }
+    },
+    {
+      "id": "gaki",
+      "kind": "enemies",
+      "file": "enemies/gaki.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "pixellab",
+      "prompt": "a small emaciated hungry ghost (gaki) with a swollen belly, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#fdf2e8",
+        "#fcecdc",
+        "#f0d9cd",
+        "#e5c7be",
+        "#d3bcb7",
+        "#cba9a4",
+        "#c89795",
+        "#a08285",
+        "#90686d",
+        "#79545f",
+        "#74505c",
+        "#69464f",
+        "#5f3744",
+        "#3f1f35",
+        "#27112a",
+        "#251129"
+      ],
+      "from": "phase1-silhouettes #13",
+      "made": "2026-10-09T09:22:09Z",
+      "mask": "enemies/gaki.mask.png",
+      "hitbox": {
+        "x": 4,
+        "y": 0,
+        "w": 16,
+        "h": 23
+      }
+    },
+    {
+      "id": "imp",
+      "kind": "enemies",
+      "file": "enemies/imp.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "pixellab",
+      "prompt": "a tiny horned red oni imp, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#d2a192",
+        "#864d4f",
+        "#7b253e",
+        "#232026",
+        "#7e0b2d",
+        "#170b0d",
+        "#0f0b0b",
+        "#0c0a09",
+        "#0b0a09",
+        "#9d0833",
+        "#87082c",
+        "#5c0820",
+        "#3f0718",
+        "#270612",
+        "#0d0809",
+        "#090503"
+      ],
+      "from": "phase1-silhouettes #15",
+      "made": "2026-10-09T09:23:05Z",
+      "mask": "enemies/imp.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "w": 17,
+        "h": 24
+      }
+    },
+    {
+      "id": "hitodama",
+      "kind": "enemies",
+      "file": "enemies/hitodama.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "pixellab",
+      "prompt": "a small floating ghost flame spirit (hitodama) with a face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#f3efcc",
+        "#fce14c",
+        "#f7b941",
+        "#e57933",
+        "#ef611f",
+        "#f3601e",
+        "#ed3f36",
+        "#9d4c2e",
+        "#863520",
+        "#e41c50",
+        "#721f32",
+        "#210b1c",
+        "#210b1b",
+        "#1f0721",
+        "#1d0521"
+      ],
+      "from": "phase1-silhouettes #17",
+      "made": "2026-10-09T09:23:52Z",
+      "mask": "enemies/hitodama.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 0,
+        "w": 19,
+        "h": 24
+      }
+    },
+    {
+      "id": "boar",
+      "kind": "enemies",
+      "file": "enemies/boar.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "pixellab",
+      "prompt": "a demonic wild boar spirit with glowing tusks, charging, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#edcb78",
+        "#cf554f",
+        "#86444a",
+        "#853d40",
+        "#723b44",
+        "#6f3a43",
+        "#93333d",
+        "#6b3841",
+        "#6a3540",
+        "#68323e",
+        "#582d37",
+        "#492832",
+        "#3a2530",
+        "#351f2a",
+        "#281622",
+        "#271521"
+      ],
+      "from": "phase1-silhouettes #21",
+      "made": "2026-10-09T09:25:39Z",
+      "mask": "enemies/boar.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 4,
+        "w": 30,
+        "h": 24
+      }
+    },
+    {
+      "id": "wanyudo",
+      "kind": "enemies",
+      "file": "enemies/wanyudo.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a burning ox-cart wheel demon with a man's face (wanyudo), single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#f6d156",
+        "#f18c37",
+        "#f36c2e",
+        "#826862",
+        "#e24f27",
+        "#dc391e",
+        "#6f484e",
+        "#413d4d",
+        "#d22214",
+        "#be110e",
+        "#7e1e1e",
+        "#7f0a0e",
+        "#342638",
+        "#1d1a2f",
+        "#1f0c1c",
+        "#070312"
+      ],
+      "from": "phase1-silhouettes #23",
+      "made": "2026-10-09T09:59:04Z",
+      "mask": "enemies/wanyudo.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 28,
+        "h": 30
+      }
+    },
+    {
+      "id": "tengu",
+      "kind": "enemies",
+      "file": "enemies/tengu.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a crow tengu archer with a bow, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#7c6a66",
+        "#4b434d",
+        "#41353f",
+        "#313043",
+        "#37242c",
+        "#262437",
+        "#1d1e35",
+        "#1a1629",
+        "#151427",
+        "#11132b",
+        "#0f0c1f",
+        "#09091e",
+        "#050313",
+        "#030318",
+        "#030315",
+        "#04020a"
+      ],
+      "from": "phase1-silhouettes #25",
+      "made": "2026-10-09T09:59:40Z",
+      "mask": "enemies/tengu.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "fox-mage",
+      "kind": "enemies",
+      "file": "enemies/fox-mage.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a fox spirit sorcerer casting a fireball, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#fcfbd9",
+        "#f9d27f",
+        "#fb9c3d",
+        "#ea9862",
+        "#ef7a3b",
+        "#e06035",
+        "#c86140",
+        "#956059",
+        "#a94a3b",
+        "#764749",
+        "#86342f",
+        "#6a1a1b",
+        "#392d4b",
+        "#271737",
+        "#140726",
+        "#040328"
+      ],
+      "from": "phase1-silhouettes #27",
+      "made": "2026-10-09T10:00:41Z",
+      "mask": "enemies/fox-mage.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "skeleton-archer",
+      "kind": "enemies",
+      "file": "enemies/skeleton-archer.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a skeletal ashigaru ghost archer, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#b0a186",
+        "#73634d",
+        "#744532",
+        "#413932",
+        "#542321",
+        "#2d2725",
+        "#201e23",
+        "#19171c",
+        "#370b10",
+        "#1e0c10",
+        "#121014",
+        "#0e0b0f",
+        "#0b0b0f",
+        "#0a090b",
+        "#09090d",
+        "#060406"
+      ],
+      "from": "phase1-silhouettes #29",
+      "made": "2026-10-09T10:01:01Z",
+      "mask": "enemies/skeleton-archer.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 30,
+        "h": 30
+      }
+    },
+    {
+      "id": "nuppeppo",
+      "kind": "enemies",
+      "file": "enemies/nuppeppo.png",
+      "size": [
+        40,
+        40
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a blobby flesh yokai (nuppeppo) with a droopy face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#fc855a",
+        "#fa704f",
+        "#f8674a",
+        "#f05f45",
+        "#ec5840",
+        "#e2543f",
+        "#d54636",
+        "#c04035",
+        "#4e4a5b",
+        "#ae2f2c",
+        "#9e272b",
+        "#96242a",
+        "#732631",
+        "#771a24",
+        "#322434",
+        "#110b0f"
+      ],
+      "from": "phase1-silhouettes #31",
+      "made": "2026-10-09T10:01:44Z",
+      "mask": "enemies/nuppeppo.mask.png",
+      "hitbox": {
+        "x": 4,
+        "y": 1,
+        "w": 32,
+        "h": 38
+      }
+    },
+    {
+      "id": "jar",
+      "kind": "enemies",
+      "file": "enemies/jar.png",
+      "size": [
+        40,
+        40
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a haunted cracked clay jar spilling small spirits, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#fdc693",
+        "#d48773",
+        "#ac595c",
+        "#803849",
+        "#62263a",
+        "#4d1d35",
+        "#431531",
+        "#401631",
+        "#3c1230",
+        "#34102d",
+        "#340f2f",
+        "#360e20",
+        "#250b29",
+        "#1a0729",
+        "#020328",
+        "#010327"
+      ],
+      "from": "phase1-silhouettes #36",
+      "made": "2026-10-09T10:02:50Z",
+      "mask": "enemies/jar.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 36,
+        "h": 37
+      }
+    },
+    {
+      "id": "oni",
+      "kind": "enemies",
+      "file": "enemies/oni.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a huge red oni brute with an iron club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#e53e44",
+        "#cf1a2e",
+        "#b71532",
+        "#911036",
+        "#4a455d",
+        "#342c42",
+        "#630f29",
+        "#201628",
+        "#620635",
+        "#4c032c",
+        "#3b0323",
+        "#26021a",
+        "#150413",
+        "#170112",
+        "#0e010e",
+        "#0d010d"
+      ],
+      "from": "phase1-silhouettes #37",
+      "made": "2026-10-09T10:03:03Z",
+      "mask": "enemies/oni.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 46,
+        "h": 45
+      }
+    },
+    {
+      "id": "ochimusha",
+      "kind": "enemies",
+      "file": "enemies/ochimusha.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a hulking armoured samurai ghost (ochimusha) with a broken spear, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#826f71",
+        "#6b555f",
+        "#71484e",
+        "#414153",
+        "#872e3b",
+        "#4b323a",
+        "#333245",
+        "#282738",
+        "#5d1729",
+        "#340e1b",
+        "#1d1c2c",
+        "#1e0817",
+        "#100f21",
+        "#080513",
+        "#04010f",
+        "#00011c"
+      ],
+      "from": "phase1-silhouettes #39",
+      "made": "2026-10-09T10:03:26Z",
+      "mask": "enemies/ochimusha.mask.png",
+      "hitbox": {
+        "x": 8,
+        "y": 1,
+        "w": 32,
+        "h": 46
+      }
+    },
+    {
+      "id": "nurikabe",
+      "kind": "enemies",
+      "file": "enemies/nurikabe.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a living stone wall yokai (nurikabe) with stubby legs, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#dedcc5",
+        "#95c373",
+        "#a6808d",
+        "#62757e",
+        "#7a5570",
+        "#5f486d",
+        "#38455c",
+        "#29364b",
+        "#522c4b",
+        "#3e2852",
+        "#2e2a4a",
+        "#2e1b40",
+        "#1b1736",
+        "#150c2e",
+        "#080421",
+        "#01011b"
+      ],
+      "from": "phase1-silhouettes #42",
+      "made": "2026-10-09T10:04:56Z",
+      "mask": "enemies/nurikabe.mask.png",
+      "hitbox": {
+        "x": 6,
+        "y": 1,
+        "w": 35,
+        "h": 46
+      }
+    },
+    {
+      "id": "gashadokuro",
+      "kind": "enemies",
+      "file": "enemies/gashadokuro.png",
+      "size": [
+        96,
+        96
+      ],
+      "provider": "pixellab",
+      "prompt": "a giant skeleton yokai (gashadokuro) looming, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#cabd9b",
+        "#978977",
+        "#84786c",
+        "#7b6d65",
+        "#5c5355",
+        "#c54b5e",
+        "#4b434d",
+        "#4b4056",
+        "#49404e",
+        "#6f2442",
+        "#352d42",
+        "#231c38",
+        "#170f34",
+        "#150e31",
+        "#120c2e",
+        "#110b2d"
+      ],
+      "from": "phase1-silhouettes #43",
+      "made": "2026-10-09T08:44:18Z",
+      "mask": "enemies/gashadokuro.mask.png",
+      "hitbox": {
+        "x": 10,
+        "y": 3,
+        "w": 76,
+        "h": 90
+      }
+    },
+    {
+      "id": "nue",
+      "kind": "enemies",
+      "file": "enemies/nue.png",
+      "size": [
+        96,
+        96
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "a nue chimera: monkey face, striped tiger body and a long snake for a tail, dark storm clouds around it, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#fcedd8",
+        "#f3c69c",
+        "#f5794f",
+        "#f15c40",
+        "#cf4a40",
+        "#af3f3e",
+        "#8f3140",
+        "#5a2942",
+        "#1f0c20",
+        "#1d0309",
+        "#13020e",
+        "#080416",
+        "#07020e",
+        "#110102",
+        "#0e0119",
+        "#050008"
+      ],
+      "from": "phase1-silhouettes #56",
+      "made": "2026-10-09T09:56:12Z",
+      "mask": "enemies/nue.mask.png",
+      "hitbox": {
+        "x": 18,
+        "y": 3,
+        "w": 59,
+        "h": 90
+      }
+    },
+    {
+      "id": "oni-lord",
+      "kind": "enemies",
+      "file": "enemies/oni-lord.png",
+      "size": [
+        96,
+        96
+      ],
+      "provider": "pixellab",
+      "prompt": "a towering oni warlord in black armour with a huge kanabo club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "palette": [
+        "#8d7a72",
+        "#574950",
+        "#483946",
+        "#363146",
+        "#48242e",
+        "#2f2231",
+        "#231f2e",
+        "#191327",
+        "#1e101b",
+        "#120d21",
+        "#190713",
+        "#0c0717",
+        "#080407",
+        "#0f030e",
+        "#080312",
+        "#07030d"
+      ],
+      "from": "phase1-silhouettes #47",
+      "made": "2026-10-09T08:47:48Z",
+      "mask": "enemies/oni-lord.mask.png",
+      "hitbox": {
+        "x": 5,
+        "y": 3,
+        "w": 86,
+        "h": 90
+      }
     }
   ]
 }

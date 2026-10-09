@@ -1,0 +1,1998 @@
+{
+  "batch": "day-set",
+  "note": "Phase 2: every approved template snapped to the locked 16-colour day palette. This is the day set the game will use.",
+  "created": "2026-10-09T11:28:14Z",
+  "updated": "2026-10-09T11:28:14Z",
+  "palette": {
+    "mode": "file",
+    "name": "day",
+    "colors": [
+      "#281622",
+      "#1a503e",
+      "#4b4056",
+      "#9e272b",
+      "#c82585",
+      "#3f823b",
+      "#7e6758",
+      "#ec5840",
+      "#58ac46",
+      "#ab8259",
+      "#28bdeb",
+      "#9c9c9c",
+      "#7ebd42",
+      "#c5a16a",
+      "#62e1f6",
+      "#fcecdc"
+    ]
+  },
+  "candidates": [
+    {
+      "number": 1,
+      "id": "character/gonta",
+      "type": "sprite",
+      "prompt": "Approved template characters/gonta.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "01-character-gonta.png",
+        "raw": "01-character-gonta.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 5,
+          "y": 1,
+          "w": 37,
+          "h": 46
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 2,
+      "id": "character/hotaru",
+      "type": "sprite",
+      "prompt": "Approved template characters/hotaru.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "02-character-hotaru.png",
+        "raw": "02-character-hotaru.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 1,
+          "w": 41,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 3,
+      "id": "character/kuro",
+      "type": "sprite",
+      "prompt": "Approved template characters/kuro.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "03-character-kuro.png",
+        "raw": "03-character-kuro.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 9,
+          "y": 1,
+          "w": 30,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 4,
+      "id": "character/mei",
+      "type": "sprite",
+      "prompt": "Approved template characters/mei.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "04-character-mei.png",
+        "raw": "04-character-mei.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 1,
+          "w": 41,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 5,
+      "id": "character/yuki",
+      "type": "sprite",
+      "prompt": "Approved template characters/yuki.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "05-character-yuki.png",
+        "raw": "05-character-yuki.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 10,
+          "y": 1,
+          "w": 27,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 6,
+      "id": "enemies/boar",
+      "type": "sprite",
+      "prompt": "Approved template enemies/boar.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "06-enemies-boar.png",
+        "raw": "06-enemies-boar.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 4,
+          "w": 30,
+          "h": 24
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 7,
+      "id": "enemies/fox-mage",
+      "type": "sprite",
+      "prompt": "Approved template enemies/fox-mage.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "07-enemies-fox-mage.png",
+        "raw": "07-enemies-fox-mage.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 8,
+      "id": "enemies/gaki",
+      "type": "sprite",
+      "prompt": "Approved template enemies/gaki.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        24,
+        24
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "08-enemies-gaki.png",
+        "raw": "08-enemies-gaki.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 4,
+          "y": 0,
+          "w": 16,
+          "h": 23
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 9,
+      "id": "enemies/gashadokuro",
+      "type": "sprite",
+      "prompt": "Approved template enemies/gashadokuro.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        96,
+        96
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "09-enemies-gashadokuro.png",
+        "raw": "09-enemies-gashadokuro.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 10,
+          "y": 3,
+          "w": 76,
+          "h": 90
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 10,
+      "id": "enemies/hitodama",
+      "type": "sprite",
+      "prompt": "Approved template enemies/hitodama.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        24,
+        24
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "10-enemies-hitodama.png",
+        "raw": "10-enemies-hitodama.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 0,
+          "w": 19,
+          "h": 24
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 11,
+      "id": "enemies/imp",
+      "type": "sprite",
+      "prompt": "Approved template enemies/imp.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        24,
+        24
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "11-enemies-imp.png",
+        "raw": "11-enemies-imp.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 0,
+          "w": 17,
+          "h": 24
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 12,
+      "id": "enemies/jar",
+      "type": "sprite",
+      "prompt": "Approved template enemies/jar.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        40,
+        40
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "12-enemies-jar.png",
+        "raw": "12-enemies-jar.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 36,
+          "h": 37
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 13,
+      "id": "enemies/nue",
+      "type": "sprite",
+      "prompt": "Approved template enemies/nue.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        96,
+        96
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "13-enemies-nue.png",
+        "raw": "13-enemies-nue.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 18,
+          "y": 3,
+          "w": 59,
+          "h": 90
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 14,
+      "id": "enemies/nuppeppo",
+      "type": "sprite",
+      "prompt": "Approved template enemies/nuppeppo.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        40,
+        40
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "14-enemies-nuppeppo.png",
+        "raw": "14-enemies-nuppeppo.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 4,
+          "y": 1,
+          "w": 32,
+          "h": 38
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 15,
+      "id": "enemies/nurikabe",
+      "type": "sprite",
+      "prompt": "Approved template enemies/nurikabe.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "15-enemies-nurikabe.png",
+        "raw": "15-enemies-nurikabe.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 6,
+          "y": 1,
+          "w": 35,
+          "h": 46
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 16,
+      "id": "enemies/ochimusha",
+      "type": "sprite",
+      "prompt": "Approved template enemies/ochimusha.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "16-enemies-ochimusha.png",
+        "raw": "16-enemies-ochimusha.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 1,
+          "w": 32,
+          "h": 46
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 17,
+      "id": "enemies/oni",
+      "type": "sprite",
+      "prompt": "Approved template enemies/oni.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "17-enemies-oni.png",
+        "raw": "17-enemies-oni.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 46,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 18,
+      "id": "enemies/oni-lord",
+      "type": "sprite",
+      "prompt": "Approved template enemies/oni-lord.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        96,
+        96
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "18-enemies-oni-lord.png",
+        "raw": "18-enemies-oni-lord.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 5,
+          "y": 3,
+          "w": 86,
+          "h": 90
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 19,
+      "id": "enemies/skeleton-archer",
+      "type": "sprite",
+      "prompt": "Approved template enemies/skeleton-archer.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "19-enemies-skeleton-archer.png",
+        "raw": "19-enemies-skeleton-archer.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 20,
+      "id": "enemies/tengu",
+      "type": "sprite",
+      "prompt": "Approved template enemies/tengu.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "20-enemies-tengu.png",
+        "raw": "20-enemies-tengu.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 21,
+      "id": "enemies/wanyudo",
+      "type": "sprite",
+      "prompt": "Approved template enemies/wanyudo.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "21-enemies-wanyudo.png",
+        "raw": "21-enemies-wanyudo.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 28,
+          "h": 30
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 22,
+      "id": "objects/keep",
+      "type": "sprite",
+      "prompt": "Approved template objects/keep.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        128,
+        128
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "22-objects-keep.png",
+        "raw": "22-objects-keep.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 18,
+          "y": 3,
+          "w": 92,
+          "h": 121
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 23,
+      "id": "objects/keep-2",
+      "type": "sprite",
+      "prompt": "Approved template objects/keep-2.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        128,
+        128
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "23-objects-keep-2.png",
+        "raw": "23-objects-keep-2.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 17,
+          "y": 3,
+          "w": 93,
+          "h": 121
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 24,
+      "id": "objects/lantern",
+      "type": "sprite",
+      "prompt": "Approved template objects/lantern.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        16,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "24-objects-lantern.png",
+        "raw": "24-objects-lantern.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 0,
+          "y": 1,
+          "w": 15,
+          "h": 30
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 25,
+      "id": "objects/lantern-2",
+      "type": "sprite",
+      "prompt": "Approved template objects/lantern-2.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        16,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "25-objects-lantern-2.png",
+        "raw": "25-objects-lantern-2.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 12,
+          "h": 30
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 26,
+      "id": "objects/rock",
+      "type": "sprite",
+      "prompt": "Approved template objects/rock.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "26-objects-rock.png",
+        "raw": "26-objects-rock.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 30
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 27,
+      "id": "objects/rock-2",
+      "type": "sprite",
+      "prompt": "Approved template objects/rock-2.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "27-objects-rock-2.png",
+        "raw": "27-objects-rock-2.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 30,
+          "h": 28
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 28,
+      "id": "objects/rock-3",
+      "type": "sprite",
+      "prompt": "Approved template objects/rock-3.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "28-objects-rock-3.png",
+        "raw": "28-objects-rock-3.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 30,
+          "h": 28
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 29,
+      "id": "objects/shrine",
+      "type": "sprite",
+      "prompt": "Approved template objects/shrine.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "29-objects-shrine.png",
+        "raw": "29-objects-shrine.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 1,
+          "w": 32,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 30,
+      "id": "objects/shrine-2",
+      "type": "sprite",
+      "prompt": "Approved template objects/shrine-2.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "30-objects-shrine-2.png",
+        "raw": "30-objects-shrine-2.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 9,
+          "y": 1,
+          "w": 30,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 31,
+      "id": "objects/shrine-3",
+      "type": "sprite",
+      "prompt": "Approved template objects/shrine-3.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "31-objects-shrine-3.png",
+        "raw": "31-objects-shrine-3.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 1,
+          "w": 42,
+          "h": 46
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 32,
+      "id": "objects/tree",
+      "type": "sprite",
+      "prompt": "Approved template objects/tree.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        64
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "32-objects-tree.png",
+        "raw": "32-objects-tree.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 42,
+          "h": 61
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 33,
+      "id": "objects/tree-2",
+      "type": "sprite",
+      "prompt": "Approved template objects/tree-2.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        64
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "33-objects-tree-2.png",
+        "raw": "33-objects-tree-2.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 45,
+          "h": 59
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 34,
+      "id": "objects/tree-3",
+      "type": "sprite",
+      "prompt": "Approved template objects/tree-3.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        64
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "34-objects-tree-3.png",
+        "raw": "34-objects-tree-3.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 4,
+          "w": 45,
+          "h": 55
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 35,
+      "id": "shikigami/kitsune-bi",
+      "type": "sprite",
+      "prompt": "Approved template shikigami/kitsune-bi.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        24,
+        24
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "35-shikigami-kitsune-bi.png",
+        "raw": "35-shikigami-kitsune-bi.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 22,
+          "h": 22
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 36,
+      "id": "shikigami/komainu",
+      "type": "sprite",
+      "prompt": "Approved template shikigami/komainu.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        24,
+        24
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "36-shikigami-komainu.png",
+        "raw": "36-shikigami-komainu.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 0,
+          "w": 20,
+          "h": 24
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 37,
+      "id": "shikigami/paper-crane",
+      "type": "sprite",
+      "prompt": "Approved template shikigami/paper-crane.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        24,
+        24
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "37-shikigami-paper-crane.png",
+        "raw": "37-shikigami-paper-crane.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 22,
+          "h": 22
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 38,
+      "id": "tile/dirt-path",
+      "type": "sprite",
+      "prompt": "Approved template tiles/dirt-path.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "38-tile-dirt-path.png",
+        "raw": "38-tile-dirt-path.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 39,
+      "id": "tile/grass",
+      "type": "sprite",
+      "prompt": "Approved template tiles/grass.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "39-tile-grass.png",
+        "raw": "39-tile-grass.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 40,
+      "id": "tile/water",
+      "type": "sprite",
+      "prompt": "Approved template tiles/water.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "40-tile-water.png",
+        "raw": "40-tile-water.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 41,
+      "id": "tiles/dirt-path-2",
+      "type": "tile",
+      "prompt": "Approved template tiles/dirt-path-2.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "41-tiles-dirt-path-2.png",
+        "raw": "41-tiles-dirt-path-2.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        null
+      ],
+      "attempts": []
+    },
+    {
+      "number": 42,
+      "id": "tiles/grass-2",
+      "type": "tile",
+      "prompt": "Approved template tiles/grass-2.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "42-tiles-grass-2.png",
+        "raw": "42-tiles-grass-2.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        null
+      ],
+      "attempts": []
+    },
+    {
+      "number": 43,
+      "id": "tiles/wall",
+      "type": "tile",
+      "prompt": "Approved template tiles/wall.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        32,
+        32
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "43-tiles-wall.png",
+        "raw": "43-tiles-wall.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        null
+      ],
+      "attempts": []
+    },
+    {
+      "number": 44,
+      "id": "weapons/katana",
+      "type": "sprite",
+      "prompt": "Approved template weapons/katana.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "44-weapons-katana.png",
+        "raw": "44-weapons-katana.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 45,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    },
+    {
+      "number": 45,
+      "id": "weapons/naginata",
+      "type": "sprite",
+      "prompt": "Approved template weapons/naginata.png snapped to the locked day palette (left: locked, raw: original)",
+      "size": [
+        48,
+        48
+      ],
+      "status": "ok",
+      "provider": "day palette lock",
+      "files": {
+        "image": "45-weapons-naginata.png",
+        "raw": "45-weapons-naginata.raw.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 45,
+          "h": 45
+        }
+      ],
+      "attempts": []
+    }
+  ],
+  "counts": {
+    "ok": 45
+  }
+}

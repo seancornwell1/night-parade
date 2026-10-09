@@ -1,0 +1,403 @@
+{
+  "batch": "phase2-visuals",
+  "note": "Day stage effects, pickups, UI and forest/village props, generated directly in the locked day palette (Cloudflare; free).",
+  "palette": {
+    "mode": "file",
+    "name": "day"
+  },
+  "items": [
+    {
+      "id": "xp-orb",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small glowing blue spirit orb, game pickup item icon"
+    },
+    {
+      "id": "heal-onigiri",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a single onigiri rice ball wrapped in dark seaweed, healing item icon"
+    },
+    {
+      "id": "arrow",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a single small wooden arrow with white fletching, diagonal",
+      "minCoverage": 0.012
+    },
+    {
+      "id": "fireball",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small round orange fireball projectile"
+    },
+    {
+      "id": "foxfire-bolt",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small blue ghostly flame wisp projectile"
+    },
+    {
+      "id": "paper-dart",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small white folded paper dart",
+      "minCoverage": 0.02
+    },
+    {
+      "id": "spirit-wave",
+      "type": "sprite",
+      "size": [
+        32,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a glowing white crescent spirit wave energy slash, horizontal"
+    },
+    {
+      "id": "slash-arc",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a single bright white curved sword slash trail arc effect",
+      "minCoverage": 0.02
+    },
+    {
+      "id": "hit-spark",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small bright yellow white impact spark star burst effect"
+    },
+    {
+      "id": "btn-attack",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a round red lacquered wooden game button with a white katana emblem in the middle, UI icon"
+    },
+    {
+      "id": "btn-dodge",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a round blue lacquered wooden game button with a white wind swirl emblem in the middle, UI icon"
+    },
+    {
+      "id": "stick-base",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a round flat dark wooden disc with a carved outer ring, UI joystick base"
+    },
+    {
+      "id": "stick-knob",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small round polished red lacquer knob, UI joystick handle"
+    },
+    {
+      "id": "card-frame",
+      "type": "sprite",
+      "size": [
+        64,
+        96
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a blank vertical paper scroll card with dark wooden rods at the top and bottom, empty parchment, UI frame"
+    },
+    {
+      "id": "panel-frame",
+      "type": "sprite",
+      "size": [
+        64,
+        64
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a blank square UI panel: dark wooden frame around plain cream rice paper, empty, no text"
+    },
+    {
+      "id": "icon-fire",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a red-orange flame icon, game UI symbol"
+    },
+    {
+      "id": "icon-frost",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a pale blue snowflake icon, game UI symbol"
+    },
+    {
+      "id": "icon-thunder",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a yellow lightning bolt icon, game UI symbol"
+    },
+    {
+      "id": "icon-spirit",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a white ghostly soul wisp icon, game UI symbol"
+    },
+    {
+      "id": "icon-beast",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a brown animal paw print icon, game UI symbol"
+    },
+    {
+      "id": "torii",
+      "type": "sprite",
+      "size": [
+        64,
+        64
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a red Shinto torii gate, 3/4 top-down game view"
+    },
+    {
+      "id": "farmhouse",
+      "type": "sprite",
+      "size": [
+        96,
+        96
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small thatched-roof Japanese farmhouse (minka), 3/4 top-down game view"
+    },
+    {
+      "id": "fence",
+      "type": "sprite",
+      "size": [
+        32,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a short section of woven bamboo fence, 3/4 top-down game view"
+    },
+    {
+      "id": "bush",
+      "type": "sprite",
+      "size": [
+        32,
+        24
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a round leafy green bush, 3/4 top-down game view"
+    },
+    {
+      "id": "bamboo",
+      "type": "sprite",
+      "size": [
+        32,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small cluster of green bamboo stalks, 3/4 top-down game view"
+    },
+    {
+      "id": "flowers",
+      "type": "sprite",
+      "size": [
+        16,
+        16
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "a small patch of tiny wildflowers, top-down"
+    },
+    {
+      "id": "forest-floor",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 2,
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "top-down 16-bit pixel art seamless ground texture: dark forest floor with fallen leaves and moss, daylight"
+    },
+    {
+      "id": "paddy",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 2,
+      "providers": [
+        "cloudflare"
+      ],
+      "prompt": "top-down 16-bit pixel art seamless texture: flooded rice paddy water with rows of young green rice shoots, daylight"
+    }
+  ]
+}
