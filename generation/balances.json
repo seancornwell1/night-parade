@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-09T09:04:39Z",
+  "checked": "2026-10-09T09:27:27Z",
   "pixellab": {
     "type": "usd",
     "usd": 0.0
@@ -7,5 +7,23 @@
   "retrodiffusion": {
     "credits": 50,
     "balance": 0.020000000000000018
+  },
+  "elevenlabs": {
+    "tier": "free",
+    "character_count": 0,
+    "character_limit": 10000,
+    "next_character_count_reset_unix": 1794172040,
+    "status": "free"
+  },
+  "stability": {
+    "credits": 25
+  },
+  "secretsPresent": {
+    "PIXELLAB_API_KEY": true,
+    "RETRO_DIFFUSION_API_KEY": true,
+    "CLOUDFLARE_ACCOUNT_ID": true,
+    "CLOUDFLARE_API_TOKEN": true,
+    "ELEVENLABS_API_KEY": true,
+    "STABILITY_API_KEY": true
   }
 }
