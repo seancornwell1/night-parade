@@ -407,6 +407,24 @@ def balances() -> int:
             out["retrodiffusion"] = r.json() if r.status_code < 400 else f"HTTP {r.status_code}: {r.text[:200]}"
         except Exception as e:  # noqa: BLE001
             out["retrodiffusion"] = f"error: {e}"
+    if os.environ.get("ELEVENLABS_API_KEY"):
+        try:
+            r = requests.get("https://api.elevenlabs.io/v1/user/subscription", headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]}, timeout=60)
+            d = r.json() if r.status_code < 400 else None
+            out["elevenlabs"] = (
+                {k: d.get(k) for k in ("tier", "character_count", "character_limit", "next_character_count_reset_unix", "status")}
+                if d else f"HTTP {r.status_code}: {r.text[:200]}"
+            )
+        except Exception as e:  # noqa: BLE001
+            out["elevenlabs"] = f"error: {e}"
+    if os.environ.get("STABILITY_API_KEY"):
+        try:
+            r = requests.get("https://api.stability.ai/v1/user/balance", headers={"Authorization": f"Bearer {os.environ['STABILITY_API_KEY']}"}, timeout=60)
+            out["stability"] = r.json() if r.status_code < 400 else f"HTTP {r.status_code}: {r.text[:200]}"
+        except Exception as e:  # noqa: BLE001
+            out["stability"] = f"error: {e}"
+    out["secretsPresent"] = {k: bool(os.environ.get(k)) for k in (
+        "PIXELLAB_API_KEY", "RETRO_DIFFUSION_API_KEY", "CLOUDFLARE_ACCOUNT_ID", "CLOUDFLARE_API_TOKEN", "ELEVENLABS_API_KEY", "STABILITY_API_KEY")}
     save_json(GEN / "balances.json", out)
     print(json.dumps(out, indent=2))
     return 0
