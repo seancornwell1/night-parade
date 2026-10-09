@@ -80,7 +80,7 @@ to the palette (alpha becomes fully on or off).
 | Type | Processing | Checks |
 |---|---|---|
 | tile | Opaque; small edge mismatches cross-faded with the opposite edge so it wraps cleanly | the provider's **original** edges must already wrap: colour step across the wrap seam vs the interior ≤ `tileSeamRatio` (a truly seamless texture scores about 1.0); at least `tileMinColors` colours |
-| sprite | Background flood-filled away if the provider returned an opaque image; cropped to the main subject (dropping stray captions) so it fills the fixed frame; specks removed; exact mask PNG; hitbox = mask bounds | coverage in range; outline contrast vs stage background ≥ `contrastMin`; inside silhouette if given |
+| sprite | Background flood-filled away if the provider returned an opaque image; cropped to the main subject (dropping stray captions) so it fills the fixed frame; specks removed; exact mask PNG; hitbox = mask bounds | coverage in range; no baked-in background (fills ≤ `boxFillMax` of its bounding box); outline contrast vs stage background ≥ `contrastMin`; inside silhouette if given |
 | sheet | As sprite, then sliced on the fixed grid into frames with per-frame hitboxes | per-frame coverage and contrast; each frame's area, height and colour use within range of the median frame (drifting frames fail) |
 
 A candidate is accepted only if every check passes; otherwise the attempt counts as a check

@@ -87,6 +87,197 @@
       ],
       "from": "test-tiles-003 #3",
       "made": "2026-10-08T23:58:16Z"
+    },
+    {
+      "id": "hotaru",
+      "kind": "character",
+      "file": "characters/hotaru.png",
+      "mask": "characters/hotaru.mask.png",
+      "size": [
+        48,
+        48
+      ],
+      "hitbox": {
+        "x": 3,
+        "y": 1,
+        "w": 41,
+        "h": 45
+      },
+      "provider": "retrodiffusion",
+      "prompt": "Hotaru the Lantern Warden: a cheerful young girl in an indigo kimono and hakama wearing a very wide flat straw kasa hat, carrying a glowing amber paper lantern hanging from a pole over her shoulder, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan",
+      "palette": [
+        "#f0bc76",
+        "#cba16a",
+        "#ce9460",
+        "#af8159",
+        "#a47340",
+        "#8f775e",
+        "#6d5e5e",
+        "#57465c",
+        "#2e2e2f",
+        "#252e64",
+        "#281a19",
+        "#130e1a",
+        "#120502",
+        "#04020a",
+        "#030102",
+        "#010002"
+      ],
+      "from": "phase1-characters #1",
+      "made": "2026-10-09T10:47:19Z"
+    },
+    {
+      "id": "kuro",
+      "kind": "character",
+      "file": "characters/kuro.png",
+      "mask": "characters/kuro.mask.png",
+      "size": [
+        48,
+        48
+      ],
+      "hitbox": {
+        "x": 9,
+        "y": 1,
+        "w": 30,
+        "h": 45
+      },
+      "provider": "retrodiffusion",
+      "prompt": "Kuro the Crow Ronin: a lean young swordsman in a ragged black straw-and-feather mino cloak that flares like crow wings, half tengu mask with a short beak, deep blue clothes, katana with a red cord, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan",
+      "palette": [
+        "#bb9f7c",
+        "#87745c",
+        "#4a545a",
+        "#4b4446",
+        "#3a3941",
+        "#2e4662",
+        "#302c36",
+        "#1a1c28",
+        "#152948",
+        "#0b0f1a",
+        "#070200",
+        "#040207",
+        "#010104",
+        "#050002",
+        "#000007",
+        "#000003"
+      ],
+      "from": "phase1-characters #3",
+      "made": "2026-10-09T10:48:38Z"
+    },
+    {
+      "id": "yuki",
+      "kind": "character",
+      "file": "characters/yuki.png",
+      "mask": "characters/yuki.mask.png",
+      "size": [
+        48,
+        48
+      ],
+      "hitbox": {
+        "x": 10,
+        "y": 1,
+        "w": 27,
+        "h": 45
+      },
+      "provider": "retrodiffusion",
+      "prompt": "Yuki the Fox-Mask Shrine Maiden: a shrine maiden in white top and red hakama with very wide sleeves, a white fox mask pushed up on top of her head with pointed ears, paper talismans circling her, faint blue frost, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan",
+      "palette": [
+        "#fefefe",
+        "#dfe9ed",
+        "#d4cdca",
+        "#b8e0f8",
+        "#9ca9bb",
+        "#7e6977",
+        "#9f3a36",
+        "#494147",
+        "#892b31",
+        "#7b1c26",
+        "#57334f",
+        "#4c131c",
+        "#31222d",
+        "#130b12",
+        "#0f0205",
+        "#020408"
+      ],
+      "from": "phase1-characters #5",
+      "made": "2026-10-09T10:49:56Z"
+    },
+    {
+      "id": "gonta",
+      "kind": "character",
+      "file": "characters/gonta.png",
+      "mask": "characters/gonta.mask.png",
+      "size": [
+        48,
+        48
+      ],
+      "hitbox": {
+        "x": 5,
+        "y": 1,
+        "w": 37,
+        "h": 46
+      },
+      "provider": "retrodiffusion",
+      "prompt": "Gonta the Oni-Blooded Brawler: a sturdy grinning boy with one small stubby horn on his forehead, huge oversized iron gauntlets, one orange-red oni arm, green tunic with a rope belt and a gourd, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan",
+      "palette": [
+        "#f8ecd3",
+        "#efa97f",
+        "#ca9a81",
+        "#88846e",
+        "#5d864a",
+        "#c3653c",
+        "#925d3d",
+        "#4a5c58",
+        "#5c4a3d",
+        "#602d26",
+        "#2a1d1f",
+        "#0c170a",
+        "#090001",
+        "#030600",
+        "#020104",
+        "#000001"
+      ],
+      "from": "phase1-characters #7",
+      "made": "2026-10-09T10:50:46Z"
+    },
+    {
+      "id": "mei",
+      "kind": "character",
+      "file": "characters/mei.png",
+      "mask": "characters/mei.mask.png",
+      "size": [
+        48,
+        48
+      ],
+      "hitbox": {
+        "x": 10,
+        "y": 1,
+        "w": 27,
+        "h": 46
+      },
+      "provider": "retrodiffusion",
+      "prompt": "Mei the Paper Folder: a small girl origami master in soft pink and cream clothes with a cape of folded paper cranes, a round brown tanuki sitting on top of her head, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan",
+      "palette": [
+        "#f3dab4",
+        "#e0c38d",
+        "#ebbdb1",
+        "#dbaaa1",
+        "#bd9282",
+        "#bf7453",
+        "#8e5c59",
+        "#725961",
+        "#6b4942",
+        "#6b3f2d",
+        "#4b343a",
+        "#46271f",
+        "#1e080a",
+        "#120905",
+        "#080102",
+        "#020408"
+      ],
+      "from": "phase1-characters #9",
+      "made": "2026-10-09T10:52:27Z",
+      "note": "placeholder until the Mei redesign"
     }
   ]
 }

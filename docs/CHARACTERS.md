@@ -53,11 +53,12 @@ toward a path without locking it, and has a capstone special for its upgrade tre
 
 ## 5. Mei & Pom, the Paper Folder and her Tanuki
 
-- **Who:** a small origami master and the mischievous tanuki that rides on her head. Made
-  with a younger player in mind: playful, and easy to tell apart.
-- **Silhouette hook:** a round tanuki sitting on her head (two ear bumps on top), and a cape
-  of folded paper cranes.
-- **Accent:** soft pink and cream paper, brown tanuki.
+- **Who:** a cheerful 8-year-old origami master and Pom, the chubby tanuki who rides on her
+  shoulders. Designed for an 8-year-old player: bright, friendly and impossible to lose on screen.
+- **Silhouette hook:** two big round hair buns with yellow ribbons, and Pom's round body,
+  ears and big striped tail on her shoulders. She holds a large paper crane.
+- **Accent:** bright magenta kimono with white cherry blossoms and a sky-blue sash, the
+  strongest colours of any character so she stands out against grass and at night.
 - **Leans toward:** Beast, with shikigami support.
 - **Capstone special:** *Shape-Shift*: Pom turns into a giant paper tanuki that charges
   through the parade.

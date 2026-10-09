@@ -59,6 +59,7 @@
     ],
     "frameColorDistanceMax": 0.6,
     "silhouetteSpillMax": 0.02,
-    "minComponentPixels": 4
+    "minComponentPixels": 4,
+    "boxFillMax": 0.86
   }
 }

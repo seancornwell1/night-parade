@@ -329,6 +329,13 @@ def process(item: dict, raw: Image.Image, palette_cfg: dict, cfg: dict, silhouet
         info = []
         for i, (fimg, fmask) in enumerate(frames):
             cov = float(fmask.mean())
+            hb = hitbox(fmask)
+            if hb:
+                # A subject that fills nearly its whole bounding box is a rectangle: a baked-in background.
+                box_fill = float(fmask.sum() / (hb["w"] * hb["h"]))
+                lim = c.get("boxFillMax", 0.86)
+                label0 = "" if kind == "sprite" else f"frame {i + 1}: "
+                checks.append(check(f"{label0}no baked-in background", box_fill <= lim, box_fill, f"<= {lim} of its bounding box"))
             label = "" if kind == "sprite" else f"frame {i + 1}: "
             lo_cov = item.get("minCoverage", c["spriteMinCoverage"])
             checks.append(check(f"{label}coverage", lo_cov <= cov <= c["spriteMaxCoverage"], cov, f"{lo_cov}-{c['spriteMaxCoverage']}"))

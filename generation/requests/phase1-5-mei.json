@@ -1,0 +1,25 @@
+{
+  "batch": "phase1-mei",
+  "note": "Mei & Pom redesign for an 8-year-old player: bright magenta and yellow, big hair buns, a large clearly drawn tanuki on her shoulders. Retro Diffusion Pro, 48x48.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "items": [
+    {
+      "id": "mei",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "retrodiffusion"
+      ],
+      "rdStyle": "rd_pro__default",
+      "prompt": "Mei, a cheerful 8-year-old girl origami master: two big round hair buns tied with bright yellow ribbons, a bright magenta kimono with big white cherry blossoms and a sky-blue sash, holding a large folded paper crane; a chubby round tanuki with a dark eye mask, big round ears and a thick striped fluffy tail rides on her shoulders. Bold dark outlines, bright saturated colours, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right"
+    }
+  ]
+}
