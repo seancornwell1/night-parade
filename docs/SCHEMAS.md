@@ -216,6 +216,8 @@ reference must exist in `assets/day` (checked at load).
 | `weapon` | weapon id | Starting weapon |
 | `playable` | boolean | Selectable |
 | `default` | boolean | The character used now (exactly one) |
+| `displayScale` | number? | Extra draw scale on top of the 2× art scale (default 1) |
+| `animations` | `{idle?, run?, attack?: {sheet, fps}}`? | Animation strips listed under `sheets` in `assets/day/day.json` (`key`, `frameWidth`, `frameHeight`, `frames`, `anchor` as an origin fraction at the feet). The attack strip is stretched to each swing's length; anything missing stays code-animated |
 
 ## Weapon — `content/weapons/<id>.json`
 

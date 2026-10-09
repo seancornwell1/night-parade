@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { ART_SCALE, hasArt, hasSound } from '../art';
+import { ART_SCALE, hasArt, hasSound, SHEETS } from '../art';
 import { ARENA, GREY, tuning } from '../config/tuning';
 import { content, currentRift, enemy as enemyDef, mainCharacter } from '../content';
 import type { EnemyDef, HitEffect, RiftDef, Spawn, Tag } from '../content/types';
@@ -71,7 +71,11 @@ const wrapAngle = (a: number) => Phaser.Math.Angle.Wrap(a);
 
 export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   private stage!: BuiltStage;
-  private player!: Phaser.GameObjects.Image;
+  private player!: Phaser.GameObjects.Sprite;
+  /** Draw scale of the hero (art pixels to world units). */
+  private heroScale = ART_SCALE;
+  /** Which hero animations exist (user-provided sheets); the rest stays code-animated. */
+  private heroAnims = { idle: false, run: false, attack: false };
   private weapon!: { key: string; offset: number };
   private music?: Phaser.Sound.BaseSound;
   private lastXpSound = 0;
@@ -174,7 +178,23 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     const hero = mainCharacter();
     const weapon = content.weapons.get(hero.weapon)!;
     this.weapon = { key: weapon.sprite, offset: weapon.angleOffsetDeg * DEG };
-    this.player = this.add.image(this.px, this.py, hero.sprite).setOrigin(0.5, 0.78).setScale(ART_SCALE);
+    this.heroScale = ART_SCALE * (hero.displayScale ?? 1);
+    const anims = hero.animations ?? {};
+    const first = anims.idle ?? anims.run ?? anims.attack;
+    this.player = this.add.sprite(this.px, this.py, first ? first.sheet : hero.sprite);
+    if (first) this.player.setOrigin(...SHEETS[first.sheet].anchor);
+    else this.player.setOrigin(0.5, 0.78);
+    for (const name of ['idle', 'run', 'attack'] as const) {
+      const a = anims[name];
+      if (!a) continue;
+      const key = `hero-${name}`;
+      if (!this.anims.exists(key)) {
+        this.anims.create({ key, frames: this.anims.generateFrameNumbers(a.sheet, {}), frameRate: a.fps, repeat: name === 'attack' ? 0 : -1 });
+      }
+      this.heroAnims[name] = true;
+    }
+    if (this.heroAnims.idle) this.player.play('hero-idle');
+    this.player.setScale(this.heroScale);
     this.arcLines.forEach((l) => l.setDepth(5000));
     this.snapMarker.setDepth(5000);
     this.startMusic(false);
@@ -237,14 +257,13 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (hasSound(k) && tuning.sfxVolume > 0) this.sound.play(k, { volume: tuning.sfxVolume * volume });
   }
 
-  /** Day theme by day; the night track at night, or the day theme slowed and lowered until one exists. */
+  /** Day theme by day; the night track at night, or the day theme until one exists. */
   private startMusic(night: boolean): void {
     this.music?.stop();
     const own = night && hasSound('audio/night-theme');
     const key = own ? 'audio/night-theme' : 'audio/day-theme';
     if (!hasSound(key)) return;
-    const slowed = night && !own;
-    this.music = this.sound.add(key, { loop: true, volume: tuning.musicVolume, rate: slowed ? 0.9 : 1, detune: slowed ? -500 : 0 });
+    this.music = this.sound.add(key, { loop: true, volume: tuning.musicVolume });
     this.music.play();
   }
 
@@ -613,6 +632,13 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.curHit = this.comboIndex;
     this.hitApplied = false;
     this.setState('attack');
+    this.playAttackAnim(tuning.hitDuration);
+  }
+
+  /** Plays the hero's attack sheet once, stretched to the swing's length. */
+  private playAttackAnim(seconds: number): void {
+    if (!this.heroAnims.attack) return;
+    this.player.play({ key: 'hero-attack', duration: seconds * 1000 }, false);
   }
 
   private chargeKindNow(): ChargeKind {
@@ -627,6 +653,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.lastHitFacing = this.facing;
     this.hitApplied = false;
     this.setState('chargeAttack');
+    this.playAttackAnim(tuning.chargeRecovery);
   }
 
   private applyHit(i: number): void {
@@ -1156,6 +1183,8 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     let to = facing + half;
     if (reverse) [from, to] = [to, from];
     if (hasArt(this.weapon.key)) {
+      // The attack sheet already draws the blade and its slash; only spins still show the weapon art.
+      if (this.heroAnims.attack && arcDeg < 360) return;
       const blade = 45 * Math.SQRT2; // diagonal of the 48px weapon art
       const obj = this.add.image(this.px, this.py, this.weapon.key).setOrigin(0.12, 0.88).setScale((length * 0.95) / blade).setDepth(this.py + 1);
       this.fx.push({ obj, t: 0, dur: Math.max(dur, 0.12), alpha: 1, follow: true, from, to, rotOffset: this.weapon.offset });
@@ -1207,11 +1236,18 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   }
 
   private syncVisuals(): void {
-    // Hotaru's single generated frame, animated by code: bob, lean, squash, spin and tints.
+    // Hotaru's sheets (idle, run, attack) plus code motion: bob, lean, squash, spin and tints.
+    // Without sheets the single frame is animated by code alone.
     const p = this.player;
     const t = this.time.now / 1000;
     const flip = Math.cos(this.facing) < 0;
     const dir = flip ? -1 : 1;
+    const sheet = this.heroAnims.idle || this.heroAnims.run;
+    const loop = (name: 'idle' | 'run') => {
+      if (!this.heroAnims[name]) return;
+      const key = `hero-${name}`;
+      if (p.anims.currentAnim?.key !== key || !p.anims.isPlaying) p.play(key, true);
+    };
     let rot = 0;
     let sx = 1;
     let sy = 1;
@@ -1219,31 +1255,45 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     switch (this.state) {
       case 'free':
         if (this.moving) {
-          oy = -Math.abs(Math.sin(t * 14)) * 5;
-          rot = Math.sin(t * 14) * 0.06;
+          loop('run');
+          oy = sheet ? 0 : -Math.abs(Math.sin(t * 14)) * 5;
+          rot = Math.sin(t * 14) * (sheet ? 0.02 : 0.06);
         } else {
-          sy = 1 + 0.025 * Math.sin(t * 3);
-          sx = 1 - 0.015 * Math.sin(t * 3);
+          loop('idle');
+          if (!sheet) {
+            sy = 1 + 0.025 * Math.sin(t * 3);
+            sx = 1 - 0.015 * Math.sin(t * 3);
+          }
         }
         break;
       case 'attack':
       case 'chargeAttack': {
         const k = Math.min(1, this.stateT / (this.state === 'attack' ? tuning.hitDuration : tuning.chargeRecovery));
-        rot = dir * 0.2 * (1 - k);
-        sx = 1 + 0.1 * (1 - k);
-        sy = 1 - 0.08 * (1 - k);
+        const amt = this.heroAnims.attack ? 0.4 : 1;
+        rot = dir * 0.2 * (1 - k) * amt;
+        sx = 1 + 0.1 * (1 - k) * amt;
+        sy = 1 - 0.08 * (1 - k) * amt;
         break;
       }
       case 'charging':
+        // Wind-up: hold the first attack frame.
+        if (this.heroAnims.attack) {
+          if (p.anims.currentAnim?.key !== 'hero-attack' || p.anims.isPlaying) {
+            p.play('hero-attack');
+            p.anims.stop();
+          }
+          p.setFrame(0);
+        }
         sx = 1.05;
         sy = 0.93;
         break;
       case 'dodge':
+        loop('run');
         rot = dir * Math.PI * 2 * Math.min(1, this.stateT / tuning.dodgeTime);
         sy = 0.85;
         break;
     }
-    p.setPosition(this.px, this.py + oy).setFlipX(flip).setRotation(rot).setScale(ART_SCALE * sx, ART_SCALE * sy).setDepth(this.py);
+    p.setPosition(this.px, this.py + oy).setFlipX(flip).setRotation(rot).setScale(this.heroScale * sx, this.heroScale * sy).setDepth(this.py);
     p.clearTint();
     const hurtFlash = this.hurtT > tuning.playerHurtIFrames - 0.12;
     p.setTintMode(hurtFlash ? Phaser.TintModes.FILL : Phaser.TintModes.MULTIPLY);

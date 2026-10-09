@@ -16,3 +16,8 @@ non-commercial and need the credit "Sound effects created with ElevenLabs"; this
 ## Provided by the player's family
 
 Files imported from `assets/inbox/` are listed with provider `user` in the manifests above.
+
+| Asset | Files |
+|---|---|
+| Hotaru idle, run and attack sheets | `assets/day/characters/hotaru-{idle,run,attack}.png` (originals in `assets/source/hotaru/`) |
+| Day theme music (also plays at night until a night track arrives) | `assets/day/audio/day-theme.mp3` (original in `assets/source/day-theme-user.mp3`) |

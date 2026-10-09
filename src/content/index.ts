@@ -10,7 +10,7 @@ import {
   type UpgradeDef,
   type WeaponDef,
 } from './types';
-import { hasArt } from '../art';
+import { hasArt, SHEETS } from '../art';
 
 // Loads every content file under /content and checks it against the schemas in docs/SCHEMAS.md.
 // Adding content means adding a file; no code changes.
@@ -79,6 +79,7 @@ check(rifts.size > 0, 'no rift files in content/rifts');
 for (const c of characters.values()) {
   check(weapons.has(c.weapon), `character ${c.id} uses unknown weapon "${c.weapon}"`);
   check(hasArt(c.sprite), `character ${c.id} sprite "${c.sprite}" is not in assets/day`);
+  for (const [name, a] of Object.entries(c.animations ?? {})) check(a && SHEETS[a.sheet], `character ${c.id} ${name} animation "${a?.sheet}" is not a sheet in assets/day`);
 }
 for (const w of weapons.values()) check(hasArt(w.sprite), `weapon ${w.id} sprite "${w.sprite}" is not in assets/day`);
 for (const e of enemies.values()) if (e.sprite) check(hasArt(e.sprite), `enemy ${e.id} sprite "${e.sprite}" is not in assets/day`);

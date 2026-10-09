@@ -4,5 +4,20 @@
   "sprite": "characters/hotaru",
   "weapon": "katana",
   "playable": true,
-  "default": true
+  "default": true,
+  "displayScale": 1,
+  "animations": {
+    "idle": {
+      "sheet": "characters/hotaru-idle",
+      "fps": 6
+    },
+    "run": {
+      "sheet": "characters/hotaru-run",
+      "fps": 11
+    },
+    "attack": {
+      "sheet": "characters/hotaru-attack",
+      "fps": 18
+    }
+  }
 }

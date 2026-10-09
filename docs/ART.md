@@ -43,7 +43,12 @@ use `"palette": {"mode": "file", "name": "day"}`.
 
 ## In-game animation
 
-Until animated sprite sheets exist, the game animates each single frame in code (allowed:
+Hotaru uses the user's own idle, run and attack sheets (64px tall, in their own colours, an
+approved exception to the palette lock), drawn at `displayScale` 1. The attack sheet carries
+its own slash, so the katana art is only shown for spin attacks. Charge (holds the first
+attack frame) and the dodge roll (run frames plus a spin) are still code motion.
+
+For everything without sheets, the game animates each single frame in code (allowed:
 code places, moves, tints, scales and animates generated files): idle breathing, run bob and
 lean, attack lean and squash, a spin for the dodge roll, tint flashes for hits, charge, slow,
 burn and freeze. The weapon art itself swings through each attack arc.

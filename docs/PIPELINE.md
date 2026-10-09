@@ -123,3 +123,16 @@ Images get the same clean-up as generated ones (background removed, cropped to t
 resized to the fixed size for their kind, snapped to the locked day palette unless
 `--keep-colours`); sounds are trimmed and levelled, and music is cut into a seamless loop.
 Results go to `assets/templates/` and `assets/day/` with provider `user`.
+
+Animation sheets (a row of frames per animation) use:
+
+```
+python scripts/gen/import_sheet.py <name> <height> <keep|day> <sheet.png>:<anim>:<frames> ...
+```
+
+Frames are split at their gaps, the background is removed, and every frame of every
+animation is aligned on the same foot anchor and scaled by one shared factor, so the
+character never jumps or changes size between animations. `keep` keeps the artist's colours
+(a shared 32-colour palette); `day` snaps to the day palette. Strips land in
+`assets/day/characters/<name>-<anim>.png` and are listed under `sheets` in `day.json`; point
+the character's `animations` at them (`docs/SCHEMAS.md`).

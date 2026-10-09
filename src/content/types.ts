@@ -144,10 +144,17 @@ export interface DayDef {
   stage: StageDef;
 }
 
+export interface AnimationDef {
+  sheet: string; // strip in assets/day, e.g. "characters/hotaru-run"
+  fps: number;
+}
+
 export interface CharacterDef {
   id: string;
   name: string;
   sprite: string;
+  displayScale?: number; // world units per art pixel (default 2); larger art can draw smaller
+  animations?: { idle?: AnimationDef; run?: AnimationDef; attack?: AnimationDef };
   weapon: string;
   playable: boolean;
   default?: boolean;

@@ -7,7 +7,7 @@ here still shows as a grey box (or is missing) in the game.
 
 | Asset | Where it shows | Status |
 |---|---|---|
-| Player sprite sheet (Hotaru): idle, run, 4 combo hits, charge attacks, dodge roll, on a fixed grid | Player | **Needs paid generation** (Retro Diffusion or PixelLab animation). Until then the single Hotaru frame is animated in code |
+| Hotaru charge wind-up, charge attacks and dodge roll frames | Player | Idle, run and attack are done (your sheets). Charge holds the first attack frame and the roll is the run frames spinning, in code. Send more sheets any time |
 | Shikigami sheets (kitsune-bi, paper crane, komainu) | Shikigami | Single frames in game; sheets need paid generation |
 | Day enemy sheets (gaki, boar, tengu, nuppeppo, oni) | Enemies | Single frames in game; sheets need paid generation |
 | Yuki Doll and Raiju shikigami art | Shikigami (Frost and Thunder paths) | Not generated yet; grey box with a name label |
@@ -29,4 +29,4 @@ here still shows as a grey box (or is missing) in the game.
 | Red Lotus rift tileset and 16-colour night palette | Phase 3. The night currently darkens the day stage with a tint |
 | Rift enemies: Guren Hound, Icicle Monk, Lotus Shade, Petal Shard, Glacier Oni, Mahapadma | Phase 3; grey boxes at night |
 | Frostbitten Gaki | Uses the day gaki art tinted icy blue (it appears in the day as an omen); needs its own art in phase 3 |
-| Night chiptune track for the rift | Phase 3. ElevenLabs music needs a paid plan and Stability's free credits are spent; the night plays the day theme slowed and lowered for now |
+| Night track for the rift (Japanese metal fight music) | Waiting for your upload (or a paid music provider). The night plays your day theme unchanged for now |
