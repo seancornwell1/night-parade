@@ -1690,19 +1690,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:46:50Z",
+      "files": {
+        "image": "45-boss-nue.png",
+        "raw": "45-boss-nue.raw.png",
+        "mask": "45-boss-nue.mask.png"
+      },
+      "palette": [
+        "#fbeae4",
+        "#f6e1b3",
+        "#f99c7d",
+        "#b49c83",
+        "#e68c3e",
+        "#dd873c",
+        "#c96f1e",
+        "#987f61",
+        "#ac675f",
+        "#95521a",
+        "#7d4418",
+        "#3e322e",
+        "#271c17",
+        "#280f0f",
+        "#210a0b",
+        "#1e0709"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.4,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.753,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 12,
+          "y": 2,
+          "w": 70,
+          "h": 90
+        }
+      ]
     },
     {
       "number": 46,
@@ -1716,19 +1754,56 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:47:16Z",
+      "files": {
+        "image": "46-boss-nue.png",
+        "raw": "46-boss-nue.raw.png",
+        "mask": "46-boss-nue.mask.png"
+      },
+      "palette": [
+        "#fbf5e4",
+        "#c9aaa8",
+        "#e98a38",
+        "#e5863b",
+        "#e98435",
+        "#d87633",
+        "#8a5d6b",
+        "#834016",
+        "#7e401a",
+        "#92351f",
+        "#58210e",
+        "#3a131e",
+        "#360d18",
+        "#340e1e",
+        "#300b18"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.358,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.165,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 5,
+          "y": 3,
+          "w": 86,
+          "h": 90
+        }
+      ]
     },
     {
       "number": 47,
@@ -1742,19 +1817,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:47:48Z",
+      "files": {
+        "image": "47-boss-oni-lord.png",
+        "raw": "47-boss-oni-lord.raw.png",
+        "mask": "47-boss-oni-lord.mask.png"
+      },
+      "palette": [
+        "#8d7a72",
+        "#574950",
+        "#483946",
+        "#363146",
+        "#48242e",
+        "#2f2231",
+        "#231f2e",
+        "#191327",
+        "#1e101b",
+        "#120d21",
+        "#190713",
+        "#0c0717",
+        "#080407",
+        "#0f030e",
+        "#080312",
+        "#07030d"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.31,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.007,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 5,
+          "y": 3,
+          "w": 86,
+          "h": 90
+        }
+      ]
     },
     {
       "number": 48,
@@ -1768,19 +1881,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:48:09Z",
+      "files": {
+        "image": "48-boss-oni-lord.png",
+        "raw": "48-boss-oni-lord.raw.png",
+        "mask": "48-boss-oni-lord.mask.png"
+      },
+      "palette": [
+        "#e6c996",
+        "#9b9892",
+        "#c18c53",
+        "#9e6e52",
+        "#63606b",
+        "#7a5147",
+        "#795147",
+        "#5e4b4d",
+        "#413f4c",
+        "#413f4b",
+        "#5a3335",
+        "#41202d",
+        "#2f2d3f",
+        "#232033",
+        "#281426",
+        "#07051f"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.345,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.212,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 9,
+          "y": 3,
+          "w": 77,
+          "h": 90
+        }
+      ]
     },
     {
       "number": 49,
@@ -1794,11 +1945,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: daily cap of 10 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:48:33Z",
+      "files": {
+        "image": "49-player.png",
+        "raw": "49-player.raw.png",
+        "mask": "49-player.mask.png"
+      },
+      "palette": [
+        "#f2c4b1",
+        "#a29ba5",
+        "#a97f7e",
+        "#8b6767",
+        "#754e46",
+        "#594f5f",
+        "#922645",
+        "#563126",
+        "#433a4c",
+        "#372a3d",
+        "#580922",
+        "#3d201a",
+        "#2d1e2f",
+        "#29161c",
+        "#241629",
+        "#1d1123"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.269,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.623,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 9,
+          "y": 1,
+          "w": 30,
+          "h": 46
+        }
+      ]
     },
     {
       "number": 50,
@@ -1812,11 +2009,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: daily cap of 10 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:48:59Z",
+      "files": {
+        "image": "50-player.png",
+        "raw": "50-player.raw.png",
+        "mask": "50-player.mask.png"
+      },
+      "palette": [
+        "#e3b4a3",
+        "#a3a2a2",
+        "#b27b5a",
+        "#744533",
+        "#51372f",
+        "#402f38",
+        "#3b2621",
+        "#8c0e22",
+        "#50050d",
+        "#291921",
+        "#221121",
+        "#1b0d16",
+        "#13090f",
+        "#0f0a09",
+        "#0a0706",
+        "#090504"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.33,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.679,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 11,
+          "y": 1,
+          "w": 26,
+          "h": 46
+        }
+      ]
     },
     {
       "number": 51,
@@ -1830,11 +2073,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: daily cap of 10 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:49:21Z",
+      "files": {
+        "image": "51-kitsune-bi.png",
+        "raw": "51-kitsune-bi.raw.png",
+        "mask": "51-kitsune-bi.mask.png"
+      },
+      "palette": [
+        "#fcfcfc",
+        "#c5edf7",
+        "#e0dde9",
+        "#c7c2d7",
+        "#bab7c1",
+        "#65def5",
+        "#67a4c1",
+        "#888788",
+        "#596d7e",
+        "#615c69",
+        "#245c91",
+        "#35455b",
+        "#1a324b",
+        "#120f10",
+        "#110f0f",
+        "#0f0b0b"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.474,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.031,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 22,
+          "h": 22
+        }
+      ]
     },
     {
       "number": 52,
@@ -1848,11 +2137,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: daily cap of 10 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:49:40Z",
+      "files": {
+        "image": "52-paper-crane.png",
+        "raw": "52-paper-crane.raw.png",
+        "mask": "52-paper-crane.mask.png"
+      },
+      "palette": [
+        "#efedf5",
+        "#e6e3ee",
+        "#dedae9",
+        "#d9d5e5",
+        "#cdc7dc",
+        "#aea9ba",
+        "#828084",
+        "#907678",
+        "#75717d",
+        "#706b75",
+        "#5d5960",
+        "#412f39",
+        "#151312",
+        "#151311",
+        "#13100f",
+        "#100d0c"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.321,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.349,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 22,
+          "h": 22
+        }
+      ]
     },
     {
       "number": 53,
@@ -1866,11 +2201,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: daily cap of 10 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:50:16Z",
+      "files": {
+        "image": "53-komainu.png",
+        "raw": "53-komainu.raw.png",
+        "mask": "53-komainu.mask.png"
+      },
+      "palette": [
+        "#bcb6be",
+        "#a09ea5",
+        "#9a959c",
+        "#908192",
+        "#847886",
+        "#7c6a83",
+        "#7b657e",
+        "#78657f",
+        "#65596d",
+        "#5e4554",
+        "#4b4755",
+        "#423647",
+        "#35293a",
+        "#2a2133",
+        "#261c33",
+        "#22192f"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.542,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.551,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 0,
+          "w": 20,
+          "h": 24
+        }
+      ]
     }
   ],
   "note": "Phase 1 silhouettes: player, 2 weapons, 3 shikigami, 3 enemies per behavior. Generated as full sprites; the mask is kept as the silhouette. Player, shikigami and bosses use PixelLab only (numbers 49+ are PixelLab versions of the player and shikigami).",
@@ -1878,9 +2259,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T08:45:04Z",
+  "updated": "2026-10-09T08:50:16Z",
   "counts": {
-    "ok": 10,
-    "pending": 43
+    "ok": 19,
+    "pending": 34
   }
 }

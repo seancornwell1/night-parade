@@ -92,3 +92,22 @@
   pixellab: ok on attempt 1
 [phase1-silhouettes] #44 boss-gashadokuro (sprite)
   pixellab: ok on attempt 1
+--- run 2026-10-09T08:50:16Z
+[phase1-silhouettes] #45 boss-nue (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #46 boss-nue (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #47 boss-oni-lord (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #48 boss-oni-lord (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #49 player (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #50 player (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #51 kitsune-bi (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #52 paper-crane (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #53 komainu (sprite)
+  pixellab: ok on attempt 1
