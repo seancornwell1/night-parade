@@ -135,6 +135,11 @@ def make_candidate(item, number, palette_cfg, cfg, providers, usage, log) -> dic
             continue
         errors = 0
         for attempt in range(1, cfg["attemptsPerProvider"] + 1):
+            why = usage.available(name)
+            if why:
+                entry["attempts"].append({"provider": name, "outcome": f"skipped: {why}"})
+                waiting = True
+                break
             try:
                 raw = p.generate(item, gen_size, palette_img)
             except LimitHit as e:
@@ -269,5 +274,53 @@ def run() -> int:
     return 0
 
 
+def reprocess(batch: str) -> int:
+    """Re-run post-processing on a batch's saved provider originals (no provider calls).
+    Candidates that now fail a check go back to pending so the next run regenerates them."""
+    cfg = load_json(GEN / "config.json", None)
+    batch_dir = GEN / "candidates" / batch
+    manifest = load_json(batch_dir / "manifest.json", None)
+    req_path = next(p for p in (GEN / "requests").glob("*.json") if json.loads(p.read_text()).get("batch") == batch)
+    req = json.loads(req_path.read_text())
+    manifest["request"] = f"generation/requests/{req_path.name}"
+    items = {i["id"]: i for i in req["items"]}
+    palette_cfg = resolve_palette(req)
+    out = []
+    for c in manifest["candidates"]:
+        if c.get("status") != "ok":
+            out.append(c)
+            continue
+        raw = Image.open(batch_dir / c["files"]["raw"]).convert("RGBA")
+        for f in [c["files"]["image"], c["files"].get("mask"), *c["files"].get("frames", [])]:
+            if f:
+                (batch_dir / f).unlink(missing_ok=True)
+        result = process(items[c["id"]], raw, palette_cfg, cfg)
+        failed = [k for k in result["checks"] if not k["pass"]]
+        if failed:
+            (batch_dir / c["files"]["raw"]).unlink(missing_ok=True)
+            note = "reprocessed, checks failed: " + "; ".join(f"{k['name']} = {k['value']}" for k in failed)
+            out.append({k: c[k] for k in ("number", "id", "type", "prompt", "size", "attempts")} | {
+                "status": "pending", "reason": "Failed a check after reprocessing; the next run regenerates it.",
+                "attempts": c["attempts"] + [{"provider": c["provider"], "outcome": note}]})
+            print(f"#{c['number']} {c['id']}: {note}")
+            continue
+        e = {**c, "raw": raw, "result": result}
+        e = save_candidate(batch_dir, e)
+        out.append(e)
+        print(f"#{c['number']} {c['id']}: reprocessed")
+    manifest["candidates"] = out
+    manifest["updated"] = now()
+    counts = {}
+    for c in out:
+        counts[c["status"]] = counts.get(c["status"], 0) + 1
+    manifest["counts"] = counts
+    save_json(batch_dir / "manifest.json", manifest)
+    with open(batch_dir / "log.txt", "a") as f:
+        f.write(f"--- reprocessed {now()} (post-processing only, no provider calls)\n")
+    return 0
+
+
 if __name__ == "__main__":
+    if len(sys.argv) == 3 and sys.argv[1] == "--reprocess":
+        sys.exit(reprocess(sys.argv[2]))
     sys.exit(run())

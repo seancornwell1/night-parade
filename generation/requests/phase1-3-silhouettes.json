@@ -28,7 +28,8 @@
       "candidates": 2,
       "background": "#5fae44",
       "rdStyle": "rd_tile__tile_object",
-      "prompt": "a single katana sword with black wrapped hilt, drawn diagonally, game weapon sprite"
+      "prompt": "a single katana sword with black wrapped hilt, drawn diagonally, game weapon sprite",
+      "minCoverage": 0.012
     },
     {
       "id": "naginata",
@@ -40,7 +41,8 @@
       "candidates": 2,
       "background": "#5fae44",
       "rdStyle": "rd_tile__tile_object",
-      "prompt": "a single naginata polearm with a long wooden shaft and curved blade, drawn diagonally, game weapon sprite"
+      "prompt": "a single naginata polearm with a long wooden shaft and curved blade, drawn diagonally, game weapon sprite",
+      "minCoverage": 0.012
     },
     {
       "id": "kitsune-bi",

@@ -36,3 +36,4 @@
   cloudflare: ok on attempt 1
 [phase1-objects] #15 rock (sprite)
   cloudflare: ok on attempt 1
+--- reprocessed 2026-10-09T00:16:29Z (post-processing only, no provider calls)

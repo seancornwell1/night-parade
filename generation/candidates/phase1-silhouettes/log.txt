@@ -75,3 +75,4 @@
 [phase1-silhouettes] #46 boss-nue (sprite)
 [phase1-silhouettes] #47 boss-oni-lord (sprite)
 [phase1-silhouettes] #48 boss-oni-lord (sprite)
+--- reprocessed 2026-10-09T00:16:30Z (post-processing only, no provider calls)

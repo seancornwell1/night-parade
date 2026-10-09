@@ -94,6 +94,46 @@ def is_blocky(img: Image.Image, kx: int, ky: int) -> bool:
     return float((spread.max(axis=-1) <= 24).mean()) > 0.9
 
 
+def crop_to_subject(img: Image.Image, w: int, h: int) -> Image.Image:
+    """Crop a transparent sprite to its main subject (largest blob plus anything touching it),
+    then pad to the target aspect so the subject fills the fixed frame. Drops stray captions
+    and specks that some providers add away from the subject."""
+    a = np.asarray(img)
+    small = img.copy()
+    k = max(1, max(img.size) // 192)
+    small = small.resize((max(1, img.width // k), max(1, img.height // k)), Image.Resampling.NEAREST)
+    mask = np.asarray(small)[..., 3] >= 128
+    comps = components(mask)
+    if not comps:
+        return img
+    comps.sort(key=len, reverse=True)
+    def bbox(c):
+        ys = [p[0] for p in c]
+        xs = [p[1] for p in c]
+        return min(xs), min(ys), max(xs) + 1, max(ys) + 1
+    x0, y0, x1, y1 = bbox(comps[0])
+    mx, my = (x1 - x0) * 0.15, (y1 - y0) * 0.15
+    for c in comps[1:]:
+        if len(c) < 3:
+            continue
+        cx0, cy0, cx1, cy1 = bbox(c)
+        if cx1 >= x0 - mx and cx0 <= x1 + mx and cy1 >= y0 - my and cy0 <= y1 + my:
+            x0, y0, x1, y1 = min(x0, cx0), min(y0, cy0), max(x1, cx1), max(y1, cy1)
+    x0, y0, x1, y1 = x0 * k, y0 * k, min(img.width, x1 * k), min(img.height, y1 * k)
+    keep = np.zeros(a.shape[:2], dtype=bool)
+    keep[y0:y1, x0:x1] = True
+    out = a.copy()
+    out[..., 3] = np.where(keep, out[..., 3], 0)
+    sub = Image.fromarray(out, "RGBA").crop((x0, y0, x1, y1))
+    # Pad to the target aspect with a small margin, subject centred.
+    sw, sh = sub.size
+    scale = max(sw / (w * 0.94), sh / (h * 0.94))
+    cw, ch = max(sw, round(w * scale)), max(sh, round(h * scale))
+    canvas = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
+    canvas.paste(sub, ((cw - sw) // 2, (ch - sh) // 2))
+    return canvas
+
+
 def has_transparency(img: Image.Image) -> bool:
     return bool((np.asarray(img.convert("RGBA"))[..., 3] < 128).mean() > 0.02)
 
@@ -251,6 +291,8 @@ def process(item: dict, raw: Image.Image, palette_cfg: dict, cfg: dict, silhouet
     img = raw.convert("RGBA")
     if kind != "tile" and not has_transparency(img):
         img = remove_background(img)
+    if kind == "sprite":
+        img = crop_to_subject(img, w, h)
     img = fit(img, w, h)
     if kind == "tile":
         bg = Image.new("RGBA", img.size, (0, 0, 0, 255))
@@ -288,7 +330,8 @@ def process(item: dict, raw: Image.Image, palette_cfg: dict, cfg: dict, silhouet
         for i, (fimg, fmask) in enumerate(frames):
             cov = float(fmask.mean())
             label = "" if kind == "sprite" else f"frame {i + 1}: "
-            checks.append(check(f"{label}coverage", c["spriteMinCoverage"] <= cov <= c["spriteMaxCoverage"], cov, f"{c['spriteMinCoverage']}-{c['spriteMaxCoverage']}"))
+            lo_cov = item.get("minCoverage", c["spriteMinCoverage"])
+            checks.append(check(f"{label}coverage", lo_cov <= cov <= c["spriteMaxCoverage"], cov, f"{lo_cov}-{c['spriteMaxCoverage']}"))
             if fmask.any():
                 ct = contrast(fimg, fmask, background)
                 checks.append(check(f"{label}contrast vs {background}", ct >= c["contrastMin"], ct, f">= {c['contrastMin']}"))

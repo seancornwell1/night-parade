@@ -1,0 +1,66 @@
+{
+  "batch": "phase1-tiles",
+  "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept. Retro Diffusion's free credits are used up, so tiles try Cloudflare before PixelLab (PixelLab tends to draw scenes rather than textures).",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "items": [
+    {
+      "id": "grass",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 2,
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "providers": [
+        "cloudflare",
+        "pixellab"
+      ]
+    },
+    {
+      "id": "dirt-path",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 2,
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "providers": [
+        "cloudflare",
+        "pixellab"
+      ]
+    },
+    {
+      "id": "water",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 2,
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "providers": [
+        "cloudflare",
+        "pixellab"
+      ]
+    },
+    {
+      "id": "wall",
+      "type": "tile",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 3,
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "providers": [
+        "cloudflare",
+        "pixellab"
+      ]
+    }
+  ]
+}

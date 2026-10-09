@@ -30,12 +30,18 @@ class ProviderError(Exception):
     """Anything else (bad request, server error, timeout)."""
 
 
+class Busy(Exception):
+    """Provider is busy with a previous job (e.g. free plan: one generation at a time). Wait and retry."""
+
+
 LIMIT_WORDS = ("limit", "quota", "balance", "credit", "insufficient", "allocation", "neurons", "payment", "exceeded")
 REFUSE_WORDS = ("nsfw", "safety", "content policy", "moderation", "filter", "inappropriate", "flagged", "refus")
 
 
 def classify(status: int, text: str) -> Exception:
     low = text.lower()
+    if "concurrent" in low or "at a time" in low:
+        return Busy(f"HTTP {status}: {text[:300]}")
     if status in (402, 429) or (status in (400, 403) and any(w in low for w in LIMIT_WORDS)):
         return LimitHit(f"HTTP {status}: {text[:300]}")
     if any(w in low for w in REFUSE_WORDS):
@@ -44,13 +50,19 @@ def classify(status: int, text: str) -> Exception:
 
 
 def post(url: str, **kw) -> requests.Response:
-    try:
-        r = requests.post(url, timeout=TIMEOUT, **kw)
-    except requests.RequestException as e:
-        raise ProviderError(f"network: {e}") from e
-    if r.status_code >= 400:
-        raise classify(r.status_code, r.text)
-    return r
+    """POST, waiting out "busy" responses (free plans that run one job at a time)."""
+    for wait in (5, 10, 20, 30, 45, 60, 0):
+        try:
+            r = requests.post(url, timeout=TIMEOUT, **kw)
+        except requests.RequestException as e:
+            raise ProviderError(f"network: {e}") from e
+        if r.status_code < 400:
+            return r
+        err = classify(r.status_code, r.text)
+        if not isinstance(err, Busy) or not wait:
+            raise err if not isinstance(err, Busy) else ProviderError(f"still busy after waiting: {err}")
+        time.sleep(wait)
+    raise ProviderError("unreachable")
 
 
 def b64_image(data: str) -> Image.Image:

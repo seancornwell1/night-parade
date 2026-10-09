@@ -1,6 +1,6 @@
 {
   "batch": "phase1-silhouettes",
-  "request": "generation/requests/phase1-silhouettes.json",
+  "request": "generation/requests/phase1-3-silhouettes.json",
   "created": "2026-10-09T00:13:03Z",
   "candidates": [
     {
@@ -35,43 +35,43 @@
         "mask": "01-player.mask.png"
       },
       "palette": [
-        "#e8eee6",
-        "#bec0ac",
-        "#b4a792",
-        "#939e9a",
-        "#a8855a",
-        "#898477",
-        "#777e7e",
-        "#6a7072",
-        "#6d675f",
-        "#6d5246",
-        "#50534f",
-        "#46413c",
-        "#662a26",
-        "#373129",
-        "#2a292b",
-        "#22161a"
+        "#ecf1e8",
+        "#c4c5b3",
+        "#b9ad93",
+        "#9aa49e",
+        "#989583",
+        "#a08261",
+        "#7d8486",
+        "#707573",
+        "#6e675c",
+        "#744d42",
+        "#515756",
+        "#44413f",
+        "#5c2621",
+        "#332d25",
+        "#272526",
+        "#1e1419"
       ],
       "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.131,
+          "value": 0.221,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 2.093,
+          "value": 2.049,
           "limit": ">= 1.6"
         }
       ],
       "hitboxes": [
         {
-          "x": 17,
-          "y": 9,
-          "w": 15,
-          "h": 35
+          "x": 14,
+          "y": 1,
+          "w": 20,
+          "h": 46
         }
       ]
     },
@@ -107,43 +107,43 @@
         "mask": "02-player.mask.png"
       },
       "palette": [
-        "#f7debb",
-        "#eed3af",
-        "#e1c19e",
-        "#cfa88d",
-        "#c5937e",
-        "#a88d86",
-        "#a56b51",
-        "#876b65",
-        "#7d5247",
-        "#634a40",
-        "#623831",
-        "#483332",
-        "#9c1112",
-        "#5b1f20",
-        "#3f2428",
-        "#31141f"
+        "#f8dfbb",
+        "#f2d8b3",
+        "#e5c7a3",
+        "#dab094",
+        "#bc998b",
+        "#c68465",
+        "#9b827a",
+        "#8a6551",
+        "#7f544b",
+        "#733c34",
+        "#4e3631",
+        "#49282a",
+        "#9b0c0e",
+        "#501918",
+        "#301f2a",
+        "#2d0f19"
       ],
       "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.095,
+          "value": 0.21,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 2.121,
+          "value": 2.061,
           "limit": ">= 1.6"
         }
       ],
       "hitboxes": [
         {
-          "x": 16,
-          "y": 11,
-          "w": 12,
-          "h": 31
+          "x": 10,
+          "y": 1,
+          "w": 27,
+          "h": 46
         }
       ]
     },
@@ -346,55 +346,14 @@
         {
           "provider": "cloudflare",
           "outcome": "ok"
-        }
-      ],
-      "status": "ok",
-      "provider": "cloudflare",
-      "made": "2026-10-09T00:13:30Z",
-      "files": {
-        "image": "07-kitsune-bi.png",
-        "raw": "07-kitsune-bi.raw.png",
-        "mask": "07-kitsune-bi.mask.png"
-      },
-      "palette": [
-        "#fafaf8",
-        "#f2f0ed",
-        "#e4e0dc",
-        "#dae7e8",
-        "#bcf1f7",
-        "#6ef2f4",
-        "#7be1f2",
-        "#59e3f7",
-        "#5bddf1",
-        "#dcd7d2",
-        "#d8ccc2",
-        "#aed0cf",
-        "#a5ad9f",
-        "#5ec3e1",
-        "#45d6fb"
-      ],
-      "checks": [
-        {
-          "name": "coverage",
-          "pass": true,
-          "value": 0.062,
-          "limit": "0.04-0.9"
         },
         {
-          "name": "contrast vs #5fae44",
-          "pass": true,
-          "value": 1.662,
-          "limit": ">= 1.6"
+          "provider": "cloudflare",
+          "outcome": "reprocessed, checks failed: contrast vs #5fae44 = 1.382"
         }
       ],
-      "hitboxes": [
-        {
-          "x": 8,
-          "y": 7,
-          "w": 7,
-          "h": 9
-        }
-      ]
+      "status": "pending",
+      "reason": "Failed a check after reprocessing; the next run regenerates it."
     },
     {
       "number": 8,
@@ -434,40 +393,41 @@
       "palette": [
         "#ffffff",
         "#fefefe",
-        "#fdfdfc",
-        "#fcfdfc",
-        "#fbfbfa",
-        "#f6f3f0",
-        "#cef0f0",
-        "#f2eeeb",
-        "#ecebea",
-        "#ede8e5",
-        "#e6e2e1",
-        "#edddd0",
-        "#dfdcdb",
-        "#d2cdca",
-        "#d8bfae"
+        "#fefefd",
+        "#fefdfe",
+        "#fdfdfd",
+        "#fdfcfc",
+        "#fcfcfc",
+        "#faf9f8",
+        "#f7f6f4",
+        "#f4e9df",
+        "#e9e7e5",
+        "#adeaf2",
+        "#e8dbd1",
+        "#d7d5d4",
+        "#cec7c5",
+        "#c2a998"
       ],
       "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.108,
+          "value": 0.306,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 2.251,
+          "value": 2.024,
           "limit": ">= 1.6"
         }
       ],
       "hitboxes": [
         {
-          "x": 8,
-          "y": 5,
-          "w": 10,
-          "h": 13
+          "x": 4,
+          "y": 1,
+          "w": 17,
+          "h": 22
         }
       ]
     },
@@ -508,42 +468,42 @@
       },
       "palette": [
         "#f9fdfe",
-        "#f9fbfb",
-        "#f8fbfc",
-        "#f2f6f7",
-        "#ebeff1",
-        "#e3e8eb",
-        "#e3e7ea",
-        "#dfe3e6",
-        "#d7dbdf",
-        "#d1d2d4",
-        "#c7c0b3",
-        "#baabaa",
-        "#a6947c",
-        "#a08e77",
-        "#967c6d",
-        "#86625d"
+        "#f9fcfd",
+        "#f9fbfc",
+        "#f8fcfd",
+        "#f7fbfc",
+        "#f7f9f8",
+        "#f4f8f9",
+        "#e8ecef",
+        "#d8dce1",
+        "#cacfd4",
+        "#bab9b8",
+        "#a3937b",
+        "#a19178",
+        "#9e8976",
+        "#87655f",
+        "#80484b"
       ],
       "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.047,
+          "value": 0.24,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 1.718,
+          "value": 1.752,
           "limit": ">= 1.6"
         }
       ],
       "hitboxes": [
         {
-          "x": 8,
-          "y": 9,
-          "w": 8,
-          "h": 7
+          "x": 1,
+          "y": 4,
+          "w": 21,
+          "h": 16
         }
       ]
     },
@@ -627,43 +587,43 @@
         "mask": "11-komainu.mask.png"
       },
       "palette": [
-        "#818c8c",
-        "#788182",
-        "#6d7676",
-        "#676e6e",
-        "#65696c",
-        "#5a6865",
-        "#5c5f60",
-        "#56605f",
-        "#4e5a58",
-        "#515757",
-        "#4c5956",
-        "#4e5154",
-        "#45504c",
-        "#434c4b",
-        "#424749",
-        "#303531"
+        "#899895",
+        "#868e91",
+        "#82858b",
+        "#73807e",
+        "#697472",
+        "#616a69",
+        "#5d6262",
+        "#535f5c",
+        "#525759",
+        "#4a5453",
+        "#494b4b",
+        "#414a49",
+        "#414041",
+        "#333938",
+        "#292f2c",
+        "#19201a"
       ],
       "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.108,
+          "value": 0.507,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 2.606,
+          "value": 2.604,
           "limit": ">= 1.6"
         }
       ],
       "hitboxes": [
         {
-          "x": 7,
-          "y": 7,
-          "w": 9,
-          "h": 10
+          "x": 1,
+          "y": 1,
+          "w": 21,
+          "h": 22
         }
       ]
     },
@@ -703,43 +663,43 @@
         "mask": "12-komainu.mask.png"
       },
       "palette": [
-        "#c1b59e",
-        "#baaf99",
-        "#ada28f",
-        "#a79c8b",
-        "#9b9181",
-        "#91887b",
-        "#898177",
-        "#837a73",
-        "#7d756c",
-        "#797169",
-        "#716a62",
-        "#6a635f",
-        "#605c63",
-        "#5f5760",
-        "#5b5055",
-        "#514b4c"
+        "#c5b9a1",
+        "#c0b49e",
+        "#b4a895",
+        "#a89e8c",
+        "#9f9587",
+        "#948b7d",
+        "#8d8578",
+        "#857d74",
+        "#7e766e",
+        "#756e66",
+        "#6d6661",
+        "#645e5e",
+        "#5c5866",
+        "#5e5856",
+        "#58535a",
+        "#584746"
       ],
       "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.217,
+          "value": 0.41,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 1.734,
+          "value": 1.744,
           "limit": ">= 1.6"
         }
       ],
       "hitboxes": [
         {
-          "x": 6,
-          "y": 4,
-          "w": 12,
-          "h": 16
+          "x": 4,
+          "y": 1,
+          "w": 16,
+          "h": 22
         }
       ]
     },
@@ -1707,9 +1667,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T00:13:56Z",
+  "updated": "2026-10-09T00:16:30Z",
   "counts": {
-    "ok": 7,
-    "pending": 41
+    "ok": 6,
+    "pending": 42
   }
 }
