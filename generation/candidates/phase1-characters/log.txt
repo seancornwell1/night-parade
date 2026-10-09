@@ -1,0 +1,23 @@
+--- run 2026-10-09T10:53:49Z
+[phase1-characters] #1 hotaru (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #2 hotaru (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #3 kuro (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #4 kuro (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #5 yuki (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #6 yuki (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #7 gonta (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #8 gonta (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-characters] #9 mei (sprite)
+  retrodiffusion: checks failed (2), attempt 1
+  retrodiffusion: ok on attempt 2
+[phase1-characters] #10 mei (sprite)
+  retrodiffusion: checks failed (2), attempt 1
+  retrodiffusion: ok on attempt 2
