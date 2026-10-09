@@ -128,7 +128,7 @@ def process_audio(item: dict, data: bytes, cfg: dict) -> dict:
             xf = min(2.0, dur / 4)
             # Seamless loop: cross-fade the last xf seconds into the opening xf seconds, so the end flows into the start.
             norm = Path(tmp) / "norm.wav"
-            _ffmpeg("-i", str(raw), "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "44100", "-ac", "2", str(norm))
+            _ffmpeg("-i", str(raw), "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,alimiter=limit=0.89:attack=1:release=30:level=disabled", "-ar", "44100", "-ac", "2", str(norm))
             graph = (
                 f"[0:a]atrim=start={xf},asetpts=PTS-STARTPTS[body];"
                 f"[1:a]atrim=end={xf},asetpts=PTS-STARTPTS[head];"
@@ -136,7 +136,7 @@ def process_audio(item: dict, data: bytes, cfg: dict) -> dict:
             )
             _ffmpeg("-i", str(norm), "-i", str(norm), "-filter_complex", graph, "-map", "[out]", "-b:a", "160k", str(out))
         else:
-            _ffmpeg("-i", str(raw), "-af", f"{trim},loudnorm=I=-14:TP=-1.0:LRA=7,afade=t=in:d=0.004", "-ar", "44100", "-ac", "1", "-b:a", "128k", str(out))
+            _ffmpeg("-i", str(raw), "-af", f"{trim},loudnorm=I=-14:TP=-1.0:LRA=7,alimiter=limit=0.89:attack=1:release=30:level=disabled,afade=t=in:d=0.004", "-ar", "44100", "-ac", "1", "-b:a", "128k", str(out))
         dur = _duration(out) if out.exists() and out.stat().st_size > 1000 else 0.0
         try:
             st = _stats(out) if dur > 0 else {"mean": -99.0, "peak": -99.0, "silent": 0.0}

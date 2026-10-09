@@ -33,7 +33,7 @@
     {
       "id": "pickup-xp",
       "type": "sfx",
-      "duration": 0.4,
+      "duration": 0.5,
       "candidates": 2,
       "prompt": "16-bit retro video game sound effect, chiptune style, tiny bright sparkling chime for collecting a spirit orb"
     },
