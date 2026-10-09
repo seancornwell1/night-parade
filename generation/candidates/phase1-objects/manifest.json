@@ -1,0 +1,1016 @@
+{
+  "batch": "phase1-objects",
+  "request": "generation/requests/phase1-objects.json",
+  "created": "2026-10-09T00:11:21Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "tree",
+      "type": "sprite",
+      "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan",
+      "size": [
+        48,
+        64
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T00:11:37Z",
+      "files": {
+        "image": "01-tree.png",
+        "raw": "01-tree.raw.png",
+        "mask": "01-tree.mask.png"
+      },
+      "palette": [
+        "#7fb854",
+        "#63a94e",
+        "#58a24c",
+        "#8f8d8c",
+        "#4e984a",
+        "#377d47",
+        "#306f47",
+        "#2c6e41",
+        "#2b6843",
+        "#655230",
+        "#164435",
+        "#123d33",
+        "#0f3c2e",
+        "#5b3b21",
+        "#2e1f19",
+        "#103930"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.313,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.322,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 6,
+          "y": 7,
+          "w": 36,
+          "h": 51
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "tree",
+      "type": "sprite",
+      "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan",
+      "size": [
+        48,
+        64
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "free limit hit: HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"}"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T00:11:54Z",
+      "files": {
+        "image": "02-tree.png",
+        "raw": "02-tree.raw.png",
+        "mask": "02-tree.mask.png"
+      },
+      "palette": [
+        "#83d538",
+        "#5fbb37",
+        "#5db837",
+        "#3f823b",
+        "#1a4d34",
+        "#524749",
+        "#1c4b37",
+        "#443a42",
+        "#322d39",
+        "#2c2b36",
+        "#0f282b"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.412,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.709,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 3,
+          "w": 44,
+          "h": 57
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "tree",
+      "type": "sprite",
+      "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan",
+      "size": [
+        48,
+        64
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T00:12:04Z",
+      "files": {
+        "image": "03-tree.png",
+        "raw": "03-tree.raw.png",
+        "mask": "03-tree.mask.png"
+      },
+      "palette": [
+        "#adaeaf",
+        "#66bb60",
+        "#2b7c40",
+        "#746b58",
+        "#1f623a",
+        "#1a503e",
+        "#4e463c",
+        "#1c3d37",
+        "#2f2928",
+        "#13282e"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.416,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.534,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 5,
+          "w": 46,
+          "h": 56
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "shrine",
+      "type": "sprite",
+      "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T00:12:17Z",
+      "files": {
+        "image": "04-shrine.png",
+        "raw": "04-shrine.raw.png",
+        "mask": "04-shrine.mask.png"
+      },
+      "palette": [
+        "#ceb7aa",
+        "#b1957e",
+        "#a28770",
+        "#7e6758",
+        "#614f43",
+        "#5d4c40",
+        "#5a483e",
+        "#56453b",
+        "#4f3e38",
+        "#4c3c38",
+        "#4a3b37",
+        "#453634",
+        "#413331",
+        "#3d2f2e",
+        "#30262e"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.4,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.883,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 9,
+          "y": 3,
+          "w": 30,
+          "h": 41
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "shrine",
+      "type": "sprite",
+      "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T00:12:30Z",
+      "files": {
+        "image": "05-shrine.png",
+        "raw": "05-shrine.raw.png",
+        "mask": "05-shrine.mask.png"
+      },
+      "palette": [
+        "#bea980",
+        "#af8b68",
+        "#787866",
+        "#957056",
+        "#906b54",
+        "#845d4b",
+        "#7f5646",
+        "#5c5f56",
+        "#555751",
+        "#6f473c",
+        "#633d36",
+        "#4e3431",
+        "#454645",
+        "#363639",
+        "#312f34",
+        "#27202c"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.397,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.875,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 10,
+          "y": 2,
+          "w": 29,
+          "h": 42
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "shrine",
+      "type": "sprite",
+      "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "free limit hit: cost 0.06 exceeds remaining balance 0.020000000000000018"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:12:32Z",
+      "files": {
+        "image": "06-shrine.png",
+        "raw": "06-shrine.raw.png",
+        "mask": "06-shrine.mask.png"
+      },
+      "palette": [
+        "#7c8298",
+        "#736871",
+        "#845a5c",
+        "#625b6d",
+        "#7d504a",
+        "#79462f",
+        "#674a53",
+        "#624045",
+        "#643b3d",
+        "#623635",
+        "#57353c",
+        "#4c3346",
+        "#582929",
+        "#492b39",
+        "#3d263b",
+        "#381928"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.082,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.391,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 17,
+          "y": 16,
+          "w": 14,
+          "h": 16
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "lantern",
+      "type": "sprite",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "size": [
+        16,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:12:34Z",
+      "files": {
+        "image": "07-lantern.png",
+        "raw": "07-lantern.raw.png",
+        "mask": "07-lantern.mask.png"
+      },
+      "palette": [
+        "#9aa0b4",
+        "#82869d",
+        "#727892",
+        "#6b708c",
+        "#696e8a",
+        "#686d89",
+        "#676c88",
+        "#666a87",
+        "#626682",
+        "#5d5f7c",
+        "#7e4962",
+        "#565977",
+        "#51526f",
+        "#673c5b",
+        "#503f5e",
+        "#62253b"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.137,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.129,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 4,
+          "y": 10,
+          "w": 8,
+          "h": 17
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "lantern",
+      "type": "sprite",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "size": [
+        16,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:12:36Z",
+      "files": {
+        "image": "08-lantern.png",
+        "raw": "08-lantern.raw.png",
+        "mask": "08-lantern.mask.png"
+      },
+      "palette": [
+        "#703b44",
+        "#543e48",
+        "#4a4455",
+        "#414460",
+        "#3b3e58",
+        "#383b55",
+        "#343854",
+        "#333654",
+        "#313551",
+        "#2f3350",
+        "#7a233f",
+        "#4a243f",
+        "#6a1534",
+        "#2d324f",
+        "#2c3050",
+        "#2f2c4b"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.148,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.824,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 2,
+          "w": 10,
+          "h": 11
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "lantern",
+      "type": "sprite",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "size": [
+        16,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:12:37Z",
+      "files": {
+        "image": "09-lantern.png",
+        "raw": "09-lantern.raw.png",
+        "mask": "09-lantern.mask.png"
+      },
+      "palette": [
+        "#82818e",
+        "#7e7d89",
+        "#7a7986",
+        "#6f7282",
+        "#5c5669",
+        "#554354",
+        "#433b59",
+        "#493446",
+        "#3c3450",
+        "#38314c",
+        "#362e49",
+        "#592525",
+        "#401d27",
+        "#322943",
+        "#2c1a26"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.205,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.593,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 4,
+          "y": 6,
+          "w": 12,
+          "h": 15
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "keep",
+      "type": "sprite",
+      "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view",
+      "size": [
+        128,
+        128
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:12:39Z",
+      "files": {
+        "image": "10-keep.png",
+        "raw": "10-keep.raw.png",
+        "mask": "10-keep.mask.png"
+      },
+      "palette": [
+        "#f6f3ec",
+        "#c9c3b8",
+        "#a3a2a0",
+        "#9b9c9c",
+        "#979694",
+        "#909091",
+        "#807e7f",
+        "#717072",
+        "#545165",
+        "#3e3d64",
+        "#572c44",
+        "#3a3860",
+        "#38375e",
+        "#343257",
+        "#282546",
+        "#16121a"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.161,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.286,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 30,
+          "w": 126,
+          "h": 96
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "keep",
+      "type": "sprite",
+      "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view",
+      "size": [
+        128,
+        128
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.504"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.301"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.234"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.168,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.234,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 12,
+      "id": "keep",
+      "type": "sprite",
+      "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view",
+      "size": [
+        128,
+        128
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.277"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.507"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.058"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.206,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.058,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 13,
+      "id": "rock",
+      "type": "sprite",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.256"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:12:59Z",
+      "files": {
+        "image": "13-rock.png",
+        "raw": "13-rock.raw.png",
+        "mask": "13-rock.mask.png"
+      },
+      "palette": [
+        "#7bae05",
+        "#6fa507",
+        "#858d7c",
+        "#65951e",
+        "#89888d",
+        "#7d8974",
+        "#648337",
+        "#527f22",
+        "#647058",
+        "#4e6e25",
+        "#585c5b",
+        "#514f59",
+        "#4c4957",
+        "#43444a",
+        "#3e3d47",
+        "#32303e"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.119,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.158,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 10,
+          "y": 8,
+          "w": 12,
+          "h": 13
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "rock",
+      "type": "sprite",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:00Z",
+      "files": {
+        "image": "14-rock.png",
+        "raw": "14-rock.raw.png",
+        "mask": "14-rock.mask.png"
+      },
+      "palette": [
+        "#68a01f",
+        "#748f5f",
+        "#7f897b",
+        "#738662",
+        "#767b7a",
+        "#74737f",
+        "#697666",
+        "#597646",
+        "#666d6c",
+        "#60626b",
+        "#545562",
+        "#4a564d",
+        "#464754",
+        "#3e3e4f",
+        "#38344c",
+        "#2e293f"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.086,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.099,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 10,
+          "y": 11,
+          "w": 12,
+          "h": 10
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "rock",
+      "type": "sprite",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:03Z",
+      "files": {
+        "image": "15-rock.png",
+        "raw": "15-rock.raw.png",
+        "mask": "15-rock.mask.png"
+      },
+      "palette": [
+        "#a09da1",
+        "#809f3a",
+        "#908f8d",
+        "#6d9035",
+        "#838284",
+        "#807c84",
+        "#73766e",
+        "#577a25",
+        "#6c6a70",
+        "#4d692b",
+        "#5a5761",
+        "#435631",
+        "#434646",
+        "#373640",
+        "#2c2b38",
+        "#1f1a31"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.181,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.927,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 9,
+          "w": 16,
+          "h": 14
+        }
+      ]
+    }
+  ],
+  "note": "Phase 1 map objects, 3/4 top-down view, transparent background.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-09T00:13:03Z",
+  "counts": {
+    "ok": 13,
+    "pending": 2
+  }
+}

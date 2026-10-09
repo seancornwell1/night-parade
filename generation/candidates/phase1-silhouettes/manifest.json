@@ -1,0 +1,1715 @@
+{
+  "batch": "phase1-silhouettes",
+  "request": "generation/requests/phase1-silhouettes.json",
+  "created": "2026-10-09T00:13:03Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "player",
+      "type": "sprite",
+      "prompt": "a young demon hunter in light samurai armour with a red headband, empty hands, ready stance, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:04Z",
+      "files": {
+        "image": "01-player.png",
+        "raw": "01-player.raw.png",
+        "mask": "01-player.mask.png"
+      },
+      "palette": [
+        "#e8eee6",
+        "#bec0ac",
+        "#b4a792",
+        "#939e9a",
+        "#a8855a",
+        "#898477",
+        "#777e7e",
+        "#6a7072",
+        "#6d675f",
+        "#6d5246",
+        "#50534f",
+        "#46413c",
+        "#662a26",
+        "#373129",
+        "#2a292b",
+        "#22161a"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.131,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.093,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 17,
+          "y": 9,
+          "w": 15,
+          "h": 35
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "player",
+      "type": "sprite",
+      "prompt": "a young demon hunter in light samurai armour with a red headband, empty hands, ready stance, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:06Z",
+      "files": {
+        "image": "02-player.png",
+        "raw": "02-player.raw.png",
+        "mask": "02-player.mask.png"
+      },
+      "palette": [
+        "#f7debb",
+        "#eed3af",
+        "#e1c19e",
+        "#cfa88d",
+        "#c5937e",
+        "#a88d86",
+        "#a56b51",
+        "#876b65",
+        "#7d5247",
+        "#634a40",
+        "#623831",
+        "#483332",
+        "#9c1112",
+        "#5b1f20",
+        "#3f2428",
+        "#31141f"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.095,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.121,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 16,
+          "y": 11,
+          "w": 12,
+          "h": 31
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "katana",
+      "type": "sprite",
+      "prompt": "a single katana sword with black wrapped hilt, drawn diagonally, game weapon sprite",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.037"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.034; contrast vs #5fae44 = 1.014"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.262"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.047,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.262,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 4,
+      "id": "katana",
+      "type": "sprite",
+      "prompt": "a single katana sword with black wrapped hilt, drawn diagonally, game weapon sprite",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (b6257bc0-1c57-4110-b7da-4b4b64821f8e)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 5,
+      "id": "naginata",
+      "type": "sprite",
+      "prompt": "a single naginata polearm with a long wooden shaft and curved blade, drawn diagonally, game weapon sprite",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.024"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.029"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.032"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "coverage",
+          "pass": false,
+          "value": 0.032,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.202,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 6,
+      "id": "naginata",
+      "type": "sprite",
+      "prompt": "a single naginata polearm with a long wooden shaft and curved blade, drawn diagonally, game weapon sprite",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.024"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.03"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.018"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "coverage",
+          "pass": false,
+          "value": 0.018,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.717,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 7,
+      "id": "kitsune-bi",
+      "type": "sprite",
+      "prompt": "a small fox-fire spirit: a tiny white paper fox wreathed in blue flame, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.458"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.085"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:30Z",
+      "files": {
+        "image": "07-kitsune-bi.png",
+        "raw": "07-kitsune-bi.raw.png",
+        "mask": "07-kitsune-bi.mask.png"
+      },
+      "palette": [
+        "#fafaf8",
+        "#f2f0ed",
+        "#e4e0dc",
+        "#dae7e8",
+        "#bcf1f7",
+        "#6ef2f4",
+        "#7be1f2",
+        "#59e3f7",
+        "#5bddf1",
+        "#dcd7d2",
+        "#d8ccc2",
+        "#aed0cf",
+        "#a5ad9f",
+        "#5ec3e1",
+        "#45d6fb"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.062,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.662,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 7,
+          "w": 7,
+          "h": 9
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "kitsune-bi",
+      "type": "sprite",
+      "prompt": "a small fox-fire spirit: a tiny white paper fox wreathed in blue flame, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.507"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:36Z",
+      "files": {
+        "image": "08-kitsune-bi.png",
+        "raw": "08-kitsune-bi.raw.png",
+        "mask": "08-kitsune-bi.mask.png"
+      },
+      "palette": [
+        "#ffffff",
+        "#fefefe",
+        "#fdfdfc",
+        "#fcfdfc",
+        "#fbfbfa",
+        "#f6f3f0",
+        "#cef0f0",
+        "#f2eeeb",
+        "#ecebea",
+        "#ede8e5",
+        "#e6e2e1",
+        "#edddd0",
+        "#dfdcdb",
+        "#d2cdca",
+        "#d8bfae"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.108,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.251,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 5,
+          "w": 10,
+          "h": 13
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "paper-crane",
+      "type": "sprite",
+      "prompt": "a small folded white paper crane familiar, wings spread, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.017"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:42Z",
+      "files": {
+        "image": "09-paper-crane.png",
+        "raw": "09-paper-crane.raw.png",
+        "mask": "09-paper-crane.mask.png"
+      },
+      "palette": [
+        "#f9fdfe",
+        "#f9fbfb",
+        "#f8fbfc",
+        "#f2f6f7",
+        "#ebeff1",
+        "#e3e8eb",
+        "#e3e7ea",
+        "#dfe3e6",
+        "#d7dbdf",
+        "#d1d2d4",
+        "#c7c0b3",
+        "#baabaa",
+        "#a6947c",
+        "#a08e77",
+        "#967c6d",
+        "#86625d"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.047,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.718,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 8,
+          "y": 9,
+          "w": 8,
+          "h": 7
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "paper-crane",
+      "type": "sprite",
+      "prompt": "a small folded white paper crane familiar, wings spread, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.036"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.026"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: coverage = 0.035; contrast vs #5fae44 = 1.465"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "coverage",
+          "pass": false,
+          "value": 0.035,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.465,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 11,
+      "id": "komainu",
+      "type": "sprite",
+      "prompt": "a small stone guardian lion-dog (komainu) familiar, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:48Z",
+      "files": {
+        "image": "11-komainu.png",
+        "raw": "11-komainu.raw.png",
+        "mask": "11-komainu.mask.png"
+      },
+      "palette": [
+        "#818c8c",
+        "#788182",
+        "#6d7676",
+        "#676e6e",
+        "#65696c",
+        "#5a6865",
+        "#5c5f60",
+        "#56605f",
+        "#4e5a58",
+        "#515757",
+        "#4c5956",
+        "#4e5154",
+        "#45504c",
+        "#434c4b",
+        "#424749",
+        "#303531"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.108,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.606,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 7,
+          "y": 7,
+          "w": 9,
+          "h": 10
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "komainu",
+      "type": "sprite",
+      "prompt": "a small stone guardian lion-dog (komainu) familiar, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.496"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T00:13:51Z",
+      "files": {
+        "image": "12-komainu.png",
+        "raw": "12-komainu.raw.png",
+        "mask": "12-komainu.mask.png"
+      },
+      "palette": [
+        "#c1b59e",
+        "#baaf99",
+        "#ada28f",
+        "#a79c8b",
+        "#9b9181",
+        "#91887b",
+        "#898177",
+        "#837a73",
+        "#7d756c",
+        "#797169",
+        "#716a62",
+        "#6a635f",
+        "#605c63",
+        "#5f5760",
+        "#5b5055",
+        "#514b4c"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.217,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.734,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 6,
+          "y": 4,
+          "w": 12,
+          "h": 16
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "swarmer-gaki",
+      "type": "sprite",
+      "prompt": "a small emaciated hungry ghost (gaki) with a swollen belly, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.472"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.019"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "checks failed: contrast vs #5fae44 = 1.021"
+        }
+      ],
+      "lastChecks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.153,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.021,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 14,
+      "id": "swarmer-gaki",
+      "type": "sprite",
+      "prompt": "a small emaciated hungry ghost (gaki) with a swollen belly, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 15,
+      "id": "swarmer-imp",
+      "type": "sprite",
+      "prompt": "a tiny horned red oni imp, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 16,
+      "id": "swarmer-imp",
+      "type": "sprite",
+      "prompt": "a tiny horned red oni imp, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 17,
+      "id": "swarmer-hitodama",
+      "type": "sprite",
+      "prompt": "a small floating ghost flame spirit (hitodama) with a face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 18,
+      "id": "swarmer-hitodama",
+      "type": "sprite",
+      "prompt": "a small floating ghost flame spirit (hitodama) with a face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 19,
+      "id": "charger-kappa",
+      "type": "sprite",
+      "prompt": "a crouching kappa river demon ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 20,
+      "id": "charger-kappa",
+      "type": "sprite",
+      "prompt": "a crouching kappa river demon ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 21,
+      "id": "charger-boar",
+      "type": "sprite",
+      "prompt": "a demonic wild boar spirit with glowing tusks, charging, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 22,
+      "id": "charger-boar",
+      "type": "sprite",
+      "prompt": "a demonic wild boar spirit with glowing tusks, charging, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 23,
+      "id": "charger-wanyudo",
+      "type": "sprite",
+      "prompt": "a burning ox-cart wheel demon with a man's face (wanyudo), single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 24,
+      "id": "charger-wanyudo",
+      "type": "sprite",
+      "prompt": "a burning ox-cart wheel demon with a man's face (wanyudo), single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 25,
+      "id": "ranged-tengu",
+      "type": "sprite",
+      "prompt": "a crow tengu archer with a bow, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 26,
+      "id": "ranged-tengu",
+      "type": "sprite",
+      "prompt": "a crow tengu archer with a bow, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 27,
+      "id": "ranged-fox-mage",
+      "type": "sprite",
+      "prompt": "a fox spirit sorcerer casting a fireball, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 28,
+      "id": "ranged-fox-mage",
+      "type": "sprite",
+      "prompt": "a fox spirit sorcerer casting a fireball, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 29,
+      "id": "ranged-skeleton-archer",
+      "type": "sprite",
+      "prompt": "a skeletal ashigaru ghost archer, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 30,
+      "id": "ranged-skeleton-archer",
+      "type": "sprite",
+      "prompt": "a skeletal ashigaru ghost archer, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 31,
+      "id": "splitter-nuppeppo",
+      "type": "sprite",
+      "prompt": "a blobby flesh yokai (nuppeppo) with a droopy face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        40,
+        40
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 32,
+      "id": "splitter-nuppeppo",
+      "type": "sprite",
+      "prompt": "a blobby flesh yokai (nuppeppo) with a droopy face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        40,
+        40
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 33,
+      "id": "splitter-mud",
+      "type": "sprite",
+      "prompt": "a lumpy mud spirit (dorotabo) rising from the ground, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        40,
+        40
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 34,
+      "id": "splitter-mud",
+      "type": "sprite",
+      "prompt": "a lumpy mud spirit (dorotabo) rising from the ground, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        40,
+        40
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 35,
+      "id": "splitter-jar",
+      "type": "sprite",
+      "prompt": "a haunted cracked clay jar spilling small spirits, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        40,
+        40
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 36,
+      "id": "splitter-jar",
+      "type": "sprite",
+      "prompt": "a haunted cracked clay jar spilling small spirits, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        40,
+        40
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 37,
+      "id": "tank-oni",
+      "type": "sprite",
+      "prompt": "a huge red oni brute with an iron club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 38,
+      "id": "tank-oni",
+      "type": "sprite",
+      "prompt": "a huge red oni brute with an iron club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 39,
+      "id": "tank-ochimusha",
+      "type": "sprite",
+      "prompt": "a hulking armoured samurai ghost (ochimusha) with a broken spear, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 40,
+      "id": "tank-ochimusha",
+      "type": "sprite",
+      "prompt": "a hulking armoured samurai ghost (ochimusha) with a broken spear, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 41,
+      "id": "tank-nurikabe",
+      "type": "sprite",
+      "prompt": "a living stone wall yokai (nurikabe) with stubby legs, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 42,
+      "id": "tank-nurikabe",
+      "type": "sprite",
+      "prompt": "a living stone wall yokai (nurikabe) with stubby legs, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 43,
+      "id": "boss-gashadokuro",
+      "type": "sprite",
+      "prompt": "a giant skeleton yokai (gashadokuro) looming, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 44,
+      "id": "boss-gashadokuro",
+      "type": "sprite",
+      "prompt": "a giant skeleton yokai (gashadokuro) looming, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 45,
+      "id": "boss-nue",
+      "type": "sprite",
+      "prompt": "a nue chimera with a monkey face, tiger body and snake tail, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 46,
+      "id": "boss-nue",
+      "type": "sprite",
+      "prompt": "a nue chimera with a monkey face, tiger body and snake tail, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 47,
+      "id": "boss-oni-lord",
+      "type": "sprite",
+      "prompt": "a towering oni warlord in black armour with a huge kanabo club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 48,
+      "id": "boss-oni-lord",
+      "type": "sprite",
+      "prompt": "a towering oni warlord in black armour with a huge kanabo club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "Phase 1 silhouettes: player, 2 weapons, 3 shikigami, 3 enemies per behavior. Generated as full sprites; the mask is kept as the silhouette.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-09T00:13:56Z",
+  "counts": {
+    "ok": 7,
+    "pending": 41
+  }
+}

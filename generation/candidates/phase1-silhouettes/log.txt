@@ -1,0 +1,77 @@
+--- run 2026-10-09T00:13:56Z
+[phase1-silhouettes] #1 player (sprite)
+  cloudflare: ok on attempt 1
+[phase1-silhouettes] #2 player (sprite)
+  cloudflare: ok on attempt 1
+[phase1-silhouettes] #3 katana (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: checks failed (2), attempt 2
+  cloudflare: checks failed (1), attempt 3
+[phase1-silhouettes] #4 katana (sprite)
+  cloudflare: refused, moving on (HTTP 400: {"errors":[{"message":"AiError: AiError: Input prompt contains NSFW content. (b6257bc0-1c57-4110-b7da-4b4b64821f8e)","code":8007}],"success":false,"result":{},"messages":[]})
+[phase1-silhouettes] #5 naginata (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: checks failed (1), attempt 2
+  cloudflare: checks failed (1), attempt 3
+[phase1-silhouettes] #6 naginata (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: checks failed (1), attempt 2
+  cloudflare: checks failed (1), attempt 3
+[phase1-silhouettes] #7 kitsune-bi (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: checks failed (1), attempt 2
+  cloudflare: ok on attempt 3
+[phase1-silhouettes] #8 kitsune-bi (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: ok on attempt 2
+[phase1-silhouettes] #9 paper-crane (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: ok on attempt 2
+[phase1-silhouettes] #10 paper-crane (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: checks failed (1), attempt 2
+  cloudflare: checks failed (2), attempt 3
+[phase1-silhouettes] #11 komainu (sprite)
+  cloudflare: ok on attempt 1
+[phase1-silhouettes] #12 komainu (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: ok on attempt 2
+[phase1-silhouettes] #13 swarmer-gaki (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: checks failed (1), attempt 2
+  cloudflare: checks failed (1), attempt 3
+[phase1-silhouettes] #14 swarmer-gaki (sprite)
+[phase1-silhouettes] #15 swarmer-imp (sprite)
+[phase1-silhouettes] #16 swarmer-imp (sprite)
+[phase1-silhouettes] #17 swarmer-hitodama (sprite)
+[phase1-silhouettes] #18 swarmer-hitodama (sprite)
+[phase1-silhouettes] #19 charger-kappa (sprite)
+[phase1-silhouettes] #20 charger-kappa (sprite)
+[phase1-silhouettes] #21 charger-boar (sprite)
+[phase1-silhouettes] #22 charger-boar (sprite)
+[phase1-silhouettes] #23 charger-wanyudo (sprite)
+[phase1-silhouettes] #24 charger-wanyudo (sprite)
+[phase1-silhouettes] #25 ranged-tengu (sprite)
+[phase1-silhouettes] #26 ranged-tengu (sprite)
+[phase1-silhouettes] #27 ranged-fox-mage (sprite)
+[phase1-silhouettes] #28 ranged-fox-mage (sprite)
+[phase1-silhouettes] #29 ranged-skeleton-archer (sprite)
+[phase1-silhouettes] #30 ranged-skeleton-archer (sprite)
+[phase1-silhouettes] #31 splitter-nuppeppo (sprite)
+[phase1-silhouettes] #32 splitter-nuppeppo (sprite)
+[phase1-silhouettes] #33 splitter-mud (sprite)
+[phase1-silhouettes] #34 splitter-mud (sprite)
+[phase1-silhouettes] #35 splitter-jar (sprite)
+[phase1-silhouettes] #36 splitter-jar (sprite)
+[phase1-silhouettes] #37 tank-oni (sprite)
+[phase1-silhouettes] #38 tank-oni (sprite)
+[phase1-silhouettes] #39 tank-ochimusha (sprite)
+[phase1-silhouettes] #40 tank-ochimusha (sprite)
+[phase1-silhouettes] #41 tank-nurikabe (sprite)
+[phase1-silhouettes] #42 tank-nurikabe (sprite)
+[phase1-silhouettes] #43 boss-gashadokuro (sprite)
+[phase1-silhouettes] #44 boss-gashadokuro (sprite)
+[phase1-silhouettes] #45 boss-nue (sprite)
+[phase1-silhouettes] #46 boss-nue (sprite)
+[phase1-silhouettes] #47 boss-oni-lord (sprite)
+[phase1-silhouettes] #48 boss-oni-lord (sprite)

@@ -1,8 +1,12 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "counts": {
-    "pixellab": 3,
-    "retrodiffusion": 4
+    "pixellab": 1,
+    "retrodiffusion": 4,
+    "cloudflare": 42
   },
-  "limited": {}
+  "limited": {
+    "pixellab": "HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"}",
+    "retrodiffusion": "cost 0.06 exceeds remaining balance 0.020000000000000018"
+  }
 }

@@ -1,0 +1,250 @@
+{
+  "batch": "phase1-tiles",
+  "request": "generation/requests/phase1-tiles.json",
+  "created": "2026-10-09T00:13:56Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "grass",
+      "type": "tile",
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 2,
+      "id": "grass",
+      "type": "tile",
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 3,
+      "id": "dirt-path",
+      "type": "tile",
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 4,
+      "id": "dirt-path",
+      "type": "tile",
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 5,
+      "id": "water",
+      "type": "tile",
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 6,
+      "id": "water",
+      "type": "tile",
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 7,
+      "id": "wall",
+      "type": "tile",
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 8,
+      "id": "wall",
+      "type": "tile",
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 9,
+      "id": "wall",
+      "type": "tile",
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+        },
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 40 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-09T00:13:56Z",
+  "counts": {
+    "pending": 9
+  }
+}
