@@ -1,0 +1,434 @@
+{
+  "batch": "phase1-silhouettes",
+  "made": "2026-10-09T01:09:19Z",
+  "provider": "retrodiffusion",
+  "note": "Free cost check only; nothing was generated.",
+  "totals": {
+    "rd_plus__default all": 3.18,
+    "rd_plus__default notPixellab": 2.04,
+    "rd_pro__default all": 9.54,
+    "rd_pro__default notPixellab": 6.12
+  },
+  "items": [
+    {
+      "id": "player",
+      "candidates": 2,
+      "size": [
+        48,
+        48
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "katana",
+      "candidates": 2,
+      "size": [
+        48,
+        48
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "naginata",
+      "candidates": 2,
+      "size": [
+        48,
+        48
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "kitsune-bi",
+      "candidates": 2,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "paper-crane",
+      "candidates": 2,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "komainu",
+      "candidates": 2,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "swarmer-gaki",
+      "candidates": 2,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "swarmer-imp",
+      "candidates": 2,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "swarmer-hitodama",
+      "candidates": 2,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "charger-kappa",
+      "candidates": 2,
+      "size": [
+        32,
+        32
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "charger-boar",
+      "candidates": 2,
+      "size": [
+        32,
+        32
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "charger-wanyudo",
+      "candidates": 2,
+      "size": [
+        32,
+        32
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "ranged-tengu",
+      "candidates": 2,
+      "size": [
+        32,
+        32
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "ranged-fox-mage",
+      "candidates": 2,
+      "size": [
+        32,
+        32
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "ranged-skeleton-archer",
+      "candidates": 2,
+      "size": [
+        32,
+        32
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "splitter-nuppeppo",
+      "candidates": 2,
+      "size": [
+        40,
+        40
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "splitter-mud",
+      "candidates": 2,
+      "size": [
+        40,
+        40
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "splitter-jar",
+      "candidates": 2,
+      "size": [
+        40,
+        40
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "tank-oni",
+      "candidates": 2,
+      "size": [
+        48,
+        48
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "tank-ochimusha",
+      "candidates": 2,
+      "size": [
+        48,
+        48
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "tank-nurikabe",
+      "candidates": 2,
+      "size": [
+        48,
+        48
+      ],
+      "currentProviders": [
+        "cloudflare"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "boss-gashadokuro",
+      "candidates": 2,
+      "size": [
+        96,
+        96
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "boss-nue",
+      "candidates": 2,
+      "size": [
+        96,
+        96
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "boss-oni-lord",
+      "candidates": 2,
+      "size": [
+        96,
+        96
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "player",
+      "candidates": 2,
+      "size": [
+        48,
+        48
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "kitsune-bi",
+      "candidates": 1,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "paper-crane",
+      "candidates": 1,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    },
+    {
+      "id": "komainu",
+      "candidates": 1,
+      "size": [
+        24,
+        24
+      ],
+      "currentProviders": [
+        "pixellab"
+      ],
+      "perImage": {
+        "rd_plus__default": 0.06,
+        "rd_pro__default": 0.18
+      }
+    }
+  ]
+}
