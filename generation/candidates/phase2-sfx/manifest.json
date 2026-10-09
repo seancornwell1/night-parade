@@ -11,12 +11,45 @@
       "attempts": [
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "duration": 0.5,
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:56:58Z",
+      "files": {
+        "audio": "01-hit.mp3",
+        "raw": "01-hit.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.47,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -18.9,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -0.9,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.47
     },
     {
       "number": 2,
@@ -276,10 +309,41 @@
       "attempts": [
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+          "cost": null,
+          "outcome": "checks failed: no clipping = -0.2"
+        },
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: daily cap of 30 reached"
         }
       ],
       "duration": 0.6,
+      "lastChecks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.44,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -14.0,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": false,
+          "value": -0.2,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
       "status": "pending",
       "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
     },
@@ -738,9 +802,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T11:45:54Z",
+  "updated": "2026-10-09T11:57:00Z",
   "counts": {
-    "pending": 5,
-    "ok": 13
+    "ok": 14,
+    "pending": 4
   }
 }

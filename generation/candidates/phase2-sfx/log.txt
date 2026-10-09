@@ -55,3 +55,8 @@
 [phase2-sfx] #8 roll (sfx)
 [phase2-sfx] #9 pickup-xp (sfx)
 [phase2-sfx] #10 pickup-xp (sfx)
+--- run 2026-10-09T11:57:00Z
+[phase2-sfx] #1 hit (sfx)
+  elevenlabs: ok on attempt 1
+[phase2-sfx] #7 roll (sfx)
+  elevenlabs: checks failed (1), attempt 1
