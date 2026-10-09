@@ -1,11 +1,12 @@
 {
   "date": "2026-10-09",
   "counts": {
-    "pixellab": 24,
+    "pixellab": 37,
     "retrodiffusion": 4,
     "cloudflare": 55
   },
   "limited": {
-    "retrodiffusion": "cost 0.06 exceeds remaining balance 0.020000000000000018"
+    "retrodiffusion": "cost 0.06 exceeds remaining balance 0.020000000000000018",
+    "pixellab": "HTTP 402: {\"detail\":\"Insufficient generations and credits. Generations: 40.0/40.0, Credits: 0.0\"}"
   }
 }

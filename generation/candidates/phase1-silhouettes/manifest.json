@@ -159,41 +159,53 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.037"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.034; contrast vs #5fae44 = 1.014"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.262"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:20:33Z",
+      "files": {
+        "image": "03-katana.png",
+        "raw": "03-katana.raw.png",
+        "mask": "03-katana.mask.png"
+      },
+      "palette": [
+        "#e9e3fa",
+        "#bebad9",
+        "#aaa5c6",
+        "#8f8aaf",
+        "#a93d88",
+        "#332e5c",
+        "#24243b",
+        "#95236f",
+        "#751157",
+        "#2c0d3b",
+        "#221334"
+      ],
+      "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.047,
-          "limit": "0.04-0.9"
+          "value": 0.141,
+          "limit": "0.012-0.9"
         },
         {
           "name": "contrast vs #5fae44",
-          "pass": false,
-          "value": 1.262,
+          "pass": true,
+          "value": 6.209,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 46,
+          "h": 45
+        }
+      ]
     },
     {
       "number": 4,
@@ -207,19 +219,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (b6257bc0-1c57-4110-b7da-4b4b64821f8e)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:21:04Z",
+      "files": {
+        "image": "04-katana.png",
+        "raw": "04-katana.raw.png",
+        "mask": "04-katana.mask.png"
+      },
+      "palette": [
+        "#cdd2e5",
+        "#ba874d",
+        "#747685",
+        "#9b6c34",
+        "#5c5c6e",
+        "#56555f",
+        "#6b441a",
+        "#4f4e62",
+        "#434052",
+        "#56381c",
+        "#3d2a18",
+        "#2e2c33",
+        "#1f1d22",
+        "#161212",
+        "#100c0c",
+        "#0b0706"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.136,
+          "limit": "0.012-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.772,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 45,
+          "h": 45
+        }
+      ]
     },
     {
       "number": 5,
@@ -233,41 +284,53 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.024"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.029"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.032"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:21:24Z",
+      "files": {
+        "image": "05-naginata.png",
+        "raw": "05-naginata.raw.png",
+        "mask": "05-naginata.mask.png"
+      },
+      "palette": [
+        "#7e5c29",
+        "#64471e",
+        "#5a4024",
+        "#59322a",
+        "#3f3224",
+        "#49231f",
+        "#272017",
+        "#19140f",
+        "#171107",
+        "#110c07",
+        "#0a0703"
+      ],
+      "checks": [
         {
           "name": "coverage",
-          "pass": false,
-          "value": 0.032,
-          "limit": "0.04-0.9"
+          "pass": true,
+          "value": 0.088,
+          "limit": "0.012-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 2.202,
+          "value": 6.94,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 45,
+          "h": 45
+        }
+      ]
     },
     {
       "number": 6,
@@ -281,41 +344,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.024"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.03"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.018"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:21:49Z",
+      "files": {
+        "image": "06-naginata.png",
+        "raw": "06-naginata.raw.png",
+        "mask": "06-naginata.mask.png"
+      },
+      "palette": [
+        "#bb8fad",
+        "#7e4b67",
+        "#86424f",
+        "#7c413f",
+        "#6c3842",
+        "#733b39",
+        "#5f3634",
+        "#5f3144",
+        "#502540",
+        "#462132",
+        "#37172c",
+        "#2d0f22",
+        "#2d0f21",
+        "#290d17",
+        "#240a0f",
+        "#23090f"
+      ],
+      "checks": [
         {
           "name": "coverage",
-          "pass": false,
-          "value": 0.018,
-          "limit": "0.04-0.9"
+          "pass": true,
+          "value": 0.114,
+          "limit": "0.012-0.9"
         },
         {
           "name": "contrast vs #5fae44",
           "pass": true,
-          "value": 3.717,
+          "value": 5.546,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 45,
+          "h": 43
+        }
+      ]
     },
     {
       "number": 7,
@@ -760,41 +840,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.472"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.019"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.021"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:22:09Z",
+      "files": {
+        "image": "13-swarmer-gaki.png",
+        "raw": "13-swarmer-gaki.raw.png",
+        "mask": "13-swarmer-gaki.mask.png"
+      },
+      "palette": [
+        "#fdf2e8",
+        "#fcecdc",
+        "#f0d9cd",
+        "#e5c7be",
+        "#d3bcb7",
+        "#cba9a4",
+        "#c89795",
+        "#a08285",
+        "#90686d",
+        "#79545f",
+        "#74505c",
+        "#69464f",
+        "#5f3744",
+        "#3f1f35",
+        "#27112a",
+        "#251129"
+      ],
+      "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.153,
+          "value": 0.418,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
-          "pass": false,
-          "value": 1.021,
+          "pass": true,
+          "value": 3.264,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 4,
+          "y": 0,
+          "w": 16,
+          "h": 23
+        }
+      ]
     },
     {
       "number": 14,
@@ -808,19 +905,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:22:38Z",
+      "files": {
+        "image": "14-swarmer-gaki.png",
+        "raw": "14-swarmer-gaki.raw.png",
+        "mask": "14-swarmer-gaki.mask.png"
+      },
+      "palette": [
+        "#fdf9f8",
+        "#f8c0b1",
+        "#f7bcaf",
+        "#f19c9b",
+        "#f3838e",
+        "#a794a2",
+        "#a78d9c",
+        "#d5727c",
+        "#8e5d67",
+        "#d23d64",
+        "#81384c",
+        "#a8264f",
+        "#532736",
+        "#4b2432",
+        "#492432",
+        "#472431"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.396,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.583,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 5,
+          "y": 1,
+          "w": 13,
+          "h": 22
+        }
+      ]
     },
     {
       "number": 15,
@@ -834,19 +970,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:23:05Z",
+      "files": {
+        "image": "15-swarmer-imp.png",
+        "raw": "15-swarmer-imp.raw.png",
+        "mask": "15-swarmer-imp.mask.png"
+      },
+      "palette": [
+        "#d2a192",
+        "#864d4f",
+        "#7b253e",
+        "#232026",
+        "#7e0b2d",
+        "#170b0d",
+        "#0f0b0b",
+        "#0c0a09",
+        "#0b0a09",
+        "#9d0833",
+        "#87082c",
+        "#5c0820",
+        "#3f0718",
+        "#270612",
+        "#0d0809",
+        "#090503"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.382,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.502,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 0,
+          "w": 17,
+          "h": 24
+        }
+      ]
     },
     {
       "number": 16,
@@ -860,19 +1035,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:23:30Z",
+      "files": {
+        "image": "16-swarmer-imp.png",
+        "raw": "16-swarmer-imp.raw.png",
+        "mask": "16-swarmer-imp.mask.png"
+      },
+      "palette": [
+        "#e4ad96",
+        "#807f86",
+        "#f05965",
+        "#825e51",
+        "#d43f56",
+        "#ac314b",
+        "#8c3241",
+        "#4f332f",
+        "#7f233f",
+        "#611d33",
+        "#4a182c",
+        "#401528",
+        "#2a121e",
+        "#1a131c",
+        "#170f19",
+        "#140d16"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.438,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.277,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 1,
+          "w": 17,
+          "h": 23
+        }
+      ]
     },
     {
       "number": 17,
@@ -886,19 +1100,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:23:52Z",
+      "files": {
+        "image": "17-swarmer-hitodama.png",
+        "raw": "17-swarmer-hitodama.raw.png",
+        "mask": "17-swarmer-hitodama.mask.png"
+      },
+      "palette": [
+        "#f3efcc",
+        "#fce14c",
+        "#f7b941",
+        "#e57933",
+        "#ef611f",
+        "#f3601e",
+        "#ed3f36",
+        "#9d4c2e",
+        "#863520",
+        "#e41c50",
+        "#721f32",
+        "#210b1c",
+        "#210b1b",
+        "#1f0721",
+        "#1d0521"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.438,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.295,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 0,
+          "w": 19,
+          "h": 24
+        }
+      ]
     },
     {
       "number": 18,
@@ -912,19 +1164,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:24:29Z",
+      "files": {
+        "image": "18-swarmer-hitodama.png",
+        "raw": "18-swarmer-hitodama.raw.png",
+        "mask": "18-swarmer-hitodama.mask.png"
+      },
+      "palette": [
+        "#fdf6ee",
+        "#f8b642",
+        "#c2aca3",
+        "#eb9456",
+        "#fa6945",
+        "#8c6c61",
+        "#fa6542",
+        "#fa613e",
+        "#7a655d",
+        "#cd4b3b",
+        "#a7472f",
+        "#9f2f3c",
+        "#683025",
+        "#532a1d",
+        "#53291d"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.439,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.628,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 20,
+          "h": 22
+        }
+      ]
     },
     {
       "number": 19,
@@ -938,19 +1228,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:24:52Z",
+      "files": {
+        "image": "19-charger-kappa.png",
+        "raw": "19-charger-kappa.raw.png",
+        "mask": "19-charger-kappa.mask.png"
+      },
+      "palette": [
+        "#c29562",
+        "#986748",
+        "#654836",
+        "#a34168",
+        "#8c3a51",
+        "#742941",
+        "#3e3537",
+        "#6b283b",
+        "#642236",
+        "#591e31",
+        "#4e1829",
+        "#3e1521",
+        "#31161c",
+        "#290d16",
+        "#261214",
+        "#210d10"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.395,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.077,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 28,
+          "h": 30
+        }
+      ]
     },
     {
       "number": 20,
@@ -964,19 +1293,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:25:17Z",
+      "files": {
+        "image": "20-charger-kappa.png",
+        "raw": "20-charger-kappa.raw.png",
+        "mask": "20-charger-kappa.mask.png"
+      },
+      "palette": [
+        "#c7ab95",
+        "#9a6f54",
+        "#824738",
+        "#4a4343",
+        "#bf3031",
+        "#9b1c1e",
+        "#891415",
+        "#761817",
+        "#282528",
+        "#6c0f10",
+        "#550d0b",
+        "#480a09",
+        "#3d0a08",
+        "#240705",
+        "#090504",
+        "#050201"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.404,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.489,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 30,
+          "h": 29
+        }
+      ]
     },
     {
       "number": 21,
@@ -990,19 +1358,58 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T09:25:39Z",
+      "files": {
+        "image": "21-charger-boar.png",
+        "raw": "21-charger-boar.raw.png",
+        "mask": "21-charger-boar.mask.png"
+      },
+      "palette": [
+        "#edcb78",
+        "#cf554f",
+        "#86444a",
+        "#853d40",
+        "#723b44",
+        "#6f3a43",
+        "#93333d",
+        "#6b3841",
+        "#6a3540",
+        "#68323e",
+        "#582d37",
+        "#492832",
+        "#3a2530",
+        "#351f2a",
+        "#281622",
+        "#271521"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.316,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.756,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 4,
+          "w": 30,
+          "h": 24
+        }
+      ]
     },
     {
       "number": 22,
@@ -1016,15 +1423,11 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "free limit hit: HTTP 402: {\"detail\":\"Insufficient generations and credits. Generations: 40.0/40.0, Credits: 0.0\"}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -2259,9 +2662,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T08:50:16Z",
+  "updated": "2026-10-09T09:25:45Z",
   "counts": {
-    "ok": 19,
-    "pending": 34
+    "ok": 32,
+    "pending": 21
   }
 }

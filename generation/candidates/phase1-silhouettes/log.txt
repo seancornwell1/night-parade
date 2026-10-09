@@ -111,3 +111,32 @@
   pixellab: ok on attempt 1
 [phase1-silhouettes] #53 komainu (sprite)
   pixellab: ok on attempt 1
+--- run 2026-10-09T09:25:45Z
+[phase1-silhouettes] #3 katana (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #4 katana (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #5 naginata (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #6 naginata (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #13 swarmer-gaki (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #14 swarmer-gaki (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #15 swarmer-imp (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #16 swarmer-imp (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #17 swarmer-hitodama (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #18 swarmer-hitodama (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #19 charger-kappa (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #20 charger-kappa (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #21 charger-boar (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #22 charger-boar (sprite)
+  pixellab: free limit hit, moving on (HTTP 402: {"detail":"Insufficient generations and credits. Generations: 40.0/40.0, Credits: 0.0"})
