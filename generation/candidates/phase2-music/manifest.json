@@ -1,0 +1,68 @@
+{
+  "batch": "phase2-music",
+  "request": "generation/requests/phase2-2-music.json",
+  "created": "2026-10-09T11:32:32Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "day-theme",
+      "type": "music",
+      "prompt": "16-bit SNES chiptune background music for a feudal Japan adventure game daytime stage: koto-like pentatonic lead melody, taiko-style drum pattern, plucky shamisen-like bass, bright, adventurous and determined, steady 120 BPM, loopable, instrumental, no vocals",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "free limit hit: HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access\",\"request_id\":\"c736830282dde8ea6771e52e1437b2eb\"}}"
+        },
+        {
+          "provider": "stability",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 90,
+      "status": "ok",
+      "provider": "stability",
+      "made": "2026-10-09T11:32:41Z",
+      "files": {
+        "audio": "01-day-theme.mp3",
+        "raw": "01-day-theme.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 88.03,
+          "limit": "20-240 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -17.7,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -1.6,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 88.03
+    }
+  ],
+  "note": "Day stage chiptune track: plays once in the day, loops seamlessly.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-09T11:32:41Z",
+  "counts": {
+    "ok": 1
+  }
+}

@@ -1,0 +1,1042 @@
+{
+  "batch": "phase2-visuals",
+  "request": "generation/requests/phase2-3-visuals.json",
+  "created": "2026-10-09T11:32:41Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "xp-orb",
+      "type": "sprite",
+      "prompt": "a small glowing blue spirit orb, game pickup item icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 2,
+      "id": "xp-orb",
+      "type": "sprite",
+      "prompt": "a small glowing blue spirit orb, game pickup item icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 3,
+      "id": "heal-onigiri",
+      "type": "sprite",
+      "prompt": "a single onigiri rice ball wrapped in dark seaweed, healing item icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 4,
+      "id": "heal-onigiri",
+      "type": "sprite",
+      "prompt": "a single onigiri rice ball wrapped in dark seaweed, healing item icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 5,
+      "id": "arrow",
+      "type": "sprite",
+      "prompt": "a single small wooden arrow with white fletching, diagonal",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 6,
+      "id": "arrow",
+      "type": "sprite",
+      "prompt": "a single small wooden arrow with white fletching, diagonal",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 7,
+      "id": "fireball",
+      "type": "sprite",
+      "prompt": "a small round orange fireball projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 8,
+      "id": "fireball",
+      "type": "sprite",
+      "prompt": "a small round orange fireball projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 9,
+      "id": "foxfire-bolt",
+      "type": "sprite",
+      "prompt": "a small blue ghostly flame wisp projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 10,
+      "id": "foxfire-bolt",
+      "type": "sprite",
+      "prompt": "a small blue ghostly flame wisp projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 11,
+      "id": "paper-dart",
+      "type": "sprite",
+      "prompt": "a small white folded paper dart",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 12,
+      "id": "paper-dart",
+      "type": "sprite",
+      "prompt": "a small white folded paper dart",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 13,
+      "id": "spirit-wave",
+      "type": "sprite",
+      "prompt": "a glowing white crescent spirit wave energy slash, horizontal",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 14,
+      "id": "spirit-wave",
+      "type": "sprite",
+      "prompt": "a glowing white crescent spirit wave energy slash, horizontal",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 15,
+      "id": "slash-arc",
+      "type": "sprite",
+      "prompt": "a single bright white curved sword slash trail arc effect",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 16,
+      "id": "slash-arc",
+      "type": "sprite",
+      "prompt": "a single bright white curved sword slash trail arc effect",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 17,
+      "id": "hit-spark",
+      "type": "sprite",
+      "prompt": "a small bright yellow white impact spark star burst effect",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 18,
+      "id": "hit-spark",
+      "type": "sprite",
+      "prompt": "a small bright yellow white impact spark star burst effect",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 19,
+      "id": "btn-attack",
+      "type": "sprite",
+      "prompt": "a round red lacquered wooden game button with a white katana emblem in the middle, UI icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 20,
+      "id": "btn-attack",
+      "type": "sprite",
+      "prompt": "a round red lacquered wooden game button with a white katana emblem in the middle, UI icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 21,
+      "id": "btn-dodge",
+      "type": "sprite",
+      "prompt": "a round blue lacquered wooden game button with a white wind swirl emblem in the middle, UI icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 22,
+      "id": "btn-dodge",
+      "type": "sprite",
+      "prompt": "a round blue lacquered wooden game button with a white wind swirl emblem in the middle, UI icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 23,
+      "id": "stick-base",
+      "type": "sprite",
+      "prompt": "a round flat dark wooden disc with a carved outer ring, UI joystick base",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 24,
+      "id": "stick-base",
+      "type": "sprite",
+      "prompt": "a round flat dark wooden disc with a carved outer ring, UI joystick base",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 25,
+      "id": "stick-knob",
+      "type": "sprite",
+      "prompt": "a small round polished red lacquer knob, UI joystick handle",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 26,
+      "id": "stick-knob",
+      "type": "sprite",
+      "prompt": "a small round polished red lacquer knob, UI joystick handle",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 27,
+      "id": "card-frame",
+      "type": "sprite",
+      "prompt": "a blank vertical paper scroll card with dark wooden rods at the top and bottom, empty parchment, UI frame",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        96
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 28,
+      "id": "card-frame",
+      "type": "sprite",
+      "prompt": "a blank vertical paper scroll card with dark wooden rods at the top and bottom, empty parchment, UI frame",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        96
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 29,
+      "id": "panel-frame",
+      "type": "sprite",
+      "prompt": "a blank square UI panel: dark wooden frame around plain cream rice paper, empty, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 30,
+      "id": "panel-frame",
+      "type": "sprite",
+      "prompt": "a blank square UI panel: dark wooden frame around plain cream rice paper, empty, no text",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 31,
+      "id": "icon-fire",
+      "type": "sprite",
+      "prompt": "a red-orange flame icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 32,
+      "id": "icon-fire",
+      "type": "sprite",
+      "prompt": "a red-orange flame icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 33,
+      "id": "icon-frost",
+      "type": "sprite",
+      "prompt": "a pale blue snowflake icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 34,
+      "id": "icon-frost",
+      "type": "sprite",
+      "prompt": "a pale blue snowflake icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 35,
+      "id": "icon-thunder",
+      "type": "sprite",
+      "prompt": "a yellow lightning bolt icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 36,
+      "id": "icon-thunder",
+      "type": "sprite",
+      "prompt": "a yellow lightning bolt icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 37,
+      "id": "icon-spirit",
+      "type": "sprite",
+      "prompt": "a white ghostly soul wisp icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 38,
+      "id": "icon-spirit",
+      "type": "sprite",
+      "prompt": "a white ghostly soul wisp icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 39,
+      "id": "icon-beast",
+      "type": "sprite",
+      "prompt": "a brown animal paw print icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 40,
+      "id": "icon-beast",
+      "type": "sprite",
+      "prompt": "a brown animal paw print icon, game UI symbol",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 41,
+      "id": "torii",
+      "type": "sprite",
+      "prompt": "a red Shinto torii gate, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 42,
+      "id": "torii",
+      "type": "sprite",
+      "prompt": "a red Shinto torii gate, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 43,
+      "id": "farmhouse",
+      "type": "sprite",
+      "prompt": "a small thatched-roof Japanese farmhouse (minka), 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        96,
+        96
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 44,
+      "id": "farmhouse",
+      "type": "sprite",
+      "prompt": "a small thatched-roof Japanese farmhouse (minka), 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        96,
+        96
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 45,
+      "id": "fence",
+      "type": "sprite",
+      "prompt": "a short section of woven bamboo fence, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 46,
+      "id": "fence",
+      "type": "sprite",
+      "prompt": "a short section of woven bamboo fence, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 47,
+      "id": "bush",
+      "type": "sprite",
+      "prompt": "a round leafy green bush, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 48,
+      "id": "bush",
+      "type": "sprite",
+      "prompt": "a round leafy green bush, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 49,
+      "id": "bamboo",
+      "type": "sprite",
+      "prompt": "a small cluster of green bamboo stalks, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 50,
+      "id": "bamboo",
+      "type": "sprite",
+      "prompt": "a small cluster of green bamboo stalks, 3/4 top-down game view",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 51,
+      "id": "flowers",
+      "type": "sprite",
+      "prompt": "a small patch of tiny wildflowers, top-down",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 52,
+      "id": "flowers",
+      "type": "sprite",
+      "prompt": "a small patch of tiny wildflowers, top-down",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 53,
+      "id": "forest-floor",
+      "type": "tile",
+      "prompt": "top-down 16-bit pixel art seamless ground texture: dark forest floor with fallen leaves and moss, daylight",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 54,
+      "id": "forest-floor",
+      "type": "tile",
+      "prompt": "top-down 16-bit pixel art seamless ground texture: dark forest floor with fallen leaves and moss, daylight",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 55,
+      "id": "paddy",
+      "type": "tile",
+      "prompt": "top-down 16-bit pixel art seamless texture: flooded rice paddy water with rows of young green rice shoots, daylight",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 56,
+      "id": "paddy",
+      "type": "tile",
+      "prompt": "top-down 16-bit pixel art seamless texture: flooded rice paddy water with rows of young green rice shoots, daylight",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "Day stage effects, pickups, UI and forest/village props, generated directly in the locked day palette (Cloudflare; free).",
+  "palette": {
+    "mode": "file",
+    "name": "day",
+    "colors": [
+      "#281622",
+      "#1a503e",
+      "#4b4056",
+      "#9e272b",
+      "#c82585",
+      "#3f823b",
+      "#7e6758",
+      "#ec5840",
+      "#58ac46",
+      "#ab8259",
+      "#28bdeb",
+      "#9c9c9c",
+      "#7ebd42",
+      "#c5a16a",
+      "#62e1f6",
+      "#fcecdc"
+    ]
+  },
+  "updated": "2026-10-09T11:32:41Z",
+  "counts": {
+    "pending": 56
+  }
+}

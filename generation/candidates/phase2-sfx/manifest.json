@@ -1,0 +1,865 @@
+{
+  "batch": "phase2-sfx",
+  "request": "generation/requests/phase2-1-sfx.json",
+  "created": "2026-10-09T11:31:46Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "hit",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, quick crisp sword slash hitting a demon, short punchy impact",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = -0.0"
+        }
+      ],
+      "duration": 0.5,
+      "lastChecks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.52,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -21.2,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": false,
+          "value": -0.0,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 2,
+      "id": "hit",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, quick crisp sword slash hitting a demon, short punchy impact",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 0.5,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:31:53Z",
+      "files": {
+        "audio": "02-hit.mp3",
+        "raw": "02-hit.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.26,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -18.1,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -1.4,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.26
+    },
+    {
+      "number": 3,
+      "id": "finisher",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, heavy spinning sword finisher whoosh ending in a big impact boom",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no long silences = 0.4"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 1.2,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:31:56Z",
+      "files": {
+        "audio": "03-finisher.mp3",
+        "raw": "03-finisher.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.73,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -15.8,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -3.8,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.73
+    },
+    {
+      "number": 4,
+      "id": "finisher",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, heavy spinning sword finisher whoosh ending in a big impact boom",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0; no long silences = 0.26"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 1.2,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:31:59Z",
+      "files": {
+        "audio": "04-finisher.mp3",
+        "raw": "04-finisher.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 1.23,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -15.6,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -6.4,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 1.23
+    },
+    {
+      "number": 5,
+      "id": "charge",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, energy charging up then releasing in a powerful burst",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 1.5,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:00Z",
+      "files": {
+        "audio": "05-charge.mp3",
+        "raw": "05-charge.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 1.52,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -15.5,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -5.2,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 1.52
+    },
+    {
+      "number": 6,
+      "id": "charge",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, energy charging up then releasing in a powerful burst",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 1.5,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:02Z",
+      "files": {
+        "audio": "06-charge.mp3",
+        "raw": "06-charge.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 1.52,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -15.6,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -3.7,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 1.52
+    },
+    {
+      "number": 7,
+      "id": "roll",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, fast dodge roll whoosh on dirt",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        }
+      ],
+      "duration": 0.6,
+      "lastChecks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.63,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -14.7,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": false,
+          "value": 0.0,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 8,
+      "id": "roll",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, fast dodge roll whoosh on dirt",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        }
+      ],
+      "duration": 0.6,
+      "lastChecks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.42,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -8.4,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": false,
+          "value": 0.0,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 9,
+      "id": "pickup-xp",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, tiny bright sparkling chime for collecting a spirit orb",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "error: HTTP 400: {\"detail\":{\"status\":\"invalid_generation_settings\",\"message\":\"Invalid setting for duration_seconds received, expected to be greater or equal to 0.5 and less or equal to 30, received 0.4.\"}}"
+        },
+        {
+          "provider": "elevenlabs",
+          "outcome": "error: HTTP 400: {\"detail\":{\"status\":\"invalid_generation_settings\",\"message\":\"Invalid setting for duration_seconds received, expected to be greater or equal to 0.5 and less or equal to 30, received 0.4.\"}}"
+        }
+      ],
+      "duration": 0.4,
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 10,
+      "id": "pickup-xp",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, tiny bright sparkling chime for collecting a spirit orb",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "error: HTTP 400: {\"detail\":{\"status\":\"invalid_generation_settings\",\"message\":\"Invalid setting for duration_seconds received, expected to be greater or equal to 0.5 and less or equal to 30, received 0.4.\"}}"
+        },
+        {
+          "provider": "elevenlabs",
+          "outcome": "error: HTTP 400: {\"detail\":{\"status\":\"invalid_generation_settings\",\"message\":\"Invalid setting for duration_seconds received, expected to be greater or equal to 0.5 and less or equal to 30, received 0.4.\"}}"
+        }
+      ],
+      "duration": 0.4,
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 11,
+      "id": "pickup-heal",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, warm soft rising chime for eating a healing rice ball",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 0.8,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:13Z",
+      "files": {
+        "audio": "11-pickup-heal.mp3",
+        "raw": "11-pickup-heal.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.84,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -14.8,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -0.8,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.84
+    },
+    {
+      "number": 12,
+      "id": "pickup-heal",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, warm soft rising chime for eating a healing rice ball",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 0.8,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:14Z",
+      "files": {
+        "audio": "12-pickup-heal.mp3",
+        "raw": "12-pickup-heal.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.39,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -18.5,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -0.8,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.39
+    },
+    {
+      "number": 13,
+      "id": "level-up",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, cheerful ascending fanfare jingle for leveling up",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 1.6,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:16Z",
+      "files": {
+        "audio": "13-level-up.mp3",
+        "raw": "13-level-up.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 1.33,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -16.0,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -2.8,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 1.33
+    },
+    {
+      "number": 14,
+      "id": "level-up",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, cheerful ascending fanfare jingle for leveling up",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 1.6,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:18Z",
+      "files": {
+        "audio": "14-level-up.mp3",
+        "raw": "14-level-up.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 1.65,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -15.8,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -3.8,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 1.65
+    },
+    {
+      "number": 15,
+      "id": "hurt",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, short painful grunt with a dull hit, player taking damage",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = -0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 0.5,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:21Z",
+      "files": {
+        "audio": "15-hurt.mp3",
+        "raw": "15-hurt.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.52,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -16.2,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -0.6,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.52
+    },
+    {
+      "number": 16,
+      "id": "hurt",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, short painful grunt with a dull hit, player taking damage",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = -0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = -0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 0.5,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:27Z",
+      "files": {
+        "audio": "16-hurt.mp3",
+        "raw": "16-hurt.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.52,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -16.0,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -2.6,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.52
+    },
+    {
+      "number": 17,
+      "id": "death",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, sad descending game over jingle with a final thud",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no long silences = 0.27"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 2.5,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:30Z",
+      "files": {
+        "audio": "17-death.mp3",
+        "raw": "17-death.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 2.51,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -15.1,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -2.6,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.21,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 2.51
+    },
+    {
+      "number": 18,
+      "id": "death",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, sad descending game over jingle with a final thud",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "ok"
+        }
+      ],
+      "duration": 2.5,
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:32:32Z",
+      "files": {
+        "audio": "18-death.mp3",
+        "raw": "18-death.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 2.01,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -14.4,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -4.9,
+          "limit": "<= -0.3 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 2.01
+    }
+  ],
+  "note": "Day stage sound effects (ElevenLabs).",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "updated": "2026-10-09T11:32:32Z",
+  "counts": {
+    "failed": 5,
+    "ok": 13
+  }
+}
