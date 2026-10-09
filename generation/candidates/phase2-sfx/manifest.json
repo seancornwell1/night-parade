@@ -4,6 +4,21 @@
   "created": "2026-10-09T11:31:46Z",
   "candidates": [
     {
+      "number": 1,
+      "id": "hit",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, quick crisp sword slash hitting a demon, short punchy impact",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+        }
+      ],
+      "duration": 0.5,
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
       "number": 2,
       "id": "hit",
       "type": "sfx",
@@ -252,6 +267,66 @@
         }
       ],
       "length": 1.52
+    },
+    {
+      "number": 7,
+      "id": "roll",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, fast dodge roll whoosh on dirt",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+        }
+      ],
+      "duration": 0.6,
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 8,
+      "id": "roll",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, fast dodge roll whoosh on dirt",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+        }
+      ],
+      "duration": 0.6,
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 9,
+      "id": "pickup-xp",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, tiny bright sparkling chime for collecting a spirit orb",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+        }
+      ],
+      "duration": 0.5,
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 10,
+      "id": "pickup-xp",
+      "type": "sfx",
+      "prompt": "16-bit retro video game sound effect, chiptune style, tiny bright sparkling chime for collecting a spirit orb",
+      "attempts": [
+        {
+          "provider": "elevenlabs",
+          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+        }
+      ],
+      "duration": 0.5,
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
     },
     {
       "number": 11,
@@ -663,9 +738,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T11:32:32Z",
+  "updated": "2026-10-09T11:45:54Z",
   "counts": {
-    "failed": 5,
+    "pending": 5,
     "ok": 13
   }
 }

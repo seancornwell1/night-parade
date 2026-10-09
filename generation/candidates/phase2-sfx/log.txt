@@ -49,3 +49,9 @@
   elevenlabs: ok on attempt 2
 [phase2-sfx] #18 death (sfx)
   elevenlabs: ok on attempt 1
+--- run 2026-10-09T11:45:54Z
+[phase2-sfx] #1 hit (sfx)
+[phase2-sfx] #7 roll (sfx)
+[phase2-sfx] #8 roll (sfx)
+[phase2-sfx] #9 pickup-xp (sfx)
+[phase2-sfx] #10 pickup-xp (sfx)
