@@ -1660,16 +1660,106 @@
       ],
       "status": "pending",
       "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 49,
+      "id": "player",
+      "type": "sprite",
+      "prompt": "a young demon hunter in light samurai armour with a red headband, empty hands, ready stance, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: daily cap of 10 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 50,
+      "id": "player",
+      "type": "sprite",
+      "prompt": "a young demon hunter in light samurai armour with a red headband, empty hands, ready stance, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        48,
+        48
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: daily cap of 10 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 51,
+      "id": "kitsune-bi",
+      "type": "sprite",
+      "prompt": "a small fox-fire spirit: a tiny white paper fox wreathed in blue flame, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: daily cap of 10 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 52,
+      "id": "paper-crane",
+      "type": "sprite",
+      "prompt": "a small folded white paper crane familiar, wings spread, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: daily cap of 10 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 53,
+      "id": "komainu",
+      "type": "sprite",
+      "prompt": "a small stone guardian lion-dog (komainu) familiar, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        24,
+        24
+      ],
+      "attempts": [
+        {
+          "provider": "pixellab",
+          "outcome": "skipped: daily cap of 10 reached"
+        }
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
     }
   ],
-  "note": "Phase 1 silhouettes: player, 2 weapons, 3 shikigami, 3 enemies per behavior. Generated as full sprites; the mask is kept as the silhouette.",
+  "note": "Phase 1 silhouettes: player, 2 weapons, 3 shikigami, 3 enemies per behavior. Generated as full sprites; the mask is kept as the silhouette. Player, shikigami and bosses use PixelLab only (numbers 49+ are PixelLab versions of the player and shikigami).",
   "palette": {
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T00:16:30Z",
+  "updated": "2026-10-09T01:04:59Z",
   "counts": {
     "ok": 6,
-    "pending": 42
+    "pending": 47
   }
 }

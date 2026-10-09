@@ -76,3 +76,9 @@
 [phase1-silhouettes] #47 boss-oni-lord (sprite)
 [phase1-silhouettes] #48 boss-oni-lord (sprite)
 --- reprocessed 2026-10-09T00:16:30Z (post-processing only, no provider calls)
+--- run 2026-10-09T01:04:59Z
+[phase1-silhouettes] #49 player (sprite)
+[phase1-silhouettes] #50 player (sprite)
+[phase1-silhouettes] #51 kitsune-bi (sprite)
+[phase1-silhouettes] #52 paper-crane (sprite)
+[phase1-silhouettes] #53 komainu (sprite)
