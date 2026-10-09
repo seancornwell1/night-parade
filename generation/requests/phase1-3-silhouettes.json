@@ -1,6 +1,6 @@
 {
   "batch": "phase1-silhouettes",
-  "note": "Phase 1 silhouettes: player, 2 weapons, 3 shikigami, 3 enemies per behavior. Generated as full sprites; the mask is kept as the silhouette.",
+  "note": "Phase 1 silhouettes: player, 2 weapons, 3 shikigami, 3 enemies per behavior. Generated as full sprites; the mask is kept as the silhouette. Player, shikigami and bosses use PixelLab only (numbers 49+ are PixelLab versions of the player and shikigami).",
   "palette": {
     "mode": "auto",
     "colors": 16
@@ -16,7 +16,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a young demon hunter in light samurai armour with a red headband, empty hands, ready stance, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a young demon hunter in light samurai armour with a red headband, empty hands, ready stance, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
     },
     {
       "id": "katana",
@@ -29,7 +32,10 @@
       "background": "#5fae44",
       "rdStyle": "rd_tile__tile_object",
       "prompt": "a single katana sword with black wrapped hilt, drawn diagonally, game weapon sprite",
-      "minCoverage": 0.012
+      "minCoverage": 0.012,
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "naginata",
@@ -42,7 +48,10 @@
       "background": "#5fae44",
       "rdStyle": "rd_tile__tile_object",
       "prompt": "a single naginata polearm with a long wooden shaft and curved blade, drawn diagonally, game weapon sprite",
-      "minCoverage": 0.012
+      "minCoverage": 0.012,
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "kitsune-bi",
@@ -54,7 +63,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a small fox-fire spirit: a tiny white paper fox wreathed in blue flame, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a small fox-fire spirit: a tiny white paper fox wreathed in blue flame, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
     },
     {
       "id": "paper-crane",
@@ -66,7 +78,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a small folded white paper crane familiar, wings spread, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a small folded white paper crane familiar, wings spread, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
     },
     {
       "id": "komainu",
@@ -78,7 +93,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a small stone guardian lion-dog (komainu) familiar, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a small stone guardian lion-dog (komainu) familiar, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
     },
     {
       "id": "swarmer-gaki",
@@ -90,7 +108,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a small emaciated hungry ghost (gaki) with a swollen belly, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a small emaciated hungry ghost (gaki) with a swollen belly, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "swarmer-imp",
@@ -102,7 +123,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a tiny horned red oni imp, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a tiny horned red oni imp, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "swarmer-hitodama",
@@ -114,7 +138,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a small floating ghost flame spirit (hitodama) with a face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a small floating ghost flame spirit (hitodama) with a face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "charger-kappa",
@@ -126,7 +153,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a crouching kappa river demon ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a crouching kappa river demon ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "charger-boar",
@@ -138,7 +168,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a demonic wild boar spirit with glowing tusks, charging, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a demonic wild boar spirit with glowing tusks, charging, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "charger-wanyudo",
@@ -150,7 +183,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a burning ox-cart wheel demon with a man's face (wanyudo), single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a burning ox-cart wheel demon with a man's face (wanyudo), single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "ranged-tengu",
@@ -162,7 +198,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a crow tengu archer with a bow, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a crow tengu archer with a bow, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "ranged-fox-mage",
@@ -174,7 +213,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a fox spirit sorcerer casting a fireball, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a fox spirit sorcerer casting a fireball, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "ranged-skeleton-archer",
@@ -186,7 +228,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a skeletal ashigaru ghost archer, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a skeletal ashigaru ghost archer, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "splitter-nuppeppo",
@@ -198,7 +243,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a blobby flesh yokai (nuppeppo) with a droopy face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a blobby flesh yokai (nuppeppo) with a droopy face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "splitter-mud",
@@ -210,7 +258,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a lumpy mud spirit (dorotabo) rising from the ground, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a lumpy mud spirit (dorotabo) rising from the ground, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "splitter-jar",
@@ -222,7 +273,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a haunted cracked clay jar spilling small spirits, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a haunted cracked clay jar spilling small spirits, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "tank-oni",
@@ -234,7 +288,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a huge red oni brute with an iron club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a huge red oni brute with an iron club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "tank-ochimusha",
@@ -246,7 +303,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a hulking armoured samurai ghost (ochimusha) with a broken spear, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a hulking armoured samurai ghost (ochimusha) with a broken spear, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "tank-nurikabe",
@@ -258,7 +318,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a living stone wall yokai (nurikabe) with stubby legs, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a living stone wall yokai (nurikabe) with stubby legs, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "cloudflare"
+      ]
     },
     {
       "id": "boss-gashadokuro",
@@ -270,7 +333,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a giant skeleton yokai (gashadokuro) looming, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a giant skeleton yokai (gashadokuro) looming, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
     },
     {
       "id": "boss-nue",
@@ -282,7 +348,10 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a nue chimera with a monkey face, tiger body and snake tail, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a nue chimera with a monkey face, tiger body and snake tail, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
     },
     {
       "id": "boss-oni-lord",
@@ -294,7 +363,70 @@
       "candidates": 2,
       "background": "#5fae44",
       "direction": "south-east",
-      "prompt": "a towering oni warlord in black armour with a huge kanabo club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style"
+      "prompt": "a towering oni warlord in black armour with a huge kanabo club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
+    },
+    {
+      "id": "player",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "direction": "south-east",
+      "prompt": "a young demon hunter in light samurai armour with a red headband, empty hands, ready stance, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
+    },
+    {
+      "id": "kitsune-bi",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 1,
+      "background": "#5fae44",
+      "direction": "south-east",
+      "prompt": "a small fox-fire spirit: a tiny white paper fox wreathed in blue flame, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
+    },
+    {
+      "id": "paper-crane",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 1,
+      "background": "#5fae44",
+      "direction": "south-east",
+      "prompt": "a small folded white paper crane familiar, wings spread, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
+    },
+    {
+      "id": "komainu",
+      "type": "sprite",
+      "size": [
+        24,
+        24
+      ],
+      "candidates": 1,
+      "background": "#5fae44",
+      "direction": "south-east",
+      "prompt": "a small stone guardian lion-dog (komainu) familiar, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "providers": [
+        "pixellab"
+      ]
     }
   ]
 }

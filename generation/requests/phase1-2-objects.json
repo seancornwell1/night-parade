@@ -1,12 +1,85 @@
 {
   "batch": "phase1-objects",
   "note": "Phase 1 map objects, 3/4 top-down view, transparent background.",
-  "palette": { "mode": "auto", "colors": 16 },
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
   "items": [
-    { "id": "tree", "type": "sprite", "size": [48, 64], "candidates": 3, "background": "#5fae44", "rdStyle": "rd_tile__tile_object", "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan" },
-    { "id": "shrine", "type": "sprite", "size": [48, 48], "candidates": 3, "background": "#5fae44", "rdStyle": "rd_tile__tile_object", "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view" },
-    { "id": "lantern", "type": "sprite", "size": [16, 32], "candidates": 3, "background": "#5fae44", "rdStyle": "rd_tile__tile_object", "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view" },
-    { "id": "keep", "type": "sprite", "size": [128, 128], "candidates": 3, "background": "#5fae44", "rdStyle": "rd_tile__scene_object", "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view" },
-    { "id": "rock", "type": "sprite", "size": [32, 32], "candidates": 3, "background": "#5fae44", "rdStyle": "rd_tile__tile_object", "prompt": "a single mossy grey boulder, 3/4 top-down game view" }
+    {
+      "id": "tree",
+      "type": "sprite",
+      "size": [
+        48,
+        64
+      ],
+      "candidates": 3,
+      "background": "#5fae44",
+      "rdStyle": "rd_tile__tile_object",
+      "prompt": "a single Japanese black pine tree, full tree with trunk, 3/4 top-down game view, feudal Japan",
+      "providers": [
+        "cloudflare"
+      ]
+    },
+    {
+      "id": "shrine",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 3,
+      "background": "#5fae44",
+      "rdStyle": "rd_tile__tile_object",
+      "prompt": "a small wooden Shinto wayside shrine (hokora) with a tiny roof, 3/4 top-down game view",
+      "providers": [
+        "cloudflare"
+      ]
+    },
+    {
+      "id": "lantern",
+      "type": "sprite",
+      "size": [
+        16,
+        32
+      ],
+      "candidates": 3,
+      "background": "#5fae44",
+      "rdStyle": "rd_tile__tile_object",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "providers": [
+        "cloudflare"
+      ]
+    },
+    {
+      "id": "keep",
+      "type": "sprite",
+      "size": [
+        128,
+        128
+      ],
+      "candidates": 3,
+      "background": "#5fae44",
+      "rdStyle": "rd_tile__scene_object",
+      "prompt": "a Japanese castle keep (tenshu) with white walls and dark tiled roofs on a stone base, 3/4 top-down game view",
+      "providers": [
+        "cloudflare"
+      ]
+    },
+    {
+      "id": "rock",
+      "type": "sprite",
+      "size": [
+        32,
+        32
+      ],
+      "candidates": 3,
+      "background": "#5fae44",
+      "rdStyle": "rd_tile__tile_object",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "providers": [
+        "cloudflare"
+      ]
+    }
   ]
 }
