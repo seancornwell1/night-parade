@@ -15,26 +15,22 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "checks failed: original edges wrap seamlessly = 2.249"
         },
         {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 4.464"
+          "provider": "cloudflare",
+          "outcome": "checks failed: original edges wrap seamlessly = 13.473"
         },
         {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 1.892"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 2.535"
+          "provider": "cloudflare",
+          "outcome": "checks failed: original edges wrap seamlessly = 5.915"
         }
       ],
       "lastChecks": [
         {
           "name": "original edges wrap seamlessly",
           "pass": false,
-          "value": 2.535,
+          "value": 5.915,
           "limit": "<= 1.6"
         },
         {
@@ -44,8 +40,8 @@
           "limit": ">= 3"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 2,
@@ -59,26 +55,39 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 2.11"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 3.196"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 3.379"
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:03Z",
+      "files": {
+        "image": "02-grass.png",
+        "raw": "02-grass.raw.png"
+      },
+      "palette": [
+        "#2fb511",
+        "#2fa816",
+        "#24ad11",
+        "#24a514",
+        "#2c9d18",
+        "#269b17",
+        "#209e15",
+        "#1f9717",
+        "#288f1d",
+        "#218d1a",
+        "#1b9019",
+        "#1b891b",
+        "#1f821d",
+        "#16801d",
+        "#17771f",
+        "#136923"
+      ],
+      "checks": [
         {
           "name": "original edges wrap seamlessly",
-          "pass": false,
-          "value": 3.379,
+          "pass": true,
+          "value": 0.869,
           "limit": "<= 1.6"
         },
         {
@@ -88,8 +97,7 @@
           "limit": ">= 3"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": null
     },
     {
       "number": 3,
@@ -103,37 +111,49 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 1.706"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 1.681"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "checks failed: original edges wrap seamlessly = 2.295"
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:04Z",
+      "files": {
+        "image": "03-dirt-path.png",
+        "raw": "03-dirt-path.raw.png"
+      },
+      "palette": [
+        "#a66850",
+        "#a5664d",
+        "#a5654b",
+        "#a4654c",
+        "#a5654a",
+        "#a3664e",
+        "#a06650",
+        "#a3644b",
+        "#a2644c",
+        "#a0644d",
+        "#a2634b",
+        "#a0634b",
+        "#9d624d",
+        "#9d604a",
+        "#99604c",
+        "#975c49"
+      ],
+      "checks": [
         {
           "name": "original edges wrap seamlessly",
-          "pass": false,
-          "value": 2.295,
+          "pass": true,
+          "value": 1.307,
           "limit": "<= 1.6"
         },
         {
           "name": "enough detail (colours)",
           "pass": true,
-          "value": 14.0,
+          "value": 16.0,
           "limit": ">= 3"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": null
     },
     {
       "number": 4,
@@ -146,20 +166,50 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:06Z",
+      "files": {
+        "image": "04-dirt-path.png",
+        "raw": "04-dirt-path.raw.png"
+      },
+      "palette": [
+        "#aa5f44",
+        "#a95e43",
+        "#a75d42",
+        "#a65c42",
+        "#a45b41",
+        "#a45940",
+        "#a15941",
+        "#9f5740",
+        "#9d553f",
+        "#9b523e",
+        "#96513d",
+        "#934e3c",
+        "#924b3b",
+        "#8b493a",
+        "#854337",
+        "#803a34"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.454,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
     },
     {
       "number": 5,
@@ -172,20 +222,50 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:08Z",
+      "files": {
+        "image": "05-water.png",
+        "raw": "05-water.raw.png"
+      },
+      "palette": [
+        "#58b4dd",
+        "#56b0d9",
+        "#55add7",
+        "#53aad5",
+        "#52a9d4",
+        "#52a8d4",
+        "#52a7d3",
+        "#51a7d3",
+        "#51a6d2",
+        "#50a6d2",
+        "#51a5d1",
+        "#51a4d0",
+        "#50a4d0",
+        "#51a3d0",
+        "#50a3d0",
+        "#50a3cf"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.384,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
     },
     {
       "number": 6,
@@ -198,20 +278,50 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:10Z",
+      "files": {
+        "image": "06-water.png",
+        "raw": "06-water.raw.png"
+      },
+      "palette": [
+        "#8ee5f5",
+        "#7de0f4",
+        "#75dff4",
+        "#72ddf2",
+        "#6bdbf3",
+        "#65daf3",
+        "#63d9f2",
+        "#5dd7f2",
+        "#5bd6f1",
+        "#58d5f0",
+        "#55d4f0",
+        "#54d3ef",
+        "#53d2ef",
+        "#52d2ef",
+        "#52d1ee",
+        "#51d2ee"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.017,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
     },
     {
       "number": 7,
@@ -224,20 +334,50 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:12Z",
+      "files": {
+        "image": "07-wall.png",
+        "raw": "07-wall.raw.png"
+      },
+      "palette": [
+        "#9094b1",
+        "#858ba9",
+        "#8288a7",
+        "#7d84a4",
+        "#7a81a2",
+        "#777ea0",
+        "#747b9e",
+        "#717a9d",
+        "#6f779b",
+        "#6c7499",
+        "#6a7196",
+        "#666f95",
+        "#636c93",
+        "#5f688f",
+        "#58628b",
+        "#3a4677"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.242,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
     },
     {
       "number": 8,
@@ -250,20 +390,50 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:14Z",
+      "files": {
+        "image": "08-wall.png",
+        "raw": "08-wall.raw.png"
+      },
+      "palette": [
+        "#868fb1",
+        "#7c85a9",
+        "#757fa4",
+        "#7079a0",
+        "#6b739b",
+        "#666f97",
+        "#616a93",
+        "#5c6590",
+        "#57618b",
+        "#535d88",
+        "#4f5985",
+        "#495482",
+        "#454f7e",
+        "#3f4978",
+        "#364171",
+        "#242f64"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 0.658,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
     },
     {
       "number": 9,
@@ -276,29 +446,68 @@
       ],
       "attempts": [
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "cloudflare",
+          "outcome": "checks failed: original edges wrap seamlessly = 2.735"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "checks failed: original edges wrap seamlessly = 2.122"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-09T08:42:20Z",
+      "files": {
+        "image": "09-wall.png",
+        "raw": "09-wall.raw.png"
+      },
+      "palette": [
+        "#9fa6b6",
+        "#969eb1",
+        "#8f97ab",
+        "#8990a6",
+        "#848ba2",
+        "#7f879f",
+        "#7c849c",
+        "#79829c",
+        "#787f99",
+        "#747c97",
+        "#717994",
+        "#6e7794",
+        "#6c7390",
+        "#676e8c",
+        "#5e6686",
+        "#333963"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 0.894,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
     }
   ],
-  "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept. Retro Diffusion's free credits are used up, so tiles try Cloudflare before PixelLab (PixelLab tends to draw scenes rather than textures).",
+  "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept. Retro Diffusion's free credits are used up and PixelLab draws scenes rather than seamless textures, so tiles use Cloudflare only.",
   "palette": {
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T00:19:57Z",
+  "updated": "2026-10-09T08:42:20Z",
   "counts": {
-    "pending": 9
+    "failed": 1,
+    "ok": 8
   }
 }

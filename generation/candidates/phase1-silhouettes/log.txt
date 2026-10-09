@@ -82,3 +82,13 @@
 [phase1-silhouettes] #51 kitsune-bi (sprite)
 [phase1-silhouettes] #52 paper-crane (sprite)
 [phase1-silhouettes] #53 komainu (sprite)
+--- run 2026-10-09T08:45:04Z
+[phase1-silhouettes] #7 kitsune-bi (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #10 paper-crane (sprite)
+  pixellab: checks failed (1), attempt 1
+  pixellab: ok on attempt 2
+[phase1-silhouettes] #43 boss-gashadokuro (sprite)
+  pixellab: ok on attempt 1
+[phase1-silhouettes] #44 boss-gashadokuro (sprite)
+  pixellab: ok on attempt 1

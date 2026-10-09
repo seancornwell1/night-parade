@@ -329,31 +329,56 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.458"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.085"
-        },
-        {
-          "provider": "cloudflare",
           "outcome": "ok"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "reprocessed, checks failed: contrast vs #5fae44 = 1.382"
         }
       ],
-      "status": "pending",
-      "reason": "Failed a check after reprocessing; the next run regenerates it."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:42:49Z",
+      "files": {
+        "image": "07-kitsune-bi.png",
+        "raw": "07-kitsune-bi.raw.png",
+        "mask": "07-kitsune-bi.mask.png"
+      },
+      "palette": [
+        "#fdfdfc",
+        "#f4efe0",
+        "#e8baaf",
+        "#c9c8cb",
+        "#7acbf2",
+        "#99999a",
+        "#28a3e8",
+        "#21a1e7",
+        "#2092d6",
+        "#9f7271",
+        "#696769",
+        "#1c75b3",
+        "#155a95",
+        "#2d547b",
+        "#24313c"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.615,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.106,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 0,
+          "y": 1,
+          "w": 24,
+          "h": 22
+        }
+      ]
     },
     {
       "number": 8,
@@ -519,41 +544,61 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "outcome": "checks failed: contrast vs #5fae44 = 1.162"
         },
         {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.036"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.026"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: coverage = 0.035; contrast vs #5fae44 = 1.465"
+          "provider": "pixellab",
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:43:39Z",
+      "files": {
+        "image": "10-paper-crane.png",
+        "raw": "10-paper-crane.raw.png",
+        "mask": "10-paper-crane.mask.png"
+      },
+      "palette": [
+        "#fafafa",
+        "#f2f0f1",
+        "#e8e5e7",
+        "#d7d2d6",
+        "#c3bfc2",
+        "#b3b1b3",
+        "#a4a2a3",
+        "#988f93",
+        "#8a857e",
+        "#6e6b6a",
+        "#575354",
+        "#6f4c54",
+        "#4e4a4c",
+        "#4d494b",
+        "#494545",
+        "#474343"
+      ],
+      "checks": [
         {
           "name": "coverage",
-          "pass": false,
-          "value": 0.035,
+          "pass": true,
+          "value": 0.34,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
-          "pass": false,
-          "value": 1.465,
+          "pass": true,
+          "value": 2.185,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 22,
+          "h": 21
+        }
+      ]
     },
     {
       "number": 11,
@@ -1517,19 +1562,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:44:18Z",
+      "files": {
+        "image": "43-boss-gashadokuro.png",
+        "raw": "43-boss-gashadokuro.raw.png",
+        "mask": "43-boss-gashadokuro.mask.png"
+      },
+      "palette": [
+        "#cabd9b",
+        "#978977",
+        "#84786c",
+        "#7b6d65",
+        "#5c5355",
+        "#c54b5e",
+        "#4b434d",
+        "#4b4056",
+        "#49404e",
+        "#6f2442",
+        "#352d42",
+        "#231c38",
+        "#170f34",
+        "#150e31",
+        "#120c2e",
+        "#110b2d"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.307,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 4.442,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 10,
+          "y": 3,
+          "w": 76,
+          "h": 90
+        }
+      ]
     },
     {
       "number": 44,
@@ -1543,19 +1626,57 @@
       "attempts": [
         {
           "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "ok"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "pixellab",
+      "made": "2026-10-09T08:45:04Z",
+      "files": {
+        "image": "44-boss-gashadokuro.png",
+        "raw": "44-boss-gashadokuro.raw.png",
+        "mask": "44-boss-gashadokuro.mask.png"
+      },
+      "palette": [
+        "#f9f9ed",
+        "#f7c9a6",
+        "#d49982",
+        "#ba6a6b",
+        "#797877",
+        "#695376",
+        "#b83c60",
+        "#4d4558",
+        "#44454b",
+        "#35244a",
+        "#5f1a3e",
+        "#110a19",
+        "#0b0910",
+        "#080612",
+        "#07050d",
+        "#030204"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.338,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.132,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 4,
+          "w": 90,
+          "h": 87
+        }
+      ]
     },
     {
       "number": 45,
@@ -1757,9 +1878,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T01:04:59Z",
+  "updated": "2026-10-09T08:45:04Z",
   "counts": {
-    "ok": 6,
-    "pending": 47
+    "ok": 10,
+    "pending": 43
   }
 }
