@@ -1422,8 +1422,12 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "free limit hit: HTTP 402: {\"detail\":\"Insufficient generations and credits. Generations: 40.0/40.0, Credits: 0.0\"}"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9279d1f8-c3c7-11f1-8238-a2aad1a06e13\"}}"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"92ae89de-c3c7-11f1-80fd-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
@@ -1444,16 +1448,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"92df97d6-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93110f5a-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1470,16 +1474,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93448a7e-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93761346-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1496,16 +1500,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93a6754a-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"93db5cba-c3c7-11f1-80fd-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1522,16 +1526,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"940ef9c6-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"94450ffc-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1548,16 +1552,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9478e25a-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"94aa711c-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1574,16 +1578,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"94db6312-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"950c7aa6-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1600,16 +1604,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95440c5a-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95725934-c3c7-11f1-80fd-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1626,16 +1630,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95ac48ce-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"95dc0280-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1652,16 +1656,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"960b1368-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"963cd6d2-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1678,16 +1682,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"966db158-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"969d503e-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1704,16 +1708,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"96d21cc4-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"970745ac-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1730,16 +1734,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9738b98e-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9764c1e6-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1756,16 +1760,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"97a0f10c-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"97d45c22-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1782,16 +1786,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"98031a30-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"98364608-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1808,16 +1812,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9869ec4c-c3c7-11f1-80fd-a2aad1a06e13\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"989925de-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1834,16 +1838,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"98d90294-c3c7-11f1-b5fd-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9917d622-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1860,16 +1864,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"994c0780-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"997e4fd8-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1886,16 +1890,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"99ac6ee0-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"99e189f4-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1912,16 +1916,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9a1315fa-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9a41af78-c3c7-11f1-8238-a2aad1a06e13\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -1938,16 +1942,16 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9a77849a-c3c7-11f1-80fd-a2aad1a06e13\"}}"
         },
         {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9ab38db4-c3c7-11f1-8e98-a2aa336465d7\"}}"
         },
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 40 reached"
+          "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "status": "pending",
@@ -2655,6 +2659,180 @@
           "h": 24
         }
       ]
+    },
+    {
+      "number": 54,
+      "id": "charger-kappa",
+      "type": "sprite",
+      "prompt": "a crouching kappa: a green turtle-shelled river imp with a water-filled dish on its head and a beak, ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9ae8ce48-c3c7-11f1-b5fd-a2aa336465d7\"}}"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9b177f40-c3c7-11f1-8238-a2aad1a06e13\"}}"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 55,
+      "id": "charger-kappa",
+      "type": "sprite",
+      "prompt": "a crouching kappa: a green turtle-shelled river imp with a water-filled dish on its head and a beak, ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9b4a7882-c3c7-11f1-b5fd-a2aa336465d7\"}}"
+        },
+        {
+          "provider": "retrodiffusion",
+          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9b780ea0-c3c7-11f1-8e98-a2aa336465d7\"}}"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
+    },
+    {
+      "number": 56,
+      "id": "boss-nue",
+      "type": "sprite",
+      "prompt": "a nue chimera: monkey face, striped tiger body and a long snake for a tail, dark storm clouds around it, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:56:12Z",
+      "files": {
+        "image": "56-boss-nue.png",
+        "raw": "56-boss-nue.raw.png",
+        "mask": "56-boss-nue.mask.png"
+      },
+      "palette": [
+        "#fcedd8",
+        "#f3c69c",
+        "#f5794f",
+        "#f15c40",
+        "#cf4a40",
+        "#af3f3e",
+        "#8f3140",
+        "#5a2942",
+        "#1f0c20",
+        "#1d0309",
+        "#13020e",
+        "#080416",
+        "#07020e",
+        "#110102",
+        "#0e0119",
+        "#050008"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.23,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 6.248,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 18,
+          "y": 3,
+          "w": 59,
+          "h": 90
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "id": "boss-nue",
+      "type": "sprite",
+      "prompt": "a nue chimera: monkey face, striped tiger body and a long snake for a tail, dark storm clouds around it, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
+      "size": [
+        96,
+        96
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:56:25Z",
+      "files": {
+        "image": "57-boss-nue.png",
+        "raw": "57-boss-nue.raw.png",
+        "mask": "57-boss-nue.mask.png"
+      },
+      "palette": [
+        "#faad76",
+        "#f28666",
+        "#e25e55",
+        "#c64046",
+        "#ae203f",
+        "#362a4f",
+        "#851939",
+        "#731c3d",
+        "#331843",
+        "#6a0f2c",
+        "#211243",
+        "#1b0820",
+        "#0d0926",
+        "#05040b",
+        "#04041c",
+        "#01021b"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.404,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 7.14,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 5,
+          "w": 90,
+          "h": 86
+        }
+      ]
     }
   ],
   "note": "Phase 1 silhouettes: player, 2 weapons, 3 shikigami, 3 enemies per behavior. Generated as full sprites; the mask is kept as the silhouette. Player, shikigami and bosses use PixelLab only (numbers 49+ are PixelLab versions of the player and shikigami).",
@@ -2662,9 +2840,10 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T09:25:45Z",
+  "updated": "2026-10-09T09:56:25Z",
   "counts": {
-    "ok": 32,
-    "pending": 21
+    "ok": 34,
+    "pending": 21,
+    "failed": 2
   }
 }

@@ -498,6 +498,348 @@
         }
       ],
       "hitboxes": null
+    },
+    {
+      "number": 10,
+      "id": "wall",
+      "type": "tile",
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:52:37Z",
+      "files": {
+        "image": "10-wall.png",
+        "raw": "10-wall.raw.png"
+      },
+      "palette": [
+        "#c2c2c2",
+        "#bebebd",
+        "#b9b9b9",
+        "#a7a7a7",
+        "#a1a1a1",
+        "#9f9f9e",
+        "#9c9c9c",
+        "#969696",
+        "#8e8e8e",
+        "#8b8b8a",
+        "#898989",
+        "#878786",
+        "#848483",
+        "#7f7f7e",
+        "#787878",
+        "#737372"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.135,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
+    },
+    {
+      "number": 11,
+      "id": "wall",
+      "type": "tile",
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:52:44Z",
+      "files": {
+        "image": "11-wall.png",
+        "raw": "11-wall.raw.png"
+      },
+      "palette": [
+        "#cacaca",
+        "#c8c8c8",
+        "#bfbfbf",
+        "#b4b4b4",
+        "#aeaeae",
+        "#ababab",
+        "#a8a8a7",
+        "#9e9e9d",
+        "#949493",
+        "#8f8f8f",
+        "#8d8d8c",
+        "#8a8a8a",
+        "#838282",
+        "#7c7c7b",
+        "#767675",
+        "#6c6c6c"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.392,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
+    },
+    {
+      "number": 12,
+      "id": "wall",
+      "type": "tile",
+      "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:52:51Z",
+      "files": {
+        "image": "12-wall.png",
+        "raw": "12-wall.raw.png"
+      },
+      "palette": [
+        "#c9c9c9",
+        "#c0c0c0",
+        "#bebebe",
+        "#b8b8b8",
+        "#b1b1b1",
+        "#adadad",
+        "#a8a8a8",
+        "#a2a2a2",
+        "#9f9f9e",
+        "#9c9b9a",
+        "#939392",
+        "#90908e",
+        "#8a8a89",
+        "#868686",
+        "#818181",
+        "#787878"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.006,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
+    },
+    {
+      "number": 13,
+      "id": "grass",
+      "type": "tile",
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:53:04Z",
+      "files": {
+        "image": "13-grass.png",
+        "raw": "13-grass.raw.png"
+      },
+      "palette": [
+        "#bde243",
+        "#b6e03c",
+        "#b0de40",
+        "#a3da43",
+        "#8dcd4a",
+        "#84c84b",
+        "#80c54a",
+        "#7bc14b",
+        "#77bf4c",
+        "#6eba4c",
+        "#6ab64b",
+        "#67b54c",
+        "#61af4e",
+        "#5bac4e",
+        "#50a947",
+        "#52a74c"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 0.812,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
+    },
+    {
+      "number": 14,
+      "id": "dirt-path",
+      "type": "tile",
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:53:11Z",
+      "files": {
+        "image": "14-dirt-path.png",
+        "raw": "14-dirt-path.raw.png"
+      },
+      "palette": [
+        "#dab985",
+        "#d9b57f",
+        "#d6b27a",
+        "#d1ac74",
+        "#caa66e",
+        "#c5a16a",
+        "#c19d66",
+        "#be9a64",
+        "#bc9863",
+        "#b79360",
+        "#b48f5f",
+        "#af8b5e",
+        "#ac885c",
+        "#a8855a",
+        "#a3845e",
+        "#9b7d57"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.205,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
+    },
+    {
+      "number": 15,
+      "id": "water",
+      "type": "tile",
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:53:18Z",
+      "files": {
+        "image": "15-water.png",
+        "raw": "15-water.raw.png"
+      },
+      "palette": [
+        "#6ce1f7",
+        "#69dff5",
+        "#68e1f5",
+        "#59daf3",
+        "#46d4f0",
+        "#45d6f2",
+        "#44d3ef",
+        "#40d1ef",
+        "#3dcfee",
+        "#36cbeb",
+        "#33c9eb",
+        "#32c6ed",
+        "#2dc2ed",
+        "#29bfeb",
+        "#28bdeb",
+        "#27bbeb"
+      ],
+      "checks": [
+        {
+          "name": "original edges wrap seamlessly",
+          "pass": true,
+          "value": 1.116,
+          "limit": "<= 1.6"
+        },
+        {
+          "name": "enough detail (colours)",
+          "pass": true,
+          "value": 16.0,
+          "limit": ">= 3"
+        }
+      ],
+      "hitboxes": null
     }
   ],
   "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept. Retro Diffusion's free credits are used up and PixelLab draws scenes rather than seamless textures, so tiles use Cloudflare only.",
@@ -505,9 +847,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T08:42:20Z",
+  "updated": "2026-10-09T09:53:18Z",
   "counts": {
     "failed": 1,
-    "ok": 8
+    "ok": 14
   }
 }

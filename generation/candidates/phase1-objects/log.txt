@@ -37,3 +37,20 @@
 [phase1-objects] #15 rock (sprite)
   cloudflare: ok on attempt 1
 --- reprocessed 2026-10-09T00:16:29Z (post-processing only, no provider calls)
+--- run 2026-10-09T09:55:34Z
+[phase1-objects] #10 keep (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-objects] #11 keep (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-objects] #12 keep (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-objects] #16 lantern (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-objects] #17 lantern (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-objects] #18 lantern (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-objects] #19 rock (sprite)
+  retrodiffusion: ok on attempt 1
+[phase1-objects] #20 rock (sprite)
+  retrodiffusion: ok on attempt 1

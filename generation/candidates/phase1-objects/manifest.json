@@ -632,24 +632,59 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
+          "cost": 0.06,
           "outcome": "ok"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "reprocessed, checks failed: contrast vs #5fae44 = 1.114"
         }
       ],
-      "status": "pending",
-      "reason": "Failed a check after reprocessing; the next run regenerates it."
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:53:50Z",
+      "files": {
+        "image": "10-keep.png",
+        "raw": "10-keep.raw.png",
+        "mask": "10-keep.mask.png"
+      },
+      "palette": [
+        "#fefefe",
+        "#dcdbec",
+        "#b0b2ba",
+        "#9d939a",
+        "#808db3",
+        "#868097",
+        "#6f7a81",
+        "#816969",
+        "#616785",
+        "#4d5566",
+        "#593f46",
+        "#454c64",
+        "#333d52",
+        "#232a40",
+        "#2f2231",
+        "#171e36"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.431,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.529,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 18,
+          "y": 3,
+          "w": 92,
+          "h": 121
+        }
+      ]
     },
     {
       "number": 11,
@@ -662,42 +697,59 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.504"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.301"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.234"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:54:06Z",
+      "files": {
+        "image": "11-keep.png",
+        "raw": "11-keep.raw.png",
+        "mask": "11-keep.mask.png"
+      },
+      "palette": [
+        "#e6e6e7",
+        "#babbc8",
+        "#979aa3",
+        "#878182",
+        "#717880",
+        "#70696d",
+        "#586372",
+        "#4f5671",
+        "#454d61",
+        "#653c39",
+        "#3a4359",
+        "#2f3650",
+        "#422629",
+        "#282f46",
+        "#222940",
+        "#161b31"
+      ],
+      "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.168,
+          "value": 0.453,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
-          "pass": false,
-          "value": 1.234,
+          "pass": true,
+          "value": 3.099,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 22,
+          "y": 3,
+          "w": 84,
+          "h": 121
+        }
+      ]
     },
     {
       "number": 12,
@@ -710,42 +762,59 @@
       ],
       "attempts": [
         {
-          "provider": "pixellab",
-          "outcome": "skipped: free limit reached today (HTTP 429: {\"detail\":\"Sorry, you have reached the maximum number of concurrent jobs. Free plan: 1 generation at a time. Upgrade for higher concurrency (more generations at once).\"})"
-        },
-        {
           "provider": "retrodiffusion",
-          "outcome": "skipped: free limit reached today (cost 0.06 exceeds remaining balance 0.020000000000000018)"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.277"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.507"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "checks failed: contrast vs #5fae44 = 1.058"
+          "cost": 0.06,
+          "outcome": "ok"
         }
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:54:19Z",
+      "files": {
+        "image": "12-keep.png",
+        "raw": "12-keep.raw.png",
+        "mask": "12-keep.mask.png"
+      },
+      "palette": [
+        "#eff1f2",
+        "#bbbcbe",
+        "#999494",
+        "#7a7e85",
+        "#7f736d",
+        "#776165",
+        "#585e6f",
+        "#494f68",
+        "#5a403a",
+        "#40465c",
+        "#393e55",
+        "#2e3349",
+        "#44251e",
+        "#252b3e",
+        "#1f2533",
+        "#171c28"
+      ],
+      "checks": [
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.206,
+          "value": 0.466,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
-          "pass": false,
-          "value": 1.058,
+          "pass": true,
+          "value": 3.403,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 17,
+          "y": 3,
+          "w": 93,
+          "h": 121
+        }
+      ]
     },
     {
       "number": 13,
@@ -966,6 +1035,304 @@
           "h": 25
         }
       ]
+    },
+    {
+      "number": 16,
+      "id": "lantern",
+      "type": "sprite",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "size": [
+        16,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:54:32Z",
+      "files": {
+        "image": "16-lantern.png",
+        "raw": "16-lantern.raw.png",
+        "mask": "16-lantern.mask.png"
+      },
+      "palette": [
+        "#e4e5e3",
+        "#bdbdbb",
+        "#a1acab",
+        "#829090",
+        "#818181",
+        "#6e7d7f",
+        "#627174",
+        "#2f4653",
+        "#212429"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.445,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.061,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 0,
+          "y": 1,
+          "w": 15,
+          "h": 30
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "lantern",
+      "type": "sprite",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "size": [
+        16,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:54:45Z",
+      "files": {
+        "image": "17-lantern.png",
+        "raw": "17-lantern.raw.png",
+        "mask": "17-lantern.mask.png"
+      },
+      "palette": [
+        "#c7c9c8",
+        "#a8b2aa",
+        "#a4aea6",
+        "#8f9a92",
+        "#707e7f",
+        "#6c7a7b",
+        "#58676a",
+        "#3d4b55",
+        "#3c4954",
+        "#232330"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.367,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.0,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 12,
+          "h": 30
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "id": "lantern",
+      "type": "sprite",
+      "prompt": "a single tall Japanese stone lantern (toro), 3/4 top-down game view",
+      "size": [
+        16,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:54:58Z",
+      "files": {
+        "image": "18-lantern.png",
+        "raw": "18-lantern.raw.png",
+        "mask": "18-lantern.mask.png"
+      },
+      "palette": [
+        "#cfcfc5",
+        "#cecdc4",
+        "#9d9c93",
+        "#6b6b6c",
+        "#6a696b",
+        "#4b4557",
+        "#292633"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.434,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.958,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 1,
+          "w": 13,
+          "h": 30
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "id": "rock",
+      "type": "sprite",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:55:11Z",
+      "files": {
+        "image": "19-rock.png",
+        "raw": "19-rock.raw.png",
+        "mask": "19-rock.mask.png"
+      },
+      "palette": [
+        "#d1deae",
+        "#cfddac",
+        "#94af72",
+        "#93ad70",
+        "#92ad70",
+        "#708b58",
+        "#6f8a56",
+        "#5f7749",
+        "#5d7547",
+        "#50643f",
+        "#4e5d40",
+        "#4a593e",
+        "#364132",
+        "#35412f",
+        "#354031",
+        "#363f33"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.592,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.891,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 30,
+          "h": 28
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "id": "rock",
+      "type": "sprite",
+      "prompt": "a single mossy grey boulder, 3/4 top-down game view",
+      "size": [
+        32,
+        32
+      ],
+      "attempts": [
+        {
+          "provider": "retrodiffusion",
+          "cost": 0.06,
+          "outcome": "ok"
+        }
+      ],
+      "status": "ok",
+      "provider": "retrodiffusion",
+      "made": "2026-10-09T09:55:34Z",
+      "files": {
+        "image": "20-rock.png",
+        "raw": "20-rock.raw.png",
+        "mask": "20-rock.mask.png"
+      },
+      "palette": [
+        "#ced9b0",
+        "#64af30",
+        "#979a86",
+        "#727b69",
+        "#687360",
+        "#5a6755",
+        "#3d662f",
+        "#556451",
+        "#44544a",
+        "#2a3f3a",
+        "#1c2c29"
+      ],
+      "checks": [
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.581,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.432,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 30,
+          "h": 28
+        }
+      ]
     }
   ],
   "note": "Phase 1 map objects, 3/4 top-down view, transparent background.",
@@ -973,9 +1340,8 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T00:16:29Z",
+  "updated": "2026-10-09T09:55:34Z",
   "counts": {
-    "ok": 12,
-    "pending": 3
+    "ok": 20
   }
 }
