@@ -1,0 +1,92 @@
+{
+  "templates": [
+    {
+      "id": "grass",
+      "kind": "tile",
+      "file": "tiles/grass.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight",
+      "palette": [
+        "#fbfef7",
+        "#fbf6a9",
+        "#fdeb8a",
+        "#fad869",
+        "#92c940",
+        "#8bc542",
+        "#7ebd42",
+        "#58ac46",
+        "#45a240",
+        "#36983d",
+        "#2d923b"
+      ],
+      "from": "test-tiles-003 #1",
+      "made": "2026-10-08T23:57:50Z"
+    },
+    {
+      "id": "dirt-path",
+      "kind": "tile",
+      "file": "tiles/dirt-path.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "packed brown dirt path ground texture with small pebbles, daylight",
+      "palette": [
+        "#f6b784",
+        "#d4a579",
+        "#c39d76",
+        "#c0a48d",
+        "#c2996f",
+        "#c1966b",
+        "#bd9165",
+        "#a4b2be",
+        "#b98e62",
+        "#b4895e",
+        "#ab8259",
+        "#a07850",
+        "#9c754e",
+        "#97714b",
+        "#946e48",
+        "#8f6b44"
+      ],
+      "from": "test-tiles-003 #2",
+      "made": "2026-10-08T23:58:00Z"
+    },
+    {
+      "id": "water",
+      "kind": "tile",
+      "file": "tiles/water.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "retrodiffusion",
+      "prompt": "shallow clear blue river water texture with gentle ripples, daylight",
+      "palette": [
+        "#94f1fd",
+        "#88eefb",
+        "#7aeaf8",
+        "#76e9f7",
+        "#70e7f7",
+        "#6ce5f7",
+        "#6ae4f7",
+        "#62e1f6",
+        "#5fdff4",
+        "#5ddef3",
+        "#5cdcf2",
+        "#59daf1",
+        "#58d9ef",
+        "#53d6ef",
+        "#4ed8ef",
+        "#4cd5ee"
+      ],
+      "from": "test-tiles-003 #3",
+      "made": "2026-10-08T23:58:16Z"
+    }
+  ]
+}

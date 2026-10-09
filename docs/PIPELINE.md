@@ -49,6 +49,8 @@ https://seancornwell1.github.io/night-parade/review/
 | `items[].background` | Sprites and sheets: stage colour for the contrast check (default `#2a2a2a`) |
 | `items[].silhouette` | Optional path to a mask PNG; the art must stay inside it |
 | `items[].providers` | Optional override of the provider order |
+| `items[].direction` | PixelLab: which way the subject faces (`south-east`, `south`, …) |
+| `items[].rdStyle` | Retro Diffusion: style id overriding the default for the type (e.g. `rd_tile__tile_object`) |
 
 ## Provider chain
 

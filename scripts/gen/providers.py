@@ -93,6 +93,8 @@ class PixelLab(Provider):
             "no_background": item["type"] != "tile",
             "seed": int(time.time() * 1000) % 2_000_000_000,
         }
+        if item.get("direction"):
+            body["direction"] = item["direction"]
         if palette_img is not None:
             body["color_image"] = {"type": "base64", "base64": png_b64(palette_img.convert("RGB")), "format": "png"}
         r = post("https://api.pixellab.ai/v1/generate-image-pixflux", headers={"Authorization": f"Bearer {self.key}"}, json=body)
@@ -120,7 +122,7 @@ class RetroDiffusion(Provider):
         w, h = size
         body = {
             "prompt": item["prompt"],
-            "prompt_style": self.cfg["styles"][item["type"]],
+            "prompt_style": item.get("rdStyle") or self.cfg["styles"][item["type"]],
             "width": w,
             "height": h,
             "num_images": 1,

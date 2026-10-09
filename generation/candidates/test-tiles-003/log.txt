@@ -1,8 +1,0 @@
---- run 2026-10-08T23:58:16Z
-[test-tiles-003] #1 grass (tile)
-  retrodiffusion: ok on attempt 1
-[test-tiles-003] #2 dirt-path (tile)
-  retrodiffusion: ok on attempt 1
-[test-tiles-003] #3 water (tile)
-  retrodiffusion: checks failed (1), attempt 1
-  retrodiffusion: ok on attempt 2

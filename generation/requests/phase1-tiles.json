@@ -1,0 +1,11 @@
+{
+  "batch": "phase1-tiles",
+  "note": "Phase 1 tile templates (32x32): extra ground, path and water variants, plus walls. Your three test tiles are already kept.",
+  "palette": { "mode": "auto", "colors": 16 },
+  "items": [
+    { "id": "grass", "type": "tile", "size": [32, 32], "candidates": 2, "prompt": "short green grass ground texture with a few tiny flowers, feudal Japan countryside, daylight" },
+    { "id": "dirt-path", "type": "tile", "size": [32, 32], "candidates": 2, "prompt": "packed brown dirt path ground texture with small pebbles, daylight" },
+    { "id": "water", "type": "tile", "size": [32, 32], "candidates": 2, "prompt": "shallow clear blue river water texture with gentle ripples, daylight" },
+    { "id": "wall", "type": "tile", "size": [32, 32], "candidates": 3, "prompt": "grey fitted stone castle wall texture, Japanese castle masonry, seen from above, daylight" }
+  ]
+}
