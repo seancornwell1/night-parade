@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { PIXEL_FONT } from '../ui/font';
 import { GREY, tuning } from '../config/tuning';
 import { actions, clearControls, controls, status, type Offer } from '../game/shared';
 import { TuningPanel } from '../ui/TuningPanel';
@@ -6,7 +7,7 @@ import { TuningPanel } from '../ui/TuningPanel';
 // Touch controls, run status, banners and level-up cards. Grey-box scaffolding: never ships.
 
 const CORNER = 70; // top-left zone for the triple-tap that opens the tuning panel
-const FONT = 'system-ui, -apple-system, sans-serif';
+const FONT = PIXEL_FONT;
 
 interface CardView {
   bg: Phaser.GameObjects.Rectangle;
@@ -60,30 +61,30 @@ export class HudScene extends Phaser.Scene {
     const label = { fontFamily: FONT, fontSize: '16px', color: '#111111' };
     this.attackLabel = this.add.text(0, 0, 'ATTACK', label).setOrigin(0.5);
     this.dodgeLabel = this.add.text(0, 0, 'DODGE', label).setOrigin(0.5);
-    this.info = this.add.text(CORNER + 6, 6, '', { fontFamily: FONT, fontSize: '13px', color: '#dddddd' });
-    this.add.rectangle(CORNER + 6, 26, 160, 8, 0x444444).setOrigin(0, 0.5);
-    this.hpBar = this.add.rectangle(CORNER + 6, 26, 160, 8, GREY.heal).setOrigin(0, 0.5);
-    this.add.rectangle(CORNER + 6, 36, 160, 5, 0x444444).setOrigin(0, 0.5);
-    this.xpBar = this.add.rectangle(CORNER + 6, 36, 0, 5, GREY.xp).setOrigin(0, 0.5);
-    this.sub = this.add.text(CORNER + 6, 42, '', { fontFamily: FONT, fontSize: '11px', color: '#aaaaaa', lineSpacing: 2 });
-    this.phaseText = this.add.text(0, 6, '', { fontFamily: FONT, fontSize: '18px', color: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5, 0);
-    this.bannerTitle = this.add.text(0, 0, '', { fontFamily: 'Georgia, serif', fontSize: '28px', color: '#ffffff' }).setOrigin(0.5);
+    this.info = this.add.text(CORNER + 6, 6, '', { fontFamily: FONT, fontSize: '16px', color: '#dddddd' });
+    this.add.rectangle(CORNER + 6, 32, 160, 8, 0x444444).setOrigin(0, 0.5);
+    this.hpBar = this.add.rectangle(CORNER + 6, 32, 160, 8, GREY.heal).setOrigin(0, 0.5);
+    this.add.rectangle(CORNER + 6, 42, 160, 5, 0x444444).setOrigin(0, 0.5);
+    this.xpBar = this.add.rectangle(CORNER + 6, 42, 0, 5, GREY.xp).setOrigin(0, 0.5);
+    this.sub = this.add.text(CORNER + 6, 48, '', { fontFamily: FONT, fontSize: '16px', color: '#aaaaaa', lineSpacing: 2 });
+    this.phaseText = this.add.text(0, 6, '', { fontFamily: FONT, fontSize: '16px', color: '#ffffff' }).setOrigin(0.5, 0);
+    this.bannerTitle = this.add.text(0, 0, '', { fontFamily: PIXEL_FONT, fontSize: '32px', color: '#ffffff' }).setOrigin(0.5);
     this.bannerSub = this.add
-      .text(0, 0, '', { fontFamily: FONT, fontSize: '14px', color: '#cccccc', align: 'center' })
+      .text(0, 0, '', { fontFamily: FONT, fontSize: '16px', color: '#cccccc', align: 'center' })
       .setOrigin(0.5, 0);
 
     this.dim = this.add.rectangle(0, 0, 10, 10, 0x000000, 0.6).setOrigin(0).setVisible(false);
-    this.offerTitle = this.add.text(0, 0, '', { fontFamily: FONT, fontSize: '18px', color: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5, 1);
+    this.offerTitle = this.add.text(0, 0, '', { fontFamily: FONT, fontSize: '16px', color: '#ffffff' }).setOrigin(0.5, 1);
     this.rerollBtn = this.add.rectangle(0, 0, 120, 34, GREY.ui).setVisible(false);
-    this.rerollLabel = this.add.text(0, 0, '', { fontFamily: FONT, fontSize: '14px', color: '#111111' }).setOrigin(0.5);
+    this.rerollLabel = this.add.text(0, 0, '', { fontFamily: FONT, fontSize: '16px', color: '#111111' }).setOrigin(0.5);
     for (let i = 0; i < 5; i++) {
       const dark = { fontFamily: FONT, color: '#111111' };
       this.cards.push({
         bg: this.add.rectangle(0, 0, 10, 10, GREY.uiPressed),
-        name: this.add.text(0, 0, '', { ...dark, fontSize: '16px', fontStyle: 'bold' }).setOrigin(0.5, 0),
-        path: this.add.text(0, 0, '', { ...dark, fontSize: '11px', color: '#333333' }).setOrigin(0.5, 0),
-        desc: this.add.text(0, 0, '', { ...dark, fontSize: '13px', align: 'center' }).setOrigin(0.5, 0),
-        notes: this.add.text(0, 0, '', { ...dark, fontSize: '11px', align: 'center', color: '#333333', fontStyle: 'italic' }).setOrigin(0.5, 1),
+        name: this.add.text(0, 0, '', { ...dark, fontSize: '16px' }).setOrigin(0.5, 0),
+        path: this.add.text(0, 0, '', { ...dark, fontSize: '16px', color: '#333333' }).setOrigin(0.5, 0),
+        desc: this.add.text(0, 0, '', { ...dark, fontSize: '16px', align: 'center' }).setOrigin(0.5, 0),
+        notes: this.add.text(0, 0, '', { ...dark, fontSize: '16px', align: 'center', color: '#333333' }).setOrigin(0.5, 1),
       });
     }
 
@@ -293,8 +294,8 @@ export class HudScene extends Phaser.Scene {
         c.notes.setText(card.notes.join('\n'));
       }
       c.name.setPosition(x, top + 10).setWordWrapWidth(cw - 12);
-      c.path.setPosition(x, top + 32);
-      c.desc.setPosition(x, top + 52).setWordWrapWidth(cw - 16);
+      c.path.setPosition(x, top + 30);
+      c.desc.setPosition(x, top + 50).setWordWrapWidth(cw - 16);
       c.notes.setPosition(x, top + ch - 8).setWordWrapWidth(cw - 12);
     });
     if (offer) {

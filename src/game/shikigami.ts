@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { PIXEL_FONT } from '../ui/font';
 import { ART_SCALE, hasArt } from '../art';
 import { GREY, tuning } from '../config/tuning';
 import type { ShikigamiDef } from '../content/types';
@@ -48,7 +49,7 @@ export class Familiar {
       // Grey box and name label until this shikigami has art.
       this.rect = scene.add.rectangle(x, y, 14, 14, GREY.shikigami).setDepth(9);
       this.label = scene.add
-        .text(x, y, def.name, { fontFamily: 'system-ui, sans-serif', fontSize: '10px', color: '#bbbbbb' })
+        .text(x, y, def.name, { fontFamily: PIXEL_FONT, fontSize: '16px', color: '#bbbbbb' })
         .setOrigin(0.5, 1)
         .setDepth(9);
     }

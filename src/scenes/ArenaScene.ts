@@ -177,7 +177,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.player = this.add.image(this.px, this.py, hero.sprite).setOrigin(0.5, 0.78).setScale(ART_SCALE);
     this.arcLines.forEach((l) => l.setDepth(5000));
     this.snapMarker.setDepth(5000);
-    this.startMusic(1, 0);
+    this.startMusic(false);
 
     const cam = this.cameras.main;
     cam.setBounds(0, 0, ARENA.width, ARENA.height);
@@ -237,11 +237,14 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (hasSound(k) && tuning.sfxVolume > 0) this.sound.play(k, { volume: tuning.sfxVolume * volume });
   }
 
-  /** Day theme. Until the night has its own rift track, the night plays it slowed and lowered. */
-  private startMusic(rate: number, detune: number): void {
+  /** Day theme by day; the night track at night, or the day theme slowed and lowered until one exists. */
+  private startMusic(night: boolean): void {
     this.music?.stop();
-    if (!hasSound('audio/day-theme')) return;
-    this.music = this.sound.add('audio/day-theme', { loop: true, volume: tuning.musicVolume, rate, detune });
+    const own = night && hasSound('audio/night-theme');
+    const key = own ? 'audio/night-theme' : 'audio/day-theme';
+    if (!hasSound(key)) return;
+    const slowed = night && !own;
+    this.music = this.sound.add(key, { loop: true, volume: tuning.musicVolume, rate: slowed ? 0.9 : 1, detune: slowed ? -500 : 0 });
     this.music.play();
   }
 
@@ -381,7 +384,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     for (const g of this.stage.ground) g.setTint(0x6a6fa8);
     for (const d of this.stage.decor) d.setTint(0x6a6fa8);
     for (const sh of this.shrines) sh.sprite.setTint(0x8a8fc0);
-    this.startMusic(0.9, -500);
+    this.startMusic(true);
     this.banner('The Night Parade', `${this.rift.name}. Night pays double XP.`, 4000);
   }
 

@@ -1,0 +1,20 @@
+{
+  "batch": "phase2-music-v2",
+  "note": "New direction: day = subdued sinister club thump; night = Japanese metal fight music. Waiting for a music provider: ElevenLabs music needs a paid plan and Stability's free credits are spent.",
+  "items": [
+    {
+      "id": "day-theme",
+      "type": "music",
+      "duration": 120,
+      "candidates": 1,
+      "prompt": "Dark, subdued electronic track for a survival action game's daytime: a steady four-on-the-floor kick thumping like a club, deep warm sub bass, sinister minor-key synth arpeggios, sparse eerie koto plucks and breathy shakuhachi drifting over it, tense and brooding but restrained, 118 BPM, instrumental, loopable, no vocals"
+    },
+    {
+      "id": "night-theme",
+      "type": "music",
+      "duration": 120,
+      "candidates": 1,
+      "prompt": "Aggressive Japanese-themed metal battle music for a night boss fight: heavy downtuned distorted guitar riffs, fast double-kick drums layered with thunderous taiko, shamisen and shakuhachi lead melodies, dark, intense and driving, 150 BPM, instrumental, loopable, no vocals"
+    }
+  ]
+}

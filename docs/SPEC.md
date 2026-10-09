@@ -217,3 +217,11 @@ The project folder holds this spec, the locked palette, API keys with the ordere
 - Auto-pause when the app loses focus; save one in-progress run.
 - A title-screen tap starts audio (iOS requires it).
 - iPhone Safari has no vibration, so hit feel comes from hit-stop, shake and sound.
+
+## Amendments
+
+- **Music direction (Oct 9, 2026):** music no longer has to be chiptune. Day: subdued, sinister
+  and thumping, like a dark club track (in the spirit of 20 Minutes Till Dawn). Night: opens up
+  into Japanese-themed metal fight music. Sound effects stay retro.
+- **Exceptions to "every asset is generated" (Oct 9, 2026):** art and sounds the player's family
+  provide can be added to the game, and a free open-licence pixel font is used for text.

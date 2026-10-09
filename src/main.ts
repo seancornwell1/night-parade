@@ -4,6 +4,9 @@ import { ArenaScene } from './scenes/ArenaScene';
 import { HudScene } from './scenes/HudScene';
 import { ResultScene } from './scenes/ResultScene';
 import { TitleScene } from './scenes/TitleScene';
+import { fontReady } from './ui/font';
+
+await fontReady();
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,

@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { PIXEL_FONT } from '../ui/font';
 import { IMAGES, SOUNDS } from '../art';
 
 // Placeholder title. The background and logo are generated assets listed in ASSETS_NEEDED.md.
@@ -6,6 +7,7 @@ import { IMAGES, SOUNDS } from '../art';
 export class TitleScene extends Phaser.Scene {
   private title!: Phaser.GameObjects.Text;
   private prompt!: Phaser.GameObjects.Text;
+  private credit!: Phaser.GameObjects.Text;
 
   constructor() {
     super('Title');
@@ -18,12 +20,15 @@ export class TitleScene extends Phaser.Scene {
 
   create(): void {
     this.title = this.add
-      .text(0, 0, 'Night Parade', { fontFamily: 'Georgia, serif', fontSize: '48px', color: '#ffffff' })
+      .text(0, 0, 'Night Parade', { fontFamily: PIXEL_FONT, fontSize: '48px', color: '#ffffff' })
       .setOrigin(0.5);
     this.prompt = this.add
-      .text(0, 0, 'Tap to start', { fontFamily: 'system-ui, sans-serif', fontSize: '18px', color: '#999999' })
+      .text(0, 0, 'Tap to start', { fontFamily: PIXEL_FONT, fontSize: '16px', color: '#999999' })
       .setOrigin(0.5);
 
+    this.credit = this.add
+      .text(0, 0, 'Sound effects: ElevenLabs   Font: DotGothic16 (OFL)', { fontFamily: PIXEL_FONT, fontSize: '16px', color: '#555555' })
+      .setOrigin(0.5, 1);
     this.layout();
     this.scale.on(Phaser.Scale.Events.RESIZE, this.layout, this);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this.scale.off(Phaser.Scale.Events.RESIZE, this.layout, this));
@@ -35,5 +40,6 @@ export class TitleScene extends Phaser.Scene {
     const { width, height } = this.scale;
     this.title.setPosition(width / 2, height / 2 - 20);
     this.prompt.setPosition(width / 2, height / 2 + 36);
+    this.credit.setPosition(width / 2, height - 8);
   }
 }

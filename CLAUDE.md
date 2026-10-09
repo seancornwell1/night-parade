@@ -3,7 +3,10 @@
 1. **Read `docs/SPEC.md` before any work.** It is the design source of truth.
 2. **Nothing hand-drawn.** Never draw art with canvas/vector/shape primitives
    and never synthesize audio in code. Code only places, moves, tints, scales
-   and animates generated image and audio files.
+   and animates generated image and audio files. Exceptions the user approved:
+   art and sounds the user provides (import them from `assets/inbox/` or a message
+   with `scripts/gen/import_asset.py`), and free open-licence fonts for testing and
+   minor assets (currently DotGothic16, see `docs/CREDITS.md`). Be ready to swap these on request.
 3. **Grey rectangles are temporary scaffolding only** and never ship.
 4. **Missing assets go in `ASSETS_NEEDED.md`.** Never improvise replacements.
 5. **All content is data.** Enemies, weapons, shikigami, upgrades and rifts are
