@@ -28,7 +28,10 @@
       "sprite": "rd_plus__default",
       "sheet": "rd_pro__spritesheet"
     },
-    "tileSeamless": false
+    "tileSeamless": false,
+    "minSize": {
+      "rd_plus__default": 64
+    }
   },
   "pixellab": {
     "view": "high top-down",

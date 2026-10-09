@@ -134,9 +134,16 @@ class RetroDiffusion(Provider):
 
     def generate(self, item, size, palette_img):
         w, h = size
+        style = item.get("rdStyle") or self.cfg["styles"][item["type"]]
+        # Some styles have a minimum size: ask for a whole multiple and let post-processing scale down.
+        min_side = self.cfg.get("minSize", {}).get(style, 0)
+        k = 1
+        while min(w, h) * k < min_side:
+            k += 1
+        w, h = w * k, h * k
         body = {
             "prompt": item["prompt"],
-            "prompt_style": item.get("rdStyle") or self.cfg["styles"][item["type"]],
+            "prompt_style": style,
             "width": w,
             "height": h,
             "num_images": 1,

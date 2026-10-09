@@ -2661,50 +2661,6 @@
       ]
     },
     {
-      "number": 54,
-      "id": "charger-kappa",
-      "type": "sprite",
-      "prompt": "a crouching kappa: a green turtle-shelled river imp with a water-filled dish on its head and a beak, ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
-      "size": [
-        32,
-        32
-      ],
-      "attempts": [
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9ae8ce48-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9b177f40-c3c7-11f1-8238-a2aad1a06e13\"}}"
-        }
-      ],
-      "status": "failed",
-      "reason": "Every provider failed or refused. Change the prompt and re-request."
-    },
-    {
-      "number": 55,
-      "id": "charger-kappa",
-      "type": "sprite",
-      "prompt": "a crouching kappa: a green turtle-shelled river imp with a water-filled dish on its head and a beak, ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
-      "size": [
-        32,
-        32
-      ],
-      "attempts": [
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9b4a7882-c3c7-11f1-b5fd-a2aa336465d7\"}}"
-        },
-        {
-          "provider": "retrodiffusion",
-          "outcome": "error: HTTP 400: {\"error\":{\"code\":\"invalid_style_dimensions\",\"message\":\"Image dimensions are not allowed for this style.\",\"request_id\":\"9b780ea0-c3c7-11f1-8e98-a2aa336465d7\"}}"
-        }
-      ],
-      "status": "failed",
-      "reason": "Every provider failed or refused. Change the prompt and re-request."
-    },
-    {
       "number": 56,
       "id": "boss-nue",
       "type": "sprite",
