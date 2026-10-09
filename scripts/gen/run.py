@@ -320,7 +320,69 @@ def reprocess(batch: str) -> int:
     return 0
 
 
+def quote(batch: str) -> int:
+    """Price a batch on Retro Diffusion with its free cost check. Generates nothing, spends nothing."""
+    import os
+
+    import requests
+
+    key = os.environ.get("RETRO_DIFFUSION_API_KEY", "")
+    if not key:
+        print("No RETRO_DIFFUSION_API_KEY")
+        return 1
+    headers = {"X-RD-Token": key}
+    base = "https://api.retrodiffusion.ai/v2"
+    req = next(json.loads(p.read_text()) for p in (GEN / "requests").glob("*.json") if json.loads(p.read_text()).get("batch") == batch)
+    styles = ["rd_fast__default", "rd_plus__default", "rd_pro__default"]
+    try:
+        sel = requests.get(f"{base}/styles/selector", headers=headers, timeout=60).json()
+        known = json.dumps(sel)
+        styles = [s for s in styles if s in known] or styles
+    except Exception as e:  # noqa: BLE001
+        print(f"style list unavailable: {e}")
+    rows = []
+    for it in req["items"]:
+        if it["type"] == "tile":
+            continue
+        n = int(it.get("candidates", 1))
+        w, h = it["size"]
+        if it["type"] == "sheet":
+            w, h = w * it["grid"][0], h * it["grid"][1]
+        row = {"id": it["id"], "candidates": n, "size": [w, h], "currentProviders": it.get("providers"), "perImage": {}}
+        for style in styles:
+            body = {"prompt": it["prompt"], "prompt_style": style, "width": w, "height": h, "num_images": 1, "remove_bg": True, "check_cost": True}
+            try:
+                r = requests.post(f"{base}/inferences", headers=headers, json=body, timeout=60)
+                data = r.json()
+                data = data.get("result", data) if isinstance(data, dict) else data
+                row["perImage"][style] = data.get("balance_cost") if r.status_code < 400 else f"error: {r.text[:160]}"
+            except Exception as e:  # noqa: BLE001
+                row["perImage"][style] = f"error: {e}"
+        rows.append(row)
+        print(row["id"], row["perImage"])
+    totals = {}
+    for style in styles:
+        for group in ("all", "notPixellab"):
+            t = 0.0
+            ok = True
+            for row in rows:
+                if group == "notPixellab" and row["currentProviders"] == ["pixellab"]:
+                    continue
+                v = row["perImage"].get(style)
+                if isinstance(v, (int, float)):
+                    t += v * row["candidates"]
+                else:
+                    ok = False
+            totals[f"{style} {group}"] = round(t, 2) if ok else f"{round(t, 2)} (some sizes not supported)"
+    out = {"batch": batch, "made": now(), "provider": "retrodiffusion", "note": "Free cost check only; nothing was generated.", "totals": totals, "items": rows}
+    save_json(GEN / "candidates" / batch / "quote.json", out)
+    print(json.dumps(totals, indent=2))
+    return 0
+
+
 if __name__ == "__main__":
     if len(sys.argv) == 3 and sys.argv[1] == "--reprocess":
         sys.exit(reprocess(sys.argv[2]))
+    if len(sys.argv) == 3 and sys.argv[1] == "--quote":
+        sys.exit(quote(sys.argv[2]))
     sys.exit(run())

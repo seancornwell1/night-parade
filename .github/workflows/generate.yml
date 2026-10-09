@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: '17 7 * * *'
   workflow_dispatch:
+    inputs:
+      quote:
+        description: 'Batch to price on Retro Diffusion (free cost check, generates nothing). Leave empty for a normal run.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -32,12 +37,18 @@ jobs:
           cache-dependency-path: scripts/gen/requirements.txt
       - run: pip install -r scripts/gen/requirements.txt
       - name: Generate
+        if: ${{ !inputs.quote }}
         run: python scripts/gen/run.py
         env:
           PIXELLAB_API_KEY: ${{ secrets.PIXELLAB_API_KEY }}
           RETRO_DIFFUSION_API_KEY: ${{ secrets.RETRO_DIFFUSION_API_KEY }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Price check
+        if: ${{ inputs.quote }}
+        run: python scripts/gen/run.py --quote "${{ inputs.quote }}"
+        env:
+          RETRO_DIFFUSION_API_KEY: ${{ secrets.RETRO_DIFFUSION_API_KEY }}
       - name: Commit candidates
         id: commit
         run: |
