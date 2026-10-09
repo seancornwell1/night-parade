@@ -27,7 +27,7 @@
     "pixellab": 100,
     "retrodiffusion": 80,
     "cloudflare": 55,
-    "elevenlabs": 30,
+    "elevenlabs": 60,
     "stability": 1
   },
   "attemptsPerProvider": 3,
@@ -80,7 +80,7 @@
     "musicMin": 20,
     "musicMax": 240,
     "minMeanDb": -38,
-    "maxPeakDb": -0.3,
+    "maxPeakDb": -0.1,
     "maxSilentFraction": 0.25
   }
 }
