@@ -310,11 +310,17 @@
         {
           "provider": "elevenlabs",
           "cost": null,
-          "outcome": "checks failed: no clipping = -0.2"
+          "outcome": "checks failed: no clipping = 0.0"
         },
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: daily cap of 30 reached"
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
+        },
+        {
+          "provider": "elevenlabs",
+          "cost": null,
+          "outcome": "checks failed: no clipping = 0.0"
         }
       ],
       "duration": 0.6,
@@ -322,20 +328,20 @@
         {
           "name": "length",
           "pass": true,
-          "value": 0.44,
+          "value": 0.59,
           "limit": "0.08-4 s"
         },
         {
           "name": "not silent",
           "pass": true,
-          "value": -14.0,
+          "value": -15.3,
           "limit": "> -38 dB mean"
         },
         {
           "name": "no clipping",
           "pass": false,
-          "value": -0.2,
-          "limit": "<= -0.3 dB peak"
+          "value": 0.0,
+          "limit": "<= -0.1 dB peak"
         },
         {
           "name": "no long silences",
@@ -344,8 +350,8 @@
           "limit": "<= 0.25 of the clip"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 8,
@@ -355,12 +361,45 @@
       "attempts": [
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "duration": 0.6,
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:59:16Z",
+      "files": {
+        "audio": "08-roll.mp3",
+        "raw": "08-roll.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.5,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -13.3,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -0.4,
+          "limit": "<= -0.1 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.5
     },
     {
       "number": 9,
@@ -370,12 +409,45 @@
       "attempts": [
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "duration": 0.5,
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:59:18Z",
+      "files": {
+        "audio": "09-pickup-xp.mp3",
+        "raw": "09-pickup-xp.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.48,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -17.6,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -4.1,
+          "limit": "<= -0.1 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.48
     },
     {
       "number": 10,
@@ -385,12 +457,45 @@
       "attempts": [
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "duration": 0.5,
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "elevenlabs",
+      "made": "2026-10-09T11:59:20Z",
+      "files": {
+        "audio": "10-pickup-xp.mp3",
+        "raw": "10-pickup-xp.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 0.48,
+          "limit": "0.08-4 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -19.9,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -1.6,
+          "limit": "<= -0.1 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.0,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 0.48
     },
     {
       "number": 11,
@@ -802,9 +907,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T11:57:00Z",
+  "updated": "2026-10-09T11:59:20Z",
   "counts": {
-    "ok": 14,
-    "pending": 4
+    "ok": 17,
+    "failed": 1
   }
 }
