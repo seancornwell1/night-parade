@@ -25,7 +25,7 @@
   "retrodiffusion": {
     "styles": {
       "tile": "rd_tile__single_tile",
-      "sprite": "rd_fast__default",
+      "sprite": "rd_plus__default",
       "sheet": "rd_pro__spritesheet"
     },
     "tileSeamless": false
