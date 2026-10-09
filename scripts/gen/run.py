@@ -55,9 +55,10 @@ class Usage:
         self.data = data
         self.dirty = False
 
-    def available(self, name: str) -> str | None:
-        if name in self.data["limited"]:
-            return f"free limit reached today ({self.data['limited'][name]})"
+    def available(self, name: str, kind: str | None = None) -> str | None:
+        for key in (name, f"{name}:{kind}" if kind else None):
+            if key and key in self.data["limited"]:
+                return f"free limit reached today ({self.data['limited'][key]})"
         if self.data["counts"].get(name, 0) >= self.caps.get(name, 10**9):
             return f"daily cap of {self.caps[name]} reached"
         return None
@@ -144,14 +145,14 @@ def make_candidate(item, number, palette_cfg, cfg, providers, usage, log) -> dic
             entry["attempts"].append({"provider": name, "outcome": "skipped: no API key secret"})
             waiting = True
             continue
-        why = usage.available(name)
+        why = usage.available(name, item["type"])
         if why:
             entry["attempts"].append({"provider": name, "outcome": f"skipped: {why}"})
             waiting = True
             continue
         errors = 0
         for attempt in range(1, cfg["attemptsPerProvider"] + 1):
-            why = usage.available(name)
+            why = usage.available(name, item["type"])
             if why:
                 entry["attempts"].append({"provider": name, "outcome": f"skipped: {why}"})
                 waiting = True
@@ -159,7 +160,7 @@ def make_candidate(item, number, palette_cfg, cfg, providers, usage, log) -> dic
             try:
                 raw = p.generate(item, gen_size, palette_img)
             except LimitHit as e:
-                usage.limit(name, str(e))
+                usage.limit(f"{name}:{e.scope}" if getattr(e, "scope", None) else name, str(e))
                 entry["attempts"].append({"provider": name, "outcome": f"free limit hit: {e}"})
                 log(f"  {name}: free limit hit, moving on ({e})")
                 waiting = True

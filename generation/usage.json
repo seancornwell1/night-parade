@@ -9,7 +9,7 @@
   },
   "limited": {
     "pixellab": "HTTP 402: {\"detail\":\"Insufficient generations and credits. Generations: 40.0/40.0, Credits: 0.0\"}",
-    "elevenlabs": "HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access"
+    "elevenlabs:music": "HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access"
   },
   "usd": {
     "retrodiffusion": 4.98

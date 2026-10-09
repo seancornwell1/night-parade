@@ -14,7 +14,7 @@ from pathlib import Path
 
 import requests
 
-from providers import ProviderError, Provider, classify
+from providers import LimitHit, ProviderError, Provider, classify
 
 TIMEOUT = 300
 
@@ -47,7 +47,11 @@ class ElevenLabs(Provider):
         headers = {"xi-api-key": self.key}
         if item["type"] == "music":
             body = {"prompt": item["prompt"], "music_length_ms": int(item["duration"] * 1000)}
-            r = _post("https://api.elevenlabs.io/v1/music?output_format=mp3_44100_128", headers=headers, json=body)
+            try:
+                r = _post("https://api.elevenlabs.io/v1/music?output_format=mp3_44100_128", headers=headers, json=body)
+            except LimitHit as e:
+                e.scope = "music"  # music needs a paid plan; sound effects still work
+                raise
         else:
             body = {"text": item["prompt"], "duration_seconds": item["duration"], "prompt_influence": item.get("promptInfluence", 0.6)}
             r = _post("https://api.elevenlabs.io/v1/sound-generation?output_format=mp3_44100_128", headers=headers, json=body)
