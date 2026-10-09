@@ -17,7 +17,7 @@
     ]
   },
   "dailyCaps": {
-    "pixellab": 30,
+    "pixellab": 100,
     "retrodiffusion": 8,
     "cloudflare": 55
   },

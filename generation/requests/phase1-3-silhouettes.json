@@ -34,6 +34,7 @@
       "prompt": "a single katana sword with black wrapped hilt, drawn diagonally, game weapon sprite",
       "minCoverage": 0.012,
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -50,6 +51,7 @@
       "prompt": "a single naginata polearm with a long wooden shaft and curved blade, drawn diagonally, game weapon sprite",
       "minCoverage": 0.012,
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -110,6 +112,7 @@
       "direction": "south-east",
       "prompt": "a small emaciated hungry ghost (gaki) with a swollen belly, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -125,6 +128,7 @@
       "direction": "south-east",
       "prompt": "a tiny horned red oni imp, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -140,6 +144,7 @@
       "direction": "south-east",
       "prompt": "a small floating ghost flame spirit (hitodama) with a face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -155,6 +160,7 @@
       "direction": "south-east",
       "prompt": "a crouching kappa river demon ready to lunge, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -170,6 +176,7 @@
       "direction": "south-east",
       "prompt": "a demonic wild boar spirit with glowing tusks, charging, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -185,6 +192,7 @@
       "direction": "south-east",
       "prompt": "a burning ox-cart wheel demon with a man's face (wanyudo), single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -200,6 +208,7 @@
       "direction": "south-east",
       "prompt": "a crow tengu archer with a bow, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -215,6 +224,7 @@
       "direction": "south-east",
       "prompt": "a fox spirit sorcerer casting a fireball, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -230,6 +240,7 @@
       "direction": "south-east",
       "prompt": "a skeletal ashigaru ghost archer, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -245,6 +256,7 @@
       "direction": "south-east",
       "prompt": "a blobby flesh yokai (nuppeppo) with a droopy face, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -260,6 +272,7 @@
       "direction": "south-east",
       "prompt": "a lumpy mud spirit (dorotabo) rising from the ground, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -275,6 +288,7 @@
       "direction": "south-east",
       "prompt": "a haunted cracked clay jar spilling small spirits, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -290,6 +304,7 @@
       "direction": "south-east",
       "prompt": "a huge red oni brute with an iron club, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -305,6 +320,7 @@
       "direction": "south-east",
       "prompt": "a hulking armoured samurai ghost (ochimusha) with a broken spear, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
@@ -320,6 +336,7 @@
       "direction": "south-east",
       "prompt": "a living stone wall yokai (nurikabe) with stubby legs, single full-body character, 3/4 top-down game view, facing down-right, feudal Japan yokai style",
       "providers": [
+        "pixellab",
         "cloudflare"
       ]
     },
