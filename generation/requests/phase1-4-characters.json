@@ -1,0 +1,85 @@
+{
+  "batch": "phase1-characters",
+  "note": "Player character concepts from docs/CHARACTERS.md, Retro Diffusion Pro at the exact 48x48 size, 2 candidates each.",
+  "palette": {
+    "mode": "auto",
+    "colors": 16
+  },
+  "items": [
+    {
+      "id": "hotaru",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "retrodiffusion"
+      ],
+      "rdStyle": "rd_pro__default",
+      "prompt": "Hotaru the Lantern Warden: a cheerful young girl in an indigo kimono and hakama wearing a very wide flat straw kasa hat, carrying a glowing amber paper lantern hanging from a pole over her shoulder, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan"
+    },
+    {
+      "id": "kuro",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "retrodiffusion"
+      ],
+      "rdStyle": "rd_pro__default",
+      "prompt": "Kuro the Crow Ronin: a lean young swordsman in a ragged black straw-and-feather mino cloak that flares like crow wings, half tengu mask with a short beak, deep blue clothes, katana with a red cord, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan"
+    },
+    {
+      "id": "yuki",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "retrodiffusion"
+      ],
+      "rdStyle": "rd_pro__default",
+      "prompt": "Yuki the Fox-Mask Shrine Maiden: a shrine maiden in white top and red hakama with very wide sleeves, a white fox mask pushed up on top of her head with pointed ears, paper talismans circling her, faint blue frost, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan"
+    },
+    {
+      "id": "gonta",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "retrodiffusion"
+      ],
+      "rdStyle": "rd_pro__default",
+      "prompt": "Gonta the Oni-Blooded Brawler: a sturdy grinning boy with one small stubby horn on his forehead, huge oversized iron gauntlets, one orange-red oni arm, green tunic with a rope belt and a gourd, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan"
+    },
+    {
+      "id": "mei",
+      "type": "sprite",
+      "size": [
+        48,
+        48
+      ],
+      "candidates": 2,
+      "background": "#5fae44",
+      "providers": [
+        "retrodiffusion"
+      ],
+      "rdStyle": "rd_pro__default",
+      "prompt": "Mei the Paper Folder: a small girl origami master in soft pink and cream clothes with a cape of folded paper cranes, a round brown tanuki sitting on top of her head, single full-body character, 16-bit pixel art game sprite, 3/4 top-down view, facing down-right, feudal Japan"
+    }
+  ]
+}
