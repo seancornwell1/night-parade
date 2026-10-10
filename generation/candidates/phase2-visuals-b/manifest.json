@@ -1,0 +1,322 @@
+{
+  "batch": "phase2-visuals-b",
+  "request": "generation/requests/phase2-3b-visuals.json",
+  "created": "2026-10-10T07:52:51Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "foxfire-bolt",
+      "type": "sprite",
+      "prompt": "a small blue wisp of ghost fire, pixel art game projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 2,
+      "id": "foxfire-bolt",
+      "type": "sprite",
+      "prompt": "a small blue wisp of ghost fire, pixel art game projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 3,
+      "id": "hit-spark",
+      "type": "sprite",
+      "prompt": "a small yellow and white four-pointed star flash, pixel art game effect",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 4,
+      "id": "hit-spark",
+      "type": "sprite",
+      "prompt": "a small yellow and white four-pointed star flash, pixel art game effect",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 5,
+      "id": "arrow",
+      "type": "sprite",
+      "prompt": "a thin brown wooden arrow with a grey tip and white feathers, pointing right, pixel art",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 6,
+      "id": "arrow",
+      "type": "sprite",
+      "prompt": "a thin brown wooden arrow with a grey tip and white feathers, pointing right, pixel art",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 7,
+      "id": "paper-dart",
+      "type": "sprite",
+      "prompt": "a small folded paper plane with a dark grey outline, pixel art game projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 8,
+      "id": "paper-dart",
+      "type": "sprite",
+      "prompt": "a small folded paper plane with a dark grey outline, pixel art game projectile",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 9,
+      "id": "stick-base",
+      "type": "sprite",
+      "prompt": "a flat round dark brown wooden plate with a lighter carved rim, top view, game interface",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 10,
+      "id": "stick-base",
+      "type": "sprite",
+      "prompt": "a flat round dark brown wooden plate with a lighter carved rim, top view, game interface",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 11,
+      "id": "panel-frame",
+      "type": "sprite",
+      "prompt": "an empty square frame of dark wood around plain cream paper, game interface panel, nothing inside",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 12,
+      "id": "panel-frame",
+      "type": "sprite",
+      "prompt": "an empty square frame of dark wood around plain cream paper, game interface panel, nothing inside",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 13,
+      "id": "card-frame",
+      "type": "sprite",
+      "prompt": "an empty wide rectangular card of cream paper with a thin dark wooden border, game interface, nothing inside",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        56
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 14,
+      "id": "card-frame",
+      "type": "sprite",
+      "prompt": "an empty wide rectangular card of cream paper with a thin dark wooden border, game interface, nothing inside",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        56
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 15,
+      "id": "icon-thunder",
+      "type": "sprite",
+      "prompt": "a bright yellow zigzag lightning symbol with a thick dark outline, game interface icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 16,
+      "id": "icon-thunder",
+      "type": "sprite",
+      "prompt": "a bright yellow zigzag lightning symbol with a thick dark outline, game interface icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "Re-worded retries of phase2-visuals items that Cloudflare refused (false content-filter hits) or that failed checks, plus a landscape card frame for the level-up cards. Locked day palette, free.",
+  "palette": {
+    "mode": "file",
+    "name": "day",
+    "colors": [
+      "#281622",
+      "#1a503e",
+      "#4b4056",
+      "#9e272b",
+      "#c82585",
+      "#3f823b",
+      "#7e6758",
+      "#ec5840",
+      "#58ac46",
+      "#ab8259",
+      "#28bdeb",
+      "#9c9c9c",
+      "#7ebd42",
+      "#c5a16a",
+      "#62e1f6",
+      "#fcecdc"
+    ]
+  },
+  "updated": "2026-10-10T07:52:51Z",
+  "counts": {
+    "pending": 16
+  }
+}
