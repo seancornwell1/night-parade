@@ -9,6 +9,9 @@ import type { BossStep, EnemyDef } from '../content/types';
 export interface EnemyWorld {
   px: number;
   py: number;
+  /** Player velocity (units/s), so the crowd around the player moves with them. */
+  pvx: number;
+  pvy: number;
   tokensUsed: number;
   hurtPlayer(damage: number): void;
   fireEnemyProjectile(x: number, y: number, angle: number, speed: number, size: number, damage: number, sprite?: string): void;
@@ -135,6 +138,18 @@ export class Enemy {
     const nx = dx / d;
     const ny = dy / d;
     this.farBoost = d > tuning.catchUpDistance ? tuning.catchUpMult : 1;
+    // A token holder that lost contact (pushed back by the crowd, knocked away, left behind)
+    // gives its token up, or the few attack slots stay taken and nobody close can attack.
+    if (this.hasToken && this.mode === 'move' && d > tuning.enemyWaitRadius + 140) this.hasToken = false;
+    // Inside the crowd, enemies are carried along with the player's movement (up to a bit
+    // above their own speed), so walking doesn't leave the ring behind; sprinting still does.
+    if (d < tuning.crowdRadius && this.stun <= 0 && this.mode !== 'charge' && !this.isBoss) {
+      const cap = this.speed * tuning.crowdFollowMult;
+      const pv = Math.hypot(w.pvx, w.pvy);
+      const k = pv > cap ? cap / pv : 1;
+      this.x += w.pvx * k * dt;
+      this.y += w.pvy * k * dt;
+    }
 
     switch (this.def.behavior) {
       case 'swarmer':

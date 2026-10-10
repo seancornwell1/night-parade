@@ -2,23 +2,23 @@
   "enemies": [
     {
       "enemy": "gaki",
-      "weight": 10
+      "weight": 30
     },
     {
       "enemy": "boar",
-      "weight": 2
+      "weight": 1
     },
     {
       "enemy": "tengu-archer",
-      "weight": 2
+      "weight": 1
     },
     {
       "enemy": "nuppeppo",
-      "weight": 2
+      "weight": 1
     },
     {
       "enemy": "oni",
-      "weight": 1
+      "weight": 0.5
     }
   ],
   "stage": {

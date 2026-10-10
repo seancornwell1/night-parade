@@ -3,14 +3,14 @@
   "name": "Gaki",
   "behavior": "swarmer",
   "size": 16,
-  "hp": 12,
+  "hp": 8,
   "speed": 62,
-  "damage": 5,
+  "damage": 3,
   "xp": 1,
   "windup": 0.3,
   "attackCooldown": 0.9,
   "reach": 26,
-  "groupSize": 10,
+  "groupSize": 14,
   "sprite": "enemies/gaki",
   "spriteScale": 0.75
 }

@@ -97,6 +97,10 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   py = ARENA.height / 2;
   facing = 0;
   tokensUsed = 0;
+  pvx = 0;
+  pvy = 0;
+  private lastPx = 0;
+  private lastPy = 0;
   private state: PlayerState = 'free';
   private stateT = 0;
   private comboIndex = 0;
@@ -145,6 +149,8 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.build = new Build(this.rift);
     this.px = ARENA.width / 2;
     this.py = ARENA.height / 2;
+    this.lastPx = this.px;
+    this.lastPy = this.py;
     this.facing = 0;
     this.state = 'free';
     this.comboIndex = this.cooldown = this.dodgeCd = this.hurtT = this.hitStopT = 0;
@@ -464,6 +470,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       e.x = Phaser.Math.Clamp(this.px + Math.cos(a) * tuning.spawnDistance, m, ARENA.width - m);
       e.y = Phaser.Math.Clamp(this.py + Math.sin(a) * tuning.spawnDistance, m, ARENA.height - m);
       e.vx = e.vy = 0;
+      e.hasToken = false;
     }
   }
 
@@ -912,6 +919,11 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     const sorted = this.enemies
       .map((e) => ({ e, d: Math.hypot(e.x - this.px, e.y - this.py) }))
       .sort((a, b) => a.d - b.d);
+    // Player velocity this frame, for the crowd to move along with.
+    this.pvx = dt > 0 ? (this.px - this.lastPx) / dt : 0;
+    this.pvy = dt > 0 ? (this.py - this.lastPy) / dt : 0;
+    this.lastPx = this.px;
+    this.lastPy = this.py;
     for (const { e } of sorted) {
       if (!e.alive) continue;
       e.update(dt, this, tuning.playerSize);
