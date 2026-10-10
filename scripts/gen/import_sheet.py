@@ -1,7 +1,11 @@
 """Import user-provided animation sheets for one character.
 
 Usage:
-  python scripts/gen/import_sheet.py <name> <height> <colours> <sheet.png>:<anim>:<frames> [...]
+  python scripts/gen/import_sheet.py <name> <height> <colours> <sheet.png>:<anim>:<frames>[:r<row>] [...]
+
+  height:  pixel height of the first animation's frames; frames that reach further (a raised
+           sword, a long slash) make the shared frame bigger instead of shrinking the character
+  :r<row>: take one row of a grid image (rows are found at the empty bands between them)
 
   colours: "keep" (shared palette of up to 32 colours from the sheets themselves) or "day"
            (snap to the locked day palette)
@@ -82,8 +86,32 @@ def strip_backdrop(img: Image.Image) -> Image.Image:
 
 
 def split_cells(img: Image.Image, n: int) -> list[Image.Image]:
-    step = img.width / n
-    return [img.crop((round(i * step), 0, round((i + 1) * step), img.height)) for i in range(n)]
+    """Cut a row into n frames at the empty columns between figures (midway through each gap),
+    or into n equal cells if the figures can't be told apart."""
+    a = np.asarray(img.convert("RGB")).astype(int)
+    bg = np.median(np.concatenate([a[:4].reshape(-1, 3), a[-4:].reshape(-1, 3)]), 0)
+    busy = (np.abs(a - bg).sum(-1) > 40).any(0)
+    runs, start = [], None
+    for x, v in enumerate(busy):
+        if v and start is None:
+            start = x
+        if not v and start is not None:
+            runs.append([start, x])
+            start = None
+    if start is not None:
+        runs.append([start, len(busy)])
+    merged: list[list[int]] = []
+    for r in runs:  # join slivers (sword tips, slash ends) separated by tiny gaps
+        if merged and r[0] - merged[-1][1] < 12:
+            merged[-1][1] = r[1]
+        else:
+            merged.append(r)
+    merged = [r for r in merged if r[1] - r[0] > 8]
+    if len(merged) == n:
+        cuts = [0] + [(merged[i][1] + merged[i + 1][0]) // 2 for i in range(n - 1)] + [img.width]
+    else:
+        cuts = [round(i * img.width / n) for i in range(n + 1)]
+    return [img.crop((cuts[i], 0, cuts[i + 1], img.height)) for i in range(n)]
 
 
 def anchor(mask: np.ndarray) -> tuple[float, float]:
@@ -95,38 +123,97 @@ def anchor(mask: np.ndarray) -> tuple[float, float]:
     return float(np.median(xs[band])), float(feet)
 
 
+def rows_of(img: Image.Image) -> list[Image.Image]:
+    """Split a grid image into its rows of frames at the empty horizontal bands between them."""
+    a = np.asarray(img.convert("RGB")).astype(int)
+    bg = np.median(a[:4].reshape(-1, 3), 0)
+    busy = (np.abs(a - bg).sum(-1) > 40).any(1)
+    runs, start = [], None
+    for y, v in enumerate(busy):
+        if v and start is None:
+            start = y
+        if not v and start is not None:
+            if y - start > 20:
+                runs.append([start, y])
+            start = None
+    if start is not None:
+        runs.append([start, len(busy)])
+    cuts = [0] + [(runs[i][1] + runs[i + 1][0]) // 2 for i in range(len(runs) - 1)] + [img.height]
+    return [img.crop((0, cuts[i], img.width, cuts[i + 1])) for i in range(len(runs))]
+
+
+def hat_width(img: Image.Image) -> int:
+    """Width of the straw hat, the one rigid object in every pose, used as a size ruler."""
+    a = np.asarray(img.convert("RGB")).astype(int)
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    m = ndi.binary_closing((r > 120) & (r < 240) & (g > 85) & (b < 150) & (r - b > 55) & (r - g > 15) & (r - g < 75), iterations=2)
+    lab, n = ndi.label(m)
+    if n == 0:
+        return 0
+    xs = np.nonzero(lab == 1 + int(np.argmax(ndi.sum(m, lab, range(1, n + 1)))))[1]
+    return int(xs.max() - xs.min() + 1)
+
+
 def main(name: str, height: int, colours: str, specs: list[str]) -> None:
-    anims = []
+    # 1. Cut every spec into frame cells (a spec may pick one row of a grid with :rN).
+    cells: list[tuple[str, str, list[Image.Image]]] = []
     for spec in specs:
-        path, anim, n = spec.rsplit(":", 2)
+        parts = spec.split(":")
+        row = None
+        if parts[-1].startswith("r") and parts[-1][1:].isdigit():
+            row = int(parts.pop()[1:])
+        path, anim, n = ":".join(parts[:-2]), parts[-2], int(parts[-1])
+        img = Image.open(path).convert("RGB")
+        if row is not None:
+            img = rows_of(img)[row]
+        cells.append((path, anim, split_cells(img, n)))
+    # 2. Sheets drawn at a different size (different generations) are scaled to match the
+    #    first sheet, measured by the hat. Small differences are left alone.
+    hats: dict[str, int] = {}
+    for path, _, cs in cells:
+        hats[path] = max(hats.get(path, 0), *(hat_width(c) for c in cs))
+    ref = hats[cells[0][0]]
+    anims = []
+    for path, anim, cs in cells:
+        k = ref / hats[path] if hats[path] else 1.0
+        if abs(1 - k) < 0.25:
+            k = 1.0
         frames = []
-        for f in split_cells(strip_backdrop(Image.open(path)), int(n)):
-            f, mask = clean_mask(f, 40)
+        for c in cs:
+            if k != 1.0:
+                c = c.resize((round(c.width * k), round(c.height * k)), Image.Resampling.NEAREST)
+            f, mask = clean_mask(strip_backdrop(c), 40)
             ax, ay = anchor(mask)
             ys, xs = np.nonzero(mask)
-            frames.append({"img": f, "ox": ax, "oy": ay, "x0": xs.min(), "x1": xs.max() + 1, "y0": ys.min()})
+            frames.append({"img": f, "ox": ax, "oy": ay, "x0": xs.min(), "x1": xs.max() + 1, "y0": ys.min(), "y1": ys.max() + 1})
         anims.append((anim, frames))
+        if k != 1.0:
+            print(f"{path}: hat {hats[path]}px vs {ref}px, scaled x{k:.2f}")
+    # 3. One canvas holds every frame; its scale comes from the first animation alone, so a
+    #    raised sword or a long slash makes the frame bigger instead of shrinking the character.
     allf = [f for _, fs in anims for f in fs]
+    margin = 4
     left = max(f["ox"] - f["x0"] for f in allf)
     right = max(f["x1"] - f["ox"] for f in allf)
     up = max(f["oy"] - f["y0"] for f in allf)
-    down = max(0.0, max(float(np.nonzero(np.asarray(f["img"])[..., 3])[0].max()) + 1 - f["oy"] for f in allf))
-    margin = 4
+    down = max(0.0, max(f["y1"] - f["oy"] for f in allf))
     cw, ch = int(left + right + 2 * margin), int(up + down + 2 * margin)
-    scale = height / ch
-    out_w = max(1, round(cw * scale))
+    first = anims[0][1]
+    ref_h = max(f["oy"] - f["y0"] for f in first) + max(f["y1"] - f["oy"] for f in first) + 2 * margin
+    scale = height / ref_h
+    out_w, out_h = max(1, round(cw * scale)), max(1, round(ch * scale))
     small = []
     for anim, frames in anims:
         row = []
         for f in frames:
             canvas = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
             canvas.paste(f["img"], (int(margin + left - f["ox"]), int(margin + up - f["oy"])), f["img"])
-            row.append(canvas.resize((out_w, height), Image.Resampling.BOX))
+            row.append(canvas.resize((out_w, out_h), Image.Resampling.BOX))
         small.append((anim, row))
     if colours == "day":
         pal = np.array([hex_to_rgb(c) for c in json.loads((ROOT / "generation/palettes/day.json").read_text())["colors"]])
     else:
-        strip = Image.new("RGBA", (out_w * sum(len(r) for _, r in small), height))
+        strip = Image.new("RGBA", (out_w * sum(len(r) for _, r in small), out_h))
         x = 0
         for _, r in small:
             for f in r:
@@ -137,7 +224,7 @@ def main(name: str, height: int, colours: str, specs: list[str]) -> None:
     day = json.loads(day_path.read_text())
     day.setdefault("sheets", [])
     for anim, row in small:
-        sheet = Image.new("RGBA", (out_w * len(row), height), (0, 0, 0, 0))
+        sheet = Image.new("RGBA", (out_w * len(row), out_h), (0, 0, 0, 0))
         areas = []
         for i, f in enumerate(row):
             f = snap(f, pal)
@@ -148,12 +235,12 @@ def main(name: str, height: int, colours: str, specs: list[str]) -> None:
         dest = ROOT / "assets/day" / f"{key}.png"
         dest.parent.mkdir(parents=True, exist_ok=True)
         sheet.save(dest)
-        entry = {"key": key, "frameWidth": out_w, "frameHeight": height, "frames": len(row),
-                 "anchor": [round((margin + left) * scale / out_w, 4), round((margin + up) * scale / height, 4)],
+        entry = {"key": key, "frameWidth": out_w, "frameHeight": out_h, "frames": len(row),
+                 "anchor": [round((margin + left) * scale / out_w, 4), round((margin + up) * scale / out_h, 4)],
                  "provider": "user", "colours": colours, "palette": palette_used(sheet)}
         day["sheets"] = [s for s in day["sheets"] if s["key"] != key] + [entry]
         med = float(np.median(areas))
-        print(f"{key}: {len(row)} frames of {out_w}x{height}, area vs median {[round(a / med, 2) for a in areas]}")
+        print(f"{key}: {len(row)} frames of {out_w}x{out_h}, area vs median {[round(a / med, 2) for a in areas]}")
     day_path.write_text(json.dumps(day, indent=2) + "\n")
 
 

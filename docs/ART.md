@@ -43,11 +43,11 @@ use `"palette": {"mode": "file", "name": "day"}`.
 
 ## In-game animation
 
-Hotaru uses the user's own idle, run and attack sheets (64px tall, in their own colours, an
+Hotaru uses the user's own idle, run, roll and four-hit combo sheets (64px tall, in their own colours, an
 approved exception to the palette lock), drawn at `displayScale` 0.6 (about 77 units tall, hat included). The import strips the
-sheets' drop shadow and lantern glow. The attack sheet carries
-its own slash, so the katana art is only shown for spin attacks. Charge (holds the first
-attack frame) and the dodge roll (run frames plus a spin) are still code motion.
+sheets' drop shadow and lantern glow. Each hit of the string has its
+own sheet with its own slash, so the separate katana art is no longer drawn over her. Charge
+holds the first frame of hit 1.
 
 For everything without sheets, the game animates each single frame in code (allowed:
 code places, moves, tints, scales and animates generated files): idle breathing, run bob and

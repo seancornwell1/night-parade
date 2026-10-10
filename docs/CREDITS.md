@@ -19,5 +19,5 @@ Files imported from `assets/inbox/` are listed with provider `user` in the manif
 
 | Asset | Files |
 |---|---|
-| Hotaru idle, run and attack sheets | `assets/day/characters/hotaru-{idle,run,attack}.png` (originals in `assets/source/hotaru/`) |
+| Hotaru idle, run, roll and four-hit combo sheets | `assets/day/characters/hotaru-{idle,run,roll,attack1..4}.png` (originals in `assets/source/hotaru/`; `combo-alt.png` is the unused second combo) |
 | Day theme music (also plays at night until a night track arrives) | `assets/day/audio/day-theme.mp3` (original in `assets/source/day-theme-user.mp3`) |

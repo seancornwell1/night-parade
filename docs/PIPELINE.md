@@ -136,7 +136,7 @@ Results go to `assets/templates/` and `assets/day/` with provider `user`.
 Animation sheets (a row of frames per animation) use:
 
 ```
-python scripts/gen/import_sheet.py <name> <height> <keep|day> <sheet.png>:<anim>:<frames> ...
+python scripts/gen/import_sheet.py <name> <height> <keep|day> <sheet.png>:<anim>:<frames>[:r<row>] ...
 ```
 
 Each sheet is cut into equal cells. The flat backdrop is removed together with anything
@@ -144,7 +144,11 @@ painted onto it that would clash with the map: the drop shadow under the feet, g
 around lights, and backdrop trapped between limbs and props. Every frame is pinned on its
 torso centre and lowest foot (generators place frames inconsistently inside their cells, which
 made the idle sway), and everything is scaled by one shared factor, so the character never
-jumps or changes size between animations. `keep` keeps the artist's colours
+jumps or changes size between animations. Frames are cut at the empty columns between figures; `:r<row>`
+takes one row of a grid image. Sheets drawn at a different size (another generation) are
+scaled to match the first one, using the straw hat's width as the ruler. `height` sizes the
+first animation; frames that reach further (a raised sword, a long slash) make the shared frame
+bigger rather than shrinking the character. `keep` keeps the artist's colours
 (a shared 32-colour palette); `day` snaps to the day palette. Strips land in
 `assets/day/characters/<name>-<anim>.png` and are listed under `sheets` in `day.json`; point
 the character's `animations` at them (`docs/SCHEMAS.md`).

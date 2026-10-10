@@ -15,8 +15,24 @@
       "sheet": "characters/hotaru-run",
       "fps": 11
     },
-    "attack": {
-      "sheet": "characters/hotaru-attack",
+    "roll": {
+      "sheet": "characters/hotaru-roll",
+      "fps": 14
+    },
+    "attack1": {
+      "sheet": "characters/hotaru-attack1",
+      "fps": 18
+    },
+    "attack2": {
+      "sheet": "characters/hotaru-attack2",
+      "fps": 18
+    },
+    "attack3": {
+      "sheet": "characters/hotaru-attack3",
+      "fps": 18
+    },
+    "attack4": {
+      "sheet": "characters/hotaru-attack4",
       "fps": 18
     }
   }

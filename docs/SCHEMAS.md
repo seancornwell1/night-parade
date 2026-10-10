@@ -223,7 +223,7 @@ reference must exist in `assets/day` (checked at load).
 | `playable` | boolean | Selectable |
 | `default` | boolean | The character used now (exactly one) |
 | `displayScale` | number? | Extra draw scale on top of the 2× art scale (default 1) |
-| `animations` | `{idle?, run?, attack?: {sheet, fps}}`? | Animation strips listed under `sheets` in `assets/day/day.json` (`key`, `frameWidth`, `frameHeight`, `frames`, `anchor` as an origin fraction at the feet). The attack strip is stretched to each swing's length; anything missing stays code-animated |
+| `animations` | `{idle?, run?, roll?, attack?, attack1?..attack4?: {sheet, fps}}`? | Animation strips listed under `sheets` in `assets/day/day.json` (`key`, `frameWidth`, `frameHeight`, `frames`, `anchor` as an origin fraction at the feet). idle and run loop; roll plays across a dodge; attack1-4 are the four hits of the string (charge attacks reuse 2, 1 and 4 for launcher, sweep and big finisher), each stretched to the swing's length; attack is the fallback for any hit. Anything missing stays code-animated |
 
 ## Weapon — `content/weapons/<id>.json`
 

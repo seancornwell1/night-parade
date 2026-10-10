@@ -144,6 +144,10 @@ export interface DayDef {
   stage: StageDef;
 }
 
+/** idle and run loop; roll plays over a dodge; attack1-4 are the four hits of the string (charge
+ * attacks reuse them), stretched to each swing's length; attack is the fallback for any hit. */
+export type HeroAnim = 'idle' | 'run' | 'roll' | 'attack' | 'attack1' | 'attack2' | 'attack3' | 'attack4';
+
 export interface AnimationDef {
   sheet: string; // strip in assets/day, e.g. "characters/hotaru-run"
   fps: number;
@@ -154,7 +158,7 @@ export interface CharacterDef {
   name: string;
   sprite: string;
   displayScale?: number; // world units per art pixel (default 2); larger art can draw smaller
-  animations?: { idle?: AnimationDef; run?: AnimationDef; attack?: AnimationDef };
+  animations?: Partial<Record<HeroAnim, AnimationDef>>;
   weapon: string;
   playable: boolean;
   default?: boolean;

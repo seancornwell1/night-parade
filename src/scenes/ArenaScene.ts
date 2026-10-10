@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { ART_SCALE, hasArt, hasSound, SHEETS } from '../art';
 import { ARENA, GREY, tuning } from '../config/tuning';
 import { content, currentRift, enemy as enemyDef, mainCharacter } from '../content';
-import type { EnemyDef, HitEffect, RiftDef, Spawn, Tag } from '../content/types';
+import type { AnimationDef, EnemyDef, HeroAnim, HitEffect, RiftDef, Spawn, Tag } from '../content/types';
 import { Build } from '../game/build';
 import { Enemy, type EnemyWorld } from '../game/enemies';
 import { piercesArmor, type HitOpts } from '../game/hit';
@@ -76,7 +76,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   /** Draw scale of the hero (art pixels to world units). */
   private heroScale = ART_SCALE;
   /** Which hero animations exist (user-provided sheets); the rest stays code-animated. */
-  private heroAnims = { idle: false, run: false, attack: false };
+  private heroAnims = new Set<HeroAnim>();
   private weapon!: { key: string; offset: number };
   private music?: Music;
   private lastXpSound = 0;
@@ -190,20 +190,19 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.weapon = { key: weapon.sprite, offset: weapon.angleOffsetDeg * DEG };
     this.heroScale = ART_SCALE * (hero.displayScale ?? 1);
     const anims = hero.animations ?? {};
-    const first = anims.idle ?? anims.run ?? anims.attack;
+    const first = anims.idle ?? anims.run ?? anims.attack1 ?? anims.attack;
     this.player = this.add.sprite(this.px, this.py, first ? first.sheet : hero.sprite);
     if (first) this.player.setOrigin(...SHEETS[first.sheet].anchor);
     else this.player.setOrigin(0.5, 0.78);
-    for (const name of ['idle', 'run', 'attack'] as const) {
-      const a = anims[name];
-      if (!a) continue;
+    this.heroAnims.clear();
+    for (const [name, a] of Object.entries(anims) as [HeroAnim, AnimationDef][]) {
       const key = `hero-${name}`;
       if (!this.anims.exists(key)) {
-        this.anims.create({ key, frames: this.anims.generateFrameNumbers(a.sheet, {}), frameRate: a.fps, repeat: name === 'attack' ? 0 : -1 });
+        this.anims.create({ key, frames: this.anims.generateFrameNumbers(a.sheet, {}), frameRate: a.fps, repeat: name === 'idle' || name === 'run' ? -1 : 0 });
       }
-      this.heroAnims[name] = true;
+      this.heroAnims.add(name);
     }
-    if (this.heroAnims.idle) this.player.play('hero-idle');
+    if (this.heroAnims.has('idle')) this.player.play('hero-idle');
     this.player.setScale(this.heroScale);
     this.arcLines.forEach((l) => l.setDepth(5000));
     this.snapMarker.setDepth(5000);
@@ -660,13 +659,20 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.curHit = this.comboIndex;
     this.hitApplied = false;
     this.setState('attack');
-    this.playAttackAnim(tuning.hitDuration);
+    this.playAttackAnim(tuning.hitDuration, this.curHit + 1);
   }
 
-  /** Plays the hero's attack sheet once, stretched to the swing's length. */
-  private playAttackAnim(seconds: number): void {
-    if (!this.heroAnims.attack) return;
-    this.player.play({ key: 'hero-attack', duration: seconds * 1000 }, false);
+  /** The sheet for hit n of the string (1-4), or the general attack sheet. */
+  private attackAnim(n: number): HeroAnim | null {
+    const own = `attack${n}` as HeroAnim;
+    if (this.heroAnims.has(own)) return own;
+    return this.heroAnims.has('attack') ? 'attack' : null;
+  }
+
+  /** Plays the hit's attack sheet once, stretched to the swing's length. */
+  private playAttackAnim(seconds: number, n: number): void {
+    const name = this.attackAnim(n);
+    if (name) this.player.play({ key: `hero-${name}`, duration: seconds * 1000 }, false);
   }
 
   private chargeKindNow(): ChargeKind {
@@ -681,7 +687,8 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.lastHitFacing = this.facing;
     this.hitApplied = false;
     this.setState('chargeAttack');
-    this.playAttackAnim(tuning.chargeRecovery);
+    // Launcher: the rising cut; sweep: the wide horizontal slash; big finisher: the spin.
+    this.playAttackAnim(tuning.chargeRecovery, this.chargeKind === 'launcher' ? 2 : this.chargeKind === 'sweep' ? 1 : 4);
   }
 
   private applyHit(i: number): void {
@@ -1228,7 +1235,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (reverse) [from, to] = [to, from];
     if (hasArt(this.weapon.key)) {
       // The attack sheet already draws the blade and its slash; only spins still show the weapon art.
-      if (this.heroAnims.attack && arcDeg < 360) return;
+      if (this.attackAnim(1)) return;
       const blade = 45 * Math.SQRT2; // diagonal of the 48px weapon art
       const obj = this.add.image(this.px, this.py, this.weapon.key).setOrigin(0.12, 0.88).setScale((length * 0.95) / blade).setDepth(this.py + 1);
       this.fx.push({ obj, t: 0, dur: Math.max(dur, 0.12), alpha: 1, follow: true, from, to, rotOffset: this.weapon.offset });
@@ -1301,9 +1308,9 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     const t = this.time.now / 1000;
     const flip = Math.cos(this.facing) < 0;
     const dir = flip ? -1 : 1;
-    const sheet = this.heroAnims.idle || this.heroAnims.run;
+    const sheet = this.heroAnims.has('idle') || this.heroAnims.has('run');
     const loop = (name: 'idle' | 'run') => {
-      if (!this.heroAnims[name]) return;
+      if (!this.heroAnims.has(name)) return;
       const key = `hero-${name}`;
       if (p.anims.currentAnim?.key !== key || !p.anims.isPlaying) p.play(key, true);
     };
@@ -1328,7 +1335,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       case 'attack':
       case 'chargeAttack': {
         const k = Math.min(1, this.stateT / (this.state === 'attack' ? tuning.hitDuration : tuning.chargeRecovery));
-        const amt = this.heroAnims.attack ? 0.4 : 1;
+        const amt = this.attackAnim(1) ? 0.4 : 1;
         rot = dir * 0.2 * (1 - k) * amt;
         sx = 1 + 0.1 * (1 - k) * amt;
         sy = 1 - 0.08 * (1 - k) * amt;
@@ -1336,9 +1343,10 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       }
       case 'charging':
         // Wind-up: hold the first attack frame.
-        if (this.heroAnims.attack) {
-          if (p.anims.currentAnim?.key !== 'hero-attack' || p.anims.isPlaying) {
-            p.play('hero-attack');
+        const wind = this.attackAnim(1);
+        if (wind) {
+          if (p.anims.currentAnim?.key !== `hero-${wind}` || p.anims.isPlaying) {
+            p.play(`hero-${wind}`);
             p.anims.stop();
           }
           p.setFrame(0);
@@ -1347,9 +1355,14 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
         sy = 0.93;
         break;
       case 'dodge':
-        loop('run');
-        rot = dir * Math.PI * 2 * Math.min(1, this.stateT / tuning.dodgeTime);
-        sy = 0.85;
+        if (this.heroAnims.has('roll')) {
+          // The roll sheet plays once across the roll; no code spin needed.
+          if (p.anims.currentAnim?.key !== 'hero-roll') p.play({ key: 'hero-roll', duration: tuning.dodgeTime * 1000 });
+        } else {
+          loop('run');
+          rot = dir * Math.PI * 2 * Math.min(1, this.stateT / tuning.dodgeTime);
+          sy = 0.85;
+        }
         break;
     }
     p.setPosition(this.px, this.py + oy).setFlipX(flip).setRotation(rot).setScale(this.heroScale * sx, this.heroScale * sy).setDepth(this.py);

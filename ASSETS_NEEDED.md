@@ -7,7 +7,7 @@ here still shows as a grey box (or is missing) in the game.
 
 | Asset | Where it shows | Status |
 |---|---|---|
-| Hotaru dodge roll, full 4-hit attack string, better run cycle (alternating feet), charge wind-up | Player | Idle, run and attack are your sheets. You're generating the roll and 4-hit string (prompts given in chat). Until then the roll is the run frames spinning, and every hit replays the one attack sheet |
+| Hotaru run cycle with alternating feet, charge wind-up | Player | Idle, roll and the four hits are your sheets. The run sheet has the same foot forward in every frame; a new one needs the run prompt from chat |
 | New day enemy sheet (small grunts, mid enemies) | Enemies | You're generating one (prompt given in chat). Current gaki art is shrunk to 0.75 as the small grunt |
 | Shikigami sheets (kitsune-bi, paper crane, komainu) | Shikigami | Single frames in game; sheets need paid generation |
 | Day enemy sheets (gaki, boar, tengu, nuppeppo, oni) | Enemies | Single frames in game; sheets need paid generation |
