@@ -52,8 +52,19 @@ export class Build {
     return this.effects.find((e) => e.effect.kind === kind)?.effect;
   }
 
+  /** Shikigami summoned this run (each id once, plus extra copies). */
+  private summoned = new Set<string>();
+  private familiarCount = 0;
+
+  /** Would this upgrade bring in another shikigami body (a new one, or an extra copy)? */
+  private addsFamiliar(u: UpgradeDef): boolean {
+    return u.effects.some((ef) => ef.type === 'shikigami' && (!!ef.extra || !this.summoned.has(ef.id)));
+  }
+
   private eligible(u: UpgradeDef): boolean {
     if ((this.stacks.get(u.id) ?? 0) >= (u.maxStacks ?? 1)) return false;
+    // Only one shikigami per run for now (docs/SPEC.md amendments: equipped before the run).
+    if (this.familiarCount >= tuning.maxShikigami && this.addsFamiliar(u)) return false;
     if (!u.path) return true;
     if (this.locked.has(u.path)) return false;
     const picks = this.pathPicks(u.path);
@@ -118,6 +129,8 @@ export class Build {
           this.effects.push({ slot: ef.slot, tag: ef.tag, effect: ef.effect });
           break;
         case 'shikigami':
+          if (ef.extra || !this.summoned.has(ef.id)) this.familiarCount++;
+          this.summoned.add(ef.id);
           out.shikigami.push({ id: ef.id, levels: ef.levels ?? 1, extra: !!ef.extra });
           break;
         case 'heal':

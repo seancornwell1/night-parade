@@ -178,7 +178,11 @@ No stats carry between runs. Your collection and your currency do. No real money
 | Finishing the night | A large currency bonus plus a treasure chest with a random weapon or shikigami |
 | Dying | You keep everything collected so far; you lose only the finish bonus and chest |
 
-Shikigami summoning is gacha-style, paid with in-game currency only. Shikigami come in tiers of usefulness (for example common, rare, legendary). Proposed: duplicates raise a shikigami's tier, so a favourite common one can be grown rather than replaced.
+Shikigami (decided Oct 10, 2026, see Amendments): you equip **one** before the run (more slots
+may come later). Rarities are **rare, epic and legendary**, and drop rates match the rarity.
+Duplicates are combined into the copy you own to level it up, so a well-fed rare can come close
+to an epic or a legendary, as in gacha games. Drops are revealed only after the run ends.
+Gacha summoning with in-game currency comes later; plan rarity with it in mind.
 
 ### Saves and sharing
 
@@ -232,3 +236,11 @@ The project folder holds this spec, the locked palette, API keys with the ordere
   sections (forest, village, rocky hills). The attack lunge and dodge roll are short.
   You can't escape the parade: enemies off screen hurry to catch up, and ones left far behind
   re-enter around you. XP needs are steeper to match the bigger crowds.
+- **Shikigami are equipped, not levelled into (Oct 10, 2026):** shikigami are collected
+  treasure, not level-up rewards. One is equipped before the run (more slots maybe later).
+  New ones come from bosses and the end-of-night chest, revealed only after the run. Three
+  rarities to start (rare, epic, legendary) with drop rates to match; duplicates combine into
+  the owned copy to level it, so a rare can grow toward epic or legendary strength. Gacha
+  summoning comes later. Not built yet. Until it is, a run allows only one shikigami
+  (`maxShikigami` tuning): once you have one, level-up cards can only strengthen it, because
+  stacking four of them killed everything without the player attacking.

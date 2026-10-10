@@ -146,6 +146,7 @@ const DEFS = {
   shrineCooldown: t(60, 5, 300, 5, 'Healing', 'Shrine cooldown (s)'),
 
   // Shikigami
+  maxShikigami: t(1, 1, 6, 1, 'Shikigami', 'Max shikigami per run'),
   shikigamiFollowDist: t(46, 10, 150, 2, 'Shikigami', 'Follow distance'),
   shikigamiDashSpeed: t(650, 100, 1500, 25, 'Shikigami', 'Bite dash speed'),
 
