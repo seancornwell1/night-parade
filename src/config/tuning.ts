@@ -33,7 +33,7 @@ const DEFS = {
   hitActiveDelay: t(0.06, 0, 0.3, 0.01, 'Combo', 'Hit lands after (s)'),
   comboWindow: t(0.45, 0.1, 1.5, 0.05, 'Combo', 'Time to continue string (s)'),
   inputBuffer: t(0.2, 0, 0.5, 0.01, 'Combo', 'Early tap buffer (s)'),
-  lungeDistance: t(40, 0, 160, 2, 'Combo', 'Lunge distance per hit'),
+  lungeDistance: t(10, 0, 160, 2, 'Combo', 'Lunge distance per hit'),
   lungeTime: t(0.1, 0.02, 0.3, 0.01, 'Combo', 'Lunge time (s)'),
   turnClampDeg: t(45, 0, 180, 1, 'Combo', 'Turn clamp between hits (deg)'),
   snapRange: t(160, 0, 400, 5, 'Combo', 'Auto-snap range'),
@@ -62,8 +62,8 @@ const DEFS = {
   bigKnockback: t(650, 0, 1500, 10, 'Charge', 'Big finisher knockback'),
 
   // Dodge
-  dodgeDistance: t(130, 20, 400, 5, 'Dodge', 'Roll distance'),
-  dodgeTime: t(0.28, 0.08, 0.8, 0.01, 'Dodge', 'Roll time (s)'),
+  dodgeDistance: t(80, 20, 400, 5, 'Dodge', 'Roll distance'),
+  dodgeTime: t(0.24, 0.08, 0.8, 0.01, 'Dodge', 'Roll time (s)'),
   dodgeIFrames: t(0.22, 0, 0.8, 0.01, 'Dodge', 'Invulnerable for (s)'),
   dodgeCooldown: t(0.35, 0, 2, 0.05, 'Dodge', 'Roll cooldown (s)'),
 
@@ -84,7 +84,9 @@ const DEFS = {
 
   // Enemies (per-enemy stats live in content/enemies/*.json)
   attackTokens: t(2, 0, 10, 1, 'Enemies', 'Attack tokens'),
-  enemyWaitRadius: t(90, 30, 300, 5, 'Enemies', 'Wait ring distance'),
+  enemyWaitRadius: t(46, 20, 300, 2, 'Enemies', 'Wait ring distance'),
+  crowdRadius: t(180, 50, 800, 10, 'Enemies', 'Start slowing within (units)'),
+  crowdSpeedMult: t(0.5, 0.05, 1, 0.05, 'Enemies', 'Speed at the crowd (x)'),
   enemyHitStun: t(0.25, 0, 1, 0.01, 'Enemies', 'Hit stun (s)'),
   enemyFriction: t(8, 1, 30, 0.5, 'Enemies', 'Knockback friction'),
   enemyHpMult: t(1, 0.1, 5, 0.05, 'Enemies', 'Enemy HP (x)'),
@@ -101,14 +103,14 @@ const DEFS = {
   nightBossCount: t(2, 0, 5, 1, 'Run', 'Bosses per night'),
 
   // Spawns
-  daySpawnStart: t(0.5, 0, 5, 0.05, 'Spawns', 'Day spawns/s at start'),
-  daySpawnEnd: t(1.4, 0, 8, 0.05, 'Spawns', 'Day spawns/s at end'),
-  nightSpawnStart: t(2.2, 0, 10, 0.1, 'Spawns', 'Night spawns/s at start'),
-  nightSpawnEnd: t(4.5, 0, 15, 0.1, 'Spawns', 'Night spawns/s at end'),
-  maxEnemies: t(90, 10, 250, 5, 'Spawns', 'Max enemies alive'),
+  daySpawnStart: t(1.2, 0, 5, 0.05, 'Spawns', 'Day spawns/s at start'),
+  daySpawnEnd: t(3, 0, 8, 0.05, 'Spawns', 'Day spawns/s at end'),
+  nightSpawnStart: t(3, 0, 10, 0.1, 'Spawns', 'Night spawns/s at start'),
+  nightSpawnEnd: t(6, 0, 15, 0.1, 'Spawns', 'Night spawns/s at end'),
+  maxEnemies: t(220, 10, 400, 5, 'Spawns', 'Max enemies alive'),
   spawnDistance: t(620, 250, 1500, 10, 'Spawns', 'Spawn distance from you'),
   marchSpreadDeg: t(25, 0, 90, 1, 'Spawns', 'March column spread (deg)'),
-  stragglerChance: t(0.2, 0, 1, 0.02, 'Spawns', 'Straggler (flank) chance'),
+  stragglerChance: t(0.5, 0, 1, 0.02, 'Spawns', 'Surround chance (from any side)'),
   marchShiftTime: t(90, 0, 300, 5, 'Spawns', 'March turns every (s, 0 = never)'),
 
   // XP and level-ups
@@ -133,7 +135,7 @@ const DEFS = {
   // Healing
   healDropChance: t(0.012, 0, 0.1, 0.002, 'Healing', 'Heal drop chance per kill'),
   healDropAmount: t(20, 1, 100, 1, 'Healing', 'Heal drop amount'),
-  shrineCount: t(4, 0, 10, 1, 'Healing', 'Shrines'),
+  shrineCount: t(8, 0, 16, 1, 'Healing', 'Shrines'),
   shrineRadius: t(55, 20, 150, 5, 'Healing', 'Shrine radius'),
   shrineChannelTime: t(3, 0.5, 10, 0.1, 'Healing', 'Shrine use time (s)'),
   shrineHeal: t(40, 5, 200, 5, 'Healing', 'Shrine heal'),
@@ -163,7 +165,7 @@ export const TUNING_DEFS: Record<TuningKey, TuningDef> = DEFS;
 export const TUNING_KEYS = Object.keys(DEFS) as TuningKey[];
 
 // Fixed, non-tuned values for the grey-box test arena.
-export const ARENA = { width: 4000, height: 4000, grid: 100 };
+export const ARENA = { width: 12000, height: 12000, grid: 100 };
 
 // Grey-box scaffolding shades. These never ship.
 export const GREY = {

@@ -8,6 +8,7 @@ import { TuningPanel } from '../ui/TuningPanel';
 
 const CORNER = 70; // top-left zone for the triple-tap that opens the tuning panel
 const FONT = PIXEL_FONT;
+const PAUSE_SIZE = 44;
 
 interface CardView {
   bg: Phaser.GameObjects.Rectangle;
@@ -37,6 +38,11 @@ export class HudScene extends Phaser.Scene {
   private rerollLabel!: Phaser.GameObjects.Text;
   private cards: CardView[] = [];
   private shownCards: unknown = null;
+  private pauseBtn!: Phaser.GameObjects.Rectangle;
+  private pauseLabel!: Phaser.GameObjects.Text;
+  private pauseDim!: Phaser.GameObjects.Rectangle;
+  private pauseTitle!: Phaser.GameObjects.Text;
+  private paused = false;
 
   private stickId: number | null = null;
   private stickX = 0;
@@ -88,6 +94,15 @@ export class HudScene extends Phaser.Scene {
       });
     }
 
+    this.paused = false;
+    this.pauseBtn = this.add.rectangle(0, 0, PAUSE_SIZE, PAUSE_SIZE, GREY.ui);
+    this.pauseLabel = this.add.text(0, 0, 'II', label).setOrigin(0.5);
+    this.pauseDim = this.add.rectangle(0, 0, 10, 10, 0x000000, 0.6).setOrigin(0).setVisible(false);
+    this.pauseTitle = this.add
+      .text(0, 0, 'PAUSED\n\nTap anywhere to resume', { fontFamily: FONT, fontSize: '32px', color: '#ffffff', align: 'center' })
+      .setOrigin(0.5)
+      .setVisible(false);
+
     this.panel = new TuningPanel(
       () => {
         this.releaseAll();
@@ -101,6 +116,7 @@ export class HudScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       this.panel.destroy();
       this.game.events.off(Phaser.Core.Events.BLUR, this.releaseAll, this);
+      if (this.paused) this.sound.resumeAll();
     });
 
     this.input.on('pointerdown', this.onDown, this);
@@ -114,7 +130,29 @@ export class HudScene extends Phaser.Scene {
     return Math.abs(x - r.x) <= r.displayWidth / 2 + pad && Math.abs(y - r.y) <= r.displayHeight / 2 + pad;
   }
 
+  /** Pause button in the top-right corner; while paused, any tap resumes. */
+  private setPaused(on: boolean): void {
+    if (on === this.paused) return;
+    this.paused = on;
+    this.releaseAll();
+    if (on) {
+      this.scene.pause('Arena');
+      this.sound.pauseAll();
+    } else {
+      this.scene.resume('Arena');
+      this.sound.resumeAll();
+    }
+  }
+
   private onDown(p: Phaser.Input.Pointer): void {
+    if (this.paused) {
+      this.setPaused(false);
+      return;
+    }
+    if (!status.offer && this.inRect(this.pauseBtn, p.x, p.y, 10)) {
+      this.setPaused(true);
+      return;
+    }
     if (p.x < CORNER && p.y < CORNER) {
       const now = this.time.now;
       this.cornerTaps = this.cornerTaps.filter((t) => now - t < 900);
@@ -210,6 +248,11 @@ export class HudScene extends Phaser.Scene {
     if (offer && (this.stickId !== null || this.attackId !== null || this.dodgeId !== null)) this.releaseAll();
 
     this.layoutControls(width, height, !offer);
+    const pm = 12;
+    this.pauseBtn.setVisible(!offer).setPosition(width - pm - PAUSE_SIZE / 2, pm + PAUSE_SIZE / 2).setAlpha(tuning.uiAlpha);
+    this.pauseLabel.setVisible(!offer).setPosition(this.pauseBtn.x, this.pauseBtn.y);
+    this.pauseDim.setVisible(this.paused).setDisplaySize(width, height).setDepth(10);
+    this.pauseTitle.setVisible(this.paused).setPosition(width / 2, height / 2).setDepth(11);
 
     const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
     this.phaseText.setPosition(width / 2, 6).setText(`${status.phase.toUpperCase()} ${fmt(status.phaseLeft)}`);

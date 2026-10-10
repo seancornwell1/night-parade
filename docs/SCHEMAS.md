@@ -189,6 +189,12 @@ matchup. Cooldown is `cooldown × cooldownPerLevel^(level − 1) ÷ shikigamiRat
 
 During the day, spawns draw from `day.enemies` plus tonight's rift `omens`.
 
+### Music loop points — `assets/day/day.json` `audio`
+
+A music entry may carry `"loop": [start, end]` (seconds). The track plays from the start once,
+then repeats start..end forever (intro once, outro never). Written by
+`import_asset.py --loop`.
+
 ### Stage — `content/day.json` `stage`
 
 The frozen day world. Layout comes from `seed`, so it is the same every run. Every art

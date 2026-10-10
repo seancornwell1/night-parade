@@ -5,7 +5,7 @@
   "weapon": "katana",
   "playable": true,
   "default": true,
-  "displayScale": 1,
+  "displayScale": 0.6,
   "animations": {
     "idle": {
       "sheet": "characters/hotaru-idle",

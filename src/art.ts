@@ -34,5 +34,11 @@ export function hasSound(k: string): boolean {
   return k in SOUNDS;
 }
 
+/** Intro-then-loop points for music tracks ("loop": [start, end] seconds in day.json audio). */
+export const MUSIC_LOOPS: Record<string, [number, number]> = {};
+for (const a of ((dayManifest as unknown as { audio?: { file: string; loop?: [number, number] }[] }).audio ?? [])) {
+  if (a.loop) MUSIC_LOOPS[a.file.replace(/\.mp3$/, '')] = a.loop;
+}
+
 /** One art pixel is two world units (docs/ART.md). */
 export const ART_SCALE = 2;

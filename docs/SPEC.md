@@ -225,3 +225,8 @@ The project folder holds this spec, the locked palette, API keys with the ordere
   into Japanese-themed metal fight music. Sound effects stay retro.
 - **Exceptions to "every asset is generated" (Oct 9, 2026):** art and sounds the player's family
   provide can be added to the game, and a free open-licence pixel font is used for text.
+- **Crowds and map (Oct 10, 2026):** being surrounded is the norm from the start, not only late
+  game: many small, slow grunts arrive from every side and slow down further as they close in,
+  packing a tight ring around the player (attack tokens still limit how many strike at once).
+  The day map is much larger (12,000 units square, nine times the old area) with dense prop
+  sections (forest, village, rocky hills). The attack lunge and dodge roll are short.

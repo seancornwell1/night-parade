@@ -8,6 +8,7 @@ import { Enemy, type EnemyWorld } from '../game/enemies';
 import { piercesArmor, type HitOpts } from '../game/hit';
 import { actions, controls, status, type Phase, type RunResult } from '../game/shared';
 import { Familiar, type ShikiWorld } from '../game/shikigami';
+import { Music } from '../game/music';
 import { buildStage, type BuiltStage } from '../game/stage';
 
 // The classic run: day, dusk, night. Day art comes from assets/day; anything without art yet
@@ -77,7 +78,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   /** Which hero animations exist (user-provided sheets); the rest stays code-animated. */
   private heroAnims = { idle: false, run: false, attack: false };
   private weapon!: { key: string; offset: number };
-  private music?: Phaser.Sound.BaseSound;
+  private music?: Music;
   private lastXpSound = 0;
   private moving = false;
   private arcLines: Phaser.GameObjects.Rectangle[] = [];
@@ -235,8 +236,13 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   private shrineSpots(): { x: number; y: number }[] {
     const n = Math.round(tuning.shrineCount);
     return Array.from({ length: n }, (_, i) => {
-      const a = (i / n) * Math.PI * 2 + Math.PI / 4;
-      return { x: ARENA.width / 2 + Math.cos(a) * 750, y: ARENA.height / 2 + Math.sin(a) * 750 };
+      // An inner ring of four near the start, the rest further out across the larger map.
+      const inner = Math.min(n, 4);
+      const ring = i < inner ? 0 : 1;
+      const k = ring ? n - inner : inner;
+      const a = ((i - ring * inner) / k) * Math.PI * 2 + Math.PI / 4 + ring * (Math.PI / k);
+      const r = ring ? 2800 : 750;
+      return { x: ARENA.width / 2 + Math.cos(a) * r, y: ARENA.height / 2 + Math.sin(a) * r };
     });
   }
 
@@ -257,14 +263,13 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (hasSound(k) && tuning.sfxVolume > 0) this.sound.play(k, { volume: tuning.sfxVolume * volume });
   }
 
-  /** Day theme by day; the night track at night, or the day theme until one exists. */
+  /** Day theme by day; the night track at night, or the day theme until one exists. Intro once, then the loop. */
   private startMusic(night: boolean): void {
     this.music?.stop();
     const own = night && hasSound('audio/night-theme');
     const key = own ? 'audio/night-theme' : 'audio/day-theme';
     if (!hasSound(key)) return;
-    this.music = this.sound.add(key, { loop: true, volume: tuning.musicVolume });
-    this.music.play();
+    this.music = new Music(this, key, tuning.musicVolume);
   }
 
   // ---------------------------------------------------------------- input
@@ -340,6 +345,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     }
     this.updateFx(dt);
     this.syncVisuals();
+    this.cullDecor();
 
     const cam = this.cameras.main;
     cam.setZoom(this.scale.width / tuning.cameraViewWidth);
@@ -433,13 +439,11 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     return list[list.length - 1].enemy;
   }
 
-  /** Mostly a march from one direction, with stragglers from the flanks. */
+  /** A march from one direction, plus groups from every side so the player ends up surrounded. */
   private spawnGroup(def: EnemyDef): void {
-    const straggler = Math.random() < tuning.stragglerChance;
+    const surround = Math.random() < tuning.stragglerChance;
     const spread = tuning.marchSpreadDeg * DEG;
-    const a = straggler
-      ? this.marchAngle + (Math.random() < 0.5 ? -1 : 1) * Math.PI * 0.5 + (Math.random() - 0.5) * 0.7
-      : this.marchAngle + (Math.random() * 2 - 1) * spread;
+    const a = surround ? Math.random() * Math.PI * 2 : this.marchAngle + (Math.random() * 2 - 1) * spread;
     const bx = this.px + Math.cos(a) * tuning.spawnDistance;
     const by = this.py + Math.sin(a) * tuning.spawnDistance;
     const n = def.groupSize ?? 1;
@@ -1233,6 +1237,15 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       f.obj.destroy();
       return false;
     });
+  }
+
+  /** The big map has well over a thousand props; only the ones near the camera are drawn. */
+  private cullDecor(): void {
+    const v = this.cameras.main.worldView;
+    const pad = 220;
+    for (const d of this.stage.decor) {
+      d.setVisible(d.x > v.x - pad && d.x < v.right + pad && d.y > v.y - pad && d.y < v.bottom + pad + 120);
+    }
   }
 
   private syncVisuals(): void {

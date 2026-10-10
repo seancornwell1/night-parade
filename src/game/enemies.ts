@@ -163,10 +163,17 @@ export class Enemy {
     }
   }
 
+  /** Closing in on the player, enemies slow down so they bunch up and crowd around instead of piling straight in. */
+  private crowdSpeed(d: number): number {
+    const ring = tuning.enemyWaitRadius + this.size / 2;
+    const k = Phaser.Math.Clamp((d - ring) / Math.max(1, tuning.crowdRadius - ring), 0, 1);
+    return this.speed * Phaser.Math.Linear(tuning.crowdSpeedMult, 1, k);
+  }
+
   /** Enemies without an attack token crowd in to the wait ring and hold there. */
   private hover(d: number, nx: number, ny: number, dt: number): void {
     const ring = tuning.enemyWaitRadius + this.size / 2;
-    if (d > ring) this.move(nx, ny, this.speed, dt);
+    if (d > ring) this.move(nx, ny, this.crowdSpeed(d), dt);
     else if (d < ring - 15) this.move(-nx, -ny, this.speed * 0.5, dt);
   }
 
@@ -181,7 +188,7 @@ export class Enemy {
     }
     this.tryToken(w, d);
     if (this.hasToken || !this.usesTokens) {
-      if (d > this.reach * 0.8 + ps / 2) this.move(nx, ny, this.speed, dt);
+      if (d > this.reach * 0.8 + ps / 2) this.move(nx, ny, this.crowdSpeed(d), dt);
       else if (this.cooldown <= 0) {
         this.mode = 'windup';
         this.modeT = this.def.windup ?? 0.5;

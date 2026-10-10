@@ -7,13 +7,15 @@ here still shows as a grey box (or is missing) in the game.
 
 | Asset | Where it shows | Status |
 |---|---|---|
-| Hotaru charge wind-up, charge attacks and dodge roll frames | Player | Idle, run and attack are done (your sheets). Charge holds the first attack frame and the roll is the run frames spinning, in code. Send more sheets any time |
+| Hotaru dodge roll, full 4-hit attack string, better run cycle (alternating feet), charge wind-up | Player | Idle, run and attack are your sheets. You're generating the roll and 4-hit string (prompts given in chat). Until then the roll is the run frames spinning, and every hit replays the one attack sheet |
+| New day enemy sheet (small grunts, mid enemies) | Enemies | You're generating one (prompt given in chat). Current gaki art is shrunk to 0.75 as the small grunt |
 | Shikigami sheets (kitsune-bi, paper crane, komainu) | Shikigami | Single frames in game; sheets need paid generation |
 | Day enemy sheets (gaki, boar, tengu, nuppeppo, oni) | Enemies | Single frames in game; sheets need paid generation |
 | Yuki Doll and Raiju shikigami art | Shikigami (Frost and Thunder paths) | Not generated yet; grey box with a name label |
 | XP orb, heal onigiri, arrow, fireball, fox-fire bolt, paper dart, spirit wave, slash arc, hit spark | Pickups, projectiles, swing trail | Requested in `phase2-visuals` (Cloudflare, day palette); waiting for the daily free allowance |
 | Lightning arc, frost pulse, burn and freeze effects | Thunder chains, frost novas, explosions | Not requested yet (grey lines and squares) |
 | Attack and dodge buttons, joystick base and knob | Touch controls | Requested in `phase2-visuals` |
+| Pause button icon | Top-right corner | Not requested yet (grey square with "II") |
 | Level-up card frame, panel frame, path icons (fire, frost, thunder, spirit, beast) | Level-up cards, HUD | Requested in `phase2-visuals` |
 | HP bar, XP bar and shrine progress bar frames | HUD, shrines | Not requested yet (grey bars) |
 | Generated bitmap font | All text (HUD, cards, banners, title, results) | **Decision needed**: image generators can't reliably draw a full readable alphabet; text uses the system font for now |

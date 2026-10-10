@@ -44,7 +44,8 @@ use `"palette": {"mode": "file", "name": "day"}`.
 ## In-game animation
 
 Hotaru uses the user's own idle, run and attack sheets (64px tall, in their own colours, an
-approved exception to the palette lock), drawn at `displayScale` 1. The attack sheet carries
+approved exception to the palette lock), drawn at `displayScale` 0.6 (about 77 units tall, hat included). The import strips the
+sheets' drop shadow and lantern glow. The attack sheet carries
 its own slash, so the katana art is only shown for spin attacks. Charge (holds the first
 attack frame) and the dodge roll (run frames plus a spin) are still code motion.
 

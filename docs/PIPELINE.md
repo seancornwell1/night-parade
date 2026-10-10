@@ -117,11 +117,16 @@ message. Claude imports them with:
 ```
 python scripts/gen/import_asset.py <file> <kind> <name> [--size WxH] [--keep-colours] [--tile]
 python scripts/gen/import_asset.py <file> audio <name> [--music]
+python scripts/gen/import_asset.py <file> audio <name> --loop START:END
 ```
 
 Images get the same clean-up as generated ones (background removed, cropped to the subject,
 resized to the fixed size for their kind, snapped to the locked day palette unless
-`--keep-colours`); sounds are trimmed and levelled, and music is cut into a seamless loop.
+`--keep-colours`); sounds are trimmed and levelled, and music is cut into a seamless loop. `--loop START:END`
+keeps a whole track (levelled only) and records loop points: the game plays the intro once,
+then repeats START..END seconds forever, so the outro is never heard. Pick the points on bar
+lines (the day theme uses 10.239:136.356, 93 bars at 177 BPM, chosen by beat tracking and
+spectral match).
 Results go to `assets/templates/` and `assets/day/` with provider `user`.
 
 Animation sheets (a row of frames per animation) use:
@@ -130,9 +135,12 @@ Animation sheets (a row of frames per animation) use:
 python scripts/gen/import_sheet.py <name> <height> <keep|day> <sheet.png>:<anim>:<frames> ...
 ```
 
-Frames are split at their gaps, the background is removed, and every frame of every
-animation is aligned on the same foot anchor and scaled by one shared factor, so the
-character never jumps or changes size between animations. `keep` keeps the artist's colours
+Each sheet is cut into equal cells. The flat backdrop is removed together with anything
+painted onto it that would clash with the map: the drop shadow under the feet, glow haloes
+around lights, and backdrop trapped between limbs and props. Frames keep their own position
+inside their cell (so the drawn bob and stride survive); each animation is shifted as a whole
+so its median foot anchor lines up with the others, and everything is scaled by one shared
+factor, so the character never jumps or changes size between animations. `keep` keeps the artist's colours
 (a shared 32-colour palette); `day` snaps to the day palette. Strips land in
 `assets/day/characters/<name>-<anim>.png` and are listed under `sheets` in `day.json`; point
 the character's `animations` at them (`docs/SCHEMAS.md`).

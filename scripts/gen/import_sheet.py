@@ -6,10 +6,13 @@ Usage:
   colours: "keep" (shared palette of up to 32 colours from the sheets themselves) or "day"
            (snap to the locked day palette)
 
-Each sheet is a row of frames on a flat background. Frames are found by their gaps (or split
-evenly), the background is removed, and every frame of every animation is aligned on the
-same anchor (feet at the bottom, body centre from the legs) and scaled by one shared factor,
-so the character never changes size or jitters between animations. Output: one horizontal
+Each sheet is a row of equal frame cells on a flat background. The backdrop is removed along
+with anything painted onto it that would clash with the map: the drop shadow under the feet,
+glow haloes around light sources, and background trapped between limbs and props. Frames keep
+their own position inside their cell, so the motion drawn in the sheet (bob, step, lunge)
+survives; each animation as a whole is shifted so its median foot anchor lines up with the
+others, and everything is scaled by one shared factor so the character never changes size
+between animations. Output: one horizontal
 strip per animation in assets/day/characters/<name>-<anim>.png, plus frame size and anchor
 in assets/day/day.json under "sheets".
 """
@@ -23,37 +26,64 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from process import auto_palette, clean_mask, hex_to_rgb, palette_used, remove_background, snap
+from scipy import ndimage as ndi
+
+from process import auto_palette, clean_mask, hex_to_rgb, palette_used, snap
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def split_frames(img: Image.Image, n: int) -> list[Image.Image]:
-    a = np.asarray(img.convert("RGB")).astype(int)
+def strip_backdrop(img: Image.Image) -> Image.Image:
+    """Make the flat backdrop transparent, plus its drop shadow, light glow and trapped pockets."""
+    a = np.asarray(img.convert("RGB")).astype(float)
     h, w, _ = a.shape
-    bg = np.median(a[[0, 0, h - 1, h - 1], [0, w - 1, 0, w - 1]], axis=0)
-    cols = (np.abs(a - bg).sum(-1) > 40).any(0)
-    runs, start = [], None
-    for x, v in enumerate(cols):
-        if v and start is None:
-            start = x
-        if not v and start is not None:
-            runs.append([start, x])
-            start = None
-    if start is not None:
-        runs.append([start, w])
-    merged: list[list[int]] = []
-    for r in runs:  # join slivers separated by tiny gaps
-        if merged and r[0] - merged[-1][1] < 24:
-            merged[-1][1] = r[1]
-        else:
-            merged.append(r)
-    merged = [r for r in merged if r[1] - r[0] > 20]
-    if len(merged) != n:
-        step = w / n
-        merged = [[round(i * step), round((i + 1) * step)] for i in range(n)]
-    pad = 12
-    return [img.crop((max(0, x0 - pad), 0, min(w, x1 + pad), h)) for x0, x1 in merged]
+    edges = np.concatenate([a[:8].reshape(-1, 3), a[-8:].reshape(-1, 3), a[:, :8].reshape(-1, 3), a[:, -8:].reshape(-1, 3)])
+    bg = np.median(edges, 0)
+    d = a - bg
+    lum = a.mean(-1)
+    grad = ndi.uniform_filter(ndi.generic_gradient_magnitude(lum, ndi.sobel), 7)
+
+    def grow(seed: np.ndarray, allowed: np.ndarray, steps: int) -> np.ndarray:
+        out = seed.copy()
+        for _ in range(steps):
+            nxt = ndi.binary_dilation(out, iterations=2) & (allowed | out)
+            if (nxt == out).all():
+                break
+            out = nxt
+        return out
+
+    plain = np.abs(d).max(-1) <= 10
+    lab, _ = ndi.label(plain)
+    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    outside = np.isin(lab, edge[edge > 0])
+    # Glow: the backdrop blended toward warm lantern light.
+    warm = np.array([255, 170, 40.0]) - bg
+    t = (d @ warm) / (warm @ warm)
+    glow = (t > -0.05) & (t < 0.4) & (np.linalg.norm(d - t[..., None] * warm, axis=-1) < 20)
+    # Pockets: large, flat enclosed patches of backdrop (between the pole and the hat).
+    lab, n = ndi.label((plain | glow) & (grad < 30) & ~outside)
+    sizes = ndi.sum(np.ones_like(lab), lab, range(1, n + 1))
+    pockets = np.isin(lab, 1 + np.nonzero(sizes > 1500)[0])
+    # Shadow: darkened, flat backdrop around the feet, eaten only a short way in from outside.
+    chroma = a / np.maximum(lum[..., None], 1) - bg / bg.mean()
+    shadow = (lum < bg.mean() + 2) & (lum > bg.mean() * 0.45) & (np.abs(chroma).max(-1) < 0.32) & (grad < 70)
+    ys = np.arange(h)[:, None].repeat(w, 1)
+    feet = np.zeros_like(shadow)
+    figs, nf = ndi.label(ndi.binary_opening(~outside, iterations=2))
+    for i in range(1, nf + 1):
+        yy = np.nonzero(figs == i)[0]
+        if len(yy) >= 3000:
+            feet |= ys > yy.max() - (yy.max() - yy.min()) * 0.16
+    base = grow(outside | pockets, glow, 40)
+    gone = grow(base, shadow & feet, 14)
+    out = np.asarray(img.convert("RGBA")).copy()
+    out[..., 3] = np.where(gone, 0, 255)
+    return Image.fromarray(out, "RGBA")
+
+
+def split_cells(img: Image.Image, n: int) -> list[Image.Image]:
+    step = img.width / n
+    return [img.crop((round(i * step), 0, round((i + 1) * step), img.height)) for i in range(n)]
 
 
 def anchor(mask: np.ndarray) -> tuple[float, float]:
@@ -68,19 +98,24 @@ def main(name: str, height: int, colours: str, specs: list[str]) -> None:
     for spec in specs:
         path, anim, n = spec.rsplit(":", 2)
         frames = []
-        for f in split_frames(Image.open(path).convert("RGBA"), int(n)):
-            f = remove_background(f, tolerance=48)
+        for f in split_cells(strip_backdrop(Image.open(path)), int(n)):
             f, mask = clean_mask(f, 40)
             ax, ay = anchor(mask)
             ys, xs = np.nonzero(mask)
             frames.append({"img": f, "ax": ax, "ay": ay, "x0": xs.min(), "x1": xs.max() + 1, "y0": ys.min()})
+        # One shift per animation (its median foot anchor), so motion inside the cells survives.
+        mx = float(np.median([f["ax"] for f in frames]))
+        my = float(np.median([f["ay"] for f in frames]))
+        for f in frames:
+            f["ox"], f["oy"] = mx, my
         anims.append((anim, frames))
     allf = [f for _, fs in anims for f in fs]
-    left = max(f["ax"] - f["x0"] for f in allf)
-    right = max(f["x1"] - f["ax"] for f in allf)
-    up = max(f["ay"] - f["y0"] for f in allf)
+    left = max(f["ox"] - f["x0"] for f in allf)
+    right = max(f["x1"] - f["ox"] for f in allf)
+    up = max(f["oy"] - f["y0"] for f in allf)
+    down = max(0.0, max(float(np.nonzero(np.asarray(f["img"])[..., 3])[0].max()) + 1 - f["oy"] for f in allf))
     margin = 4
-    cw, ch = int(left + right + 2 * margin), int(up + 2 * margin)
+    cw, ch = int(left + right + 2 * margin), int(up + down + 2 * margin)
     scale = height / ch
     out_w = max(1, round(cw * scale))
     small = []
@@ -88,7 +123,7 @@ def main(name: str, height: int, colours: str, specs: list[str]) -> None:
         row = []
         for f in frames:
             canvas = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
-            canvas.paste(f["img"], (int(margin + left - f["ax"]), int(margin + up - f["ay"])), f["img"])
+            canvas.paste(f["img"], (int(margin + left - f["ox"]), int(margin + up - f["oy"])), f["img"])
             row.append(canvas.resize((out_w, height), Image.Resampling.BOX))
         small.append((anim, row))
     if colours == "day":
