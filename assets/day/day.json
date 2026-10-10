@@ -762,6 +762,227 @@
         "w": 45,
         "h": 45
       }
+    },
+    {
+      "id": "xp-orb",
+      "kind": "fx",
+      "file": "fx/xp-orb.png",
+      "size": [
+        16,
+        16
+      ],
+      "template": "templates/fx/xp-orb.png",
+      "mask": "fx/xp-orb.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 0,
+        "w": 14,
+        "h": 15
+      }
+    },
+    {
+      "id": "heal-onigiri",
+      "kind": "fx",
+      "file": "fx/heal-onigiri.png",
+      "size": [
+        16,
+        16
+      ],
+      "template": "templates/fx/heal-onigiri.png",
+      "mask": "fx/heal-onigiri.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 14,
+        "h": 12
+      }
+    },
+    {
+      "id": "fireball",
+      "kind": "fx",
+      "file": "fx/fireball.png",
+      "size": [
+        16,
+        16
+      ],
+      "template": "templates/fx/fireball.png",
+      "mask": "fx/fireball.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 14,
+        "h": 13
+      }
+    },
+    {
+      "id": "spirit-wave",
+      "kind": "fx",
+      "file": "fx/spirit-wave.png",
+      "size": [
+        32,
+        16
+      ],
+      "template": "templates/fx/spirit-wave.png",
+      "mask": "fx/spirit-wave.mask.png",
+      "hitbox": {
+        "x": 10,
+        "y": 3,
+        "w": 14,
+        "h": 12
+      }
+    },
+    {
+      "id": "slash-arc",
+      "kind": "fx",
+      "file": "fx/slash-arc.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/fx/slash-arc.png",
+      "mask": "fx/slash-arc.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 44,
+        "h": 40
+      }
+    },
+    {
+      "id": "btn-attack",
+      "kind": "ui",
+      "file": "ui/btn-attack.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/ui/btn-attack.png",
+      "mask": "ui/btn-attack.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 2,
+        "w": 44,
+        "h": 45
+      }
+    },
+    {
+      "id": "btn-dodge",
+      "kind": "ui",
+      "file": "ui/btn-dodge.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/ui/btn-dodge.png",
+      "mask": "ui/btn-dodge.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 46,
+        "h": 44
+      }
+    },
+    {
+      "id": "stick-knob",
+      "kind": "ui",
+      "file": "ui/stick-knob.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/ui/stick-knob.png",
+      "mask": "ui/stick-knob.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 20,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-fire",
+      "kind": "ui",
+      "file": "ui/icon-fire.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/ui/icon-fire.png",
+      "mask": "ui/icon-fire.mask.png",
+      "hitbox": {
+        "x": 4,
+        "y": 1,
+        "w": 16,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-frost",
+      "kind": "ui",
+      "file": "ui/icon-frost.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/ui/icon-frost.png",
+      "mask": "ui/icon-frost.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-spirit",
+      "kind": "ui",
+      "file": "ui/icon-spirit.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/ui/icon-spirit.png",
+      "mask": "ui/icon-spirit.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-beast",
+      "kind": "ui",
+      "file": "ui/icon-beast.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/ui/icon-beast.png",
+      "mask": "ui/icon-beast.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "torii",
+      "kind": "objects",
+      "file": "objects/torii.png",
+      "size": [
+        64,
+        64
+      ],
+      "template": "templates/objects/torii.png",
+      "mask": "objects/torii.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 11,
+        "w": 60,
+        "h": 42
+      }
     }
   ],
   "audio": [

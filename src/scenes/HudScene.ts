@@ -1,10 +1,15 @@
 import Phaser from 'phaser';
 import { PIXEL_FONT } from '../ui/font';
+import { hasArt } from '../art';
 import { GREY, tuning } from '../config/tuning';
 import { actions, clearControls, controls, status, type Offer } from '../game/shared';
 import { TuningPanel } from '../ui/TuningPanel';
 
-// Touch controls, run status, banners and level-up cards. Grey-box scaffolding: never ships.
+// Touch controls, run status, banners and level-up cards. Controls use generated UI art where it
+// exists (ui/btn-attack, ui/btn-dodge, ui/stick-knob, ui/icon-<path>); the rest is grey-box
+// scaffolding that never ships (ASSETS_NEEDED.md).
+
+type Control = Phaser.GameObjects.Rectangle | Phaser.GameObjects.Image;
 
 const CORNER = 70; // top-left zone for the triple-tap that opens the tuning panel
 const FONT = PIXEL_FONT;
@@ -16,13 +21,14 @@ interface CardView {
   path: Phaser.GameObjects.Text;
   desc: Phaser.GameObjects.Text;
   notes: Phaser.GameObjects.Text;
+  icon: Phaser.GameObjects.Image;
 }
 
 export class HudScene extends Phaser.Scene {
   private stickBase!: Phaser.GameObjects.Rectangle;
-  private stickKnob!: Phaser.GameObjects.Rectangle;
-  private attackBtn!: Phaser.GameObjects.Rectangle;
-  private dodgeBtn!: Phaser.GameObjects.Rectangle;
+  private stickKnob!: Control;
+  private attackBtn!: Control;
+  private dodgeBtn!: Control;
   private attackLabel!: Phaser.GameObjects.Text;
   private dodgeLabel!: Phaser.GameObjects.Text;
   private info!: Phaser.GameObjects.Text;
@@ -63,9 +69,10 @@ export class HudScene extends Phaser.Scene {
     this.shownCards = null;
     this.stickId = this.attackId = this.dodgeId = null;
     this.stickBase = this.add.rectangle(0, 0, 10, 10, GREY.ui).setVisible(false);
-    this.stickKnob = this.add.rectangle(0, 0, 10, 10, GREY.uiPressed).setVisible(false);
-    this.attackBtn = this.add.rectangle(0, 0, 10, 10, GREY.ui);
-    this.dodgeBtn = this.add.rectangle(0, 0, 10, 10, GREY.ui);
+    const control = (key: string, grey: number): Control => (hasArt(key) ? this.add.image(0, 0, key) : this.add.rectangle(0, 0, 10, 10, grey));
+    this.stickKnob = control('ui/stick-knob', GREY.uiPressed).setVisible(false);
+    this.attackBtn = control('ui/btn-attack', GREY.ui);
+    this.dodgeBtn = control('ui/btn-dodge', GREY.ui);
     const label = { fontFamily: FONT, fontSize: '16px', color: '#111111' };
     this.attackLabel = this.add.text(0, 0, 'ATTACK', label).setOrigin(0.5);
     this.dodgeLabel = this.add.text(0, 0, 'DODGE', label).setOrigin(0.5);
@@ -93,6 +100,7 @@ export class HudScene extends Phaser.Scene {
         path: this.add.text(0, 0, '', { ...dark, fontSize: '16px', color: '#333333' }).setOrigin(0.5, 0),
         desc: this.add.text(0, 0, '', { ...dark, fontSize: '16px', align: 'center' }).setOrigin(0.5, 0),
         notes: this.add.text(0, 0, '', { ...dark, fontSize: '16px', align: 'center', color: '#333333' }).setOrigin(0.5, 1),
+        icon: this.add.image(0, 0, '__DEFAULT').setVisible(false),
       });
     }
 
@@ -128,7 +136,7 @@ export class HudScene extends Phaser.Scene {
     this.game.events.on(Phaser.Core.Events.BLUR, this.releaseAll, this);
   }
 
-  private inRect(r: Phaser.GameObjects.Rectangle, x: number, y: number, pad = 0): boolean {
+  private inRect(r: Control, x: number, y: number, pad = 0): boolean {
     return Math.abs(x - r.x) <= r.displayWidth / 2 + pad && Math.abs(y - r.y) <= r.displayHeight / 2 + pad;
   }
 
@@ -294,15 +302,13 @@ export class HudScene extends Phaser.Scene {
     const m = tuning.buttonMargin;
     const ax = width - m - size / 2;
     const ay = height - m - size / 2;
-    this.attackBtn.setVisible(show).setPosition(ax, ay).setDisplaySize(size, size).setAlpha(a);
-    this.attackBtn.setFillStyle(this.attackId !== null ? GREY.uiPressed : GREY.ui);
-    this.attackLabel.setVisible(show).setPosition(ax, ay).setAlpha(Math.min(1, a + 0.3));
+    this.styleControl(this.attackBtn, this.attackId !== null, ax, ay, size, show, a);
+    this.attackLabel.setVisible(show && !this.isArt(this.attackBtn)).setPosition(ax, ay).setAlpha(Math.min(1, a + 0.3));
     const ds = size * tuning.dodgeButtonScale;
     const dx = ax - size / 2 - ds / 2 - 16;
     const dy = ay - size * 0.45;
-    this.dodgeBtn.setVisible(show).setPosition(dx, dy).setDisplaySize(ds, ds).setAlpha(a);
-    this.dodgeBtn.setFillStyle(this.dodgeId !== null ? GREY.uiPressed : GREY.ui);
-    this.dodgeLabel.setVisible(show).setPosition(dx, dy).setAlpha(Math.min(1, a + 0.3));
+    this.styleControl(this.dodgeBtn, this.dodgeId !== null, dx, dy, ds, show, a);
+    this.dodgeLabel.setVisible(show && !this.isArt(this.dodgeBtn)).setPosition(dx, dy).setAlpha(Math.min(1, a + 0.3));
     const r = tuning.stickRadius;
     const on = show && this.stickId !== null;
     this.stickBase.setVisible(on).setPosition(this.stickX, this.stickY).setDisplaySize(r * 2, r * 2).setAlpha(a * 0.5);
@@ -310,7 +316,21 @@ export class HudScene extends Phaser.Scene {
       .setVisible(on)
       .setPosition(this.stickX + controls.moveX * r, this.stickY + controls.moveY * r)
       .setDisplaySize(r * 0.8, r * 0.8)
-      .setAlpha(a);
+      .setAlpha(this.isArt(this.stickKnob) ? Math.min(1, a + 0.35) : a);
+  }
+
+  private isArt(c: Control): c is Phaser.GameObjects.Image {
+    return c instanceof Phaser.GameObjects.Image;
+  }
+
+  /** Art buttons are drawn a little more opaque than grey boxes and darken while held. */
+  private styleControl(c: Control, pressed: boolean, x: number, y: number, size: number, show: boolean, alpha: number): void {
+    c.setVisible(show).setPosition(x, y).setDisplaySize(size * (pressed ? 0.94 : 1), size * (pressed ? 0.94 : 1));
+    if (this.isArt(c)) {
+      c.setAlpha(Math.min(1, alpha + 0.35));
+      if (pressed) c.setTint(0xb0b0b0);
+      else c.clearTint();
+    } else c.setAlpha(alpha).setFillStyle(pressed ? GREY.uiPressed : GREY.ui);
   }
 
   /** Upgrade cards sit in the lower middle, in reach of both thumbs. */
@@ -331,6 +351,8 @@ export class HudScene extends Phaser.Scene {
     this.cards.forEach((c, i) => {
       const vis = show && i < n;
       for (const o of [c.bg, c.name, c.path, c.desc, c.notes]) o.setVisible(vis);
+      const iconKey = vis && offer!.cards[i].upgrade.path ? `ui/icon-${offer!.cards[i].upgrade.path}` : '';
+      c.icon.setVisible(!!iconKey && hasArt(iconKey));
       if (!vis) return;
       const card = offer!.cards[i];
       const x = width / 2 - totalW / 2 + cw / 2 + i * (cw + gap);
@@ -345,6 +367,10 @@ export class HudScene extends Phaser.Scene {
       }
       c.name.setPosition(x, top + 10).setWordWrapWidth(cw - 12);
       c.path.setPosition(x, top + 30);
+      if (c.icon.visible) {
+        if (c.icon.texture.key !== iconKey) c.icon.setTexture(iconKey);
+        c.icon.setPosition(x - cw / 2 + 18, top + 18).setDisplaySize(28, 28).setAlpha(ready ? 1 : 0.6);
+      }
       c.desc.setPosition(x, top + 50).setWordWrapWidth(cw - 16);
       c.notes.setPosition(x, top + ch - 8).setWordWrapWidth(cw - 12);
     });

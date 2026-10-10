@@ -12,17 +12,17 @@ here still shows as a grey box (or is missing) in the game.
 | Shikigami sheets (kitsune-bi, paper crane, komainu) | Shikigami | Single frames in game; sheets need paid generation |
 | Day enemy sheets (gaki, boar, tengu, nuppeppo, oni) | Enemies | Single frames in game; sheets need paid generation |
 | Yuki Doll and Raiju shikigami art | Shikigami (Frost and Thunder paths) | Not generated yet; grey box with a name label |
-| XP orb, heal onigiri, arrow, fireball, fox-fire bolt, paper dart, spirit wave, slash arc, hit spark | Pickups, projectiles, swing trail | Requested in `phase2-visuals` (Cloudflare, day palette); waiting for the daily free allowance |
+| Arrow, fox-fire bolt, paper dart, hit spark | Tengu arrows, Kitsune-bi and Paper Crane shots, hit flashes | Re-requested in `phase2-visuals-b` (first tries were refused by Cloudflare's filter or failed checks). XP orb, onigiri, fireball, spirit wave and slash arc are in the game |
 | Lightning arc, frost pulse, burn and freeze effects | Thunder chains, frost novas, explosions | Not requested yet (grey lines and squares) |
-| Attack and dodge buttons, joystick base and knob | Touch controls | Requested in `phase2-visuals` |
+| Joystick base | Touch controls | Re-requested in `phase2-visuals-b`. Attack and dodge buttons and the knob are in the game |
 | Pause button icon | Top-right corner | Not requested yet (grey square with "II") |
-| Level-up card frame, panel frame, path icons (fire, frost, thunder, spirit, beast) | Level-up cards, HUD | Requested in `phase2-visuals` |
+| Level-up card frame (landscape), panel frame, thunder icon | Level-up cards, HUD | Re-requested in `phase2-visuals-b` (the first card frames were tall scrolls that don't fit the wide cards). Fire, frost, spirit and beast icons are on the cards |
 | HP bar, XP bar and shrine progress bar frames | HUD, shrines | Not requested yet (grey bars) |
 | Generated bitmap font | All text (HUD, cards, banners, title, results) | **Decision needed**: image generators can't reliably draw a full readable alphabet; text uses the system font for now |
 | Title screen background and "Night Parade" logo | Title | Not requested yet |
 | Death and victory screen backgrounds | Result screen | Not requested yet |
 | Victory jingle | Result screen | Not requested yet |
-| Forest floor and rice paddy tiles, torii, farmhouse, fence, bush, bamboo, flowers | Day stage variety | Requested in `phase2-visuals` |
+| Forest floor and rice paddy tiles, farmhouse, fence, bush, bamboo, flowers | Day stage variety | Requested in `phase2-visuals`, waiting for the next daily free allowance. The torii is in the game |
 
 ## Night phase (asset phase 3)
 

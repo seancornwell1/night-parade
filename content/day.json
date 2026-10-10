@@ -152,6 +152,10 @@
           {
             "sprite": "objects/rock-3",
             "count": 40
+          },
+          {
+            "sprite": "objects/torii",
+            "count": 6
           }
         ]
       },
@@ -177,6 +181,10 @@
           {
             "sprite": "objects/tree-2",
             "count": 80
+          },
+          {
+            "sprite": "objects/torii",
+            "count": 10
           }
         ]
       },
@@ -210,6 +218,10 @@
           {
             "sprite": "objects/rock-2",
             "count": 20
+          },
+          {
+            "sprite": "objects/torii",
+            "count": 4
           }
         ]
       },
@@ -235,6 +247,10 @@
           {
             "sprite": "objects/tree-3",
             "count": 100
+          },
+          {
+            "sprite": "objects/torii",
+            "count": 4
           }
         ]
       },
@@ -280,6 +296,11 @@
         "sprite": "objects/shrine-3",
         "x": 5200,
         "y": 10400
+      },
+      {
+        "sprite": "objects/torii",
+        "x": 6000,
+        "y": 5600
       }
     ],
     "shrines": [

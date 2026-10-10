@@ -97,6 +97,10 @@ failure.
 - `NN-<id>.frameMM.png`: sliced frames (sheets)
 - `log.txt`: run log
 
+Keep a candidate with `python scripts/gen/keep.py [--day] <batch> <kind> <number>[=<name>] ...`.
+It goes to `assets/templates/<kind>/`; with `--day` (for batches generated in the locked day
+palette) it also ships as game art in `assets/day/<kind>/` with its mask, listed in `day.json`.
+
 ## Reprocessing
 
 `python scripts/gen/run.py --reprocess <batch>` re-runs post-processing on a batch's saved

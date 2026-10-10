@@ -933,10 +933,16 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     return this.add.rectangle(x, y, size, size, grey, alpha).setDepth(4000);
   }
 
+  /** Projectile art drawn about as big as its hitbox, whatever the art's pixel size. */
+  private sized(v: Visual, width: number): Visual {
+    if (v instanceof Phaser.GameObjects.Image) v.setScale(width / v.width);
+    return v;
+  }
+
   fireEnemyProjectile(x: number, y: number, angle: number, speed: number, size: number, damage: number, sprite?: string): void {
     if (this.projectiles.length > 400) return;
     this.projectiles.push({
-      rect: this.visual(sprite ?? 'fx/fireball', x, y, size, GREY.projectileEnemy).setRotation(angle),
+      rect: this.sized(this.visual(sprite ?? 'fx/fireball', x, y, size, GREY.projectileEnemy), size * 1.8).setRotation(angle),
       x,
       y,
       vx: Math.cos(angle) * speed,
@@ -1362,7 +1368,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     for (const e of this.enemies) if (e.alive) e.sync(now, this.px);
     for (const pk of this.pickups) {
       if (pk.rect instanceof Phaser.GameObjects.Image) {
-        const k = pk.kind === 'heal' ? 1 + 0.08 * Math.sin(now / 150) : 0.6 + Math.min(0.6, Math.sqrt(pk.value) * 0.12);
+        const k = pk.kind === 'heal' ? 0.8 + 0.06 * Math.sin(now / 150) : 0.4 + Math.min(0.5, Math.sqrt(pk.value) * 0.08);
         pk.rect.setPosition(pk.x, pk.y - 4 - Math.sin(now / 200 + pk.x) * 2).setScale(ART_SCALE * k).setDepth(pk.y);
       } else {
         const s = pk.kind === 'heal' ? 14 + Math.sin(now / 150) * 2 : 6 + Math.min(10, Math.sqrt(pk.value) * 2);

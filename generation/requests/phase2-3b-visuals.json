@@ -1,0 +1,124 @@
+{
+ "batch": "phase2-visuals-b",
+ "note": "Re-worded retries of phase2-visuals items that Cloudflare refused (false content-filter hits) or that failed checks, plus a landscape card frame for the level-up cards. Locked day palette, free.",
+ "palette": {
+  "mode": "file",
+  "name": "day"
+ },
+ "items": [
+  {
+   "id": "foxfire-bolt",
+   "type": "sprite",
+   "size": [
+    16,
+    16
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a small blue wisp of ghost fire, pixel art game projectile"
+  },
+  {
+   "id": "hit-spark",
+   "type": "sprite",
+   "size": [
+    16,
+    16
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a small yellow and white four-pointed star flash, pixel art game effect"
+  },
+  {
+   "id": "arrow",
+   "type": "sprite",
+   "size": [
+    16,
+    16
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a thin brown wooden arrow with a grey tip and white feathers, pointing right, pixel art",
+   "minCoverage": 0.012
+  },
+  {
+   "id": "paper-dart",
+   "type": "sprite",
+   "size": [
+    16,
+    16
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a small folded paper plane with a dark grey outline, pixel art game projectile",
+   "minCoverage": 0.02
+  },
+  {
+   "id": "stick-base",
+   "type": "sprite",
+   "size": [
+    48,
+    48
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a flat round dark brown wooden plate with a lighter carved rim, top view, game interface"
+  },
+  {
+   "id": "panel-frame",
+   "type": "sprite",
+   "size": [
+    64,
+    64
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "an empty square frame of dark wood around plain cream paper, game interface panel, nothing inside"
+  },
+  {
+   "id": "card-frame",
+   "type": "sprite",
+   "size": [
+    64,
+    56
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "an empty wide rectangular card of cream paper with a thin dark wooden border, game interface, nothing inside"
+  },
+  {
+   "id": "icon-thunder",
+   "type": "sprite",
+   "size": [
+    24,
+    24
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a bright yellow zigzag lightning symbol with a thick dark outline, game interface icon"
+  }
+ ]
+}

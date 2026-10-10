@@ -1663,6 +1663,500 @@
         "w": 86,
         "h": 90
       }
+    },
+    {
+      "id": "xp-orb",
+      "kind": "fx",
+      "file": "fx/xp-orb.png",
+      "size": [
+        16,
+        16
+      ],
+      "provider": "cloudflare",
+      "prompt": "a small glowing blue spirit orb, game pickup item icon",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #2",
+      "made": "2026-10-10T07:46:56Z",
+      "mask": "fx/xp-orb.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 0,
+        "w": 14,
+        "h": 15
+      }
+    },
+    {
+      "id": "heal-onigiri",
+      "kind": "fx",
+      "file": "fx/heal-onigiri.png",
+      "size": [
+        16,
+        16
+      ],
+      "provider": "cloudflare",
+      "prompt": "a single onigiri rice ball wrapped in dark seaweed, healing item icon",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #4",
+      "made": "2026-10-10T07:47:07Z",
+      "mask": "fx/heal-onigiri.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 14,
+        "h": 12
+      }
+    },
+    {
+      "id": "fireball",
+      "kind": "fx",
+      "file": "fx/fireball.png",
+      "size": [
+        16,
+        16
+      ],
+      "provider": "cloudflare",
+      "prompt": "a small round orange fireball projectile",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #7",
+      "made": "2026-10-10T07:47:15Z",
+      "mask": "fx/fireball.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 14,
+        "h": 13
+      }
+    },
+    {
+      "id": "spirit-wave",
+      "kind": "fx",
+      "file": "fx/spirit-wave.png",
+      "size": [
+        32,
+        16
+      ],
+      "provider": "cloudflare",
+      "prompt": "a glowing white crescent spirit wave energy slash, horizontal",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #14",
+      "made": "2026-10-10T07:47:36Z",
+      "mask": "fx/spirit-wave.mask.png",
+      "hitbox": {
+        "x": 10,
+        "y": 3,
+        "w": 14,
+        "h": 12
+      }
+    },
+    {
+      "id": "slash-arc",
+      "kind": "fx",
+      "file": "fx/slash-arc.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "cloudflare",
+      "prompt": "a single bright white curved sword slash trail arc effect",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #16",
+      "made": "2026-10-10T07:47:44Z",
+      "mask": "fx/slash-arc.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 44,
+        "h": 40
+      }
+    },
+    {
+      "id": "btn-attack",
+      "kind": "ui",
+      "file": "ui/btn-attack.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "cloudflare",
+      "prompt": "a round red lacquered wooden game button with a white katana emblem in the middle, UI icon",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #19",
+      "made": "2026-10-10T07:47:54Z",
+      "mask": "ui/btn-attack.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 2,
+        "w": 44,
+        "h": 45
+      }
+    },
+    {
+      "id": "btn-dodge",
+      "kind": "ui",
+      "file": "ui/btn-dodge.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "cloudflare",
+      "prompt": "a round blue lacquered wooden game button with a white wind swirl emblem in the middle, UI icon",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #22",
+      "made": "2026-10-10T07:48:02Z",
+      "mask": "ui/btn-dodge.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 46,
+        "h": 44
+      }
+    },
+    {
+      "id": "stick-knob",
+      "kind": "ui",
+      "file": "ui/stick-knob.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "cloudflare",
+      "prompt": "a small round polished red lacquer knob, UI joystick handle",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #25",
+      "made": "2026-10-10T07:48:08Z",
+      "mask": "ui/stick-knob.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 20,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-fire",
+      "kind": "ui",
+      "file": "ui/icon-fire.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "cloudflare",
+      "prompt": "a red-orange flame icon, game UI symbol",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #32",
+      "made": "2026-10-10T07:48:27Z",
+      "mask": "ui/icon-fire.mask.png",
+      "hitbox": {
+        "x": 4,
+        "y": 1,
+        "w": 16,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-frost",
+      "kind": "ui",
+      "file": "ui/icon-frost.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "cloudflare",
+      "prompt": "a pale blue snowflake icon, game UI symbol",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #34",
+      "made": "2026-10-10T07:48:30Z",
+      "mask": "ui/icon-frost.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-spirit",
+      "kind": "ui",
+      "file": "ui/icon-spirit.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "cloudflare",
+      "prompt": "a white ghostly soul wisp icon, game UI symbol",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #37",
+      "made": "2026-10-10T07:48:43Z",
+      "mask": "ui/icon-spirit.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "icon-beast",
+      "kind": "ui",
+      "file": "ui/icon-beast.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "cloudflare",
+      "prompt": "a brown animal paw print icon, game UI symbol",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #40",
+      "made": "2026-10-10T07:48:58Z",
+      "mask": "ui/icon-beast.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 1,
+        "w": 22,
+        "h": 22
+      }
+    },
+    {
+      "id": "torii",
+      "kind": "objects",
+      "file": "objects/torii.png",
+      "size": [
+        64,
+        64
+      ],
+      "provider": "cloudflare",
+      "prompt": "a red Shinto torii gate, 3/4 top-down game view",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals #41",
+      "made": "2026-10-10T07:49:04Z",
+      "mask": "objects/torii.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 11,
+        "w": 60,
+        "h": 42
+      }
     }
   ]
 }
