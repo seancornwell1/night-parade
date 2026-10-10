@@ -11,16 +11,49 @@
       "attempts": [
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+          "outcome": "free limit hit: HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access\",\"request_id\":\"3113976988a7ef965030bcd9e196cfed\"}}"
         },
         {
           "provider": "stability",
-          "outcome": "skipped: daily cap of 1 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "duration": 120,
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "stability",
+      "made": "2026-10-10T07:49:18Z",
+      "files": {
+        "audio": "01-day-theme.mp3",
+        "raw": "01-day-theme.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 118.0,
+          "limit": "20-240 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -16.9,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -1.9,
+          "limit": "<= -0.1 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.05,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 118.0
     },
     {
       "number": 2,
@@ -47,8 +80,9 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-09T13:04:22Z",
+  "updated": "2026-10-10T07:49:18Z",
   "counts": {
-    "pending": 2
+    "ok": 1,
+    "pending": 1
   }
 }
