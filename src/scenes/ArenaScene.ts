@@ -170,6 +170,9 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       ...shrineSpots.map((s) => ({ ...s, r: tuning.shrineRadius + 40 })),
       ...content.day.stage.landmarks.map((l) => ({ x: l.x, y: l.y, r: 160 })),
     ]);
+    // Props culled out of the display list aren't destroyed with the scene, so do it here.
+    const decor = this.stage.decor;
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => decor.forEach((d) => d.destroy()));
     this.buildShrines(shrineSpots);
 
     for (let i = 0; i < 2; i++) {
@@ -340,6 +343,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       this.updateFamiliars(dt);
       this.updateProjectiles(dt);
       this.updatePickups(dt);
+      this.recycleEnemies();
       this.updateShrines(dt);
       this.resolveCollisions();
     }
@@ -448,6 +452,19 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     const by = this.py + Math.sin(a) * tuning.spawnDistance;
     const n = def.groupSize ?? 1;
     for (let i = 0; i < n; i++) this.addEnemy(def, bx + (Math.random() - 0.5) * 80, by + (Math.random() - 0.5) * 80);
+  }
+
+  /** Enemies left far behind are moved back in around the player (bosses stay put). */
+  private recycleEnemies(): void {
+    const far = tuning.enemyRecycleDistance;
+    for (const e of this.enemies) {
+      if (e.isBoss || !e.alive || Math.hypot(e.x - this.px, e.y - this.py) < far) continue;
+      const a = Math.random() * Math.PI * 2;
+      const m = e.size / 2 + 14;
+      e.x = Phaser.Math.Clamp(this.px + Math.cos(a) * tuning.spawnDistance, m, ARENA.width - m);
+      e.y = Phaser.Math.Clamp(this.py + Math.sin(a) * tuning.spawnDistance, m, ARENA.height - m);
+      e.vx = e.vy = 0;
+    }
   }
 
   private spawnBoss(): void {
@@ -1055,6 +1072,11 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
         p.y += (dy / d) * s;
       }
     }
+    // Orbs left far behind are dropped, so they don't pile up across the big map.
+    const far = tuning.orbDespawnDistance;
+    for (const p of this.pickups) {
+      if (p.kind === 'xp' && !p.pulled && Math.hypot(p.x - this.px, p.y - this.py) > far) p.value = -1;
+    }
     this.pickups = this.pickups.filter((p) => {
       if (p.value < 0) p.rect.destroy();
       return p.value >= 0;
@@ -1239,12 +1261,18 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     });
   }
 
-  /** The big map has well over a thousand props; only the ones near the camera are drawn. */
+  /**
+   * The big map has thousands of props. Only the ones near the camera stay in the display list:
+   * everything in the list is depth-sorted every frame (enemies move, so their depth changes),
+   * and sorting thousands of off-screen trees was costing frame rate.
+   */
   private cullDecor(): void {
     const v = this.cameras.main.worldView;
     const pad = 220;
     for (const d of this.stage.decor) {
-      d.setVisible(d.x > v.x - pad && d.x < v.right + pad && d.y > v.y - pad && d.y < v.bottom + pad + 120);
+      const near = d.x > v.x - pad && d.x < v.right + pad && d.y > v.y - pad && d.y < v.bottom + pad + 120;
+      if (near && !d.displayList) d.addToDisplayList();
+      else if (!near && d.displayList) d.removeFromDisplayList();
     }
   }
 

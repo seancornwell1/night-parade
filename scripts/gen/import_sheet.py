@@ -8,11 +8,11 @@ Usage:
 
 Each sheet is a row of equal frame cells on a flat background. The backdrop is removed along
 with anything painted onto it that would clash with the map: the drop shadow under the feet,
-glow haloes around light sources, and background trapped between limbs and props. Frames keep
-their own position inside their cell, so the motion drawn in the sheet (bob, step, lunge)
-survives; each animation as a whole is shifted so its median foot anchor lines up with the
-others, and everything is scaled by one shared factor so the character never changes size
-between animations. Output: one horizontal
+glow haloes around light sources, and background trapped between limbs and props. Every frame
+is pinned on its torso centre (horizontally) and its lowest foot (vertically): generators
+place frames inconsistently inside their cells, which made the idle sway, while pinning the
+torso keeps the body steady and lets legs, sleeves and props move. Everything is scaled by one
+shared factor so the character never changes size between animations. Output: one horizontal
 strip per animation in assets/day/characters/<name>-<anim>.png, plus frame size and anchor
 in assets/day/day.json under "sheets".
 """
@@ -87,10 +87,12 @@ def split_cells(img: Image.Image, n: int) -> list[Image.Image]:
 
 
 def anchor(mask: np.ndarray) -> tuple[float, float]:
+    """Torso centre (the middle band of the body, so legs, sleeves and props can move around it)
+    and the lowest foot."""
     ys, xs = np.nonzero(mask)
-    feet = ys.max()
-    low = ys > feet - (feet - ys.min()) * 0.35
-    return float(np.median(xs[low])), float(feet)
+    top, feet = ys.min(), ys.max()
+    band = (ys > top + (feet - top) * 0.45) & (ys < top + (feet - top) * 0.72)
+    return float(np.median(xs[band])), float(feet)
 
 
 def main(name: str, height: int, colours: str, specs: list[str]) -> None:
@@ -102,12 +104,7 @@ def main(name: str, height: int, colours: str, specs: list[str]) -> None:
             f, mask = clean_mask(f, 40)
             ax, ay = anchor(mask)
             ys, xs = np.nonzero(mask)
-            frames.append({"img": f, "ax": ax, "ay": ay, "x0": xs.min(), "x1": xs.max() + 1, "y0": ys.min()})
-        # One shift per animation (its median foot anchor), so motion inside the cells survives.
-        mx = float(np.median([f["ax"] for f in frames]))
-        my = float(np.median([f["ay"] for f in frames]))
-        for f in frames:
-            f["ox"], f["oy"] = mx, my
+            frames.append({"img": f, "ox": ax, "oy": ay, "x0": xs.min(), "x1": xs.max() + 1, "y0": ys.min()})
         anims.append((anim, frames))
     allf = [f for _, fs in anims for f in fs]
     left = max(f["ox"] - f["x0"] for f in allf)

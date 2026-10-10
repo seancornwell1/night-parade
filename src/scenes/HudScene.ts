@@ -43,6 +43,8 @@ export class HudScene extends Phaser.Scene {
   private pauseDim!: Phaser.GameObjects.Rectangle;
   private pauseTitle!: Phaser.GameObjects.Text;
   private paused = false;
+  private fps = 60;
+  private fpsAt = 0;
 
   private stickId: number | null = null;
   private stickX = 0;
@@ -256,7 +258,12 @@ export class HudScene extends Phaser.Scene {
 
     const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
     this.phaseText.setPosition(width / 2, 6).setText(`${status.phase.toUpperCase()} ${fmt(status.phaseLeft)}`);
-    this.info.setText(`Lv ${status.level}   HP ${status.hp}/${status.maxHp}   Kills ${status.kills}   ${Math.round(this.game.loop.actualFps)} fps`);
+    // Text is re-rendered to a texture whenever it changes, so the fps figure only updates twice a second.
+    if (this.time.now - this.fpsAt > 500) {
+      this.fpsAt = this.time.now;
+      this.fps = Math.round(this.game.loop.actualFps);
+    }
+    this.info.setText(`Lv ${status.level}   HP ${status.hp}/${status.maxHp}   Kills ${status.kills}   ${this.fps} fps`);
     this.hpBar.width = 160 * Math.max(0, status.hp / Math.max(1, status.maxHp));
     this.xpBar.width = 160 * Math.min(1, status.xp / Math.max(1, status.xpNext));
     const combo = status.combo > 0 ? `Combo ${status.combo}/4` : '';

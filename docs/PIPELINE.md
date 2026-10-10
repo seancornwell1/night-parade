@@ -137,10 +137,10 @@ python scripts/gen/import_sheet.py <name> <height> <keep|day> <sheet.png>:<anim>
 
 Each sheet is cut into equal cells. The flat backdrop is removed together with anything
 painted onto it that would clash with the map: the drop shadow under the feet, glow haloes
-around lights, and backdrop trapped between limbs and props. Frames keep their own position
-inside their cell (so the drawn bob and stride survive); each animation is shifted as a whole
-so its median foot anchor lines up with the others, and everything is scaled by one shared
-factor, so the character never jumps or changes size between animations. `keep` keeps the artist's colours
+around lights, and backdrop trapped between limbs and props. Every frame is pinned on its
+torso centre and lowest foot (generators place frames inconsistently inside their cells, which
+made the idle sway), and everything is scaled by one shared factor, so the character never
+jumps or changes size between animations. `keep` keeps the artist's colours
 (a shared 32-colour palette); `day` snaps to the day palette. Strips land in
 `assets/day/characters/<name>-<anim>.png` and are listed under `sheets` in `day.json`; point
 the character's `animations` at them (`docs/SCHEMAS.md`).

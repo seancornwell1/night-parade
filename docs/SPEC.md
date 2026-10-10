@@ -230,3 +230,5 @@ The project folder holds this spec, the locked palette, API keys with the ordere
   packing a tight ring around the player (attack tokens still limit how many strike at once).
   The day map is much larger (12,000 units square, nine times the old area) with dense prop
   sections (forest, village, rocky hills). The attack lunge and dodge roll are short.
+  You can't escape the parade: enemies off screen hurry to catch up, and ones left far behind
+  re-enter around you. XP needs are steeper to match the bigger crowds.

@@ -82,8 +82,11 @@ export class Enemy {
     return this.def.usesTokens ?? !['ranged', 'boss'].includes(this.def.behavior);
   }
 
+  /** Off-screen enemies hurry to catch up, so the player can't just outrun the parade. */
+  private farBoost = 1;
+
   get speed(): number {
-    return this.def.speed * tuning.enemySpeedMult * (this.slowT > 0 ? 1 - this.slowAmt : 1);
+    return this.def.speed * tuning.enemySpeedMult * this.farBoost * (this.slowT > 0 ? 1 - this.slowAmt : 1);
   }
 
   get damage(): number {
@@ -131,6 +134,7 @@ export class Enemy {
     const d = Math.hypot(dx, dy) || 1;
     const nx = dx / d;
     const ny = dy / d;
+    this.farBoost = d > tuning.catchUpDistance ? tuning.catchUpMult : 1;
 
     switch (this.def.behavior) {
       case 'swarmer':
