@@ -63,16 +63,49 @@
       "attempts": [
         {
           "provider": "elevenlabs",
-          "outcome": "skipped: free limit reached today (HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access)"
+          "outcome": "free limit hit: HTTP 402: {\"detail\":{\"type\":\"payment_required\",\"code\":\"paid_plan_required\",\"message\":\"Music API is not available for free users. Please upgrade to a paid plan to use the API.\",\"status\":\"limited_access\",\"request_id\":\"e51ddbddeae86bbe117716b67eb5eaae\"}}"
         },
         {
           "provider": "stability",
-          "outcome": "skipped: daily cap of 1 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "duration": 120,
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "stability",
+      "made": "2026-10-11T14:07:44Z",
+      "files": {
+        "audio": "02-night-theme.mp3",
+        "raw": "02-night-theme.raw.mp3"
+      },
+      "checks": [
+        {
+          "name": "length",
+          "pass": true,
+          "value": 118.0,
+          "limit": "20-240 s"
+        },
+        {
+          "name": "not silent",
+          "pass": true,
+          "value": -17.8,
+          "limit": "> -38 dB mean"
+        },
+        {
+          "name": "no clipping",
+          "pass": true,
+          "value": -7.7,
+          "limit": "<= -0.1 dB peak"
+        },
+        {
+          "name": "no long silences",
+          "pass": true,
+          "value": 0.01,
+          "limit": "<= 0.25 of the clip"
+        }
+      ],
+      "length": 118.0
     }
   ],
   "note": "New direction: day = subdued sinister club thump; night = Japanese metal fight music. Waiting for a music provider: ElevenLabs music needs a paid plan and Stability's free credits are spent.",
@@ -80,9 +113,8 @@
     "mode": "auto",
     "colors": 16
   },
-  "updated": "2026-10-10T07:49:18Z",
+  "updated": "2026-10-11T14:07:45Z",
   "counts": {
-    "ok": 1,
-    "pending": 1
+    "ok": 2
   }
 }

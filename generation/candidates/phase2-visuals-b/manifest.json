@@ -11,15 +11,15 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (ec73ec3a-ce58-4258-ae57-70848b26b898)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 2,
@@ -29,15 +29,73 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.445"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-11T14:06:43Z",
+      "files": {
+        "image": "02-foxfire-bolt.png",
+        "raw": "02-foxfire-bolt.raw.png",
+        "mask": "02-foxfire-bolt.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.422,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.297,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.798,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 12,
+          "h": 15
+        }
+      ]
     },
     {
       "number": 3,
@@ -47,15 +105,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-11T14:06:44Z",
+      "files": {
+        "image": "03-hit-spark.png",
+        "raw": "03-hit-spark.raw.png",
+        "mask": "03-hit-spark.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.75,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.047,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.383,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 6,
+          "y": 6,
+          "w": 4,
+          "h": 4
+        }
+      ]
     },
     {
       "number": 4,
@@ -65,15 +176,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-11T14:06:46Z",
+      "files": {
+        "image": "04-hit-spark.png",
+        "raw": "04-hit-spark.raw.png",
+        "mask": "04-hit-spark.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.455,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.234,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.62,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 11,
+          "h": 12
+        }
+      ]
     },
     {
       "number": 5,
@@ -83,15 +247,78 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 0.875; contrast vs #5fae44 = 1.088"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.278"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-11T14:06:52Z",
+      "files": {
+        "image": "05-arrow.png",
+        "raw": "05-arrow.raw.png",
+        "mask": "05-arrow.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.833,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.02,
+          "limit": "0.012-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.673,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 12,
+          "y": 4,
+          "w": 3,
+          "h": 2
+        }
+      ]
     },
     {
       "number": 6,
@@ -101,15 +328,73 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 1.0"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-11T14:06:56Z",
+      "files": {
+        "image": "06-arrow.png",
+        "raw": "06-arrow.raw.png",
+        "mask": "06-arrow.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.536,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.059,
+          "limit": "0.012-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.93,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 5,
+          "w": 14,
+          "h": 2
+        }
+      ]
     },
     {
       "number": 7,
@@ -119,15 +404,45 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.151"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.099"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (c129e511-2bec-4e3c-b32d-f5a8c85cb79e)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "lastChecks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.593,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.324,
+          "limit": "0.02-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.099,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 8,
@@ -137,15 +452,46 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.155"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.291"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.205"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "lastChecks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.551,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.168,
+          "limit": "0.02-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.205,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 9,
@@ -155,15 +501,40 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.332"
+        },
+        {
+          "provider": "cloudflare",
+          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (23fa82e7-a54c-47e3-ab6e-70de77721b0f)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "size": [
         48,
         48
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "lastChecks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.807,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.645,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.332,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 10,
@@ -173,15 +544,15 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (3ed25194-21ae-4739-990a-d0679e34403f)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "size": [
         48,
         48
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 11,
@@ -191,15 +562,46 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 1.0"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 0.999; contrast vs #5fae44 = 1.285"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.138"
         }
       ],
       "size": [
         64,
         64
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "lastChecks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.676,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.495,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.138,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 12,
@@ -209,15 +611,46 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 1.0; contrast vs #5fae44 = 1.498"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 1.0"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 0.999; contrast vs #5fae44 = 1.33"
         }
       ],
       "size": [
         64,
         64
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "lastChecks": [
+        {
+          "name": "no baked-in background",
+          "pass": false,
+          "value": 0.999,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.761,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.33,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 13,
@@ -227,15 +660,46 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 0.995; contrast vs #5fae44 = 1.397"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 0.999; contrast vs #5fae44 = 1.048"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 0.979"
         }
       ],
       "size": [
         64,
         56
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "lastChecks": [
+        {
+          "name": "no baked-in background",
+          "pass": false,
+          "value": 0.979,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.669,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.549,
+          "limit": ">= 1.6"
+        }
+      ],
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 14,
@@ -245,12 +709,37 @@
       "attempts": [
         {
           "provider": "cloudflare",
+          "cost": null,
+          "outcome": "checks failed: no baked-in background = 0.999; contrast vs #5fae44 = 1.004"
+        },
+        {
+          "provider": "cloudflare",
           "outcome": "skipped: daily cap of 55 reached"
         }
       ],
       "size": [
         64,
         56
+      ],
+      "lastChecks": [
+        {
+          "name": "no baked-in background",
+          "pass": false,
+          "value": 0.999,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.635,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": false,
+          "value": 1.004,
+          "limit": ">= 1.6"
+        }
       ],
       "status": "pending",
       "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
@@ -315,8 +804,10 @@
       "#fcecdc"
     ]
   },
-  "updated": "2026-10-10T07:52:51Z",
+  "updated": "2026-10-11T14:07:32Z",
   "counts": {
-    "pending": 16
+    "failed": 8,
+    "ok": 5,
+    "pending": 3
   }
 }
