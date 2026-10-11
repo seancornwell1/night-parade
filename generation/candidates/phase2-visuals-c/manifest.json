@@ -1,0 +1,286 @@
+{
+  "batch": "phase2-visuals-c",
+  "request": "generation/requests/phase2-3c-visuals.json",
+  "created": "2026-10-11T16:04:11Z",
+  "candidates": [
+    {
+      "number": 1,
+      "id": "bush",
+      "type": "sprite",
+      "prompt": "a round dark green shrub with a thick black outline and small white blossoms, pixel art game prop",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 2,
+      "id": "bush",
+      "type": "sprite",
+      "prompt": "a round dark green shrub with a thick black outline and small white blossoms, pixel art game prop",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 3,
+      "id": "bamboo",
+      "type": "sprite",
+      "prompt": "a small clump of tall yellow-green bamboo stalks with a thick dark outline, pixel art game prop",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 4,
+      "id": "bamboo",
+      "type": "sprite",
+      "prompt": "a small clump of tall yellow-green bamboo stalks with a thick dark outline, pixel art game prop",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        32,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 5,
+      "id": "flowers",
+      "type": "sprite",
+      "prompt": "a small patch of bright red and white flowers with a dark outline, pixel art game prop",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 6,
+      "id": "flowers",
+      "type": "sprite",
+      "prompt": "a small patch of bright red and white flowers with a dark outline, pixel art game prop",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        24,
+        24
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 7,
+      "id": "paper-dart",
+      "type": "sprite",
+      "prompt": "a tiny white paper airplane with a thick black outline, pixel art icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 8,
+      "id": "paper-dart",
+      "type": "sprite",
+      "prompt": "a tiny white paper airplane with a thick black outline, pixel art icon",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 9,
+      "id": "stick-base",
+      "type": "sprite",
+      "prompt": "a round flat dark brown wooden tray seen from above with a light brown rim, pixel art game interface element",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 10,
+      "id": "stick-base",
+      "type": "sprite",
+      "prompt": "a round flat dark brown wooden tray seen from above with a light brown rim, pixel art game interface element",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 11,
+      "id": "panel-frame",
+      "type": "sprite",
+      "prompt": "an empty square wooden picture frame, dark brown border, plain cream paper middle, pixel art game interface",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 12,
+      "id": "panel-frame",
+      "type": "sprite",
+      "prompt": "an empty square wooden picture frame, dark brown border, plain cream paper middle, pixel art game interface",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 13,
+      "id": "card-frame",
+      "type": "sprite",
+      "prompt": "an empty wide rectangular card, cream paper with a thin dark brown wooden border, pixel art game interface",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        56
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    },
+    {
+      "number": 14,
+      "id": "card-frame",
+      "type": "sprite",
+      "prompt": "an empty wide rectangular card, cream paper with a thin dark brown wooden border, pixel art game interface",
+      "attempts": [
+        {
+          "provider": "cloudflare",
+          "outcome": "skipped: daily cap of 55 reached"
+        }
+      ],
+      "size": [
+        64,
+        56
+      ],
+      "status": "pending",
+      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+    }
+  ],
+  "note": "Third tries: props that came out green-on-green (failed the contrast check), UI frames that fill their whole box (allowed via boxFillMax), and items Cloudflare's filter refused. Locked day palette, free.",
+  "palette": {
+    "mode": "file",
+    "name": "day",
+    "colors": [
+      "#281622",
+      "#1a503e",
+      "#4b4056",
+      "#9e272b",
+      "#c82585",
+      "#3f823b",
+      "#7e6758",
+      "#ec5840",
+      "#58ac46",
+      "#ab8259",
+      "#28bdeb",
+      "#9c9c9c",
+      "#7ebd42",
+      "#c5a16a",
+      "#62e1f6",
+      "#fcecdc"
+    ]
+  },
+  "updated": "2026-10-11T16:04:11Z",
+  "counts": {
+    "pending": 14
+  }
+}
