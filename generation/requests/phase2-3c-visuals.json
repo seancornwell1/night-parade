@@ -1,0 +1,111 @@
+{
+ "batch": "phase2-visuals-c",
+ "note": "Third tries: props that came out green-on-green (failed the contrast check), UI frames that fill their whole box (allowed via boxFillMax), and items Cloudflare's filter refused. Locked day palette, free.",
+ "palette": {
+  "mode": "file",
+  "name": "day"
+ },
+ "items": [
+  {
+   "id": "bush",
+   "type": "sprite",
+   "size": [
+    32,
+    32
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a round dark green shrub with a thick black outline and small white blossoms, pixel art game prop"
+  },
+  {
+   "id": "bamboo",
+   "type": "sprite",
+   "size": [
+    32,
+    48
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a small clump of tall yellow-green bamboo stalks with a thick dark outline, pixel art game prop"
+  },
+  {
+   "id": "flowers",
+   "type": "sprite",
+   "size": [
+    24,
+    24
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a small patch of bright red and white flowers with a dark outline, pixel art game prop"
+  },
+  {
+   "id": "paper-dart",
+   "type": "sprite",
+   "size": [
+    16,
+    16
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a tiny white paper airplane with a thick black outline, pixel art icon",
+   "minCoverage": 0.02
+  },
+  {
+   "id": "stick-base",
+   "type": "sprite",
+   "size": [
+    48,
+    48
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "a round flat dark brown wooden tray seen from above with a light brown rim, pixel art game interface element"
+  },
+  {
+   "id": "panel-frame",
+   "type": "sprite",
+   "size": [
+    64,
+    64
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "an empty square wooden picture frame, dark brown border, plain cream paper middle, pixel art game interface",
+   "boxFillMax": 1.0
+  },
+  {
+   "id": "card-frame",
+   "type": "sprite",
+   "size": [
+    64,
+    56
+   ],
+   "candidates": 2,
+   "background": "#5fae44",
+   "providers": [
+    "cloudflare"
+   ],
+   "prompt": "an empty wide rectangular card, cream paper with a thin dark brown wooden border, pixel art game interface",
+   "boxFillMax": 1.0
+  }
+ ]
+}

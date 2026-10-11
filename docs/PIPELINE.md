@@ -50,6 +50,7 @@ https://seancornwell1.github.io/night-parade/review/
 | `items[].silhouette` | Optional path to a mask PNG; the art must stay inside it |
 | `items[].providers` | Optional override of the provider order |
 | `items[].minCoverage` | Sprites: lower the minimum coverage for thin subjects such as weapons |
+| `items[].boxFillMax` | Sprites: allow a subject that fills its whole box (UI frames and panels); default 0.86 |
 | `items[].direction` | PixelLab: which way the subject faces (`south-east`, `south`, …) |
 | `items[].rdStyle` | Retro Diffusion: style id overriding the default for the type (e.g. `rd_tile__tile_object`) |
 

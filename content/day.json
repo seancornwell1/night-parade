@@ -185,6 +185,18 @@
           {
             "sprite": "objects/torii",
             "count": 10
+          },
+          {
+            "sprite": "objects/farmhouse",
+            "count": 25
+          },
+          {
+            "sprite": "objects/fence",
+            "count": 40
+          },
+          {
+            "sprite": "objects/torii-2",
+            "count": 6
           }
         ]
       },
@@ -222,6 +234,14 @@
           {
             "sprite": "objects/torii",
             "count": 4
+          },
+          {
+            "sprite": "objects/fence",
+            "count": 10
+          },
+          {
+            "sprite": "objects/torii-2",
+            "count": 3
           }
         ]
       },
@@ -272,6 +292,14 @@
           {
             "sprite": "objects/rock-2",
             "count": 50
+          },
+          {
+            "sprite": "objects/farmhouse",
+            "count": 10
+          },
+          {
+            "sprite": "objects/fence",
+            "count": 30
           }
         ]
       }

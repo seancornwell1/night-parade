@@ -983,6 +983,108 @@
         "w": 60,
         "h": 42
       }
+    },
+    {
+      "id": "torii-2",
+      "kind": "objects",
+      "file": "objects/torii-2.png",
+      "size": [
+        64,
+        64
+      ],
+      "template": "templates/objects/torii-2.png",
+      "mask": "objects/torii-2.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 5,
+        "w": 60,
+        "h": 55
+      }
+    },
+    {
+      "id": "farmhouse",
+      "kind": "objects",
+      "file": "objects/farmhouse.png",
+      "size": [
+        96,
+        96
+      ],
+      "template": "templates/objects/farmhouse.png",
+      "mask": "objects/farmhouse.mask.png",
+      "hitbox": {
+        "x": 15,
+        "y": 3,
+        "w": 66,
+        "h": 90
+      }
+    },
+    {
+      "id": "fence",
+      "kind": "objects",
+      "file": "objects/fence.png",
+      "size": [
+        32,
+        16
+      ],
+      "template": "templates/objects/fence.png",
+      "mask": "objects/fence.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 30,
+        "h": 12
+      }
+    },
+    {
+      "id": "foxfire-bolt",
+      "kind": "fx",
+      "file": "fx/foxfire-bolt.png",
+      "size": [
+        16,
+        16
+      ],
+      "template": "templates/fx/foxfire-bolt.png",
+      "mask": "fx/foxfire-bolt.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 12,
+        "h": 15
+      }
+    },
+    {
+      "id": "hit-spark",
+      "kind": "fx",
+      "file": "fx/hit-spark.png",
+      "size": [
+        16,
+        16
+      ],
+      "template": "templates/fx/hit-spark.png",
+      "mask": "fx/hit-spark.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 11,
+        "h": 12
+      }
+    },
+    {
+      "id": "arrow",
+      "kind": "fx",
+      "file": "fx/arrow.png",
+      "size": [
+        16,
+        16
+      ],
+      "template": "templates/fx/arrow.png",
+      "mask": "fx/arrow.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 5,
+        "w": 14,
+        "h": 2
+      }
     }
   ],
   "audio": [

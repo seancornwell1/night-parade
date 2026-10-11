@@ -31,6 +31,7 @@ interface Fx {
   from?: number;
   to?: number;
   grow?: number;
+  onDone?: () => void;
 }
 
 interface Projectile {
@@ -99,6 +100,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   tokensUsed = 0;
   pvx = 0;
   pvy = 0;
+  private sparks = 0;
   private lastPx = 0;
   private lastPy = 0;
   private state: PlayerState = 'free';
@@ -144,6 +146,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.pickups = [];
     this.shrines = [];
     this.fx = [];
+    this.sparks = 0;
     this.arcLines = [];
     this.rift = currentRift();
     this.build = new Build(this.rift);
@@ -781,6 +784,18 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
   // ---------------------------------------------------------------- damage
 
   /** All damage to enemies goes through here: rift matchups, armor, status effects, death. */
+  /** A brief hit spark on sword hits (capped, since one swing can hit dozens). */
+  private spark(x: number, y: number): void {
+    if (!hasArt('fx/hit-spark') || this.sparks >= 16) return;
+    this.sparks++;
+    const obj = this.add
+      .image(x + (Math.random() - 0.5) * 8, y, 'fx/hit-spark')
+      .setScale(ART_SCALE * 0.7)
+      .setRotation(Math.random() * Math.PI)
+      .setDepth(y + 2000);
+    this.fx.push({ obj, t: 0, dur: 0.12, alpha: 1, onDone: () => this.sparks-- });
+  }
+
   hitEnemy(e: Enemy, amount: number, hit: HitOpts): void {
     if (!e.alive) return;
     const wasSlowed = e.slowT > 0;
@@ -797,6 +812,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
       e.vy = hit.ky * (1 - resist);
     }
     if (hit.source === 'combo') {
+      this.spark(e.x, e.y - e.size * 0.4);
       const stun = Math.max(tuning.enemyHitStun, hit.stun ?? 0) * (1 - resist);
       e.stun = Math.max(e.stun, stun);
       if (hit.stun) {
@@ -981,7 +997,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     if (this.projectiles.length > 400) return;
     const w = o.width ?? o.size;
     this.projectiles.push({
-      rect: this.visual(o.sprite, o.x, o.y, o.size, GREY.projectilePlayer).setRotation(o.angle),
+      rect: (o.width === undefined ? this.sized(this.visual(o.sprite, o.x, o.y, o.size, GREY.projectilePlayer), o.size * 3) : this.visual(o.sprite, o.x, o.y, o.size, GREY.projectilePlayer)).setRotation(o.angle),
       x: o.x,
       y: o.y,
       vx: Math.cos(o.angle) * o.speed,
@@ -1282,6 +1298,7 @@ export class ArenaScene extends Phaser.Scene implements EnemyWorld, ShikiWorld {
     this.fx = this.fx.filter((f) => {
       if (f.t < f.dur) return true;
       f.obj.destroy();
+      f.onDone?.();
       return false;
     });
   }
