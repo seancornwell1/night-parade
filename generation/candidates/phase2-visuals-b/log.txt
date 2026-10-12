@@ -59,3 +59,10 @@
   cloudflare: checks failed (1), attempt 3
 [phase2-visuals-b] #14 card-frame (sprite)
   cloudflare: checks failed (2), attempt 1
+--- run 2026-10-12T16:01:46Z
+[phase2-visuals-b] #14 card-frame (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-b] #15 icon-thunder (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-b] #16 icon-thunder (sprite)
+  cloudflare: ok on attempt 1

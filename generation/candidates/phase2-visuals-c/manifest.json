@@ -11,15 +11,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         32,
         32
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:47Z",
+      "files": {
+        "image": "01-bush.png",
+        "raw": "01-bush.raw.png",
+        "mask": "01-bush.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.739,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.606,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.823,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 30,
+          "h": 28
+        }
+      ]
     },
     {
       "number": 2,
@@ -29,15 +82,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         32,
         32
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:49Z",
+      "files": {
+        "image": "02-bush.png",
+        "raw": "02-bush.raw.png",
+        "mask": "02-bush.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.785,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.598,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 5.067,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 3,
+          "w": 30,
+          "h": 26
+        }
+      ]
     },
     {
       "number": 3,
@@ -47,15 +153,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         32,
         48
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:50Z",
+      "files": {
+        "image": "03-bamboo.png",
+        "raw": "03-bamboo.raw.png",
+        "mask": "03-bamboo.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.455,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.273,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.954,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 6,
+          "y": 2,
+          "w": 21,
+          "h": 44
+        }
+      ]
     },
     {
       "number": 4,
@@ -65,15 +224,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         32,
         48
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:53Z",
+      "files": {
+        "image": "04-bamboo.png",
+        "raw": "04-bamboo.raw.png",
+        "mask": "04-bamboo.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.37,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.238,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.95,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 5,
+          "y": 2,
+          "w": 22,
+          "h": 45
+        }
+      ]
     },
     {
       "number": 5,
@@ -83,15 +295,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         24,
         24
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:55Z",
+      "files": {
+        "image": "05-flowers.png",
+        "raw": "05-flowers.raw.png",
+        "mask": "05-flowers.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.648,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.47,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.723,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 22,
+          "h": 19
+        }
+      ]
     },
     {
       "number": 6,
@@ -101,15 +366,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         24,
         24
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:56Z",
+      "files": {
+        "image": "06-flowers.png",
+        "raw": "06-flowers.raw.png",
+        "mask": "06-flowers.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.722,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.441,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.321,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 4,
+          "w": 22,
+          "h": 16
+        }
+      ]
     },
     {
       "number": 7,
@@ -119,15 +437,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:58Z",
+      "files": {
+        "image": "07-paper-dart.png",
+        "raw": "07-paper-dart.raw.png",
+        "mask": "07-paper-dart.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.607,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.398,
+          "limit": "0.02-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.158,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 2,
+          "w": 14,
+          "h": 12
+        }
+      ]
     },
     {
       "number": 8,
@@ -137,15 +508,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         16,
         16
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:02:00Z",
+      "files": {
+        "image": "08-paper-dart.png",
+        "raw": "08-paper-dart.raw.png",
+        "mask": "08-paper-dart.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.657,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.359,
+          "limit": "0.02-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.981,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 1,
+          "y": 3,
+          "w": 14,
+          "h": 10
+        }
+      ]
     },
     {
       "number": 9,
@@ -155,15 +579,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         48,
         48
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:02:02Z",
+      "files": {
+        "image": "09-stick-base.png",
+        "raw": "09-stick-base.raw.png",
+        "mask": "09-stick-base.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.777,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.683,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.147,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 1,
+          "w": 44,
+          "h": 46
+        }
+      ]
     },
     {
       "number": 10,
@@ -173,15 +650,15 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (5afc5023-bcc7-4652-964f-5456e50252ad)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "size": [
         48,
         48
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 11,
@@ -191,15 +668,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         64,
         64
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:02:05Z",
+      "files": {
+        "image": "11-panel-frame.png",
+        "raw": "11-panel-frame.raw.png",
+        "mask": "11-panel-frame.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.985,
+          "limit": "<= 1.0 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.866,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.991,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 60,
+          "h": 60
+        }
+      ]
     },
     {
       "number": 12,
@@ -209,15 +739,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         64,
         64
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:02:07Z",
+      "files": {
+        "image": "12-panel-frame.png",
+        "raw": "12-panel-frame.raw.png",
+        "mask": "12-panel-frame.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.998,
+          "limit": "<= 1.0 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.701,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.799,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 8,
+          "w": 60,
+          "h": 48
+        }
+      ]
     },
     {
       "number": 13,
@@ -227,15 +810,15 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "outcome": "refused: HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (0972895a-6424-412c-a21b-9c7f7f2bc41d)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "size": [
         64,
         56
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "failed",
+      "reason": "Every provider failed or refused. Change the prompt and re-request."
     },
     {
       "number": 14,
@@ -245,15 +828,73 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "checks failed: contrast vs #5fae44 = 1.348"
+        },
+        {
+          "provider": "cloudflare",
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         64,
         56
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:02:11Z",
+      "files": {
+        "image": "14-card-frame.png",
+        "raw": "14-card-frame.raw.png",
+        "mask": "14-card-frame.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.999,
+          "limit": "<= 1.0 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.783,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 1.862,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 5,
+          "y": 2,
+          "w": 54,
+          "h": 52
+        }
+      ]
     }
   ],
   "note": "Third tries: props that came out green-on-green (failed the contrast check), UI frames that fill their whole box (allowed via boxFillMax), and items Cloudflare's filter refused. Locked day palette, free.",
@@ -279,8 +920,9 @@
       "#fcecdc"
     ]
   },
-  "updated": "2026-10-11T16:04:11Z",
+  "updated": "2026-10-12T16:02:11Z",
   "counts": {
-    "pending": 14
+    "ok": 12,
+    "failed": 2
   }
 }

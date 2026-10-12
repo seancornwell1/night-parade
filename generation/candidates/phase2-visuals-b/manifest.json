@@ -710,39 +710,67 @@
         {
           "provider": "cloudflare",
           "cost": null,
-          "outcome": "checks failed: no baked-in background = 0.999; contrast vs #5fae44 = 1.004"
-        },
-        {
-          "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "outcome": "ok"
         }
       ],
       "size": [
         64,
         56
       ],
-      "lastChecks": [
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:42Z",
+      "files": {
+        "image": "14-card-frame.png",
+        "raw": "14-card-frame.raw.png",
+        "mask": "14-card-frame.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
         {
           "name": "no baked-in background",
-          "pass": false,
-          "value": 0.999,
+          "pass": true,
+          "value": 0.076,
           "limit": "<= 0.86 of its bounding box"
         },
         {
           "name": "coverage",
           "pass": true,
-          "value": 0.635,
+          "value": 0.046,
           "limit": "0.04-0.9"
         },
         {
           "name": "contrast vs #5fae44",
-          "pass": false,
-          "value": 1.004,
+          "pass": true,
+          "value": 1.83,
           "limit": ">= 1.6"
         }
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "hitboxes": [
+        {
+          "x": 2,
+          "y": 10,
+          "w": 60,
+          "h": 36
+        }
+      ]
     },
     {
       "number": 15,
@@ -752,15 +780,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         24,
         24
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:44Z",
+      "files": {
+        "image": "15-icon-thunder.png",
+        "raw": "15-icon-thunder.raw.png",
+        "mask": "15-icon-thunder.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.31,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.189,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 2.136,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 4,
+          "y": 1,
+          "w": 16,
+          "h": 22
+        }
+      ]
     },
     {
       "number": 16,
@@ -770,15 +851,68 @@
       "attempts": [
         {
           "provider": "cloudflare",
-          "outcome": "skipped: daily cap of 55 reached"
+          "cost": null,
+          "outcome": "ok"
         }
       ],
       "size": [
         24,
         24
       ],
-      "status": "pending",
-      "reason": "Waiting: providers are out of free generations or have no API key yet. The daily run will retry."
+      "status": "ok",
+      "provider": "cloudflare",
+      "made": "2026-10-12T16:01:46Z",
+      "files": {
+        "image": "16-icon-thunder.png",
+        "raw": "16-icon-thunder.raw.png",
+        "mask": "16-icon-thunder.mask.png"
+      },
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "checks": [
+        {
+          "name": "no baked-in background",
+          "pass": true,
+          "value": 0.328,
+          "limit": "<= 0.86 of its bounding box"
+        },
+        {
+          "name": "coverage",
+          "pass": true,
+          "value": 0.226,
+          "limit": "0.04-0.9"
+        },
+        {
+          "name": "contrast vs #5fae44",
+          "pass": true,
+          "value": 3.218,
+          "limit": ">= 1.6"
+        }
+      ],
+      "hitboxes": [
+        {
+          "x": 3,
+          "y": 1,
+          "w": 18,
+          "h": 22
+        }
+      ]
     }
   ],
   "note": "Re-worded retries of phase2-visuals items that Cloudflare refused (false content-filter hits) or that failed checks, plus a landscape card frame for the level-up cards. Locked day palette, free.",
@@ -804,10 +938,9 @@
       "#fcecdc"
     ]
   },
-  "updated": "2026-10-11T14:07:32Z",
+  "updated": "2026-10-12T16:01:46Z",
   "counts": {
     "failed": 8,
-    "ok": 5,
-    "pending": 3
+    "ok": 8
   }
 }

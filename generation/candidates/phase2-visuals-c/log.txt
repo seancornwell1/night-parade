@@ -13,3 +13,33 @@
 [phase2-visuals-c] #12 panel-frame (sprite)
 [phase2-visuals-c] #13 card-frame (sprite)
 [phase2-visuals-c] #14 card-frame (sprite)
+--- run 2026-10-12T16:02:11Z
+[phase2-visuals-c] #1 bush (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #2 bush (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #3 bamboo (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #4 bamboo (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #5 flowers (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #6 flowers (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #7 paper-dart (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #8 paper-dart (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #9 stick-base (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #10 stick-base (sprite)
+  cloudflare: refused, moving on (HTTP 400: {"errors":[{"message":"AiError: AiError: Input prompt contains NSFW content. (5afc5023-bcc7-4652-964f-5456e50252ad)","code":8007}],"success":false,"result":{},"messages":[]})
+[phase2-visuals-c] #11 panel-frame (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #12 panel-frame (sprite)
+  cloudflare: ok on attempt 1
+[phase2-visuals-c] #13 card-frame (sprite)
+  cloudflare: refused, moving on (HTTP 400: {"errors":[{"message":"AiError: AiError: Input prompt contains NSFW content. (0972895a-6424-412c-a21b-9c7f7f2bc41d)","code":8007}],"success":false,"result":{},"messages":[]})
+[phase2-visuals-c] #14 card-frame (sprite)
+  cloudflare: checks failed (1), attempt 1
+  cloudflare: ok on attempt 2
