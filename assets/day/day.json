@@ -1085,6 +1085,125 @@
         "w": 14,
         "h": 2
       }
+    },
+    {
+      "id": "bush",
+      "kind": "objects",
+      "file": "objects/bush.png",
+      "size": [
+        32,
+        32
+      ],
+      "template": "templates/objects/bush.png",
+      "mask": "objects/bush.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 3,
+        "w": 30,
+        "h": 26
+      }
+    },
+    {
+      "id": "bamboo",
+      "kind": "objects",
+      "file": "objects/bamboo.png",
+      "size": [
+        32,
+        48
+      ],
+      "template": "templates/objects/bamboo.png",
+      "mask": "objects/bamboo.mask.png",
+      "hitbox": {
+        "x": 6,
+        "y": 2,
+        "w": 21,
+        "h": 44
+      }
+    },
+    {
+      "id": "flowers",
+      "kind": "objects",
+      "file": "objects/flowers.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/objects/flowers.png",
+      "mask": "objects/flowers.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 22,
+        "h": 19
+      }
+    },
+    {
+      "id": "paper-dart",
+      "kind": "fx",
+      "file": "fx/paper-dart.png",
+      "size": [
+        16,
+        16
+      ],
+      "template": "templates/fx/paper-dart.png",
+      "mask": "fx/paper-dart.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 14,
+        "h": 12
+      }
+    },
+    {
+      "id": "stick-base",
+      "kind": "ui",
+      "file": "ui/stick-base.png",
+      "size": [
+        48,
+        48
+      ],
+      "template": "templates/ui/stick-base.png",
+      "mask": "ui/stick-base.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 44,
+        "h": 46
+      }
+    },
+    {
+      "id": "card-frame",
+      "kind": "ui",
+      "file": "ui/card-frame.png",
+      "size": [
+        64,
+        56
+      ],
+      "template": "templates/ui/card-frame.png",
+      "mask": "ui/card-frame.mask.png",
+      "hitbox": {
+        "x": 5,
+        "y": 2,
+        "w": 54,
+        "h": 52
+      }
+    },
+    {
+      "id": "icon-thunder",
+      "kind": "ui",
+      "file": "ui/icon-thunder.png",
+      "size": [
+        24,
+        24
+      ],
+      "template": "templates/ui/icon-thunder.png",
+      "mask": "ui/icon-thunder.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 1,
+        "w": 18,
+        "h": 22
+      }
     }
   ],
   "audio": [

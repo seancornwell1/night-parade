@@ -2385,6 +2385,310 @@
         "w": 14,
         "h": 2
       }
+    },
+    {
+      "id": "bush",
+      "kind": "objects",
+      "file": "objects/bush.png",
+      "size": [
+        32,
+        32
+      ],
+      "provider": "cloudflare",
+      "prompt": "a round dark green shrub with a thick black outline and small white blossoms, pixel art game prop",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-c #2",
+      "made": "2026-10-12T16:01:49Z",
+      "mask": "objects/bush.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 3,
+        "w": 30,
+        "h": 26
+      }
+    },
+    {
+      "id": "bamboo",
+      "kind": "objects",
+      "file": "objects/bamboo.png",
+      "size": [
+        32,
+        48
+      ],
+      "provider": "cloudflare",
+      "prompt": "a small clump of tall yellow-green bamboo stalks with a thick dark outline, pixel art game prop",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-c #3",
+      "made": "2026-10-12T16:01:50Z",
+      "mask": "objects/bamboo.mask.png",
+      "hitbox": {
+        "x": 6,
+        "y": 2,
+        "w": 21,
+        "h": 44
+      }
+    },
+    {
+      "id": "flowers",
+      "kind": "objects",
+      "file": "objects/flowers.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "cloudflare",
+      "prompt": "a small patch of bright red and white flowers with a dark outline, pixel art game prop",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-c #5",
+      "made": "2026-10-12T16:01:55Z",
+      "mask": "objects/flowers.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 22,
+        "h": 19
+      }
+    },
+    {
+      "id": "paper-dart",
+      "kind": "fx",
+      "file": "fx/paper-dart.png",
+      "size": [
+        16,
+        16
+      ],
+      "provider": "cloudflare",
+      "prompt": "a tiny white paper airplane with a thick black outline, pixel art icon",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-c #7",
+      "made": "2026-10-12T16:01:58Z",
+      "mask": "fx/paper-dart.mask.png",
+      "hitbox": {
+        "x": 1,
+        "y": 2,
+        "w": 14,
+        "h": 12
+      }
+    },
+    {
+      "id": "stick-base",
+      "kind": "ui",
+      "file": "ui/stick-base.png",
+      "size": [
+        48,
+        48
+      ],
+      "provider": "cloudflare",
+      "prompt": "a round flat dark brown wooden tray seen from above with a light brown rim, pixel art game interface element",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-c #9",
+      "made": "2026-10-12T16:02:02Z",
+      "mask": "ui/stick-base.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 1,
+        "w": 44,
+        "h": 46
+      }
+    },
+    {
+      "id": "card-frame",
+      "kind": "ui",
+      "file": "ui/card-frame.png",
+      "size": [
+        64,
+        56
+      ],
+      "provider": "cloudflare",
+      "prompt": "an empty wide rectangular card, cream paper with a thin dark brown wooden border, pixel art game interface",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-c #14",
+      "made": "2026-10-12T16:02:11Z",
+      "mask": "ui/card-frame.mask.png",
+      "hitbox": {
+        "x": 5,
+        "y": 2,
+        "w": 54,
+        "h": 52
+      }
+    },
+    {
+      "id": "icon-thunder",
+      "kind": "ui",
+      "file": "ui/icon-thunder.png",
+      "size": [
+        24,
+        24
+      ],
+      "provider": "cloudflare",
+      "prompt": "a bright yellow zigzag lightning symbol with a thick dark outline, game interface icon",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-b #16",
+      "made": "2026-10-12T16:01:46Z",
+      "mask": "ui/icon-thunder.mask.png",
+      "hitbox": {
+        "x": 3,
+        "y": 1,
+        "w": 18,
+        "h": 22
+      }
+    },
+    {
+      "id": "panel-frame",
+      "kind": "ui",
+      "file": "ui/panel-frame.png",
+      "size": [
+        64,
+        64
+      ],
+      "provider": "cloudflare",
+      "prompt": "an empty square wooden picture frame, dark brown border, plain cream paper middle, pixel art game interface",
+      "palette": [
+        "#281622",
+        "#1a503e",
+        "#4b4056",
+        "#9e272b",
+        "#c82585",
+        "#3f823b",
+        "#7e6758",
+        "#ec5840",
+        "#58ac46",
+        "#ab8259",
+        "#28bdeb",
+        "#9c9c9c",
+        "#7ebd42",
+        "#c5a16a",
+        "#62e1f6",
+        "#fcecdc"
+      ],
+      "from": "phase2-visuals-c #12",
+      "made": "2026-10-12T16:02:07Z",
+      "mask": "ui/panel-frame.mask.png",
+      "hitbox": {
+        "x": 2,
+        "y": 8,
+        "w": 60,
+        "h": 48
+      }
     }
   ]
 }

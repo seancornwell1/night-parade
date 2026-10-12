@@ -16,7 +16,7 @@ const FONT = PIXEL_FONT;
 const PAUSE_SIZE = 44;
 
 interface CardView {
-  bg: Phaser.GameObjects.Rectangle;
+  bg: Control;
   name: Phaser.GameObjects.Text;
   path: Phaser.GameObjects.Text;
   desc: Phaser.GameObjects.Text;
@@ -25,7 +25,7 @@ interface CardView {
 }
 
 export class HudScene extends Phaser.Scene {
-  private stickBase!: Phaser.GameObjects.Rectangle;
+  private stickBase!: Control;
   private stickKnob!: Control;
   private attackBtn!: Control;
   private dodgeBtn!: Control;
@@ -68,8 +68,8 @@ export class HudScene extends Phaser.Scene {
     this.cards = [];
     this.shownCards = null;
     this.stickId = this.attackId = this.dodgeId = null;
-    this.stickBase = this.add.rectangle(0, 0, 10, 10, GREY.ui).setVisible(false);
     const control = (key: string, grey: number): Control => (hasArt(key) ? this.add.image(0, 0, key) : this.add.rectangle(0, 0, 10, 10, grey));
+    this.stickBase = control('ui/stick-base', GREY.ui).setVisible(false);
     this.stickKnob = control('ui/stick-knob', GREY.uiPressed).setVisible(false);
     this.attackBtn = control('ui/btn-attack', GREY.ui);
     this.dodgeBtn = control('ui/btn-dodge', GREY.ui);
@@ -95,7 +95,7 @@ export class HudScene extends Phaser.Scene {
     for (let i = 0; i < 5; i++) {
       const dark = { fontFamily: FONT, color: '#111111' };
       this.cards.push({
-        bg: this.add.rectangle(0, 0, 10, 10, GREY.uiPressed),
+        bg: control('ui/card-frame', GREY.uiPressed),
         name: this.add.text(0, 0, '', { ...dark, fontSize: '16px' }).setOrigin(0.5, 0),
         path: this.add.text(0, 0, '', { ...dark, fontSize: '16px', color: '#333333' }).setOrigin(0.5, 0),
         desc: this.add.text(0, 0, '', { ...dark, fontSize: '16px', align: 'center' }).setOrigin(0.5, 0),
@@ -311,7 +311,7 @@ export class HudScene extends Phaser.Scene {
     this.dodgeLabel.setVisible(show && !this.isArt(this.dodgeBtn)).setPosition(dx, dy).setAlpha(Math.min(1, a + 0.3));
     const r = tuning.stickRadius;
     const on = show && this.stickId !== null;
-    this.stickBase.setVisible(on).setPosition(this.stickX, this.stickY).setDisplaySize(r * 2, r * 2).setAlpha(a * 0.5);
+    this.stickBase.setVisible(on).setPosition(this.stickX, this.stickY).setDisplaySize(r * 2, r * 2).setAlpha(this.isArt(this.stickBase) ? a : a * 0.5);
     this.stickKnob
       .setVisible(on)
       .setPosition(this.stickX + controls.moveX * r, this.stickY + controls.moveY * r)
@@ -365,14 +365,16 @@ export class HudScene extends Phaser.Scene {
         c.desc.setText(card.upgrade.description);
         c.notes.setText(card.notes.join('\n'));
       }
-      c.name.setPosition(x, top + 10).setWordWrapWidth(cw - 12);
-      c.path.setPosition(x, top + 30);
+      // Keep text inside the card frame's border.
+      const pad = this.isArt(c.bg) ? 22 : 6;
+      c.name.setPosition(x, top + 12).setWordWrapWidth(cw - pad * 2 - 16);
+      c.path.setPosition(x, top + 32);
       if (c.icon.visible) {
         if (c.icon.texture.key !== iconKey) c.icon.setTexture(iconKey);
-        c.icon.setPosition(x - cw / 2 + 18, top + 18).setDisplaySize(28, 28).setAlpha(ready ? 1 : 0.6);
+        c.icon.setPosition(x - cw / 2 + 24, top + 24).setDisplaySize(28, 28).setAlpha(ready ? 1 : 0.6);
       }
-      c.desc.setPosition(x, top + 50).setWordWrapWidth(cw - 16);
-      c.notes.setPosition(x, top + ch - 8).setWordWrapWidth(cw - 12);
+      c.desc.setPosition(x, top + 52).setWordWrapWidth(cw - pad * 2);
+      c.notes.setPosition(x, top + ch - pad + 2).setWordWrapWidth(cw - pad * 2);
     });
     if (offer) {
       this.shownCards = offer.cards;
